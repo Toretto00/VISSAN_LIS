@@ -1,0 +1,241 @@
+@keyframes bottomtotop {
+  49% {
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: var(--secondary-color);
+  margin-top: var(--header-height);
+
+  .breadcrumbsBanner {
+    padding: 30px 0;
+
+    .breadCrumbsLink {
+      font-size: 16px;
+      font-weight: 800;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .productHeading {
+    margin-bottom: 25px;
+    padding: 55px 0 0;
+
+    .productCondition {
+      margin-bottom: 18px;
+      color: white;
+      background-color: var(--primary-color);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding: 6px 12px 4px;
+      border-radius: 2px;
+      display: inline-block;
+      margin-right: 4px;
+      line-height: 1.4;
+    }
+
+    .productTitle {
+      font-size: 30px;
+      margin-bottom: 3px;
+      font-weight: 600;
+    }
+
+    .productHeaderInfo {
+      margin-bottom: 6px;
+
+      div {
+        display: flex;
+        flex-direction: row;
+
+        p {
+          margin-left: 6px;
+        }
+      }
+    }
+
+    .productPriceWrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+
+      .productPrice {
+        margin-bottom: 18px;
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--primary-color);
+        text-align: right;
+      }
+
+      .productPriceType {
+        font-size: 30px;
+        font-weight: 600;
+        color: #878c9f;
+        margin-left: 6px;
+      }
+    }
+
+    .btnArea {
+      display: flex;
+      justify-content: right;
+
+      .iconBtn {
+        font-size: 18px;
+        color: var(--primary-color);
+        height: 46px;
+        width: 46px;
+        text-align: center;
+        background: #fff;
+        overflow: hidden;
+        border: 1px solid #e0e5ee;
+        border-radius: 4px;
+        border-right: none;
+        display: block;
+        overflow: hidden;
+        position: relative;
+
+        &:hover {
+          background-color: var(--primary-color);
+          border-color: var(--rt-primary-color);
+          color: #ffffff;
+
+          .icon {
+            animation: bottomtotop 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  .listingContentArea {
+    margin-bottom: 3rem;
+
+    .listingContent {
+      .sliderWrapper {
+        margin-bottom: 30px;
+
+        .productImage {
+          width: 100%;
+        }
+      }
+
+      .itemHeading {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .productOverview {
+        .amenitiesList {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          &:hover {
+            cursor: default;
+
+            .amenitiesIcon {
+              color: white;
+              background-color: var(--primary-color);
+            }
+          }
+
+          .amenitiesIcon {
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(232, 233, 241);
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 4px 18px 0 rgba(188, 192, 202, 0.26);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            color: var(--primary-color);
+            transition: 0.3s;
+            margin-right: 15px;
+          }
+
+          .amenitiesContent {
+            .headingTitle {
+              font-size: 14px;
+              color: #212121;
+              margin: 0;
+              line-height: 1.4;
+              margin-top: 2px;
+              font-weight: 600;
+            }
+
+            .value {
+              color: #878c9f;
+              font-size: 14px;
+              line-height: 2;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              text-align: left;
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+
+      .amenityValue {
+        &:hover {
+          cursor: default;
+        }
+      }
+
+      .submitBtn {
+        text-transform: none;
+        width: max-content;
+        border: none;
+        border-radius: 4px;
+        font-weight: 500;
+        color: #ffffff;
+        padding: 16px 30px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 4px 4px 24px 3px #e9ebee;
+      }
+    }
+
+    .listingSidebar {
+      .MuiAvatar-root {
+        height: 100% !important;
+      }
+      .listingUserInfo {
+        .heading {
+          font-size: 22px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        .userAva {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .userName {
+          font-size: 20px;
+          margin-bottom: 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

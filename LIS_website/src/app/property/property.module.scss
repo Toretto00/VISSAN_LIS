@@ -1,0 +1,125 @@
+.propertyContainer {
+  min-height: 100vh;
+  background-color: var(--secondary-color);
+  margin-top: var(--header-height);
+  position: relative;
+
+  .breadCrumbsContainer {
+    padding: 30px 0;
+    font-size: 16px;
+    font-weight: 800;
+
+    .breadCrumbsLink {
+      font-size: 16px;
+      font-weight: 800;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .mainContainer {
+    padding: 55px 0 80px;
+
+    .advancedSearchContainer {
+      padding: 30px;
+    }
+
+    .advancedSearchHeader {
+      font-size: 22px;
+      line-height: 30px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .advancedSearchItem {
+      margin-bottom: 16px;
+      border-color: var(--primary-color);
+
+      &:focus {
+        border-color: var(--primary-color);
+      }
+    }
+
+    .advancedSearchRangeSliderLabel {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: var(--primary-color);
+    }
+
+    .advancedSearchAmenities {
+      box-shadow: none;
+
+      &::before {
+        display: none;
+      }
+    }
+    .advancedSearchSummary {
+      padding: 0;
+      margin-bottom: 16px;
+      color: var(--primary-color);
+    }
+
+    .listingsActions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .resultCount {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .listingsActionsWrap {
+        display: flex;
+        flex-direction: row;
+        line-height: 1;
+
+        .orderByTitle {
+          display: flex;
+          text-wrap: nowrap;
+          align-items: center;
+        }
+
+        .orderBy {
+          background-color: white;
+          width: max-content;
+          margin-left: 6px;
+        }
+
+        .viewSwitcher {
+          margin-left: 16px;
+
+          .viewSwitcherBtn {
+            width: 56px;
+            height: 56px;
+            border: solid 1px #aaadb4;
+            background-color: white;
+          }
+        }
+      }
+    }
+
+    .loadMoreWrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 48px;
+      row-gap: 16px;
+
+      .loadMoreBtn {
+        text-transform: none;
+        text-align: center;
+        align-items: center;
+        min-width: 64px;
+        width: 225px;
+        padding: 6px 16px;
+      }
+    }
+  }
+}

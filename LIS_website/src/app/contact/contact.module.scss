@@ -1,0 +1,470 @@
+.breadcrumbBanner{
+    padding: 30px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-bottom: 1px solid #dceeea;
+}
+// menu bar
+.barContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contactAddress{
+    font-size: 15px;
+    font-weight: 600;
+    color: #00c6a9;
+}
+
+.containerTitle{
+    font-size: 15px;
+    font-weight: 600;
+    color: #878cab;
+}
+
+.elementSection{
+    margin-top: 120px;
+    margin-bottom: 100px;
+    max-width: 1270px !important;
+}
+
+.elementContainer{
+    max-width: 1270px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    flex-direction: row;
+}
+
+.elementColumn{
+    position: relative;
+    min-height: 1px;
+    display: flex;  
+}
+
+.widgetWrap{
+    align-content: center;
+    align-items: center;
+    padding: 0px 50px 0px 10px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.widgetWrap_2{
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.elementElement{
+    width: 100%;
+}
+
+.mainTitle{
+    font-size: 27px;
+    font-weight: 500;
+    color: #212121;
+    line-height: 1.2;
+}
+
+.description{
+    font-size: 15px;
+    line-height: 30px;
+    color: #70778B;
+
+}
+
+//box location call and follow
+.element2308{
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #E4E9F2;
+    box-shadow: 0px 11px 35px 0px rgba(194, 200, 213, 0.32);
+    margin-top: 0px;
+    padding: 20px 18px 20px 18px;
+    &.element2308 + .element2308{
+        margin-top: 30px;
+    }
+}
+
+.element2308Section{
+    max-width: 1240px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.elementCol2308{
+    position: relative;
+    min-height: 1px;
+    display: flex;
+    cursor: pointer;
+    &:hover{
+       .fas{
+        color: white;
+       }
+       .iconHolder{
+        background-color: #00c194;
+       } 
+    }
+}
+
+.element2308Widget{
+    padding: 10px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.elementElement2308{
+    width: 100%;
+    position: relative;
+}
+
+.serviceBox{
+    margin: 0px 0px 7px 0px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+.iconHolder{
+    position: relative;
+    margin: 0px 0px 0px 0px;
+    float: left;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #E5EAF2;
+    background-color: #F9FBFE;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    margin-right: 25px;
+}
+
+.fas{
+    line-height: 60px;
+    width: 29px;
+    height: 60px;
+    color: #00c194;
+    text-align: center;
+    transition: all 0.5s ease-out;
+    display: inline-block;
+    position: absolute;
+    left: 14px;
+}
+
+.infoTitle{
+    color: #70778B;
+    font-family: "Roboto", Sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s;
+    margin: 0 !important;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.contentHolder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoContent{
+    margin: 0 !important;
+    color: #222222;
+    font-family: "Roboto", Sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.socialIcon{
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF00;
+    position: relative;
+}
+
+.icon{
+    color: #B1B6C8;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+    &:hover{
+        color: #00c194;
+        animation: bottomToTop 0.3s ease-in-out forwards ;
+    }
+}
+@keyframes bottomToTop {
+    49% {
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    51% {
+      opacity: 1;
+    }
+}
+//right box
+.widgetWrap_3{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #EBEBEB;
+    padding: 30px 40px 30px 40px;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.elementFieldset{
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.ff_screen_reader_title{
+    margin: 0!important;
+    padding: 0!important;
+    height: 0!important;
+    text-indent: -999999px;
+    width: 0!important;
+}
+
+.ffTContainer{
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.fluentForm{
+    margin-bottom: 15px;
+    width: 48%;
+}
+
+.fluentForm_2{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.inputLabel{
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.inputContent{
+
+}
+
+.ffTCell{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ff1Title{
+    font-weight: 500 !important;
+    color: #a7a7a7 !important;
+    font-size: 14px !important;
+    display: inline-block;
+    line-height: inherit;
+    margin-bottom: 0;
+}
+
+.ff1Title::after{
+    content: "*";
+    color: #a7a7a7 !important;
+    margin-left: 3px;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+}
+
+.elFormControl {
+    border: 1px solid #e4e9f2;
+    background-color: #f9fbfe;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    height: auto;
+    color: #111111;
+    background-clip: padding-box;
+    background-image: none;
+    margin-bottom: 0;
+    max-width: 100%;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 100%;
+}
+
+.margin + .margin{
+    margin-bottom: 15px;
+}
+#namesFirstName_2{
+    height: 140px;
+    padding: 10px;
+}
+
+.submitBtn{
+    margin-bottom: 15px;
+    text-align: left;
+
+}
+
+.btnSubmit{
+    width: 100%;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    background-color: #00c194;
+    opacity: 1;
+    line-height: 30px;
+    color: #ffffff;
+    height: 60px;
+    padding: 12px 35px 10px;
+    border: none;
+
+    &:hover{
+        background-color: #00a376;
+    }
+}
+
+
+.elementCol100{
+
+}
+
+.elementWidgetWrap{
+    align-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+    padding: 0px 0px 0px 0px;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.iframeMap{
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    line-height: 1;
+}
+
+
+
+@media (min-width: 601px) and (max-width: 899px) {
+    .ffTContainer{
+        display: flex;
+        gap: 15px;
+        width: 100%;
+    }
+    .ffTCell{
+        flex-grow: 1;
+        padding-right: 0;
+    }
+    .elementCol100{
+        width: 100%;
+    }
+    .elementContainer{
+        flex-direction: column !important;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .barContainer{
+        max-width: 960px;
+    }
+    .ffTContainer{
+        display: flex;
+        gap: 15px;
+        width: 100%;
+    }
+    .ffTCell{
+        flex-grow: 1;
+        padding-right: 0;
+    }
+    .elementCol100{
+        width: 100%;
+    }
+    .widgetWrap{
+        padding-left: 0px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1535px) {
+    .barContainer{
+        max-width: 1240px !important;
+    }
+    #primary{
+        max-width: 1315px !important;
+    }
+    .ffTContainer{
+        display: flex;
+        gap: 15px;
+        width: 100%;
+    }
+    .ffTCell{
+        flex-grow: 1;
+        padding-right: 0;
+    }
+    .elementCol100{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1536px) {
+    .barContainer{
+        max-width: 1210px !important;
+    }
+    .ffTContainer{
+        display: flex;
+        gap: 15px;
+        width: 100%;
+    }
+    .ffTCell{
+        flex-grow: 1;
+        padding-right: 0;
+    }
+    .elementCol100{
+        width: 100%;
+    }
+}

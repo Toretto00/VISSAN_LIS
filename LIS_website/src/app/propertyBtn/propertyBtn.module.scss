@@ -1,0 +1,164 @@
+.breadcrumbBanner{
+    padding: 30px 0;
+    background-color: #eaf7f4;
+    overflow: hidden;
+    border-bottom: 1px solid #dceeea;
+    .barContainer{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        .contactAddress{
+            font-size: 16px;
+            font-weight: 600;
+            color: #00c6a9;
+        }
+        
+        .containerTitle{
+            font-size: 16px;
+            font-weight: 600;
+            color: #878cab;
+        }
+    }
+
+}
+
+.contentArea{
+    padding: 55px 0 80px;
+    display: block;
+}
+
+.container{
+    max-width: 1240px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    .mainForm{
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        .mainContent{
+            background-color: #ffffff;
+            padding: 30px;
+            .pageContentInner{
+                margin-bottom: 25px;
+                .pageTitleWrap{
+                    font-size: 26px;
+                    line-height: 36px;
+                    margin-bottom: 15px;
+                    color: #212121;
+                    font-weight: 600;
+                    .pageTitle{
+                        margin-bottom: 20px;
+                        font-size: 28px;
+                        line-height: 38px;
+                        color: #212121;
+                        font-weight: 700
+                    }
+                }
+                .post2363{
+                    display: inline-block;
+                    width: 100%;
+                    .rtClMessage{
+                        color: #155724;
+                        background-color: #d4edda;
+                        border-color: #c3e6cb;
+                        position: relative;
+                        padding: 0.75rem 1.25rem;
+                        margin-bottom: 1rem;
+                        border: 1px solid transparent;
+                    }
+                    .homeListingForm{
+                        background: #fff;
+                        box-shadow: 0 0 3px 0 rgba(0,0,0,.1);
+                        padding: 25px;
+                        .posSectionTitle{
+                            margin-top: 20px;
+                            margin-bottom: 25px;
+                            h3{
+                                color: #212121;
+                                font-size: 19px;
+                                font-weight: 700;
+                                margin: 0 0 15px;
+                                padding-bottom: 15px;
+                                position: relative;
+                                border-bottom: 1px solid #e1e1e1;
+                            }
+                        }
+                    }
+                    .formGroup{
+                        margin-bottom: 0px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        -ms-flex-wrap: wrap;
+                        flex-wrap: wrap;
+                        margin-right: -15px;
+                        margin-left: -15px;
+                        align-items: center;
+                        .category{
+                            font-size: 17px;
+                            font-weight: 700;
+                            padding-top: calc(0.375rem + 1px);
+                            padding-bottom: calc(0.375rem + 1px);
+                            margin-bottom: 0;
+                            font-size: inherit;
+                            line-height: 1.5;
+                            position: relative;
+                            padding-right: 15px;
+                            padding-left: 15px;
+                            color: #686868;
+                            width: 11%;
+                            .requireStar{
+                                color: red;
+                                display: inline-block;
+                                margin-left: 5px;
+                                vertical-align: middle;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 1.5;
+
+                            }
+                        }
+                        .comboBox{
+                            position: relative;
+                            width: 88%;
+                            padding-right: 15px;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 899px) {
+   
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .barContainer{
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1535px) {
+    .barContainer{
+        max-width: 1240px !important;
+    }
+}
+
+@media (min-width: 1536px) {
+    .barContainer{
+        max-width: 1210px !important;
+    }
+}

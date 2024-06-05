@@ -1,0 +1,214 @@
+.cardContainer {
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .contentWrap {
+    flex-grow: 1;
+  }
+
+  .productThumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .productType {
+      position: absolute;
+      top: 32px;
+      left: 30px;
+      z-index: 2;
+      text-transform: capitalize;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 51px;
+        height: 40px;
+        left: 50%;
+        margin-left: -27.5px;
+        top: -33px;
+        z-index: 10;
+        background-color: #00c194;
+        mask: url("../../../public/listing-label.svg");
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 51px;
+        height: 40px;
+        left: 50%;
+        margin-left: -27.5px;
+        top: -2px;
+        z-index: 11;
+        background-image: url("../../../public/listing-label-wheel.svg");
+        background-repeat: no-repeat;
+        background-position: center top;
+      }
+
+      .productTypeBadge {
+        font-size: 14px;
+        color: #ffffff;
+        background-color: #00c194;
+        padding: 7px 15px;
+        border-radius: 3px;
+        display: inline-block;
+        line-height: 1;
+        margin-right: 4px;
+        white-space: nowrap;
+        border: 1px solid #00c194;
+        font-weight: 500;
+      }
+    }
+
+    .listingAction {
+      display: flex;
+      position: absolute;
+      z-index: 99;
+      right: 30px;
+      bottom: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s ease-in-out;
+
+      .actionBtn {
+        width: 35px;
+        height: 35px;
+        border-radius: 3px;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 16px;
+        margin-left: 5px;
+        line-height: 1;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+
+        &:hover {
+          color: #00c194;
+          background: #fff;
+
+          .icon {
+            animation: bottomtotop 0.3s ease-in-out forwards;
+          }
+        }
+      }
+    }
+
+    .cardImg {
+      width: 100%;
+      max-height: 260px;
+      transition: transform 0.4s;
+    }
+
+    .productPrice {
+      position: absolute;
+      bottom: 32px;
+      left: 30px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      z-index: 10;
+    }
+  }
+
+  &:hover {
+    .listingAction {
+      bottom: 30px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cardImg {
+      transform: scale(1.06);
+      overflow: hidden;
+    }
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 32px;
+    padding-top: 5px;
+    font-weight: 600;
+    text-align: left;
+    align-items: flex-start;
+
+    &:hover {
+      cursor: pointer;
+      color: #00c194;
+    }
+  }
+
+  .entryMeta {
+    display: flex;
+    margin-bottom: 0;
+    padding-bottom: 14px;
+    color: #929292;
+  }
+
+  .listInformation {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border: none;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 8px;
+
+    .productFeatures {
+      display: flex;
+      justify-content: center;
+
+      .productFeaturesIcon {
+        margin-right: 4px;
+        padding: 4px;
+        border-radius: 50%;
+        background-color: #eaf7f4;
+        color: #00c194;
+      }
+    }
+  }
+
+  .cardDivider {
+    border: 1.6px solid #929292;
+  }
+
+  .cardAction {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+
+    .author {
+      display: flex;
+      align-items: center;
+      padding-left: 22px;
+
+      .img {
+        margin-right: 12px;
+      }
+    }
+
+    .cardButton {
+      text-transform: none;
+      font-weight: 600;
+      padding: 8px 22px;
+      margin: 12px 30px;
+      color: #00c194;
+      background-color: #dceeea;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        background-color: #00c194;
+        color: white;
+      }
+    }
+  }
+}

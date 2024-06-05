@@ -1,0 +1,49 @@
+// @use '@/scss' as *;
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--secondary-color);
+  margin-top: var(--header-height);
+  margin-bottom: var(--header-height);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .formChild {
+    margin-bottom: 6px;
+    background-color: white;
+  }
+}
+.btn--submit {
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  padding: 16px 0;
+  margin-top: 20px;
+  text-transform: none;
+  font-family: inherit;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #00c194;
+  }
+}
+
+.hello {
+  text-align: center;
+  h2 {
+    font-size: 50px;
+    font-weight: 700;
+    font-style: bold;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 40px;
+  }
+}
+.sign-up {
+  font-size: 13px;
+}

@@ -1,0 +1,332 @@
+.breadcrumbBanner {
+  padding: 30px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-bottom: 1px solid #dceeea;
+}
+// menu bar
+.barContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.accountAddress {
+  font-size: 15px;
+  font-weight: 600;
+  color: #00c6a9;
+}
+
+.containerTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #878cab;
+}
+
+.elementSection {
+  margin-top: 120px;
+  margin-bottom: 100px;
+  max-width: 1270px !important;
+}
+
+.elementContainer {
+  max-width: 1270px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  flex-direction: row;
+}
+
+.elementColumn {
+  position: relative;
+  min-height: 1px;
+  margin-top: 80px;
+  display: flex;
+}
+
+.widgetWrap_2 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.elementElement {
+  width: 100%;
+}
+
+.mainTitle {
+  font-size: 27px;
+  font-weight: 500;
+  color: #212121;
+  line-height: 1.2;
+}
+
+//box location call and follow
+
+@keyframes bottomToTop {
+  49% {
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+//right box
+.widgetWrap_3 {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px 10px 10px 10px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #ebebeb;
+  padding: 30px 40px 30px 40px;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  //margin-bottom: 10px;
+}
+
+.elementFieldset {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.ffTContainer {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.fluentForm {
+  margin-bottom: 15px;
+  width: 200%;
+}
+
+.inputLabel {
+  display: inline-block;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.ffTCell {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// .ff1Title{
+//     font-weight: 500 !important;
+//     color: #a7a7a7 !important;
+//     font-size: 14px !important;
+//     display: inline-block;
+//     line-height: inherit;
+//     margin-bottom: 0;
+// }
+
+.ff1Title::after {
+  content: "*";
+  color: #eb0c0c !important;
+  margin-left: 5px;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+}
+
+.elFormControl {
+  border: 1px solid #e4e9f2;
+  background-color: #f9fbfe;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  height: auto;
+  color: #111111;
+  margin-bottom: 0;
+  max-width: 1200px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 1100px;
+}
+
+#namesFirstName_2 {
+  height: 140px;
+  padding: 10px;
+  width: 100%;
+}
+
+.submitBtn {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 30%;
+}
+.wrapSubmit {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.checkBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btnCheckBox {
+  margin-left: 40px;
+  font-size: larger;
+  color: #dceeea;
+}
+.textCheckBox {
+  padding-left: 10px;
+  color: #b1b6c8;
+}
+.btnSubmit {
+  width: 100%;
+  border-radius: 3px;
+  font-size: 15px;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  background-color: #00c194;
+  opacity: 1;
+  line-height: 30px;
+  color: #ffffff;
+  height: 60px;
+  padding: 12px 35px 10px;
+  border: none;
+  justify-content: center;
+
+  &:hover {
+    background-color: #00a376;
+  }
+}
+
+.txtForgotPass {
+  color: #00c6a9;
+  text-decoration: none;
+}
+
+.elementWidgetWrap {
+  align-content: center;
+  align-items: center;
+  margin: 10px 10px 10px 10px;
+  padding: 0px 0px 0px 0px;
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.iframeMap {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  line-height: 1;
+}
+
+@media (min-width: 0px) and (max-width: 374px) {
+}
+
+@media (min-width: 374px) and (max-width: 376px) {
+}
+
+@media (min-width: 377px) and (max-width: 600px) {
+}
+
+@media (min-width: 601px) and (max-width: 899px) {
+  .ffTContainer {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+  }
+  .ffTCell {
+    flex-grow: 1;
+    padding-right: 0;
+  }
+  .elementCol100 {
+    width: 100%;
+  }
+  .elementContainer {
+    flex-direction: column !important;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .barContainer {
+    max-width: 960px;
+  }
+  .ffTContainer {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+  }
+  .ffTCell {
+    flex-grow: 1;
+    padding-right: 0;
+  }
+  .elementCol100 {
+    width: 100%;
+  }
+  .widgetWrap {
+    padding-left: 0px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1535px) {
+  .barContainer {
+    max-width: 1240px !important;
+  }
+  #primary {
+    max-width: 1315px !important;
+  }
+  .ffTContainer {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+  }
+  .ffTCell {
+    flex-grow: 1;
+    padding-right: 0;
+  }
+  .elementCol100 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .barContainer {
+    max-width: 1210px !important;
+  }
+  .ffTContainer {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+  }
+  .ffTCell {
+    flex-grow: 1;
+    padding-right: 0;
+  }
+  .elementCol100 {
+    width: 100%;
+  }
+}
