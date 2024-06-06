@@ -4,6 +4,8 @@ import React, { useEffect, useState, useCallback } from "react";
 
 import { useRouter } from "next/navigation";
 
+import { promises as fs } from "fs";
+
 import "../globals.css";
 import styles from "./requestForm.module.scss";
 
@@ -23,6 +25,7 @@ import {
   Alert,
   createTheme,
   ThemeProvider,
+  Autocomplete,
 } from "@mui/material";
 
 import dayjs, { Dayjs } from "dayjs";
@@ -31,8 +34,6 @@ import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
@@ -45,54 +46,24 @@ const theme = createTheme({
   },
 });
 
-const types: { id: number; name: string; checked: boolean }[] = [
-  { id: 1, name: "Xúc Xích", checked: false },
-  { id: 2, name: "Thịt nguội các loại", checked: false },
-  { id: 3, name: "Đồ hộp, hạt nêm", checked: false },
-  { id: 4, name: "Lạp xưởng", checked: false },
-  { id: 5, name: "Thịt tẩm ướp các loại", checked: false },
-  { id: 6, name: "Hàng chế biến khô", checked: false },
-  { id: 7, name: "Hàng chế biến đông lạnh", checked: false },
-];
-
-const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 70 },
-  { field: "name", headerName: "Tên mẫu", editable: true, width: 300 },
-  {
-    field: "rowManufactureDate",
-    headerName: "Ngày sản xuất",
-    editable: true,
-    width: 240,
-  },
-  {
-    field: "quantity",
-    headerName: "Số lượng",
-    editable: true,
-    width: 90,
-  },
-];
-
-const row: {
+interface product {
   id: number;
+  category: number;
   name: string;
-  rowManufactureDate: any;
+  code: string;
+  description: string;
+  created: string;
+  updated: string;
+  no: 1;
+}
+
+interface row {
+  id: number;
+  name: product | undefined;
   quantity: string;
-}[] = [
-  { id: 1, name: "Snow", rowManufactureDate: "Jon", quantity: "35" },
-  { id: 2, name: "Lannister", rowManufactureDate: "Cersei", quantity: "42" },
-  { id: 3, name: "Lannister", rowManufactureDate: "Jaime", quantity: "45" },
-  { id: 4, name: "Stark", rowManufactureDate: "Arya", quantity: "16" },
-  { id: 5, name: "Targaryen", rowManufactureDate: "Daenerys", quantity: "16" },
-  {
-    id: 6,
-    name: "Melisandre",
-    rowManufactureDate: "Daenerys",
-    quantity: "150",
-  },
-  { id: 7, name: "Clifford", rowManufactureDate: "Ferrara", quantity: "44" },
-  { id: 8, name: "Frances", rowManufactureDate: "Rossini", quantity: "36" },
-  { id: 9, name: "Roxie", rowManufactureDate: "Harvey", quantity: "65" },
-];
+  unit: string;
+  rowManufactureDate: any;
+}
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -100,25 +71,36 @@ dayjs.extend(timezone);
 const RequestForm = () => {
   const [loading, setLoading] = useState(false);
   const [display, setDisplay] = useState("none");
+  const [productList, setProductList] = useState<product[]>([]);
+  const [productSelected, setProductSelected] = useState<product | null>();
+  const [unit, setUnit] = useState("Kg");
 
-  const [productTypesChecked, setProductTypesChecked] = useState(types);
   const [productName, setProductName] = useState("");
   const [manufactureDate, setManufactureDate] = useState<Dayjs | null>(
     dayjs.utc()
   );
   const [quantity, setQuantity] = useState("");
-  const [rows, setRows] = useState(row);
+  const [rows, setRows] = useState<row>();
 
   const router = useRouter();
 
-  const handleProductTypeChecked = (id: number) => {
-    setProductTypesChecked((prevTypes) =>
-      prevTypes.map((productType) =>
-        productType.id === id
-          ? { ...productType, checked: !productType.checked }
-          : productType
-      )
-    );
+  useEffect(() => {
+    handleLoadProductList();
+  }, []);
+
+  const handleLoadProductList = async () => {
+    fetch("./data/Product.json")
+      .then(function (res) {
+        return res.json();
+      })
+      .then((data) => {
+        setProductList(data);
+
+        console.log(data);
+      })
+      .catch(function (err) {
+        console.log(err, " error");
+      });
   };
 
   const resetValue = () => {
@@ -127,12 +109,8 @@ const RequestForm = () => {
     setQuantity("");
   };
 
-  const handleDeleteSample = () => {
-    console.log(rows);
-  };
-
   const handleAddSample = () => {
-    if (productName === "") {
+    if (productSelected === null) {
       setDisplay("flex");
       return;
     }
@@ -145,14 +123,13 @@ const RequestForm = () => {
       return;
     }
     const newRow = {
-      id: rows.length + 1,
-      name: productName,
-      rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
+      id: -1,
+      name: productSelected,
+      unit: unit,
       quantity: quantity,
+      rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
     };
-    const newArr = [...rows];
-    newArr[rows.length] = newRow;
-    setRows(newArr);
+    setRows(newRow);
     resetValue();
   };
 
@@ -160,30 +137,37 @@ const RequestForm = () => {
     <ThemeProvider theme={theme}>
       <div className={styles.login}>
         <Container maxWidth="lg">
-          <FormControl>
-            <FormLabel>Chủng loại sản phẩm cần kiểm mẫu:</FormLabel>
-            <FormGroup className={styles.productTypes}>
-              {productTypesChecked.map((productType) => (
-                <FormControlLabel
-                  key={productType.id}
-                  control={
-                    <Checkbox
-                      checked={productType.checked}
-                      onChange={() => handleProductTypeChecked(productType.id)}
-                      name={productType.name}
-                    />
-                  }
-                  label={productType.name}
-                />
-              ))}
-            </FormGroup>
-          </FormControl>
           <Box className={styles.form}>
+            <Autocomplete
+              sx={{ width: 300 }}
+              options={productList}
+              onChange={(event, value) => setProductSelected(value)}
+              autoHighlight
+              getOptionLabel={(option) => option.name}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Tên sản phẩm"
+                  inputProps={{
+                    ...params.inputProps,
+                    autoComplete: "new-password", // disable autocomplete and autofill
+                  }}
+                />
+              )}
+            />
             <TextField
               required
-              label="Tên sản phẩm cần kiểm mẫu"
-              value={productName}
-              onChange={(e) => setProductName(e.target.value)}
+              type="number"
+              label="Số lượng"
+              value={quantity}
+              onChange={(e) => setQuantity(e.target.value)}
+              className={styles.formChild}
+            />
+            <TextField
+              disabled
+              label="KG"
+              value={unit}
+              onChange={(e) => setUnit(e.target.value)}
               className={styles.formChild}
             />
             <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -197,35 +181,12 @@ const RequestForm = () => {
                 />
               </DemoContainer>
             </LocalizationProvider>
-            <TextField
-              required
-              label="Số lượng"
-              value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
-              className={styles.formChild}
-            />
           </Box>
           <Button variant="contained" onClick={() => handleAddSample()}>
-            Add
+            Thêm
           </Button>
 
-          {/* <DataGrid
-            rows={rows}
-            columns={columns}
-            initialState={{
-              pagination: {
-                paginationModel: { page: 0, pageSize: 5 },
-              },
-            }}
-            pageSizeOptions={[5, 10]}
-            // checkboxSelection
-          /> */}
-
-          <FullFeaturedCrudGrid Row = {rows}/>
-
-          {/* <Button variant="contained" onClick={() => handleDeleteSample()}>
-            Delete
-          </Button> */}
+          <FullFeaturedCrudGrid Row={rows} />
 
           <Button
             fullWidth

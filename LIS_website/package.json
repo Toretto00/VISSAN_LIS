@@ -18,7 +18,9 @@
     "@mui/x-data-grid": "^7.6.1",
     "@mui/x-date-pickers": "^7.6.1",
     "axios": "^1.6.2",
+    "buffer": "^6.0.3",
     "dayjs": "^1.11.11",
+    "fs": "^0.0.1-security",
     "next": "13.5.4",
     "package": "^1.0.1",
     "react": "^18",
@@ -29,7 +31,8 @@
     "react-youtube": "^10.1.0",
     "scss": "^0.2.4",
     "styled-components": "^6.1.0",
-    "tippy.js": "^6.3.7"
+    "tippy.js": "^6.3.7",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^20",

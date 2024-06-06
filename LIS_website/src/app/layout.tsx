@@ -22,7 +22,7 @@ export default function RootLayout({
         <GlobalContextProvider>
           <Header />
           <div style={{ minHeight: "100vh" }}>{children}</div>
-          <Footer />
+          {/* <Footer /> */}
         </GlobalContextProvider>
       </body>
     </html>

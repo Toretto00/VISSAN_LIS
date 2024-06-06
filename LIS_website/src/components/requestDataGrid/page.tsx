@@ -1,13 +1,20 @@
+"use client";
+
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+
+import * as XLSX from "xlsx";
+
+import { useState, useEffect } from "react";
+
+import { Box, Button } from "@mui/material";
+
 import AddIcon from "@mui/icons-material/Add";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/DeleteOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Close";
+
 import {
-  GridRowsProp,
   GridRowModesModel,
   GridRowModes,
   DataGrid,
@@ -19,31 +26,49 @@ import {
   GridRowEditStopReasons,
 } from "@mui/x-data-grid";
 
-const initialRows: GridRowsProp = [
-  { id: 1, name: "Snow", rowManufactureDate: "Jon", quantity: "35" },
-  { id: 2, name: "Lannister", rowManufactureDate: "Cersei", quantity: "42" },
-  { id: 3, name: "Lannister", rowManufactureDate: "Jaime", quantity: "45" },
-  { id: 4, name: "Stark", rowManufactureDate: "Arya", quantity: "16" },
-  { id: 5, name: "Targaryen", rowManufactureDate: "Daenerys", quantity: "16" },
-  {
-    id: 6,
-    name: "Melisandre",
-    rowManufactureDate: "Daenerys",
-    quantity: "150",
-  },
-  { id: 7, name: "Clifford", rowManufactureDate: "Ferrara", quantity: "44" },
-  { id: 8, name: "Frances", rowManufactureDate: "Rossini", quantity: "36" },
-  { id: 9, name: "Roxie", rowManufactureDate: "Harvey", quantity: "65" },
-];
-
 export default function FullFeaturedCrudGrid(props: any) {
-  const [rows, setRows] = React.useState(initialRows);
-  const [rowModesModel, setRowModesModel] = React.useState<GridRowModesModel>(
-    {}
-  );
+  const [rows, setRows] = useState<any[]>([]);
+  const [rowModesModel, setRowModesModel] = useState<GridRowModesModel>({});
+  const [pageSize, setPageSize] = React.useState<number>(5);
 
-  React.useEffect(() => {
-    setRows(props.Row);
+  const onGetExporProduct = (title?: string, worksheetname?: string) => {
+    try {
+      // setLoading(true);
+      // const response = await fetch('https://fakestoreapi.com/products');
+      // Check if the action result contains data and if it's an array
+      if (rows && Array.isArray(rows)) {
+        const dataToExport = rows.map((row: any) => ({
+          title: row.id,
+          price: row.name,
+          category: row.rowManufactureDate,
+          description: row.quantity,
+        }));
+        // Create Excel workbook and worksheet
+        const workbook = XLSX.utils.book_new();
+        const worksheet = XLSX.utils?.json_to_sheet(dataToExport);
+        XLSX.utils.book_append_sheet(workbook, worksheet, worksheetname);
+        // Save the workbook as an Excel file
+        XLSX.writeFile(workbook, `${title}.xlsx`);
+        console.log(`Exported data to ${title}.xlsx`);
+        // setLoading(false);
+      } else {
+        // setLoading(false);
+        console.log("#==================Export Error");
+      }
+    } catch (error: any) {
+      // setLoading(false);
+      console.log("#==================Export Error", error.message);
+    }
+  };
+
+  useEffect(() => {
+    if (props.Row == undefined) return;
+    props.Row["id"] = rows.length + 1;
+    const newRows = [...rows];
+    const newRow = props.Row;
+    newRows.push(newRow);
+    console.log(rows);
+    setRows(newRows);
   }, [props.Row]);
 
   const handleRowEditStop: GridEventListener<"rowEditStop"> = (
@@ -64,8 +89,11 @@ export default function FullFeaturedCrudGrid(props: any) {
   };
 
   const handleDeleteClick = (id: GridRowId) => () => {
-    setRows(rows.filter((row) => row.id !== id));
-    console.log(rows);
+    const newRows = rows.filter((row) => row?.id !== id);
+    newRows.map((row, index) => {
+      row["id"] = index + 1;
+    });
+    setRows(newRows);
   };
 
   const handleCancelClick = (id: GridRowId) => () => {
@@ -92,18 +120,40 @@ export default function FullFeaturedCrudGrid(props: any) {
 
   const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 70 },
-    { field: "name", headerName: "Tên mẫu", width: 320, editable: true },
     {
-      field: "rowManufactureDate",
-      headerName: "Ngày sản xuất",
-      width: 240,
+      field: "name.code",
+      headerName: "Mã sản phẩm",
+      valueGetter: (value, row) => {
+        return `${row.name.code}`;
+      },
+      width: 320,
+      editable: true,
+    },
+    {
+      field: "name.name",
+      headerName: "Tên sản phẩm",
+      valueGetter: (value, row) => {
+        return `${row.name.name}`;
+      },
+      width: 320,
       editable: true,
     },
     {
       field: "quantity",
       headerName: "Số lượng",
-      //   type: "date",
       width: 180,
+      editable: true,
+    },
+    {
+      field: "unit",
+      headerName: "Đơn vị",
+      width: 180,
+      editable: true,
+    },
+    {
+      field: "rowManufactureDate",
+      headerName: "Ngày sản xuất",
+      width: 240,
       editable: true,
     },
     {
@@ -157,7 +207,9 @@ export default function FullFeaturedCrudGrid(props: any) {
   return (
     <Box
       sx={{
-        height: 500,
+        // height: 500,
+        minHeight: 500,
+        maxHeight: 800,
         width: "100%",
         "& .actions": {
           color: "text.secondary",
@@ -167,15 +219,39 @@ export default function FullFeaturedCrudGrid(props: any) {
         },
       }}
     >
+      <Button
+        variant="contained"
+        disabled={rows.length === 0 ? true : false}
+        onClick={(e) => {
+          onGetExporProduct();
+        }}
+      >
+        Export
+      </Button>
+
       <DataGrid
         rows={rows}
         columns={columns}
         editMode="row"
+        rowHeight={60}
+        sx={{
+          minHeight: 300 + 52 + 56,
+          maxHeight: 600 + 52 + 56,
+        }}
         rowModesModel={rowModesModel}
         onRowModesModelChange={handleRowModesModelChange}
         onRowEditStop={handleRowEditStop}
         processRowUpdate={processRowUpdate}
       />
+      <Button
+        variant="contained"
+        disabled={rows.length === 0 ? true : false}
+        onClick={(e) => {
+          setRows([]);
+        }}
+      >
+        Xóa tất cả
+      </Button>
     </Box>
   );
 }
