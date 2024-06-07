@@ -17,12 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body>
         <GlobalContextProvider>
-          <Header />
-          <div style={{ minHeight: "100vh" }}>{children}</div>
-          {/* <Footer /> */}
+          <section>{children}</section>
         </GlobalContextProvider>
       </body>
     </html>

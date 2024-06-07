@@ -29,7 +29,6 @@ import {
 export default function FullFeaturedCrudGrid(props: any) {
   const [rows, setRows] = useState<any[]>([]);
   const [rowModesModel, setRowModesModel] = useState<GridRowModesModel>({});
-  const [pageSize, setPageSize] = React.useState<number>(5);
 
   const onGetExporProduct = (title?: string, worksheetname?: string) => {
     try {
@@ -63,12 +62,13 @@ export default function FullFeaturedCrudGrid(props: any) {
 
   useEffect(() => {
     if (props.Row == undefined) return;
-    props.Row["id"] = rows.length + 1;
-    const newRows = [...rows];
-    const newRow = props.Row;
-    newRows.push(newRow);
-    console.log(rows);
-    setRows(newRows);
+    // props.Row["id"] = rows.length + 1;
+    // const newRows = [...rows];
+    // const newRow = props.Row;
+    // newRows.push(newRow);
+    // console.log(rows);
+    // setRows(newRows);
+    setRows(props.Row);
   }, [props.Row]);
 
   const handleRowEditStop: GridEventListener<"rowEditStop"> = (

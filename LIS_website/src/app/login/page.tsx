@@ -8,9 +8,10 @@ import Style from "./login.module.scss";
 import api from "../api/client";
 import { useRouter } from "next/navigation";
 import { useGlobalContext } from "../Context/store";
-import LoadingPage from "@/components/loadingPage/loading";
+import LoadingPage from "../../components/loadingPage/loading";
+import { Button } from "@mui/material";
 
-function Login() {
+const Login = () => {
   const router = useRouter();
 
   const [loading, setLoading] = useState(false);
@@ -19,34 +20,69 @@ function Login() {
 
   const { SETJWT, SETUSERNAME, SETPASSWORD } = useGlobalContext();
 
-  var querystring = require("querystring");
+  useEffect(() => {
+    // setLoading(true);
+    if (localStorage.getItem("storeID")) router.push("requestForm");
+  }, []);
 
   const handleLogin = () => {
-    if (username === "" || password === "") return;
-    setLoading(true);
-    api
-      .post(
-        "login/authorize",
-        querystring.stringify({
-          username: username, //gave the values directly for testing
-          password: password,
-          grant_type: "password",
-        }),
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      )
-      .then((res?) => {
-        if (res?.data) {
-          SETJWT(res.data.access_token);
-          SETUSERNAME(username);
-          SETPASSWORD(password);
-          router.push("myAccount");
-        }
+    fetch("./data/User.json")
+      .then(function (res) {
+        return res.json();
+      })
+      .then((data) => {
+        data.forEach((element: any) => {
+          if (element.username === username) {
+            if (element.password === password) {
+              localStorage.setItem("storeID", element.storeID);
+              setLoading(true);
+              SETJWT(element.role);
+              SETUSERNAME(username);
+              SETPASSWORD(password);
+              resetValue();
+              router.push("requestForm");
+            } else {
+            }
+          }
+        });
+      })
+      .catch(function (err) {
+        console.log(err, " error");
       });
   };
+
+  const resetValue = () => {
+    setUsernameLogin("");
+    setPasswordLogin("");
+    setLoading(false);
+  };
+
+  // const handleLogin = () => {
+  //   if (username === "" || password === "") return;
+  //   setLoading(true);
+  //   api
+  //     .post(
+  //       "login/authorize",
+  //       querystring.stringify({
+  //         username: username, //gave the values directly for testing
+  //         password: password,
+  //         grant_type: "password",
+  //       }),
+  //       {
+  //         headers: {
+  //           "Content-Type": "application/x-www-form-urlencoded",
+  //         },
+  //       }
+  //     )
+  //     .then((res?) => {
+  //       if (res?.data) {
+  //         SETJWT(res.data.access_token);
+  //         SETUSERNAME(username);
+  //         SETPASSWORD(password);
+  //         router.push("myAccount");
+  //       }
+  //     });
+  // };
 
   return (
     <>
@@ -55,7 +91,7 @@ function Login() {
       ) : (
         <div
           style={{
-            minHeight: "1065px",
+            // minHeight: "1065px",
             backgroundColor: "#fff",
           }}
           className="main-container"
@@ -69,7 +105,7 @@ function Login() {
                 lg: "1220px",
               },
               backgroundColor: "#fff",
-              marginTop: "86px",
+              // marginTop: "86px",
               minHeight: "100vh",
               padding: { xs: "column", lg: "row", md: "0px" },
               display: "flex",
@@ -111,7 +147,7 @@ function Login() {
                             <Box className={Style.fluentForm}>
                               <div className={Style.inputLabel}>
                                 <label className={Style.ff1Title}>
-                                  User or E-mail
+                                  Username
                                 </label>
                               </div>
                               <div>
@@ -127,6 +163,9 @@ function Login() {
                                   onChange={(e) =>
                                     setUsernameLogin(e.target.value)
                                   }
+                                  onKeyDown={(event) => {
+                                    if (event.key === "Enter") handleLogin();
+                                  }}
                                 />
                               </div>
                             </Box>
@@ -149,20 +188,27 @@ function Login() {
                                   onChange={(e) =>
                                     setPasswordLogin(e.target.value)
                                   }
+                                  onKeyDown={(event) => {
+                                    if (event.key === "Enter") handleLogin();
+                                  }}
                                 />
                               </div>
                             </Box>
                           </Box>
                           <Box className={Style.wrapSubmit}>
                             <Box className={Style.submitBtn}>
-                              <button
-                                className={Style.btnSubmit}
-                                onClick={handleLogin}
+                              <Button
+                                variant="contained"
+                                // className={Style.btnSubmit}
+                                onClick={(e) => handleLogin()}
+                                onKeyDown={(event) => {
+                                  if (event.key === "Enter") handleLogin();
+                                }}
                               >
                                 Login
-                              </button>
+                              </Button>
                             </Box>
-                            <Box className={Style.checkBox}>
+                            {/* <Box className={Style.checkBox}>
                               <input
                                 className={Style.btnCheckBox}
                                 id="CheckBox"
@@ -172,9 +218,9 @@ function Login() {
                                 {" "}
                                 Remember Me
                               </label>
-                            </Box>
+                            </Box> */}
                           </Box>
-                          <div>
+                          {/* <div>
                             <a className={Style.txtForgotPass} href="">
                               Forgot your password?
                             </a>
@@ -189,7 +235,7 @@ function Login() {
                                 Sign up
                               </button>
                             </Box>
-                          </div>
+                          </div> */}
                         </Box>
                       </Box>
                     </Box>
@@ -202,6 +248,6 @@ function Login() {
       )}
     </>
   );
-}
+};
 
 export default Login;

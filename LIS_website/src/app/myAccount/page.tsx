@@ -108,6 +108,7 @@ const MyAccount = () => {
                   SETUSERNAME("");
                   SETPASSWORD("");
                   SETJWT("");
+                  localStorage.clear();
                   router.push("/login");
                 }}
               >

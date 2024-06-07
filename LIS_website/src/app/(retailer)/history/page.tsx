@@ -4,10 +4,8 @@ import React, { useEffect, useState, useCallback } from "react";
 
 import { useRouter } from "next/navigation";
 
-import { promises as fs } from "fs";
-
-import "../globals.css";
-import styles from "./requestForm.module.scss";
+// import "@/app/globals.module.css";
+import styles from "./history.module.scss";
 
 import FullFeaturedCrudGrid from "@/components/requestDataGrid/page";
 
@@ -37,6 +35,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+import Header from "@/components/header/header";
 
 const theme = createTheme({
   palette: {
@@ -68,7 +67,7 @@ interface row {
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-const RequestForm = () => {
+const History = () => {
   const [loading, setLoading] = useState(false);
   const [display, setDisplay] = useState("none");
   const [productList, setProductList] = useState<product[]>([]);
@@ -136,8 +135,9 @@ const RequestForm = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className={styles.login}>
+        {/* <Header /> */}
         <Container maxWidth="lg">
-          <Box className={styles.form}>
+          {/* <Box className={styles.form}>
             <Autocomplete
               sx={{ width: 300 }}
               options={productList}
@@ -181,21 +181,21 @@ const RequestForm = () => {
                 />
               </DemoContainer>
             </LocalizationProvider>
-          </Box>
-          <Button variant="contained" onClick={() => handleAddSample()}>
+          </Box> */}
+          {/* <Button variant="contained" onClick={() => handleAddSample()}>
             Thêm
-          </Button>
+          </Button> */}
 
           <FullFeaturedCrudGrid Row={rows} />
 
-          <Button
+          {/* <Button
             fullWidth
             variant="contained"
             className="btn--submit"
             type="submit"
           >
             Send
-          </Button>
+          </Button> */}
           <Alert
             severity="warning"
             sx={{ display: display }}
@@ -211,4 +211,4 @@ const RequestForm = () => {
   );
 };
 
-export default RequestForm;
+export default History;

@@ -31,6 +31,18 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 import { useGlobalContext } from "@/app/Context/store";
 
+interface pages {
+  id: number;
+  page: string;
+  link: string;
+}
+
+let userPages: pages[] = [
+  { id: 1, page: "Báo hàng tồn", link: "/requestForm" },
+  { id: 2, page: "Đặt hàng", link: "/requestForm" },
+  { id: 3, page: "Lịch sử", link: "/history" },
+];
+
 let pages: {
   id: number;
   page: string;
@@ -41,32 +53,6 @@ let pages: {
     id: 1,
     page: "Home",
     link: "/",
-    // children: [
-    //   {
-    //     id: 1,
-    //     content: "Home 1",
-    //   },
-    //   {
-    //     id: 2,
-    //     content: "Home 2",
-    //   },
-    //   {
-    //     id: 3,
-    //     content: "Home 3",
-    //   },
-    //   {
-    //     id: 4,
-    //     content: "Home 4",
-    //   },
-    //   {
-    //     id: 5,
-    //     content: "Home 5",
-    //   },
-    //   {
-    //     id: 6,
-    //     content: "Home 6",
-    //   },
-    // ],
   },
   {
     id: 2,
@@ -77,86 +63,16 @@ let pages: {
     id: 3,
     page: "Property",
     link: "/property",
-    // children: [
-    //   {
-    //     id: 1,
-    //     content: "Properties Grid",
-    //   },
-    //   {
-    //     id: 2,
-    //     content: "Properties List",
-    //   },
-    //   {
-    //     id: 3,
-    //     content: "Properties Map Grid",
-    //   },
-    //   {
-    //     id: 4,
-    //     content: "Properties Map List",
-    //   },
-    //   {
-    //     id: 5,
-    //     content: "Properties Fullwidth",
-    //   },
-    //   {
-    //     id: 6,
-    //     content: "Single Property-Default",
-    //   },
-    //   {
-    //     id: 7,
-    //     content: "Single Property-Fullwidth",
-    //   },
-    //   {
-    //     id: 8,
-    //     content: "Single Property-Grid",
-    //   },
-    // ],
   },
   {
     id: 4,
     page: "Pages",
     link: "/pages",
-    // children: [
-    //   {
-    //     id: 1,
-    //     content: "Agencies",
-    //   },
-    //   {
-    //     id: 2,
-    //     content: "Agents",
-    //   },
-    //   {
-    //     id: 3,
-    //     content: "Agent Details",
-    //   },
-    //   {
-    //     id: 4,
-    //     content: "Pricing Table",
-    //   },
-    //   {
-    //     id: 5,
-    //     content: "404 Error",
-    //   },
-    // ],
   },
   {
     id: 5,
     page: "Blog",
     link: "/blog",
-    // children: [
-    //   {
-    //     id: 1,
-    //     content: "Blog List",
-    //   },
-    //   {
-    //     id: 2,
-    //     content: "Blog Grid",
-    //   },
-    //   {
-    //     id: 3,
-    //     content: "Blog Details",
-    //   },
-    // ],
   },
   {
     id: 6,
@@ -290,36 +206,32 @@ function Header() {
   //   setIsMenuItemHovered("");
   // }
   const handleAccountButtonClick = () => {
-    if (JWT !== "") router.push("/myAccount");
+    if (localStorage.getItem("storeID")) router.push("/myAccount");
     else router.push("/login");
   };
 
   return (
     <AppBar position="fixed">
       <Container maxWidth="lg">
-        <Toolbar className="headerContainer">
+        <Toolbar className={Style.headerContainer}>
+          {/* logo */}
           <Box sx={{ "&:hover": { cursor: "pointer" } }}>
             <Image src="/logo_light.svg" width={148} height={39} alt="Logo" />
           </Box>
 
+          {/* button */}
           <Box
-            sx={{
-              display: { xs: "none", md: "flex" },
-              // marginLeft: "20px",
-              // marginRight: "20px",
-              // transition: "none",
-            }}
+            className={Style.buttonContainer}
+            // sx={{
+            //   display: { xs: "none", md: "flex" },
+            //   justifyContent: "start",
+            //   flex: "1",
+            // }}
           >
-            {pages.map((page) => (
-              <div
-                key={page.id}
-                // onMouseEnter={() => {
-                //   handleButtonClick_2();
-                // }}
-                // onMouseLeave={() => setPopperOpen(false)}
-              >
+            {(JWT === "admin" ? pages : userPages).map((page) => (
+              <div key={page.id}>
                 <Button
-                  key={page.id}
+                  // key={page.id}
                   sx={{
                     textTransform: "none",
                     padding: "30px 15px", // Thêm padding cho nút
@@ -549,7 +461,7 @@ function Header() {
               />
             </IconButton>
 
-            {propertyBtn.map((property) => (
+            {/* {propertyBtn.map((property) => (
               <Button
                 key={property.id}
                 sx={{
@@ -604,9 +516,9 @@ function Header() {
               >
                 Add new sample
               </Button>
-            ))}
+            ))} */}
 
-            <IconButton
+            {/* <IconButton
               sx={{
                 display: { md: "none" },
                 color: "white",
@@ -621,9 +533,9 @@ function Header() {
               }}
             >
               <AddIcon sx={{ height: "16px", width: "16px" }} />
-            </IconButton>
+            </IconButton> */}
 
-            <IconButton
+            {/* <IconButton
               sx={{
                 display: { md: "none" },
                 color: "white",
@@ -631,9 +543,9 @@ function Header() {
               onClick={handleClick}
             >
               <MenuIcon />
-            </IconButton>
+            </IconButton> */}
 
-            <Menu
+            {/* <Menu
               anchorEl={anchorEl}
               open={open}
               sx={{ overFlow: "auto" }}
@@ -679,7 +591,7 @@ function Header() {
                   {page.page}
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
         </Toolbar>
       </Container>

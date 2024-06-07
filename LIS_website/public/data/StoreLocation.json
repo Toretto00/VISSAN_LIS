@@ -1,0 +1,6543 @@
+[
+ {
+  "warehouseID": "STHI",
+  "ID": "1",
+  "storeID": "ST000003",
+  "name": "QUẦY THỊT SATRA LẠC LONG QUÂN",
+  "retail": "HT SATRA",
+  "Column6": "HT AEON CITI",
+  "shortname": "SATRA LẠC LONG QUÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "2",
+  "storeID": "ST000004",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN VĂN QUÁ",
+  "retail": "HT COOPFOOD",
+  "Column6": "HT COCOMART",
+  "shortname": "CF NGUYỄN VĂN QUÁ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "3",
+  "storeID": "ST000006",
+  "name": "QUẦY THỊT CO.OP FOOD CHỢ CẦU",
+  "retail": "HT COOPFOOD",
+  "Column6": "HT AUCHAN",
+  "shortname": "CF CHỢ CẦU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "4",
+  "storeID": "ST000007",
+  "name": "QUẦY THỊT CO.OP FOOD VĨNH LỘC",
+  "retail": "HT COOPFOOD",
+  "Column6": "HT KHÁC",
+  "shortname": "CF VĨNH LỘC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "5",
+  "storeID": "ST000008",
+  "name": "QUẦY THỊT VINMART MỸ PHƯỚC 2",
+  "retail": "HT VINMART",
+  "Column6": "HT VINMART+",
+  "shortname": "VM MỸ PHƯỚC 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "6",
+  "storeID": "ST000009",
+  "name": "QUẦY THỊT AEON CITIMART MIỀN NAM",
+  "retail": "HT AEON CITI",
+  "Column6": "HT ZAKKA",
+  "shortname": "AEON CITI MIỀN NAM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "7",
+  "storeID": "ST000010",
+  "name": "QUẦY THỊT CO.OP FOOD LÂM VĂN BỀN",
+  "retail": "HT COOPFOOD",
+  "Column6": "HT COOPMART",
+  "shortname": "CF LÂM VĂN BỀN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "8",
+  "storeID": "ST000011",
+  "name": "QUẦY THỊT SATRA ĐỖ XUÂN HỢP",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐỖ XUÂN HỢP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "9",
+  "storeID": "ST000012",
+  "name": "QUẦY THỊT CO.OP FOOD PHẠM PHÚ THỨ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHẠM PHÚ THỨ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "10",
+  "storeID": "ST000014",
+  "name": "QUẦY THỊT SATRA KHA VẠN CÂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA KHA VẠN CÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "11",
+  "storeID": "ST000015",
+  "name": "QUẦY THỊT VINMART TÂN QUY",
+  "retail": "HT VINMART",
+  "shortname": "VM TÂN QUY"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "12",
+  "storeID": "ST000016",
+  "name": "QUẦY THỊT SATRA HUỲNH TẤN PHÁT",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HUỲNH TẤN PHÁT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "13",
+  "storeID": "ST000017",
+  "name": "QUẦY THỊT COCOMART LŨY BÁN BÍCH",
+  "retail": "HT COCOMART",
+  "shortname": "COCOMART LŨY BÁN BÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "14",
+  "storeID": "ST000018",
+  "name": "QUẦY THỊT SATRA TÔN ĐẢN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TÔN ĐẢN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "15",
+  "storeID": "ST000019",
+  "name": "QUẦY THỊT SATRA NƠ TRANG LONG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NƠ TRANG LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "16",
+  "storeID": "ST000020",
+  "name": "QUẦY THỊT CO.OP FOOD PHẠM THẾ HIỂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHẠM THẾ HIỂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "17",
+  "storeID": "ST000021",
+  "name": "QUẦY THỊT CO.OP FOOD CỦ CHI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CỦ CHI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "18",
+  "storeID": "ST000022",
+  "name": "QUẦY THỊT SATRA LÊ TRỌNG TẤN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ TRỌNG TẤN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "19",
+  "storeID": "ST000023",
+  "name": "QUẦY THỊT SATRA LŨY BÁN BÍCH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LŨY BÁN BÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "20",
+  "storeID": "ST000024",
+  "name": "QUẦY THỊT SATRA PHAN HUY ÍCH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHAN HUY ÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "21",
+  "storeID": "ST000025",
+  "name": "QUẦY THỊT SATRA LÊ VĂN LƯƠNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĂN LƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "22",
+  "storeID": "ST000026",
+  "name": "QUẦY THỊT COCOMART QUỐC LỘ 50",
+  "retail": "HT COCOMART",
+  "shortname": "COCOMART QUỐC LỘ 50"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "23",
+  "storeID": "ST000027",
+  "name": "QUẦY THỊT SATRA VĨNH LỘC",
+  "retail": "HT SATRA",
+  "shortname": "SATRA VĨNH LỘC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "24",
+  "storeID": "ST000028",
+  "name": "QUẦY THỊT SIMPLY MART",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN SIMPLY MART"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "25",
+  "storeID": "ST000029",
+  "name": "QUẦY THỊT SATRA ĐƯỜNG SỐ 41 QUẬN 4",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐƯỜNG SỐ 41 QUẬN 4"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "26",
+  "storeID": "ST000030",
+  "name": "QUẦY THỊT CO.OP FOOD PHÚ XUÂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHÚ XUÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "27",
+  "storeID": "ST000031",
+  "name": "QUẦY THỊT SATRA PHAN ĐĂNG LƯU",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHAN ĐĂNG LƯU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "28",
+  "storeID": "ST000032",
+  "name": "QUẦY THỊT CO.OP FOOD PHẠM VĂN CHIÊU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHẠM VĂN CHIÊU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "29",
+  "storeID": "ST000033",
+  "name": "QUẦY THỊT CO.OP FOOD PHẠM HỮU LẦU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHẠM HỮU LẦU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "30",
+  "storeID": "ST000034",
+  "name": "QUẦY THỊT CO.OP FOOD LÊ VĂN QUỚI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ VĂN QUỚI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "31",
+  "storeID": "ST000035",
+  "name": "QUẦY THỊT SATRA LÊ VĂN THỌ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĂN THỌ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "32",
+  "storeID": "ST000036",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN KỲ TÂN QUÝ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN KỲ TÂN QUÝ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "33",
+  "storeID": "ST000037",
+  "name": "QUẦY THỊT CO.OP FOOD QUANG TRUNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF QUANG TRUNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "34",
+  "storeID": "ST000038",
+  "name": "QUẦY THỊT CO.OP FOOD HUỲNH TẤN PHÁT",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HUỲNH TẤN PHÁT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "35",
+  "storeID": "ST000039",
+  "name": "QUẦY THỊT SATRA LÊ THỊ RIÊNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ THỊ RIÊNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "36",
+  "storeID": "ST000040",
+  "name": "QUẦY THỊT SATRA DƯƠNG BÁ TRẠC",
+  "retail": "HT SATRA",
+  "shortname": "SATRA DƯƠNG BÁ TRẠC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "37",
+  "storeID": "ST000041",
+  "name": "QUẦY THỊT SATRA PHẠM THẾ HIỂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHẠM THẾ HIỂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "38",
+  "storeID": "ST000042",
+  "name": "QUẦY THỊT CO.OP FOOD NHÀ BÈ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NHÀ BÈ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "39",
+  "storeID": "ST000043",
+  "name": "QUẦY THỊT CO.OP FOOD HƯƠNG LỘ 2",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HƯƠNG LỘ 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "40",
+  "storeID": "ST000044",
+  "name": "QUẦY THỊT AEON CITIMART HƯNG VƯỢNG",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI HƯNG VƯỢNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "41",
+  "storeID": "ST000045",
+  "name": "QUẦY THỊT AEON CITIMART NAM LONG",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI NAM LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "42",
+  "storeID": "ST000046",
+  "name": "QUẦY THỊT AEON CITIMART PARKSON QUẬN 11",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI PARKSON QUẬN 11"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "43",
+  "storeID": "ST000047",
+  "name": "QUẦY THỊT AEON CITIMART GREENVIEW",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI GREENVIEW"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "44",
+  "storeID": "ST000051",
+  "name": "QUẦY THỊT SATRA 902 LẠC LONG QUÂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 902 LẠC LONG QUÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "45",
+  "storeID": "ST000052",
+  "name": "QUẦY THỊT CO.OP FOOD TRƯỜNG THỌ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRƯỜNG THỌ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "46",
+  "storeID": "ST000053",
+  "name": "QUẦY THỊT SATRA HƯNG PHÚ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HƯNG PHÚ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "47",
+  "storeID": "ST000054",
+  "name": "QUẦY THỊT CO.OP FOOD LONG PHƯỚC - QUẬN 9",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LONG PHƯỚC Q.9"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "48",
+  "storeID": "ST000055",
+  "name": "QUẦY THỊT CO.OP FOOD BÌNH QUỚI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÌNH QUỚI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "49",
+  "storeID": "ST000056",
+  "name": "QUẦY THỊT CO.OP FOOD KHA VẠN CÂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF KHA VẠN CÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "50",
+  "storeID": "ST000058",
+  "name": "QUẦY THỊT SATRA THẠCH LAM",
+  "retail": "HT SATRA",
+  "shortname": "SATRA THẠCH LAM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "51",
+  "storeID": "ST000059",
+  "name": "QUẦY THỊT SATRA BÀ HOM",
+  "retail": "HT SATRA",
+  "shortname": "SATRA BÀ HOM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "52",
+  "storeID": "ST000060",
+  "name": "QUẦY THỊT CO.OP FOOD BẠCH ĐẰNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BẠCH ĐẰNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "53",
+  "storeID": "ST000061",
+  "name": "QUẦY THỊT SATRA 244 ÂU CƠ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 244 ÂU CƠ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "54",
+  "storeID": "ST000062",
+  "name": "QUẦY THỊT CO.OP FOOD TRƯƠNG CÔNG ĐỊNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRƯƠNG CÔNG ĐỊNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "55",
+  "storeID": "ST000063",
+  "name": "QUẦY THỊT SATRA VÕ VĂN TẦN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA VÕ VĂN TẦN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "56",
+  "storeID": "ST000064",
+  "name": "QUẦY THỊT SATRA BÌNH THỚI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA BÌNH THỚI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "57",
+  "storeID": "ST000065",
+  "name": "QUẦY THỊT SATRA THỐNG NHẤT",
+  "retail": "HT SATRA",
+  "shortname": "SATRA THỐNG NHẤT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "58",
+  "storeID": "ST000066",
+  "name": "QUẦY THỊT CO.OP FOOD PHẠM VĂN BẠCH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHẠM VĂN BẠCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "59",
+  "storeID": "ST000067",
+  "name": "QUẦY THỊT CO.OP FOOD TÔN THẤT THUYẾT",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÔN THẤT THUYẾT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "60",
+  "storeID": "ST000068",
+  "name": "QUẦY THỊT CO.OP FOOD TÔ HIẾN THÀNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÔ HIẾN THÀNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "61",
+  "storeID": "ST000071",
+  "name": "QUẦY THỊT CO.OP FOOD LÊ VĂN VIỆT",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ VĂN VIỆT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "62",
+  "storeID": "ST000072",
+  "name": "QUẦY THỊT CO.OP FOOD ĐỖ XUÂN HỢP",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐỖ XUÂN HỢP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "63",
+  "storeID": "ST000073",
+  "name": "QUẦY THỊT CO.OP FOOD VĨNH HỘI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VĨNH HỘI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "64",
+  "storeID": "ST000081",
+  "name": "QUẦY THỊT VINMART BIÊN HÒA 2",
+  "retail": "HT VINMART",
+  "shortname": "VM BIÊN HÒA 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "65",
+  "storeID": "ST000130",
+  "name": "QUẦY THỊT COCOMART BÌNH HƯNG HÒA",
+  "retail": "HT COCOMART",
+  "shortname": "COCOMART BÌNH HƯNG HÒA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "66",
+  "storeID": "ST000133",
+  "name": "QUẦY THỊT SATRA ĐƯỜNG SỐ 17 TÂN KIỂNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐƯỜNG SỐ 17 TÂN KIỂNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "67",
+  "storeID": "ST000142",
+  "name": "QUẦY THỊT SATRA QUANG TRUNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA QUANG TRUNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "68",
+  "storeID": "ST000165",
+  "name": "QUẦY THỊT CO.OPMART TÂN AN",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY TÂN AN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "69",
+  "storeID": "ST000174",
+  "name": "QUẦY THỊT CO.OPMART CỦ CHI",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY CỦ CHI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "70",
+  "storeID": "ST000175",
+  "name": "QUẦY THỊT CO.OP FOOD PHÚC AN LỘC",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHÚC AN LỘC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "71",
+  "storeID": "ST000177",
+  "name": "QUẦY THỊT AEON CITIMART BÌNH THẠNH",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI BÌNH THẠNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "72",
+  "storeID": "ST000178",
+  "name": "QUẦY THỊT AEON CITIMART GARDEN PLAZA",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI GARDEN PLAZA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "73",
+  "storeID": "ST000179",
+  "name": "QUẦY THỊT AEON CITIMART HOÀNG ANH GIA LAI",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI HOÀNG ANH GIA LAI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "74",
+  "storeID": "ST000180",
+  "name": "QUẦY THỊT AEON CITIMART B&B CONIC",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI B&B CONIC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "75",
+  "storeID": "ST000181",
+  "name": "QUẦY THỊT AEON CITIMART BÌNH DƯƠNG",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI BÌNH DƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "76",
+  "storeID": "ST000182",
+  "name": "QUẦY THỊT AEON CITIMART ETOWN 4",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI ETOWN 4"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "77",
+  "storeID": "ST000183",
+  "name": "QUẦY THỊT VINMART NGUYỄN THỊ ĐỊNH",
+  "retail": "HT VINMART",
+  "shortname": "VM NGUYỄN THỊ ĐỊNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "78",
+  "storeID": "ST000186",
+  "name": "QUẦY THỊT VINMART MỸ PHƯỚC 1",
+  "retail": "HT VINMART",
+  "shortname": "VM MỸ PHƯỚC 1"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "79",
+  "storeID": "ST000188",
+  "name": "QUẦY THỊT VINMART DĨ AN",
+  "retail": "HT VINMART",
+  "shortname": "VM DĨ AN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "80",
+  "storeID": "ST000190",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN OANH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN OANH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "81",
+  "storeID": "ST000191",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN CỪU ĐÀM",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN CỪU ĐÀM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "82",
+  "storeID": "ST000192",
+  "name": "QUẦY THỊT CO.OPMART HÒA HẢO",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY HÒA HẢO"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "83",
+  "storeID": "ST000193",
+  "name": "QUẦY THỊT CO.OPMART TRẢNG BÀNG",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY TRẢNG BÀNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "84",
+  "storeID": "ST000195",
+  "name": "QUẦY THỊT CO.OPMART NGUYỄN ĐÌNH CHIỂU",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY NGUYỄN ĐÌNH CHIỂU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "85",
+  "storeID": "ST000196",
+  "name": "QUẦY THỊT CO.OPMART TIÊN HOÀNG",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY TIÊN HOÀNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "86",
+  "storeID": "ST000197",
+  "name": "QUẦY THỊT CO.OPMART CỐNG QUỲNH",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY CỐNG QUỲNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "87",
+  "storeID": "ST000198",
+  "name": "QUẦY THỊT CO.OPMART LŨY BÁN BÍCH",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY LŨY BÁN BÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "88",
+  "storeID": "ST000199",
+  "name": "QUẦY THỊT CO.OPMART XA LỘ HÀ NỘI",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY XA LỘ HÀ NỘI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "89",
+  "storeID": "ST000200",
+  "name": "QUẦY THỊT CO.OPMART PHÚ LÂM",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY PHÚ LÂM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "90",
+  "storeID": "ST000201",
+  "name": "QUẦY THỊT CO.OPMART THẮNG LỢI",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY THẮNG LỢI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "91",
+  "storeID": "ST000202",
+  "name": "QUẦY THỊT CO.OP FOOD CHU VĂN AN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CHU VĂN AN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "92",
+  "storeID": "ST000203",
+  "name": "QUẦY THỊT CO.OPMART PHÚ MỸ HƯNG",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY PHÚ MỸ HƯNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "93",
+  "storeID": "ST000204",
+  "name": "QUẦY THỊT CO.OP FOOD LONG HẬU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LONG HẬU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "94",
+  "storeID": "ST000205",
+  "name": "QUẦY THỊT SATRA PHẠM VĂN HAI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHẠM VĂN HAI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "95",
+  "storeID": "ST000881",
+  "name": "QUẦY THỊT CO.OP FOOD 32-34 THÁP MƯỜI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 32-34 THÁP MƯỜI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "96",
+  "storeID": "ST000207",
+  "name": "QUẦY THỊT VINMART TÂN THUẬN (VINMART QUẬN 7)",
+  "retail": "HT VINMART",
+  "shortname": "VM TÂN THUẬN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "97",
+  "storeID": "ST000208",
+  "name": "QUẦY THỊT CO.OP FOOD THẢO ĐIỀN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF THẢO ĐIỀN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "98",
+  "storeID": "ST000209",
+  "name": "QUẦY THỊT CO.OP FOOD KCN TÂN BÌNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF KCN TÂN BÌNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "99",
+  "storeID": "ST000211",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN THỚI HIỆP",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN THỚI HIỆP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "100",
+  "storeID": "ST000212",
+  "name": "QUẦY THỊT SATRA ÂU CƠ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ÂU CƠ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "101",
+  "storeID": "ST000215",
+  "name": "QUẦY THỊT CO.OP FOOD LÊ QUANG ĐỊNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ QUANG ĐỊNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "102",
+  "storeID": "ST001201",
+  "name": "QUẦY THỊT OSIFOOD BÌNH HÒA",
+  "retail": "HT KHÁC",
+  "shortname": "OSIFOOD BÌNH HÒA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "103",
+  "storeID": "ST000218",
+  "name": "QUẦY THỊT CO.OPMART NGUYỄN KIỆM",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY NGUYỄN KIỆM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "104",
+  "storeID": "ST000219",
+  "name": "QUẦY THỊT VINMART LÃNH BINH THĂNG",
+  "retail": "HT VINMART",
+  "shortname": "VM LÃNH BINH THĂNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "105",
+  "storeID": "ST000220",
+  "name": "SATRA ĐIỆN BIÊN PHỦ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐIỆN BIÊN PHỦ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "106",
+  "storeID": "ST000922",
+  "name": "QUẦY THỊT SATRA XÔ VIẾT NGHỆ TĨNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA XÔ VIẾT NGHỆ TĨNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "107",
+  "storeID": "ST000224",
+  "name": "QUẦY THỊT CO.OPMART HẬU GIANG",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY HẬU GIANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "108",
+  "storeID": "ST000225",
+  "name": "QUẦY THỊT CO.OP FOOD BÀ CHIỂU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÀ CHIỂU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "109",
+  "storeID": "ST000227",
+  "name": "QUẦY THỊT VINMART 79 LÝ THƯỜNG KIỆT",
+  "retail": "HT VINMART",
+  "shortname": "VM 79 LÝ THƯỜNG KIỆT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "110",
+  "storeID": "ST000228",
+  "name": "QUẦY THỊT VINMART KHÁNH HỘI (VINMART QUẬN 4)",
+  "retail": "HT VINMART",
+  "shortname": "VM KHÁNH HỘ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "111",
+  "storeID": "ST000229",
+  "name": "QUẦY THỊT SATRA SÀI GÒN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA SÀI GÒN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "112",
+  "storeID": "ST000230",
+  "name": "QUẦY THỊT VINMART BÀU CÁT",
+  "retail": "HT VINMART",
+  "shortname": "VM BÀU CÁT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "113",
+  "storeID": "ST000231",
+  "name": "QUẦY THỊT MỸ ĐỨC",
+  "retail": "HT KHÁC",
+  "shortname": "ST MỸ ĐỨC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "114",
+  "storeID": "ST000233",
+  "name": "QUẦY THỊT NỮ HOÀNG 2",
+  "retail": "HT KHÁC",
+  "shortname": "ST NỮ HOÀNG 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "115",
+  "storeID": "ST000235",
+  "name": "QUẦY THỊT CO.OPMART LÝ THƯỜNG KIỆT",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY LÝ THƯỜNG KIỆT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "116",
+  "storeID": "ST000238",
+  "name": "QUẦY THỊT CO.OP FOOD HIỆP PHƯỚC",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HIỆP PHƯỚC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "117",
+  "storeID": "ST000239",
+  "name": "QUẦY THỊT SATRA QUẬN 4",
+  "retail": "HT SATRA",
+  "shortname": "SATRA QUẬN 4"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "118",
+  "storeID": "ST000240",
+  "name": "QUẦY THỊT SATRA QUẬN 11",
+  "retail": "HT SATRA",
+  "shortname": "SATRA QUẬN 11"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "119",
+  "storeID": "ST000241",
+  "name": "QUẦY THỊT CO.OP FOOD LINH TRUNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LINH TRUNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "120",
+  "storeID": "ST000242",
+  "name": "QUẦY THỊT NỮ HOÀNG 3",
+  "retail": "HT KHÁC",
+  "shortname": "ST NỮ HOÀNG 3"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "121",
+  "storeID": "ST000243",
+  "name": "QUẦY THỊT CO.OPMART HÓC MÔN",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY HÓC MÔN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "122",
+  "storeID": "ST000244",
+  "name": "QUẦY THỊT SATRA PHẠM HÙNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHẠM HÙNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "123",
+  "storeID": "ST001011",
+  "name": "QUẦY THỊT AUCHAN CRESCENT MALL",
+  "retail": "HT AUCHAN",
+  "shortname": " AUCHAN CRESCENT MALL"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "124",
+  "storeID": "ST000246",
+  "name": "QUẦY THỊT CO.OPMART CẦN GIỜ",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY CẦN GIỜ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "125",
+  "storeID": "ST000247",
+  "name": "QUẦY THỊT CO.OPMART GÒ VẤP",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY GÒ VẤP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "126",
+  "storeID": "ST000248",
+  "name": "QUẦY THỊT AEON CITIMART CITI PLAZA",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI CITI PLAZA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "127",
+  "storeID": "ST000249",
+  "name": "QUẦY THỊT CO.OP FOOD PASTEUR",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PASTEUR"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "128",
+  "storeID": "ST000250",
+  "name": "QUẦY THỊT CO.OP FOOD TRẦN CHÁNH CHIẾU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRẦN CHÁNH CHIẾU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "129",
+  "storeID": "ST000251",
+  "name": "QUẦY THỊT CO.OP FOOD ĐÔNG THẠNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐÔNG THẠNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "130",
+  "storeID": "ST000252",
+  "name": "QUẦY THỊT CO.OP FOOD BÌNH CHIỂU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÌNH CHIỂU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "131",
+  "storeID": "ST000253",
+  "name": "QUẦY THỊT CO.OP FOOD LÊ VĂN SỸ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ VĂN SỸ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "132",
+  "storeID": "ST000254",
+  "name": "QUẦY THỊT CO.OP FOOD CHỢ LỚN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CHỢ LỚN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "133",
+  "storeID": "ST000255",
+  "name": "QUẦY THỊT CO.OP FOOD HOÀNG VĂN THỤ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HOÀNG VĂN THỤ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "134",
+  "storeID": "ST000256",
+  "name": "QUẦY THỊT CO.OP FOOD BẠCH MÃ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BẠCH MÃ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "135",
+  "storeID": "ST000257",
+  "name": "QUẦY THỊT CO.OP FOOD ĐẶNG VĂN BI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐẶNG VĂN BI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "136",
+  "storeID": "ST000258",
+  "name": "QUẦY THỊT CO.OP FOOD BA THÁNG HAI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BA THÁNG HAI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "137",
+  "storeID": "ST000259",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN BÁ TÒNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN BÁ TÒNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "138",
+  "storeID": "ST000260",
+  "name": "QUẦY THỊT CO.OP FOOD LÊ ĐỨC THỌ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ ĐỨC THỌ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "139",
+  "storeID": "ST000261",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN THỊ ĐỊNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN THỊ ĐỊNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "140",
+  "storeID": "ST000262",
+  "name": "QUẦY THỊT CO.OP FOOD BÌNH TRƯNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÌNH TRƯNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "141",
+  "storeID": "ST000263",
+  "name": "QUẦY THỊT CO.OP FOOD HIỆP BÌNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HIỆP BÌNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "142",
+  "storeID": "ST000264",
+  "name": "QUẦY THỊT CO.OP FOOD PHÚ LỢI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHÚ LỢI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "143",
+  "storeID": "ST000265",
+  "name": "QUẦY THỊT CO.OPMART NGUYỄN XÍ",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY NGUYỄN XÍ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "144",
+  "storeID": "ST000266",
+  "name": "QUẦY THỊT CO.OP FOOD PHAN VĂN TRỊ Q.5",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHAN VĂN TRỊ Q.5"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "145",
+  "storeID": "ST000268",
+  "name": "QUẦY THỊT VINMART SÓNG THẦN 2",
+  "retail": "HT VINMART",
+  "shortname": "VM SÓNG THẦN 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "146",
+  "storeID": "ST000269",
+  "name": "QUẦY THỊT CO.OP FOOD BÌNH TRƯNG ĐÔNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÌNH TRƯNG ĐÔNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "147",
+  "storeID": "ST000270",
+  "name": "QUẦY THỊT SATRA CÂY DA XÀ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA CÂY DA XÀ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "148",
+  "storeID": "ST000271",
+  "name": "QUẦY THỊT SATRA NGUYỄN VĂN LUÔNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN VĂN LUÔNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "149",
+  "storeID": "ST000272",
+  "name": "QUẦY THỊT COCOMART CÂY TRÂM",
+  "retail": "HT COCOMART",
+  "shortname": "COCOMART CÂY TRÂM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "150",
+  "storeID": "ST000894",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN SƠN NHÌ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN SƠN NHÌ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "151",
+  "storeID": "ST000274",
+  "name": "QUẦY THỊT CO.OP FOOD TRƯƠNG ĐÌNH HỘI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRƯƠNG ĐÌNH HỘI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "152",
+  "storeID": "ST000275",
+  "name": "QUẦY THỊT SATRA 462 NƠ TRANG LONG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 462 NƠ TRANG LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "153",
+  "storeID": "ST000276",
+  "name": "QUẦY THỊT CO.OP FOOD VĨNH LỘC B",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VĨNH LỘC B"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "154",
+  "storeID": "ST000277",
+  "name": "QUẦY THỊT CO.OP FOOD TỈNH LỘ 10",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TỈNH LỘ 10"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "155",
+  "storeID": "ST000278",
+  "name": "QUẦY THỊT SATRA LÊ LỢI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ LỢI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "156",
+  "storeID": "ST000279",
+  "name": "QUẦY THỊT CO.OP FOOD TÂY THẠNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂY THẠNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "157",
+  "storeID": "ST000280",
+  "name": "QUẦY THỊT CO.OP FOOD QUỐC LỘ 50",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF QUỐC LỘ 50"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "158",
+  "storeID": "ST000889",
+  "name": "QUẦY THỊT CO.OP FOOD 285 PHAN VĂN HỚN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 285 PHAN VĂN HỚN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "159",
+  "storeID": "ST000282",
+  "name": "QUẦY THỊT SATRA TRẦN HƯNG ĐẠO",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TRẦN HƯNG ĐẠO"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "160",
+  "storeID": "ST000283",
+  "name": "QUẦY THỊT CO.OPMART VĨNH LONG",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY VĨNH LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "161",
+  "storeID": "ST000286",
+  "name": "QUẦY THỊT CO.OPMART TRÀ VINH",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY TRÀ VINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "162",
+  "storeID": "ST000287",
+  "name": "QUẦY THỊT CO.OP FOOD UNG VĂN KHIÊM",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF UNG VĂN KHIÊM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "163",
+  "storeID": "ST000288",
+  "name": "QUẦY THỊT SATRA HẢI THƯỢNG LÃNG ÔNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HẢI THƯỢNG LÃNG ÔNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "164",
+  "storeID": "ST000289",
+  "name": "QUẦY THỊT CO.OP FOOD THÁP MƯỜI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF THÁP MƯỜI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "165",
+  "storeID": "ST000290",
+  "name": "QUẦY THỊT CO.OP FOOD GÒ XOÀI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF GÒ XOÀI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "166",
+  "storeID": "ST000291",
+  "name": "QUẦY THỊT CO.OPMART RẠCH MIỄU",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY RẠCH MIỄU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "167",
+  "storeID": "ST000292",
+  "name": "QUẦY THỊT CO.OPMART LONG XUYÊN",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY LONG XUYÊN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "168",
+  "storeID": "ST000293",
+  "name": "QUẦY THỊT SATRA LÊ VĂN KHƯƠNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĂN KHƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "169",
+  "storeID": "ST000294",
+  "name": "QUẦY THỊT CO.OP FOOD TÔ KÝ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÔ KÝ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "170",
+  "storeID": "ST000295",
+  "name": "QUẦY THỊT CO.OPMART PHÚ THỌ",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY PHÚ THỌ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "171",
+  "storeID": "ST000296",
+  "name": "QUẦY THỊT CO.OPMART ĐỖ VĂN DẬY",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY ĐỖ VĂN DẬY"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "172",
+  "storeID": "ST000297",
+  "name": "QUẦY THỊT CO.OPMART BÌNH TÂN",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY BÌNH TÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "173",
+  "storeID": "ST000298",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN VĂN TĂNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN VĂN TĂNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "174",
+  "storeID": "ST000299",
+  "name": "QUẦY THỊT SATRA DẠ NAM",
+  "retail": "HT SATRA",
+  "shortname": "SATRA DẠ NAM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "175",
+  "storeID": "ST000300",
+  "name": "QUẦY THỊT SATRA CHÂU VĂN LIÊM",
+  "retail": "HT SATRA",
+  "shortname": "SATRA CHÂU VĂN LIÊM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "176",
+  "storeID": "ST000301",
+  "name": "QUẦY THỊT CO.OPMART NGUYỄN ẢNH THỦ",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY NGUYỄN ẢNH THỦ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "177",
+  "storeID": "ST000302",
+  "name": "QUẦY THỊT CO.OP FOOD TRẦN QUANG KHẢI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRẦN QUANG KHẢI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "178",
+  "storeID": "ST000303",
+  "name": "SATRA NGUYỄN HUỆ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN HUỆ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "179",
+  "storeID": "ST000307",
+  "name": "QUẦY THỊT SATRA NGUYÊN HỒNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYÊN HỒNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "180",
+  "storeID": "ST000308",
+  "name": "QUẦY THỊT COCOMART TẠ QUANG BỬU",
+  "retail": "HT COCOMART",
+  "shortname": "COCOMART TẠ QUANG BỬU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "181",
+  "storeID": "ST000309",
+  "name": "QUẦY THỊT CO.OP FOOD 53 PHẠM VĂN CHIÊU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 53 PHẠM VĂN CHIÊU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "182",
+  "storeID": "ST000310",
+  "name": "QUẦY THỊT CO.OPMART BẾN TRE",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY BẾN TRE"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "183",
+  "storeID": "ST000311",
+  "name": "QUẦY THỊT CO.OPMART VĨNH LỘC B",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY VĨNH LỘC B"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "184",
+  "storeID": "ST000312",
+  "name": "QUẦY THỊT CO.OP FOOD LÊ VĂN KHƯƠNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ VĂN KHƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "185",
+  "storeID": "ST000313",
+  "name": "QUẦY THỊT CO.OPMART ĐỒNG XOÀI",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY ĐỒNG XOÀI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "186",
+  "storeID": "ST000314",
+  "name": "QUẦY THỊT SATRA ĐỒNG KHỞI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐỒNG KHỞI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "187",
+  "storeID": "ST000315",
+  "name": "QUẦY THỊT COCOMART PHAN HUY ÍCH",
+  "retail": "HT COCOMART",
+  "shortname": "COCOMART PHAN HUY ÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "188",
+  "storeID": "ST000316",
+  "name": "QUẦY THỊT CO.OP FOOD PHAN HUY ÍCH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHAN HUY ÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "189",
+  "storeID": "ST000317",
+  "name": "QUẦY THỊT CO.OPMART BÌNH DƯƠNG",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY BÌNH DƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "190",
+  "storeID": "ST000318",
+  "name": "QUẦY THỊT SATRA LƯƠNG HỮU KHÁNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LƯƠNG HỮU KHÁNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "191",
+  "storeID": "ST000319",
+  "name": "QUẦY THỊT CO.OP FOOD ÂU CƠ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ÂU CƠ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "192",
+  "storeID": "ST000320",
+  "name": "QUẦY THỊT CO.OPMART QUANG TRUNG",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY QUANG TRUNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "193",
+  "storeID": "ST000321",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN DUY TRINH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN DUY TRINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "194",
+  "storeID": "ST000322",
+  "name": "QUẦY THỊT SATRA HOA SEN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HOA SEN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "195",
+  "storeID": "ST000323",
+  "name": "QUẦY THỊT SATRA 204-206 LÊ THÁNH TÔN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 204-206 LÊ THÁNH TÔN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "196",
+  "storeID": "ST000324",
+  "name": "QUẦY THỊT SATRA TÂN HÒA ĐÔNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TÂN HÒA ĐÔNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "197",
+  "storeID": "ST000325",
+  "name": "QUẦY THỊT CO.OP FOOD LƯƠNG ĐỊNH CỦA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LƯƠNG ĐỊNH CỦA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "198",
+  "storeID": "ST000326",
+  "name": "QUẦY THỊT CO.OP FOOD HÀNG XANH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HÀNG XANH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "199",
+  "storeID": "ST000327",
+  "name": "QUẦY THỊT COCOMART HUỲNH MẪN ĐẠT",
+  "retail": "HT COCOMART",
+  "shortname": "COCOMART HUỲNH MẪN ĐẠT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "200",
+  "storeID": "ST000328",
+  "name": "QUẦY THỊT SATRA PHAN CHU TRINH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHAN CHU TRINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "201",
+  "storeID": "ST000333",
+  "name": "QUẦY THỊT SATRA HÙNG VƯƠNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HÙNG VƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "202",
+  "storeID": "ST000340",
+  "name": "QUẦY THỊT CO.OPMART TiỀN GIANG",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY TiỀN GIANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "203",
+  "storeID": "ST000341",
+  "name": "QUẦY THỊT CO.OP FOOD BÙI ĐÌNH TÚY",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÙI ĐÌNH TÚY"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "204",
+  "storeID": "ST000342",
+  "name": "QUẦY THỊT LOTUS MART",
+  "retail": "HT KHÁC",
+  "shortname": "ST LOTUS MART"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "205",
+  "storeID": "ST000343",
+  "name": "QUẦY THỊT CO.OPMART CAO LÃNH",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY CAO LÃNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "206",
+  "storeID": "ST000344",
+  "name": "QUẦY THỊT SATRA CHUNG CƯ NGỌC LAN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA CHUNG CƯ NGỌC LAN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "207",
+  "storeID": "ST000345",
+  "name": "QUẦY THỊT LOTUS PHẠM HỮU LẦU",
+  "retail": "HT KHÁC",
+  "shortname": "ST LOTUS PHẠM HỮU LẦU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "208",
+  "storeID": "ST000352",
+  "name": "QUẦY THỊT SATRA HƯƠNG LỘ 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HƯƠNG LỘ 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "209",
+  "storeID": "ST000354",
+  "name": "QUẦY THỊT SATRA ĐƯỜNG SỐ 6 GÒ VẤP",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐƯỜNG SỐ 6 GÒ VẤP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "210",
+  "storeID": "ST000355",
+  "name": "QUẦY THỊT CO.OPMART TÂN PHONG",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY TÂN PHONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "211",
+  "storeID": "ST000356",
+  "name": "QUẦY THỊT SATRA NGUYỄN DUY TRINH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN DUY TRINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "212",
+  "storeID": "ST000357",
+  "name": "QUẦY THỊT SATRA NGUYỄN VĂN QUÁ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN VĂN QUÁ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "213",
+  "storeID": "ST000358",
+  "name": "QUẦY THỊT SATRA LÊ ĐỨC THỌ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ ĐỨC THỌ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "214",
+  "storeID": "ST000360",
+  "name": "QUẦY THỊT SATRA BÀ TRIỆU",
+  "retail": "HT SATRA",
+  "shortname": "SATRA BÀ TRIỆU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "215",
+  "storeID": "ST000362",
+  "name": "QUẦY THỊT SATRA BÌNH HƯNG HÒA",
+  "retail": "HT SATRA",
+  "shortname": "SATRA BÌNH HƯNG HÒA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "216",
+  "storeID": "ST000363",
+  "name": "QUẦY THỊT CO.OP FOOD HƯNG PHÚ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HƯNG PHÚ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "217",
+  "storeID": "ST000364",
+  "name": "QUẦY THỊT AEON CITIMART TROPIC GARDEN",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI TROPIC GARDEN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "218",
+  "storeID": "ST000366",
+  "name": "SATRA BÌNH LỢI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA BÌNH LỢI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "220",
+  "storeID": "ST000369",
+  "name": "QUẦY THỊT CO.OP FOOD BÌNH GIÃ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÌNH GIÃ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "221",
+  "storeID": "ST000370",
+  "name": "QUẦY THỊT CO.OPMART BÌNH DƯƠNG 2",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY BÌNH DƯƠNG 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "222",
+  "storeID": "ST000371",
+  "name": "QUẦY THỊT SATRA LÊ VĂN LINH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĂN LINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "223",
+  "storeID": "ST000372",
+  "name": "QUẦY THỊT SATRA LÊ VĂN VIỆT",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĂN VIỆT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "224",
+  "storeID": "ST000374",
+  "name": "QUẦY THỊT CO.OP FOOD THỐNG NHẤT",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF THỐNG NHẤT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "225",
+  "storeID": "ST000375",
+  "name": "QUẦY THỊT COCOMART HUỲNH TẤN PHÁT",
+  "retail": "HT COCOMART",
+  "shortname": "COCOMART HUỲNH TẤN PHÁT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "226",
+  "storeID": "ST000376",
+  "name": "AEON CITIMART TRUNG TÂM SỈ",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI SỈ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "227",
+  "storeID": "ST000378",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN THÁI SƠN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN THÁI SƠN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "228",
+  "storeID": "ST000379",
+  "name": "QUẦY THỊT CO.OP FOOD VÕ THÀNH TRANG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VÕ THÀNH TRANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "229",
+  "storeID": "ST000380",
+  "name": "QUẦY THỊT AEON CITIMART CAO THẮNG",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI CAO THẮNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "230",
+  "storeID": "ST000381",
+  "name": "QUẦY THỊT AEON CITIMART QUANG TRUNG",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI QUANG TRUNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "231",
+  "storeID": "ST000385",
+  "name": "QUẦY THỊT CO.OP FOOD PHẠM THẾ HIỂN 2",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHẠM THẾ HIỂN 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "232",
+  "storeID": "ST000386",
+  "name": "QUẦY THỊT CO.OP FOOD TRẦN VĂN GIÀU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRẦN VĂN GIÀU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "233",
+  "storeID": "ST000387",
+  "name": "QUẦY THỊT CO.OPMART KIÊN GIANG",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY KIÊN GIANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "234",
+  "storeID": "ST000388",
+  "name": "QUẦY THỊT CO.OPMART RẠCH GIÁ",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY RẠCH GIÁ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "235",
+  "storeID": "ST000389",
+  "name": "QUẦY THỊT CO.OPMART CÀ MAU",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY CÀ MAU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "236",
+  "storeID": "ST000390",
+  "name": "QUẦY THỊT CO.OPMART SÓC TRĂNG",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY SÓC TRĂNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "237",
+  "storeID": "ST000391",
+  "name": "QUẦY THỊT CO.OPMART BẠC LIÊU 2",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY BẠC LIÊU 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "238",
+  "storeID": "ST000392",
+  "name": "QUẦY THỊT CO.OPMART NGÃ BẢY HẬU GIANG",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY NGÃ BẢY HẬU GIANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "239",
+  "storeID": "ST000393",
+  "name": "QUẦY THỊT CO.OPMART VỊ THANH HẬU GIANG",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY VỊ THANH HẬU GIANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "240",
+  "storeID": "ST000394",
+  "name": "QUẦY THỊT SATRA NGUYỄN ẢNH THỦ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN ẢNH THỦ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "241",
+  "storeID": "ST000395",
+  "name": "QUẦY THỊT SATRA VƯỜN LÀI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA VƯỜN LÀI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "242",
+  "storeID": "ST000396",
+  "name": "QUẦY THỊT SATRA UNG VĂN KHIÊM",
+  "retail": "HT SATRA",
+  "shortname": "SATRA UNG VĂN KHIÊM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "243",
+  "storeID": "ST000398",
+  "name": "QUẦY THỊT CO.OP FOOD PHÚ THUẬN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHÚ THUẬN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "244",
+  "storeID": "ST000399",
+  "name": "QUẦY THỊT AN VUI",
+  "retail": "HT KHÁC",
+  "shortname": "ST AN VUI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "245",
+  "storeID": "ST000400",
+  "name": "QUẦY THỊT SATRA HỒ VĂN TƯ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HỒ VĂN TƯ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "246",
+  "storeID": "ST000401",
+  "name": "QUẦY THỊT SATRA LÝ THƯỜNG KIỆT",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÝ THƯỜNG KIỆT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "247",
+  "storeID": "ST000402",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN SƠN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN SƠN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "248",
+  "storeID": "ST000403",
+  "name": "QUẦY THỊT SMART PHẠM VĂN CHIÊU",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN PHẠM VĂN CHIÊU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "249",
+  "storeID": "ST000404",
+  "name": "QUẦY THỊT SMART MÃ LÒ",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN MÃ LÒ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "250",
+  "storeID": "ST000895",
+  "name": "QUẦY THỊT CO.OP FOOD HIMLAM CHỢ LỚN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HIMLAM CHỢ LỚN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "251",
+  "storeID": "ST000406",
+  "name": "QUẦY THỊT SATRA PHAN ĐÌNH PHÙNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHAN ĐÌNH PHÙNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "252",
+  "storeID": "ST000407",
+  "name": "QUẦY THỊT SATRA TÔ KÝ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TÔ KÝ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "253",
+  "storeID": "ST000408",
+  "name": "QUẦY THỊT VINMART CỘNG HÒA",
+  "retail": "HT VINMART",
+  "shortname": "VM CỘNG HÒA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "254",
+  "storeID": "ST000409",
+  "name": "QUẦY THỊT VINMART BA THÁNG HAI",
+  "retail": "HT VINMART",
+  "shortname": "VM BA THÁNG HAI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "255",
+  "storeID": "ST000410",
+  "name": "QUẦY THỊT SATRA 1438 PHẠM THẾ HIỂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 1438 PHẠM THẾ HIỂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "256",
+  "storeID": "ST000412",
+  "name": "QUẦY THỊT SATRA NGUYỄN THỊ ĐỊNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN THỊ ĐỊNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "257",
+  "storeID": "ST000413",
+  "name": "QUẦY THỊT SATRA PHAN VĂN KHỎE",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHAN VĂN KHỎE"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "258",
+  "storeID": "ST000414",
+  "name": "QUẦY THỊT SATRA TỈNH LỘ 8",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TỈNH LỘ 8"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "259",
+  "storeID": "ST000416",
+  "name": "QUẦY THỊT SATRA CỐNG QUỲNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA CỐNG QUỲNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "260",
+  "storeID": "ST000417",
+  "name": "QUẦY THỊT SATRA ĐINH TIÊN HOÀNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐINH TIÊN HOÀNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "261",
+  "storeID": "ST000418",
+  "name": "QUẦY THỊT SATRA PHÚ MỸ HƯNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHÚ MỸ HƯNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "262",
+  "storeID": "ST000419",
+  "name": "QUẦY THỊT CO.OPMART NGUYỄN BÌNH NHÀ BÈ",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY NGUYỄN BÌNH NHÀ BÈ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "263",
+  "storeID": "ST000420",
+  "name": "QUẦY THỊT CO.OP FOOD THÁI SƠN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF THÁI SƠN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "264",
+  "storeID": "ST000421",
+  "name": "QUẦY THỊT SATRA 16 ĐƯỜNG SỐ 5",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 16 ĐƯỜNG SỐ 5"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "265",
+  "storeID": "ST000422",
+  "name": "QUẦY THỊT SATRA 67 TỈNH LỘ 8",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 67 TỈNH LỘ 8"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "266",
+  "storeID": "ST000423",
+  "name": "QUẦY THỊT AEON CITIMART PHÚC YÊN",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI PHÚC YÊN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "267",
+  "storeID": "ST000424",
+  "name": "QUẦY THỊT SIÊU THỊ HQCMART",
+  "retail": "HT KHÁC",
+  "shortname": "ST SIÊU THỊ HQCMART"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "268",
+  "storeID": "ST000425",
+  "name": "QUẦY THỊT SATRA THÁP MƯỜI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA THÁP MƯỜI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "269",
+  "storeID": "ST000426",
+  "name": "QUẦY THỊT AEON CITIMART HIM LAM",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI HIM LAM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "270",
+  "storeID": "ST000427",
+  "name": "QUẦY THỊT SATRA 29 DÂN CHỦ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 29 DÂN CHỦ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "271",
+  "storeID": "ST000428",
+  "name": "QUẦY THỊT CO.OPMART BẾN LỨC",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY BẾN LỨC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "272",
+  "storeID": "ST000429",
+  "name": "QUẦY THỊT SATRA 87A ĐỖ XUÂN HỢP",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 87A ĐỖ XUÂN HỢP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "273",
+  "storeID": "ST000430",
+  "name": "QUẦY THỊT SATRA 100 LÊ ĐỨC THỌ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 100 LÊ ĐỨC THỌ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "274",
+  "storeID": "ST000431",
+  "name": "QUẦY THỊT SATRAFOODS 975 NGUYỄN DUY TRINH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 975 NGUYỄN DUY TRINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "275",
+  "storeID": "ST000434",
+  "name": "QUẦY THỊT SATRA 324 NGUYỄN OANH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 324 NGUYỄN OANH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "276",
+  "storeID": "ST000435",
+  "name": "QUẦY THỊT SMART AUCHAN TRƯỜNG SƠN",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN TRƯỜNG SƠN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "277",
+  "storeID": "ST000436",
+  "name": "QUẦY THỊT SATRA 46B NGUYỄN VĂN ĐẬU",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 46B NGUYỄN VĂN ĐẬU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "278",
+  "storeID": "ST000437",
+  "name": "QUẦY THỊT CO.OPMART SA ĐÉC",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY SA ĐÉC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "279",
+  "storeID": "ST000438",
+  "name": "QUẦY THỊT SATRA 635A ĐIỆN BIÊN PHỦ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 635A ĐIỆN BIÊN PHỦ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "280",
+  "storeID": "ST000439",
+  "name": "QUẦY THỊT CO.OP FOOD HIỆP BÌNH CHÁNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HIỆP BÌNH CHÁNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "281",
+  "storeID": "ST000440",
+  "name": "QUẦY THỊT CO.OP FOOD CÁT LÁI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CÁT LÁI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "282",
+  "storeID": "ST000441",
+  "name": "QUẦY THỊT CO.OP FOOD THANH ĐA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF THANH ĐA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "283",
+  "storeID": "ST000442",
+  "name": "QUẦY THỊT CO.OPMART GÒ CÔNG",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY GÒ CÔNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "284",
+  "storeID": "ST000443",
+  "name": "QUẦY THỊT AEON CITIMART SUNRISE",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI SUNRISE"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "285",
+  "storeID": "ST000444",
+  "name": "QUẦY THỊT CO.OP FOOD CHUNG CƯ 13B",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CHUNG CƯ 13B"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "286",
+  "storeID": "ST000445",
+  "name": "QUẦY THỊT SATRA ĐƯỜNG D4 CỦ CHI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐƯỜNG D4 CỦ CHI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "287",
+  "storeID": "ST000446",
+  "name": "QUẦY THỊT CO.OP FOOD CHUNG CƯ BÌNH PHÚ 1",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC BÌNH PHÚ 1"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "288",
+  "storeID": "ST000447",
+  "name": "QUẦY THỊT SATRAFOODS GÒ XOÀI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA GÒ XOÀI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "289",
+  "storeID": "ST000448",
+  "name": "QUẦY THỊT CO.OP FOOD TRƯƠNG GIA MÔ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRƯƠNG GIA MÔ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "290",
+  "storeID": "ST000449",
+  "name": "QUẦY THỊT SATRA TÂN HƯƠNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TÂN HƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "291",
+  "storeID": "ST001198",
+  "name": "QUẦY THỊT OSIFOOD NGUYỄN KHOÁI",
+  "retail": "HT KHÁC",
+  "shortname": "OSIFOOD NGUYỄN KHOÁI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "292",
+  "storeID": "ST000451",
+  "name": "QUẦY THỊT SATRA BÌNH ĐIỀN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA BÌNH ĐIỀN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "293",
+  "storeID": "ST000452",
+  "name": "QUẦY THỊT SATRA 64 ĐẶNG VĂN BI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 64 ĐẶNG VĂN BI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "294",
+  "storeID": "ST000453",
+  "name": "QUẦY THỊT SATRA 252 TÔ NGỌC VÂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 252 TÔ NGỌC VÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "295",
+  "storeID": "ST000454",
+  "name": "QUẦY THỊT CO.OP FOOD LÊ THỊ HÀ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ THỊ HÀ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "296",
+  "storeID": "ST001200",
+  "name": "QUẦY THỊT OSIFOOD ĐO ĐẠC",
+  "retail": "HT KHÁC",
+  "shortname": "OSIFOOD ĐO ĐẠC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "297",
+  "storeID": "ST000456",
+  "name": "QUẦY THỊT CO.OP FOOD NGUYỄN LƯƠNG BẰNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN LƯƠNG BẰNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "298",
+  "storeID": "ST000457",
+  "name": "QUẦY THỊT SATRA AN DƯƠNG VƯƠNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA AN DƯƠNG VƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "299",
+  "storeID": "ST000458",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN CHUNG CƯ ĐÀO DUY TỪ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ ĐÀO DUY TỪ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "300",
+  "storeID": "ST000459",
+  "name": "QUẦY THỊT SATRA HOÀNG HOA THÁM",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HOÀNG HOA THÁM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "301",
+  "storeID": "ST000460",
+  "name": "QUẦY THỊT SATRA TÂY HÒA",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TÂY HÒA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "302",
+  "storeID": "ST000461",
+  "name": "QUẦY THỊT CO.OP FOOD CHUNG CƯ PETROLAND",
+  "retail": "HT COOPFOOD",
+  "shortname": "CFCC PETROLAND"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "303",
+  "storeID": "ST000462",
+  "name": "QUẦY THỊT CO.OP FOOD DƯƠNG ĐÌNH HỘI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF DƯƠNG ĐÌNH HỘI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "304",
+  "storeID": "ST000463",
+  "name": "QUẦY THỊT SATRA 73\/1 NGUYỄN VĂN QUÁ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 73\/1 NGUYỄN VĂN QUÁ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "305",
+  "storeID": "ST000464",
+  "name": "QUẦY THỊT CO.OP FOOD CHUNG CƯ CARINA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC CARINA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "306",
+  "storeID": "ST000465",
+  "name": "QUẦY THỊT AEON CITIMART BCA QUẬN 2",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI BCA QUẬN 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "307",
+  "storeID": "ST000466",
+  "name": "QUẦY THỊT CO.OPMART THỐT NỐT",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY THỐT NỐT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "308",
+  "storeID": "ST000467",
+  "name": "QUẦY THỊT SATRA ĐINH ĐỨC THIỆN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐINH ĐỨC THIỆN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "309",
+  "storeID": "ST000888",
+  "name": "QUẦY THỊT CO.OP FOOD SƠN KỲ 2",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF SƠN KỲ 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "310",
+  "storeID": "ST000469",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN NGÔ QUYỀN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ NGÔ QUYỀN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "311",
+  "storeID": "ST000470",
+  "name": "QUẦY THỊT AUCHAN LẠC LONG QUÂN",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN LẠC LONG QUÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "312",
+  "storeID": "ST000471",
+  "name": "QUẦY THỊT AUCHAN NGUYỄN LƯƠNG BẰNG",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN NGUYỄN LƯƠNG BẰNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "313",
+  "storeID": "ST000472",
+  "name": "QUẦY THỊT SATRA 31\/7 NGUYỄN ẢNH THỦ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 31\/7 NGUYỄN ẢNH THỦ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "314",
+  "storeID": "ST000473",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN NAM LONG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ NAM LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "315",
+  "storeID": "ST000474",
+  "name": "QUẦY THỊT SATRA HOÀNG BẬT ĐẠT",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HOÀNG BẬT ĐẠT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "316",
+  "storeID": "ST000475",
+  "name": "QUẦY THỊT CO.OP FOOD 397 PHAN HUY ÍCH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 397 PHAN HUY ÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "317",
+  "storeID": "ST000476",
+  "name": "QUẦY THỊT CO.OP FOOD FLORA ĐỖ XUÂN HỢP",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF FLORA ĐỖ XUÂN HỢP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "318",
+  "storeID": "ST000477",
+  "name": "QUẦY THỊT CO.OP FOOD 13 LÊ VĂN THỊNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 13 LÊ VĂN THỊNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "319",
+  "storeID": "ST000478",
+  "name": "QUẦY THỊT SATRA 997 TỈNH LỘ 10",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 997 TỈNH LỘ 10"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "320",
+  "storeID": "ST000479",
+  "name": "QUẦY THỊT SATRA LÊ VĨNH HÒA",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĨNH HÒA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "321",
+  "storeID": "ST000480",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN TÂY HÒA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ TÂY HÒA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "322",
+  "storeID": "ST000481",
+  "name": "QUẦY THỊT CO.OP FOOD HOÀNG DIỆU 2",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HOÀNG DIỆU 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "323",
+  "storeID": "ST000482",
+  "name": "QUẦY THỊT SATRA ĐINH BỘ LĨNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐINH BỘ LĨNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "324",
+  "storeID": "ST000483",
+  "name": "QUẦY THỊT CO.OP FOOD AN KHANG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF AN KHANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "325",
+  "storeID": "ST000484",
+  "name": "QUẦY THỊT AUCHAN TÂY NINH",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN TÂY NINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "326",
+  "storeID": "ST000485",
+  "name": "QUẦY THỊT CO.OPMART CHÂU ĐỐC",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY CHÂU ĐỐC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "327",
+  "storeID": "ST000486",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN NGUYỄN VĂN CÔNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ NGUYỄN VĂN CÔNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "328",
+  "storeID": "ST000487",
+  "name": "QUẦY THỊT SATRA 3437 PHẠM THẾ HIỂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 3437 PHẠM THẾ HIỂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "329",
+  "storeID": "ST000488",
+  "name": "QUẦY THỊT SATRA AN BÌNH",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA AN BÌNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "330",
+  "storeID": "ST000489",
+  "name": "QUẦY THỊT SATRA XUÂN KHÁNH",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA XUÂN KHÁNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "331",
+  "storeID": "ST000490",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN CÀ MAU",
+  "retail": "HT COOPFOD TỈNH",
+  "shortname": "CF NQ CÀ MAU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "332",
+  "storeID": "ST000491",
+  "name": "QUẦY THỊT AUCHAN MAI LAN",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN MAI LAN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "333",
+  "storeID": "ST000492",
+  "name": "QUẦY THỊT CO.OPMART BẢO LỘC",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY BẢO LỘC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "334",
+  "storeID": "ST000493",
+  "name": "QUẦY THỊT SATRA PHẠM VĂN BẠCH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHẠM VĂN BẠCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "335",
+  "storeID": "ST000494",
+  "name": "QUẦY THỊT SATRA DƯƠNG ĐỨC HIỀN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA DƯƠNG ĐỨC HIỀN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "336",
+  "storeID": "ST000495",
+  "name": "QUẦY THỊT SATRA 44 ĐƯỜNG SỐ 1",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 44 ĐƯỜNG SỐ 1"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "337",
+  "storeID": "ST000496",
+  "name": "QUẦY THỊT SATRA LÊ VĂN QUỚI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĂN QUỚI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "338",
+  "storeID": "ST000497",
+  "name": "QUẦY THỊT CO.OP FOOD GREEN HILLS",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF GREEN HILLS"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "339",
+  "storeID": "ST000498",
+  "name": "QUẦY THỊT CO.OP FOOD CHUNG CƯ SƠN KỲ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC SƠN KỲ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "340",
+  "storeID": "ST000499",
+  "name": "QUẦY THỊT SATRA 201 ĐƯỜNG 3 THÁNG 2",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA 201 ĐƯỜNG 3 THÁNG 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "341",
+  "storeID": "ST000500",
+  "name": "QUẦY THỊT SATRA 204 NGUYỄN VĂN CỪ",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA 204 NGUYỄN VĂN CỪ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "342",
+  "storeID": "ST000501",
+  "name": "QUẦY THỊT CO.OP FOOD SÀI GÒN TOWN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF SÀI GÒN TOWN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "343",
+  "storeID": "ST000502",
+  "name": "QUẦY THỊT AEON CITIMART KIÊN GIANG",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI KIÊN GIANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "344",
+  "storeID": "ST000503",
+  "name": "QUẦY THỊT SATRAFOODS 228 NGUYỄN VĂN ĐẬU",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 228 NGUYỄN VĂN ĐẬU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "345",
+  "storeID": "ST000504",
+  "name": "QUẦY THỊT SATRAFOODS 28 CƯ XÁ PHÚ LÂM D",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 28 CƯ XÁ PHÚ LÂM D"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "346",
+  "storeID": "ST000505",
+  "name": "QUẦY THỊT SATRAFOODS 1E\/1 NGUYỄN THỊ ĐẶNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 1E\/1 NGUYỄN THỊ ĐẶNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "347",
+  "storeID": "ST000506",
+  "name": "QUẦY THỊT SATRAFOODS 80 NGUYỄN THƯỢNG HIỀN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 80 NGUYỄN THƯỢNG HIỀN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "348",
+  "storeID": "ST000507",
+  "name": "QUẦY THỊT SATRAFOODS 25 NGUYỄN XUÂN KHOÁT",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 25 NGUYỄN XUÂN KHOÁT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "349",
+  "storeID": "ST000508",
+  "name": "QUẦY THỊT CO.OP FOOD VÕ VĂN VÂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VÕ VĂN VÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "350",
+  "storeID": "ST000890",
+  "name": "QUẦY THỊT CO.OP FOOD 22 TRƯỜNG CHINH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 22 TRƯỜNG CHINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "351",
+  "storeID": "ST000510",
+  "name": "QUẦY THỊT CO.OPFOOD 174 PHAN VĂN HỚN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF174 PHAN VĂN HỚN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "352",
+  "storeID": "ST000511",
+  "name": "QUẦY THỊT SATRAFOODS B6\/187 QL50",
+  "retail": "HT SATRA",
+  "shortname": "SATRA B6\/187 QL50"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "353",
+  "storeID": "ST000512",
+  "name": "QUẦY THỊT VINMART+ 202 NGUYỄN DUY TRINH",
+  "retail": "HT VINMART+",
+  "shortname": "VM  202 NGUYỄN DUY TRINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "354",
+  "storeID": "ST000513",
+  "name": "QUẦY THỊT VINMART+ 24-24B TÔN ĐẢN",
+  "retail": "HT VINMART+",
+  "shortname": "VM  24-24B TÔN ĐẢN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "355",
+  "storeID": "ST000514",
+  "name": "QUẦY THỊT VINMART+ 1044 NGUYỄN VĂN QUÁ",
+  "retail": "HT VINMART+",
+  "shortname": "VM  1044 NGUYỄN VĂN QUÁ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "356",
+  "storeID": "ST000515",
+  "name": "QUẦY THỊT VINMART+ 33 BÙI QUANG LÀ",
+  "retail": "HT VINMART+",
+  "shortname": "VM  33 BÙI QUANG LÀ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "357",
+  "storeID": "ST000516",
+  "name": "QUẦY THỊT VINMART+ HÀ ĐÔ",
+  "retail": "HT VINMART+",
+  "shortname": "VM  HÀ ĐÔ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "358",
+  "storeID": "ST000517",
+  "name": "QUẦY THỊT VINMART+ 234 TÔ NGỌC VÂN",
+  "retail": "HT VINMART+",
+  "shortname": "VM  234 TÔ NGỌC VÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "359",
+  "storeID": "ST000518",
+  "name": "QUẦY THỊT VINMART+ 97 HOÀNG DIỆU 2",
+  "retail": "HT VINMART+",
+  "shortname": "VM  97 HOÀNG DIỆU 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "360",
+  "storeID": "ST000519",
+  "name": "QUẦY THỊT VINMART+ 108 HOÀNG HOA THÁM",
+  "retail": "HT VINMART+",
+  "shortname": "VM  108 HOÀNG HOA THÁM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "361",
+  "storeID": "ST000520",
+  "name": "QUẦY THỊT VINMART+ 300B NGUYỄN TRỌNG TUYỂN",
+  "retail": "HT VINMART+",
+  "shortname": "VM  300B NGUYỄN TRỌNG TUYỂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "362",
+  "storeID": "ST000521",
+  "name": "QUẦY THỊT VINMART+ 323-325 BÙI HỮU NGHĨA",
+  "retail": "HT VINMART+",
+  "shortname": "VM  323-325 BÙI HỮU NGHĨA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "363",
+  "storeID": "ST000522",
+  "name": "QUẦY THỊT VINMART+ 87 NƠ TRANG LONG",
+  "retail": "HT VINMART+",
+  "shortname": "VM  87 NƠ TRANG LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "364",
+  "storeID": "ST000523",
+  "name": "QUẦY THỊT VINMART+ 942 TỈNH LỘ 10",
+  "retail": "HT VINMART+",
+  "shortname": "VM  942 TỈNH LỘ 10"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "365",
+  "storeID": "ST000524",
+  "name": "QUẦY THỊT VINMART+ 476 PHAN XÍCH LONG",
+  "retail": "HT VINMART+",
+  "shortname": "VM  476 PHAN XÍCH LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "366",
+  "storeID": "ST000525",
+  "name": "QUẦY THỊT VINMART+ 95 HÒA HƯNG",
+  "retail": "HT VINMART+",
+  "shortname": "VM  95 HÒA HƯNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "367",
+  "storeID": "ST000526",
+  "name": "QUẦY THỊT VINMART+ THUẬN VIỆT",
+  "retail": "HT VINMART+",
+  "shortname": "VM  THUẬN VIỆT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "368",
+  "storeID": "ST000527",
+  "name": "QUẦY THỊT VINMART+ 1438B PHẠM THẾ HIỂN",
+  "retail": "HT VINMART+",
+  "shortname": "VM  1438B PHẠM THẾ HIỂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "369",
+  "storeID": "ST000528",
+  "name": "QUẦY THỊT VINMART+ 84 NGUYỄN THỊ THẬP",
+  "retail": "HT VINMART+",
+  "shortname": "VM  84 NGUYỄN THỊ THẬP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "370",
+  "storeID": "ST000529",
+  "name": "QUẦY THỊT VINMART+ THE ERA TOWN",
+  "retail": "HT VINMART+",
+  "shortname": "VM  THE ERA TOWN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "371",
+  "storeID": "ST000530",
+  "name": "QUẦY THỊT VINMART+ 457-459 ÂU CƠ",
+  "retail": "HT VINMART+",
+  "shortname": "VM  457-459 ÂU CƠ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "372",
+  "storeID": "ST000531",
+  "name": "QUẦY THỊT SATRAFOODS 46-46A NGUYỄN THỊ KIỂU",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 46-46A NGUYỄN THỊ KIỂU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "373",
+  "storeID": "ST000532",
+  "name": "QUẦY THỊT SATRAFOODS 96 PHẠM VĂN CHIÊU",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 96 PHẠM VĂN CHIÊU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "374",
+  "storeID": "ST000533",
+  "name": "QUẦY THỊT SATRAFOODS 215 NGUYỄN VĂN TĂNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 215 NGUYỄN VĂN TĂNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "375",
+  "storeID": "ST000534",
+  "name": "QUẦY THỊT VINMART+ AN KHÁNH",
+  "retail": "HT VINMART+",
+  "shortname": "VM  AN KHÁNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "376",
+  "storeID": "ST000535",
+  "name": "QUẦY THỊT VINMART+ 91\/17B CÁCH MẠNG THÁNG TÁM",
+  "retail": "HT VINMART+",
+  "shortname": "VM  91\/17B CMT8"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "377",
+  "storeID": "ST000536",
+  "name": "QUẦY THỊT NỮ HOÀNG SALA",
+  "retail": "HT KHÁC",
+  "shortname": "ST NỮ HOÀNG SALA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "378",
+  "storeID": "ST000537",
+  "name": "QUẦY THỊT CO.OP FOOD TẠ QUANG BỬU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TẠ QUANG BỬU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "379",
+  "storeID": "ST000538",
+  "name": "QUẦY THỊT SATRAFOODS 75A NGUYỄN VĂN KHẠ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 75A NGUYỄN VĂN KHẠ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "380",
+  "storeID": "ST000539",
+  "name": "QUẦY THỊT SATRAFOODS 45T ĐẶNG THÚC VỊNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 45T ĐẶNG THÚC VỊNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "381",
+  "storeID": "ST000540",
+  "name": "QUẦY THỊT SATRAFOODS D3\/18A NGUYỄN THỊ TÚ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA D3\/18A NGUYỄN THỊ TÚ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "382",
+  "storeID": "ST000541",
+  "name": "QUẦY THỊT SATRAFOODS 247 TRẦN THỊ CỜ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 247 TRẦN THỊ CỜ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "383",
+  "storeID": "ST000542",
+  "name": "QUẦY THỊT SATRAFOODS 26\/13C TRẦN VĂN MƯỜI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 26\/13C TRẦN VĂN MƯỜI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "384",
+  "storeID": "ST000543",
+  "name": "QUẦY THỊT SATRAFOODS 103 NGUYỄN VĂN CỪ",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA 103 NGUYỄN VĂN CỪ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "385",
+  "storeID": "ST000544",
+  "name": "QUẦY THỊT SATRAFOODS 135 PHAN ĐÌNH PHÙNG",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA 135 PHAN ĐÌNH PHÙNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "386",
+  "storeID": "ST000545",
+  "name": "QUẦY THỊT SATRAFOODS 174A1 TRẦN QUANG DIỆU",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA 174A1 TRẦN QUANG DIỆU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "387",
+  "storeID": "ST000546",
+  "name": "QUẦY THỊT AUCHAN HOÀNG VĂN THỤ",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN HOÀNG VĂN THỤ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "388",
+  "storeID": "ST000547",
+  "name": "QUẦY THỊT VINMART LONG XUYÊN",
+  "retail": "HT VINMART",
+  "shortname": "VM LONG XUYÊN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "389",
+  "storeID": "ST000548",
+  "name": "QUẦY THỊT VINMART BẠC LIÊU",
+  "retail": "HT VINMART",
+  "shortname": "VM BẠC LIÊU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "390",
+  "storeID": "ST000549",
+  "name": "QUẦY THỊT VINMART TRÀ VINH",
+  "retail": "HT VINMART",
+  "shortname": "VM TRÀ VINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "391",
+  "storeID": "ST000550",
+  "name": "QUẦY THỊT VINMART VĨNH LONG",
+  "retail": "HT VINMART",
+  "shortname": "VM VĨNH LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "392",
+  "storeID": "ST000551",
+  "name": "QUẦY THỊT VINMART KIÊN GIANG",
+  "retail": "HT VINMART",
+  "shortname": "VM KIÊN GIANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "393",
+  "storeID": "ST000552",
+  "name": "QUẦY THỊT VINMART VỊ THANH HẬU GIANG",
+  "retail": "HT VINMART",
+  "shortname": "VM VỊ THANH HẬU GIANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "394",
+  "storeID": "ST000553",
+  "name": "QUẦY THỊT SATRAFOODS 140 -142 THÍCH QUẢNG ĐỨC",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 140 -142 THÍCH QUẢNG ĐỨC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "395",
+  "storeID": "ST000554",
+  "name": "QUẦY THỊT SATRAFOODS 65 ĐƯỜNG SỐ 11",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 65 ĐƯỜNG SỐ 11"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "396",
+  "storeID": "ST000555",
+  "name": "QUẦY THỊT SATRAFOODS 89 HÀ HUY GIÁP",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 89 HÀ HUY GIÁP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "397",
+  "storeID": "ST000556",
+  "name": "QUẦY THỊT SATRAFOODS 471A HƯƠNG LỘ 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 471A HƯƠNG LỘ 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "398",
+  "storeID": "ST000557",
+  "name": "QUẦY THỊT SATRAFOODS 77C PHẠM NGŨ LÃO",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA 77C PHẠM NGŨ LÃO"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "399",
+  "storeID": "ST000558",
+  "name": "QUẦY THỊT SATRAFOODS 307\/9D NGUYỄN VĂN LINH",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA 307\/9D NGUYỄN VĂN LINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "400",
+  "storeID": "ST000559",
+  "name": "QUẦY THỊT SATRAFOODS 283C PHẠM HÙNG",
+  "retail": "HT SATRA TINH",
+  "shortname": "SATRA 283C PHẠM HÙNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "401",
+  "storeID": "ST000560",
+  "name": "QUẦY THỊT AUCHAN LŨY BÁN BÍCH",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN LŨY BÁN BÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "402",
+  "storeID": "ST001155",
+  "name": "QUẦY THỊT CO.OP FOOD ĐƯỜNG 11 LINH XUÂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐƯỜNG 11 LINH XUÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "403",
+  "storeID": "ST000562",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN LÊ VĂN LƯƠNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ LÊ VĂN LƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "404",
+  "storeID": "ST000563",
+  "name": "QUẦY THỊT VINMART 63 PHAN HUY ÍCH",
+  "retail": "HT VINMART",
+  "shortname": "VM 63 PHAN HUY ÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "405",
+  "storeID": "ST000893",
+  "name": "QUẦY THỊT CO.OP FOOD SUNVIEW",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF SUNVIEW"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "406",
+  "storeID": "ST000565",
+  "name": "QUẦY THỊT SATRAFOODS 863 QUỐC LỘ 22",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 863 QUỐC LỘ 22"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "407",
+  "storeID": "ST000566",
+  "name": "QUẦY THỊT SATRAFOODS 02 THOẠI NGỌC HẦU",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 02 THOẠI NGỌC HẦU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "408",
+  "storeID": "ST000567",
+  "name": "QUẦY THỊT VINMART NINH KIỀU",
+  "retail": "HT VINMART",
+  "shortname": "VM NINH KIỀU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "409",
+  "storeID": "ST000568",
+  "name": "QUẦY THỊT CO.OP FOOD KRISTA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF KRISTA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "410",
+  "storeID": "ST000569",
+  "name": "QUẦY THỊT CO.OP FOOD BÙI THẾ MỸ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÙI THẾ MỸ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "411",
+  "storeID": "ST000570",
+  "name": "QUẦY THỊT CO.OP FOOD GIA PHÚ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF GIA PHÚ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "412",
+  "storeID": "ST000571",
+  "name": "QUẦY THỊT CO.OP FOOD LINH CHIỂU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LINH CHIỂU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "413",
+  "storeID": "ST000572",
+  "name": "QUẦY THỊT CO.OP FOOD LÀNG TĂNG PHÚ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÀNG TĂNG PHÚ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "414",
+  "storeID": "ST000573",
+  "name": "QUẦY THỊT SATRAFOODS 143 LÊ THỊ HÀ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 143 LÊ THỊ HÀ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "415",
+  "storeID": "ST000574",
+  "name": "QUẦY THỊT SATRAFOODS 142 NGUYỄN VĂN KHẠ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 142 NGUYỄN VĂN KHẠ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "416",
+  "storeID": "ST000575",
+  "name": "QUẦY THỊT SATRAFOODS 37 NGUYỄN VĂN NI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 37 NGUYỄN VĂN NI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "417",
+  "storeID": "ST000576",
+  "name": "QUẦY THỊT SATRAFOODS 54B DƯƠNG ĐÌNH HỘI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 54B DƯƠNG ĐÌNH HỘI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "418",
+  "storeID": "ST000577",
+  "name": "QUẦY THỊT SATRAFOODS 204 ĐÌNH PHONG PHÚ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 204 ĐÌNH PHONG PHÚ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "419",
+  "storeID": "ST000578",
+  "name": "QUẦY THỊT SATRAFOODS 340 (60F\/17) NGUYỄN THỊ KIỂU",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 340 NGUYỄN THỊ KIỂU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "420",
+  "storeID": "ST000579",
+  "name": "QUẦY THỊT SATRAFOODS 173 ĐƯỜNG 5C",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 173 ĐƯỜNG 5C"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "421",
+  "storeID": "ST000580",
+  "name": "QUẦY THỊT SATRAFOODS 1333 PHAN VĂN TRỊ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 1333 PHAN VĂN TRỊ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "422",
+  "storeID": "ST000581",
+  "name": "QUẦY THỊT SATRAFOODS 159 TRẦN NHÂN TÔN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 159 TRẦN NHÂN TÔN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "423",
+  "storeID": "ST000582",
+  "name": "QUẦY THỊT AUCHAN PHẠM VĂN CHÍ",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN PHẠM VĂN CHÍ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "424",
+  "storeID": "ST000583",
+  "name": "QUẦY THỊT MY AUCHAN PHẠM VĂN HAI",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN PHẠM VĂN HAI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "425",
+  "storeID": "ST000584",
+  "name": "QUẦY THỊT MY AUCHAN TÂN HÒA ĐÔNG",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN TÂN HÒA ĐÔNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "426",
+  "storeID": "ST000585",
+  "name": "QUẦY THỊT AUCHAN PHAN KHANG",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN PHAN KHANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "427",
+  "storeID": "ST000586",
+  "name": "QUẦY THỊT AUCHAN CAO THẮNG",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN CAO THẮNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "428",
+  "storeID": "ST000587",
+  "name": "QUẦY THỊT AUCHAN ĐẤT MỚI",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN ĐẤT MỚI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "429",
+  "storeID": "ST000588",
+  "name": "QUẦY THỊT CO.OP FOOD VÀNH ĐAI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VÀNH ĐAI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "430",
+  "storeID": "ST000589",
+  "name": "QUẦY THỊT ZAKKA SUNVIEW A",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA SUNVIEW"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "431",
+  "storeID": "ST000590",
+  "name": "QUẦY THỊT ZAKKA HAPPY CITY",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA HAPPY"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "432",
+  "storeID": "ST000591",
+  "name": "QUẦY THỊT ZAKKA MORNING STAR",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA MORNING STAR"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "433",
+  "storeID": "ST000592",
+  "name": "QUẦY THỊT ZAKKA NGUYỄN VĂN HƯỞNG",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA N. VĂN HƯỞNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "434",
+  "storeID": "ST000593",
+  "name": "QUẦY THỊT ZAKKA EMERALD",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA EMERALD"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "435",
+  "storeID": "ST000594",
+  "name": "QUẦY THỊT ZAKKA GIAI VIỆT",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA GIAI VIỆT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "436",
+  "storeID": "ST000595",
+  "name": "QUẦY THỊT CO.OP FOOD E9\/12C VĨNH LỘC B",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF E9\/12C VĨNH LỘC B"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "437",
+  "storeID": "ST000596",
+  "name": "QUẦY THỊT CO.OP FOOD 515 HƯƠNG LỘ 2",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 515 HƯƠNG LỘ 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "438",
+  "storeID": "ST000597",
+  "name": "QUẦY THỊT CO.OP FOOD 76D PHẠM VIẾT CHÁNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 76D PHẠM VIẾT CHÁNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "439",
+  "storeID": "ST000598",
+  "name": "QUẦY THỊT CO.OP FOOD 726 QUỐC LỘ 22",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 726 QUỐC LỘ 22"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "440",
+  "storeID": "ST000599",
+  "name": "QUẦY THỊT CO.OP FOOD 81 ĐINH BỘ LĨNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 81 ĐINH BỘ LĨNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "441",
+  "storeID": "ST000600",
+  "name": "QUẦY THỊT CO.OP FOOD 1031 TỈNH LỘ 15",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 1031 TỈNH LỘ 15"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "442",
+  "storeID": "ST000601",
+  "name": "QUẦY THỊT ZAKKA LINH TÂY",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA LINH TÂY"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "443",
+  "storeID": "ST000602",
+  "name": "QUẦY THỊT CO.OP FOOD PHƯỚC KIỂNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHƯỚC KIỂNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "444",
+  "storeID": "ST000603",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN THÔNG HỘI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN THÔNG HỘI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "445",
+  "storeID": "ST000604",
+  "name": "QUẦY THỊT CO.OP FOOD 1226 TỈNH LỘ 10",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 1226 TỈNH LỘ 10"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "446",
+  "storeID": "ST000605",
+  "name": "QUẦY THỊT CO.OP FOOD 29 ĐƯỜNG 457",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 29 ĐƯỜNG 457"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "447",
+  "storeID": "ST000606",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN NGUYỄN BIỂU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ NGUYỄN BIỂU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "448",
+  "storeID": "ST000607",
+  "name": "QUẦY THỊT SATRAFOODS LIÊU BÌNH HƯƠNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LIÊU BÌNH HƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "449",
+  "storeID": "ST000608",
+  "name": "QUẦY THỊT SATRAFOODS E9\/8A-E9\/8C NGUYỄN HỮU TRÍ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN HỮU TRÍ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "450",
+  "storeID": "ST000609",
+  "name": "QUẦY THỊT SATRAFOODS 36 ĐƯỜNG SỐ 8",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 36 ĐƯỜNG SỐ 8"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "451",
+  "storeID": "ST000610",
+  "name": "QUẦY THỊT SATRAFOODS 728 TỈNH LỘ 8",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 728 TỈNH LỘ 8"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "452",
+  "storeID": "ST000611",
+  "name": "QUẦY THỊT SATRAFOODS 118A ĐƯỜNG SỐ 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 118A ĐƯỜNG SỐ 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "453",
+  "storeID": "ST000612",
+  "name": "QUẦY THỊT AEON CITIMART HIM LAM CHỢ LỚN",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI HIM LAM CHỢ LỚN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "454",
+  "storeID": "ST000613",
+  "name": "QUẦY THỊT CO.OP FOOD 64 DƯƠNG ĐÌNH HỘI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 64 DƯƠNG ĐÌNH HỘI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "455",
+  "storeID": "ST000614",
+  "name": "QUẦY THỊT CO.OP FOOD 37 ĐÌNH PHONG PHÚ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 37 ĐÌNH PHONG PHÚ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "456",
+  "storeID": "ST000615",
+  "name": "QUẦY THỊT CO.OP FOOD 134 NGUYỄN THÁI SƠN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 134 NGUYỄN THÁI SƠN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "457",
+  "storeID": "ST000616",
+  "name": "QUẦY THỊT SATRAFOODS 25 BÙI CÔNG TRỪNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 25 BÙI CÔNG TRỪNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "458",
+  "storeID": "ST000617",
+  "name": "QUẦY THỊT SATRAFOODS 85 CỬU LONG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 85 CỬU LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "459",
+  "storeID": "ST000618",
+  "name": "QUẦY THỊT SATRAFOODS 110 NGUYỄN BÌNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 110 NGUYỄN BÌNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "460",
+  "storeID": "ST000619",
+  "name": "QUẦY THỊT SATRAFOODS 46 TÔ VĨNH DIỆN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 46 TÔ VĨNH DIỆN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "461",
+  "storeID": "ST000620",
+  "name": "QUẦY THỊT SATRAFOODS 49 TÂN CHÁNH HIỆP 10",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 49 TÂN CHÁNH HIỆP 10"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "462",
+  "storeID": "ST000621",
+  "name": "QUẦY THỊT CO.OP FOOD 30\/1A BÀ ĐIỂM",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 30\/1A BÀ ĐIỂM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "463",
+  "storeID": "ST000622",
+  "name": "QUẦY THỊT CO.OP FOOD 47A LÊ TRỌNG TẤN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 47A LÊ TRỌNG TẤN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "464",
+  "storeID": "ST000623",
+  "name": "QUẦY THỊT CO.OP FOOD A1\/21 NGUYỄN CỬU PHÚ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF A1\/21 NGUYỄN CỬU PHÚ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "465",
+  "storeID": "ST000624",
+  "name": "QUẦY THỊT CO.OP FOOD 103 PHAN HUY ÍCH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 103 PHAN HUY ÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "466",
+  "storeID": "ST000625",
+  "name": "QUẦY THỊT CO.OPMART 241A CHU VĂN AN",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY 241A CHU VĂN AN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "467",
+  "storeID": "ST000626",
+  "name": "QUẦY THỊT CO.OPMART HÀ TIÊN (ĐƯỜNG MẠC CÔNG DU, P.ĐÔNG HỒ)",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY HÀ TIÊN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "468",
+  "storeID": "ST000627",
+  "name": "QUẦY THỊT CO.OP FOOD ĐÔNG BẮC (228\/01 KHU F2)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐÔNG BẮC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "469",
+  "storeID": "ST000628",
+  "name": "QUẦY THỊT VINMART 107-109 ĐỖ XUÂN HỢP QUẬN 9",
+  "retail": "HT VINMART",
+  "shortname": "VM 107-109 ĐỖ XUÂN HỢP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "470",
+  "storeID": "ST000629",
+  "name": "QUẦY THỊT CO.OP FOOD 591 HUỲNH TẤN PHÁT",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 591 HUỲNH TẤN PHÁT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "471",
+  "storeID": "ST000630",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN 52 MAI VĂN VĨNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 52 MAI VĂN VĨNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "472",
+  "storeID": "ST000631",
+  "name": "QUẦY THỊT CO.OP FOOD XUÂN HIỆP (72A ĐƯỜNG SỐ 8)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF XUÂN HIỆP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "473",
+  "storeID": "ST000632",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN QUÝ TÂY (7\/2 HƯƠNG LỘ 11)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN QUÝ TÂY"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "474",
+  "storeID": "ST000633",
+  "name": "QUẦY THỊT CO.OP FOOD 437 THỦ KHOA HUÂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 437 THỦ KHOA HUÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "475",
+  "storeID": "ST000634",
+  "name": "QUẦY THỊT CO.OP FOOD AN LẠC (64 TỜ BẢN ĐỒ SỐ 88)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF AN LẠC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "476",
+  "storeID": "ST000635",
+  "name": "QUẦY THỊT CO.OP FOOD QUY ĐỨC (A11\/32 ĐƯỜNG QL 50)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF QUY ĐỨC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "477",
+  "storeID": "ST000636",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN 110 NGUYỄN CÔNG TRỨ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 110 NGUYỄN CÔNG TRỨ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "478",
+  "storeID": "ST000637",
+  "name": "QUẦY THỊT CO.OP FOOD 5C13 TRẦN VĂN GIÀU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 5C13 TRẦN VĂN GIÀU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "479",
+  "storeID": "ST000638",
+  "name": "QUẦY THỊT CO.OP FOOD 192 NGUYỄN DUY TRINH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 192 NGUYỄN DUY TRINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "480",
+  "storeID": "ST000639",
+  "name": "QUẦY THỊT CO.OP FOOD MINH ĐỨC (103 ĐƯỜNG 154)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF MINH ĐỨC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "481",
+  "storeID": "ST000640",
+  "name": "QUẦY THỊT SATRAFOODS 86 LÂM VĂN BỀN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 86 LÂM VĂN BỀN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "482",
+  "storeID": "ST000641",
+  "name": "QUẦY THỊT SATRAFOODS 114 AN DƯƠNG VƯƠNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 114 AN DƯƠNG VƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "483",
+  "storeID": "ST000642",
+  "name": "QUẦY THỊT VINMART+ 921 BÌNH GIÃ",
+  "retail": "HT VINMART+",
+  "shortname": "VM  921 BÌNH GIÃ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "484",
+  "storeID": "ST000643",
+  "name": "QUẦY THỊT SATRAFOODS 1403 NGUYỄN DUY TRINH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 1403 NGUYỄN DUY TRINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "485",
+  "storeID": "ST000644",
+  "name": "QUẦY THỊT SATRAFOODS 3\/1 NGUYỄN THỊ ĐỊNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 3\/1 NGUYỄN THỊ ĐỊNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "486",
+  "storeID": "ST000645",
+  "name": "QUẦY THỊT CO.OP FOOD 232 XÓM CHIẾU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 232 XÓM CHIẾU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "487",
+  "storeID": "ST000646",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN QUY (102 ĐƯỜNG 15)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN QUY"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "488",
+  "storeID": "ST000647",
+  "name": "QUẦY THỊT ZAKKA MART 195 CAO LỖ",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA 195 CAO LỖ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "489",
+  "storeID": "ST000648",
+  "name": "QUẦY THỊT SATRAFOODS 8 DƯƠNG CÔNG KHI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 8 DƯƠNG CÔNG KHI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "490",
+  "storeID": "ST000649",
+  "name": "QUẦY THỊT SATRAFOODS 306 LẠC LONG QUÂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 306 LẠC LONG QUÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "491",
+  "storeID": "ST000650",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN 127 BÌNH LỢI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 127 BÌNH LỢI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "492",
+  "storeID": "ST000651",
+  "name": "QUẦY THỊT CO.OP FOOD CHỢ THỦ ĐỨC (01 VÕ VĂN NGÂN, P.LINH TÂY)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CHỢ THỦ ĐỨC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "493",
+  "storeID": "ST000652",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN CÔNG VIÊN 23\/9 (P.PHẠM NGŨ LÃO, Q.1)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ CÔNG VIÊN 23\/9"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "494",
+  "storeID": "ST000653",
+  "name": "QUẦY THỊT CO.OP MART CAI LẬY (ĐƯỜNG 30\/4)",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY CAI LẬY"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "495",
+  "storeID": "ST000654",
+  "name": "QUẦY THỊT VINMART 212-213 PHAN VĂN KHỎE, P.5, Q.6",
+  "retail": "HT VINMART",
+  "shortname": "VM 212-213 PHAN VĂN KHỎE"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "496",
+  "storeID": "ST000655",
+  "name": "QUẦY THỊT CO.OP FOOD SỐ 16 ĐƯỜNG LIÊN KHU 5-6, P.BÌNH HƯNG HÒA B",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF SỐ 16 Đ.LIÊN KHU 5-6"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "497",
+  "storeID": "ST000656",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN 7A\/32 THÀNH THÁI, P.14, Q.10",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 7A\/32 THÀNH THÁI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "498",
+  "storeID": "ST000657",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN 110 PHỔ QUANG, P.19, Q.PHÚ NHUẬN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 110 PHỔ QUANG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "499",
+  "storeID": "ST000658",
+  "name": "QUẦY THỊT CO.OP FOOD 196 TAM BÌNH, P.TAM PHÚ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 196 TAM BÌNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "500",
+  "storeID": "ST000659",
+  "name": "QUẦY THỊT CO.OP FOOD 60 LÊ LỢI, H.HÓC MÔN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 60 LÊ LỢI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "501",
+  "storeID": "ST000660",
+  "name": "QUẦY THỊT VINMART+ HÀ HUY GIÁP (SỐ 92\/4 KHU PHỐ 3, P.THẠNH XUÂN, Q.12)",
+  "retail": "HT VINMART+",
+  "shortname": "VM HÀ HUY GIÁP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "502",
+  "storeID": "ST000661",
+  "name": "QUẦY THỊT VINMART+  9\/1 ẤP MỸ HUỀ (X.TRUNG CHÁNH, H.HÓC MÔN)",
+  "retail": "HT VINMART+",
+  "shortname": "VM 9\/1 ẤP MỸ HUỀ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "503",
+  "storeID": "ST000662",
+  "name": "QUẦY THỊT VINMART CẦN THƠ",
+  "retail": "HT VINMART",
+  "shortname": "VM CẦN THƠ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "504",
+  "storeID": "ST000663",
+  "name": "QUẦY THỊT SATRAFOODS 423B ĐƯỜNG QUỐC LỘ 22",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 423B QUỐC LỘ 22"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "505",
+  "storeID": "ST000664",
+  "name": "QUẦY THỊT SATRAFOODS 1614A TỈNH LỘ 8",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 1614A TỈNH LỘ 8"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "506",
+  "storeID": "ST000665",
+  "name": "QUẦY THỊT CO.OP FOOD C1-04 CC HOÀNG ANH THANH BÌNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF H.A THANH BÌNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "507",
+  "storeID": "ST000666",
+  "name": "QUẦY THỊT CO.OP FOOD 451 LÊ HỒNG PHONG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 451 LÊ HỒNG PHONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "508",
+  "storeID": "ST000667",
+  "name": "QUẦY THỊT SATRAFOODS 11B NGUYỄN KHOÁI",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 11B NGUYỄN KHOÁI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "509",
+  "storeID": "ST000668",
+  "name": "QUẦY THỊT SATRAFOODS N23 VẠN PHÚC 1",
+  "retail": "HT SATRA",
+  "shortname": "SATRA N23 VẠN PHÚC 1"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "510",
+  "storeID": "ST000669",
+  "name": "QUẦY THỊT SATRAFOODS 53 TÂN HÓA",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 53 TÂN HÓA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "511",
+  "storeID": "ST000670",
+  "name": "QUẦY THỊT CO.OP MART HỒNG NGỰ (KHU NHÀ CAO ỐC KII, P.AN THẠNH, TX.HỒNG NGỰ)",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY HỒNG NGỰ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "512",
+  "storeID": "ST000671",
+  "name": "QUẦY THỊT VINMART+ 602\/52 ĐIỆN BIÊN PHỦ, P.22, Q.BÌNH THẠNH",
+  "retail": "HT VINMART+",
+  "shortname": "VM ĐIỆN BIÊN PHỦ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "513",
+  "storeID": "ST000672",
+  "name": "QUẦY THỊT SATRAFOODS 44-46 BÀU CÁT 8, P.11, Q.TÂN BÌNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 44-46 BÀU CÁT"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "514",
+  "storeID": "ST000673",
+  "name": "QUẦY THỊT SATRAFOODS 11 ĐƯỜNG SỐ 6 (P.LINH TRUNG, Q.THỦ ĐỨC)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 11 ĐƯỜNG SỐ 6"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "515",
+  "storeID": "ST000674",
+  "name": "QUẦY THỊT SATRAFOODS 31\/3 NGUYỄN THỊ HUỆ (ẤP ĐÔNG LÂN, X.BÀ ĐIỂM , H.HÓC MÔN)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 31\/3 NGUYỄN THỊ HUỆ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "516",
+  "storeID": "ST000675",
+  "name": "QUẦY THỊT SATRAFOODS 2\/7 QUỐC LỘ 22 (ẤP DÂN THẮNG, H.HÓC MÔN)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 2\/7 QUỐC LỘ 22"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "517",
+  "storeID": "ST000676",
+  "name": "QUẦY THỊT SATRAFOODS A3 TÔ KÝ (P.TÂN CHÁNH HIỆP, Q.12)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA A3 TÔ KÝ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "518",
+  "storeID": "ST000677",
+  "name": "QUẦY THỊT SATRAFOODS 2B BÌNH LỢI (P.13, Q.BÌNH THẠNH)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 2B BÌNH LỢI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "519",
+  "storeID": "ST000678",
+  "name": "QUẦY THỊT ZAKKA JAMONA (Đ.ĐÀO TRÍ, P.PHÚ THUẬN, Q.7)",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA JAMONA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "520",
+  "storeID": "ST000679",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN TRỤ (36A CỐNG LỠ, P.15, Q.TÂN BÌNH)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN TRỤ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "521",
+  "storeID": "ST000680",
+  "name": "QUẦY THỊT CO.OP FOOD TRỊNH ĐÌNH THẢO 31 (P.HÒA THÀNH, Q.TÂN PHÚ)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRỊNH ĐÌNH THẢO"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "522",
+  "storeID": "ST000681",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN HƯƠNG 262 (P.TÂN QUÝ, Q.TÂN PHÚ)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN HƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "523",
+  "storeID": "ST000682",
+  "name": "QUẦY THỊT CO.OP FOOD TÂY LÂN (118\/4 ẤP TÂY LÂN, X.BÀ ĐIỂM, H.HÓC MÔN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂY LÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "524",
+  "storeID": "ST000683",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN THẠNH ĐÔNG (533 TỈNH LỘ 5, X.TÂN THẠNH ĐÔNG, H.CỦ CHI)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN THẠNH ĐÔNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "525",
+  "storeID": "ST000684",
+  "name": "QUẦY THỊT CO.OP FOOD LÊ THỊ HÀ 2 (SỐ 36\/7, X.TÂN XUÂN, H.HÓC MÔN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ THỊ HÀ 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "526",
+  "storeID": "ST000685",
+  "name": "QUẦY THỊT CO.OP FOOD 138A LÃ XUÂN OAI (P.TĂNG NHƠN PHÚ A, Q.9)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 138A LÃ XUÂN OAI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "527",
+  "storeID": "ST000686",
+  "name": "QUẦY THỊT CO.OP FOOD 2649 PHẠM THẾ HIỂN (P.7, Q.8)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 2649 PHẠM THẾ HIỂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "528",
+  "storeID": "ST000687",
+  "name": "QUẦY THỊT CO.OP FOOD 70 HỒ VĂN LONG (P.BÌNH HƯNG HÒA B, Q.BÌNH TÂN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 70 HỒ VĂN LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "529",
+  "storeID": "ST000688",
+  "name": "QUẦY THỊT SATRAFOODS C9\/3A VÕ VĂN VÂN (ẤP 3, X.VĨNH LỘC B, H.BÌNH CHÁNH)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA C9\/3A VÕ VĂN VÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "530",
+  "storeID": "ST000689",
+  "name": "QUẦY THỊT SATRAFOODS E13\/394 QUỐC LỘ 50 (X.ĐA PHƯỚC, H.BÌNH CHÁNH)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA E13\/394 QUỐC LỘ 50"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "531",
+  "storeID": "ST000690",
+  "name": "QUẦY THỊT SATRAFOODS 108\/2 TRẦN MAI NINH (P.12, Q.TÂN BÌNH)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 108\/2 TRẦN MAI NINH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "532",
+  "storeID": "ST000691",
+  "name": "QUẦY THỊT SATRAFOODS 461-463 ĐƯỜNG SỐ 10 (P.8, Q.GÒ VẤP)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 461-463 ĐƯỜNG SỐ 10"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "533",
+  "storeID": "ST000692",
+  "name": "QUẦY THỊT SATRAFOODS 444 NGUYỄN VĂN TẠO (X.LONG THỚI, H.NHÀ BÈ)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 444 NGUYỄN VĂN TẠO"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "534",
+  "storeID": "ST000693",
+  "name": "QUẦY THỊT CO.OP FOOD NHƯỢNG QUYỀN 29\/25 BÌNH ĐƯỜNG (X.AN BÌNH, H.DĨ AN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 29\/25 BÌNH ĐƯỜNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "535",
+  "storeID": "ST000695",
+  "name": "QUẦY THỊT VINMART BẢO LỘC",
+  "retail": "HT VINMART",
+  "shortname": "VM BẢO LỘC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "536",
+  "storeID": "ST000696",
+  "name": "QUẦY THỊT VINMART LONG AN",
+  "retail": "HT VINMART",
+  "shortname": "VM LONG AN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "537",
+  "storeID": "ST000697",
+  "name": "QUẦY THỊT CO.OP FOOD CHUNG CƯ HOÀNG QUÂN (X.AN PHÚ TÂY, H.BÌNH CHÁNH)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC HOÀNG QUÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "538",
+  "storeID": "ST000698",
+  "name": "QUẦY THỊT CO.OP FOOD GÒ DƯA 112 (P.TAM BÌNH, Q.THỦ ĐỨC)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF GÒ DƯA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "539",
+  "storeID": "ST000699",
+  "name": "QUẦY THỊT SATRAFOODS 116 TRƯƠNG PHƯỚC PHAN (P.BÌNH TRỊ ĐÔNG, Q.BÌNH TÂN)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 116 TRƯƠNG PHƯỚC PHAN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "540",
+  "storeID": "ST000700",
+  "name": "QUẦY THỊT SATRAFOODS 112 PHAN VĂN HÂN (P.17, Q.BÌNH THẠNH)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 112 PHAN VĂN HÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "541",
+  "storeID": "ST000701",
+  "name": "QUẦY THỊT SATRAFOODS 244 LÊ THỊ HOA (P.BÌNH CHIỂU, Q.THỦ ĐỨC)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 244 LÊ THỊ HOA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "542",
+  "storeID": "ST000702",
+  "name": "QUẦY THỊT SATRAFOODS 210 BÙI HỮU NGHĨA (P.12, Q.BÌNH THẠNH)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 210 BÙI HỮU NGHĨA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "543",
+  "storeID": "ST000703",
+  "name": "QUẦY THỊT SATRAFOODS D7\/39 AN PHÚ TÂY (X.HƯNG LONG, H.BÌNH CHÁNH)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA D7\/39 AN PHÚ TÂY"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "544",
+  "storeID": "ST000704",
+  "name": "QUẦY THỊT SATRAFOODS 62 AN DƯƠNG VƯƠNG (P.16, Q.8)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 62 AN DƯƠNG VƯƠNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "545",
+  "storeID": "ST000705",
+  "name": "QUẦY THỊT CO.OP FOOD 297 HỒNG LẠC (P.10, Q.BÌNH TÂN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 297 HỒNG LẠC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "546",
+  "storeID": "ST000706",
+  "name": "QUẦY THỊT VINMART+ 173 LIÊN KHU 4-5 (P.BÌNH HƯNG HÒA, Q.BÌNH TÂN)",
+  "retail": "HT VINMART+",
+  "shortname": "VM  173 LIÊN KHU 4-5"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "547",
+  "storeID": "ST000707",
+  "name": "QUẦY THỊT SATRAFOODS 730A HƯƠNG LỘ 2, KP.4, P.BÌNH TRỊ ĐÔNG A, Q.BÌNH TÂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 730A HƯƠNG LỘ 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "548",
+  "storeID": "ST000708",
+  "name": "QUẦY THỊT SATRAFOODS 79 HỒ VĂN LONG, P.TÂN TẠO, Q.BÌNH TÂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 79 HỒ VĂN LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "549",
+  "storeID": "ST000709",
+  "name": "QUẦY THỊT SATRAFOODS 124 LIÊN KHU 5-6, KP.5, P.BÌNH HƯNG HÒA B, Q.BÌNH TÂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 124 LIÊN KHU 5-6"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "550",
+  "storeID": "ST000710",
+  "name": "QUẦY THỊT SATRAFOODS 14 LÝ TỰ TRỌNG, P.BẾN NGHÉ, Q.1",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 14 LÝ TỰ TRỌNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "551",
+  "storeID": "ST000891",
+  "name": "QUẦY THỊT CO.OP FOOD VISION ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VISSION"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "552",
+  "storeID": "ST000712",
+  "name": "QUẦY THỊT CO.OP FOOD 302\/40 HÀ HUY GIÁP (P.THẠNH XUÂN, Q.12)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 302\/40 HÀ HUY GIÁP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "553",
+  "storeID": "ST000713",
+  "name": "QUẦY THỊT CO.OP FOOD 24 ĐƯỜNG SỐ 6 (P.LINH XUÂN, Q.THỦ ĐỨC)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 24 ĐƯỜNG SỐ 6"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "554",
+  "storeID": "ST000714",
+  "name": "QUẦY THỊT CO.OP FOOD 405-407 KÊNH TÂN HÓA (P.HÒA THẠNH, Q.TÂN PHÚ)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 405-407 KÊNH TÂN HÓA"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "555",
+  "storeID": "ST000715",
+  "name": "QUẦY THỊT CO.OP FOOD 169 TRƯƠNG PHƯỚC PHAN (KP.8, P.BÌNH TRỊ ĐÔNG, Q.BÌNH TÂN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 169 TRƯƠNG PHƯỚC PHAN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "556",
+  "storeID": "ST000716",
+  "name": "QUẦY THỊT CO.OP FOOD 129 BÌNH THỚI (P.11, Q.11)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 129 BÌNH THỚI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "557",
+  "storeID": "ST000717",
+  "name": "QUẦY THỊT SATRAFOODS 235 XÓM CHIẾU (P.15, Q.4)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 235 XÓM CHIẾU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "558",
+  "storeID": "ST000718",
+  "name": "QUẦY THỊT SATRAFOODS 31 HỒ VĂN LONG (KP.1, P.BÌNH HƯNG HÒA B, Q.BÌNH TÂN)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 31 HỒ VĂN LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "559",
+  "storeID": "ST000719",
+  "name": "QUẦY THỊT SATRAFOODS 412B HÀ HUY GIÁP (KP.1, P.THẠNH LỘC, Q.12)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 412B HÀ HUY GIÁP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "560",
+  "storeID": "ST000720",
+  "name": "QUẦY THỊT SATRAFOODS 249 ẤP CHIẾN LƯỢC (KP.2, P.BÌNH HƯNG HÒA A, Q.BÌNH TÂN)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 249 ẤP CHIẾN LƯỢC"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "561",
+  "storeID": "ST000721",
+  "name": "QUẦY THỊT SATRAFOODS 88 NGÔ QUYỀN (P.HIỆP PHÚ, Q.9)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 88 NGÔ QUYỀN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "562",
+  "storeID": "ST000722",
+  "name": "QUẦY THỊT SATRAFOODS 1146 PHẠM THẾ HIỂN 4 (P.5, Q.8)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 1146 PHẠM THẾ HIỂN 4"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "563",
+  "storeID": "ST000723",
+  "name": "QUẦY THỊT SATRAFOODS 88 LÒ LU (ẤP ÍCH THẠNH, P.TRƯỜNG THẠNH, Q.9)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 88 LÒ LU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "564",
+  "storeID": "ST000724",
+  "name": "QUẦY THỊT SATRAFOODS 486 QUANG TRUNG 2 (P.10, Q.GÒ VẤP)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 486 QUANG TRUNG 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "565",
+  "storeID": "ST000725",
+  "name": "QUẦY THỊT CO.OP FOOD 31 THĂNG LONG (P.4, Q.TÂN BÌNH)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 31 THĂNG LONG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "566",
+  "storeID": "ST000726",
+  "name": "QUẦY THỊT CO.OP FOOD 387 TÂN SƠN NHÌ (P.TÂN THÀNH, Q.TÂN PHÚ)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 387 TÂN SƠN NHÌ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "567",
+  "storeID": "ST000727",
+  "name": "QUẦY THỊT CO.OP FOOD 151A PHAN VĂN HỚN (ẤP 3, X.XUÂN THỚI THƯỢNG, Q.HÓC MÔN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 151A PHAN VĂN HỚN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "568",
+  "storeID": "ST000728",
+  "name": "QUẦY THỊT CO.OP FOOD 198 NGUYỄN VĂN KHẠ (KP.8, TT.CỦ CHI, H.CỦ CHI)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 198 NGUYỄN VĂN KHẠ"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "569",
+  "storeID": "ST000729",
+  "name": "QUẦY THỊT CO.OP FOOD NQ 556 NGUYỄN KIỆM (P.4, Q.PHÚ NHUẬN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 556 NGUYỄN KIỆM"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "570",
+  "storeID": "ST000730",
+  "name": "QUẦY THỊT CO.OP FOOD NQ DREAM HOME (81\/17 ĐƯỜNG SỐ 59, P.14, Q.GÒ VẤP)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ DREAM HOME"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "571",
+  "storeID": "ST000731",
+  "name": "QUẦY THỊT CO.OPMART GÒ DẦU (QUỐC LỘ 22B, KP.RẠCH SƠN, TT.GÒ DẦU, H.GÒ DẦU, T.TÂY NINH)",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY GÒ DẦU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "572",
+  "storeID": "ST000732",
+  "name": "QUẦY THỊT CO.OPMART TÂN CHÂU (K.LONG THẠNH D, P.LONG THẠNH, TX.TÂN CHÂU, T.AN GIANG)",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY TÂN CHÂU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "573",
+  "storeID": "ST000733",
+  "name": "QUẦY THỊT CO.OP FOOD 4S LINH ĐÔNG (CĂN HỘ TM A02, ĐƯỜNG 30, P.LINH ĐÔNG, Q.THỦ ĐỨC)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 4S LINH ĐÔNG"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "574",
+  "storeID": "ST000734",
+  "name": "QUẦY THỊT CO.OP FOOD NQ 12 NGUYỄN VĂN ĐẬU (P.5, Q.PHÚ NHUẬN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 12 NGUYỄN VĂN ĐẬU"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "575",
+  "storeID": "ST001199",
+  "name": "QUẦY THỊT OSIFOOD SKY 9 (Đ.LIÊN PHƯỜNG, P.PHÚ HỮU, Q.9)",
+  "retail": "HT KHÁC",
+  "shortname": "OSIFOOD SKY 9"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "576",
+  "storeID": "ST000736",
+  "name": "QUẦY THỊT SATRAFOODS 187 HIỆP BÌNH (P.HIỆP BÌNH CHÁNH, Q.THỦ ĐỨC)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 187 HIỆP BÌNH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "577",
+  "storeID": "ST000737",
+  "name": "QUẦY THỊT SATRAFOODS 1131A-1131B LÊ VĂN LƯƠNG 1 (P.PHƯỚC KIỂNG, H.NHÀ BÈ)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĂN LƯƠNG 1"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "578",
+  "storeID": "ST000738",
+  "name": "QUẦY THỊT SATRAFOODS 1131A-1131B LÊ VĂN LƯƠNG 2 (P.NHƠN ĐỨC, H.NHÀ BÈ)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĂN LƯƠNG 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "579",
+  "storeID": "ST000739",
+  "name": "QUẦY THỊT SATRAFOODS 503 LŨY BÁN BÍCH (P.PHÚ THẠNH, Q.TÂN PHÚ)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 503 LŨY BÁN BÍCH"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "580",
+  "storeID": "ST000740",
+  "name": "QUẦY THỊT SATRAFOODS 382 NGUYỄN THỊ BÚP (P.TÂN CHÁNH HIỆP, Q.12)",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 382 NGUYỄN THỊ BÚP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "581",
+  "storeID": "ST000741",
+  "name": "QUẦY THỊT ZAKKA VIỆT PHÁT",
+  "retail": "HT ZAKKA",
+  "shortname": "ZAKKA VIỆT PHÁP"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "582",
+  "storeID": "ST000742",
+  "name": "QUẦY THỊT CO.OP FOOD NQ 167 TÔN ĐẢN (Q.4)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 167 TÔN ĐẢN (Q.4)"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "583",
+  "storeID": "ST000743",
+  "name": "QUẦY THỊT CO.OP FOOD 535 TÂN SƠN (P.12, Q.GÒ VẤP)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 535 TÂN SƠN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "584",
+  "storeID": "ST000744",
+  "name": "QUẦY THỊT CO.OP FOOD 91 ĐƯỜNG SỐ 2 TRƯỜNG THỌ (P.TRƯỜNG THỌ, Q.THỦ ĐỨC)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 91 ĐƯỜNG SỐ 2"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "585",
+  "storeID": "ST000745",
+  "name": "QUẦY THỊT CO.OP FOOD BD 473 PHÚ LỢI (P.PHÚ LỢI, TP.THỦ DẦU MỘT, BÌNH DƯƠNG)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BD 473 PHÚ LỢI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "586",
+  "storeID": "ST000746",
+  "name": "QUẦY THỊT CO.OP FOOD 326 VƯỜN LÀI (P.PHÚ THỌ HÒA, Q.TÂN PHÚ)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 326 VƯỜN LÀI"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "587",
+  "storeID": "ST000747",
+  "name": "QUẦY THỊT CO.OP FOOD TÂN XUÂN (33\/4 ẤP MỚI 1, X.TÂN XUÂN, H.HÓC MÔN)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN XUÂN"
+ },
+ {
+  "warehouseID": "STHI",
+  "ID": "588",
+  "storeID": "ST000748",
+  "name": "QUẦY THỊT CO.OP FOOD 87 PHAN SÀO NAM (P.11, Q.TÂN BÌNH)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 87 PHAN SÀO NAM"
+ },
+ {
+  "warehouseID": "KL000",
+  "ID": "640",
+  "storeID": "ST000433",
+  "name": "QUẦY THỊT SIMPLY SUNNY",
+  "retail": "HT AUCHAN",
+  "shortname": "AUCHAN PHẠM VĂN ĐỒNG"
+ },
+ {
+  "storeID": "ST000759",
+  "name": "QUẦY THỊT COOPFOOD CC ĐẠT GIA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC ĐẠT GIA"
+ },
+ {
+  "storeID": "ST000758",
+  "name": "QUẦY THỊT COOPFOOD TĂNG NHƠN PHÚ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TĂNG NHƠN PHÚ"
+ },
+ {
+  "storeID": "ST000749",
+  "name": "QUẦY THỊT SATRAMART CỦ CHI CENTRAL MALL",
+  "retail": "HT SATRA",
+  "shortname": "SATRAMART CỦ CHI"
+ },
+ {
+  "storeID": "ST000750",
+  "name": "SATRA TÙNG THIỆN VƯƠNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TÙNG THIỆN VƯƠNG"
+ },
+ {
+  "storeID": "ST000760",
+  "name": "CF CMT8 BÌNH DƯƠNG",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF CMT8 BD"
+ },
+ {
+  "storeID": "ST000753",
+  "name": "SATRA 115 ĐÌNH PHONG PHÚ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 115 ĐÌNH PHONG PHÚ"
+ },
+ {
+  "storeID": "ST000752",
+  "name": "SATRA LÝ PHỤC MAN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÝ PHỤC MAN"
+ },
+ {
+  "storeID": "ST000754",
+  "name": "SATRA BÙI VĂN BA",
+  "retail": "HT SATRA",
+  "shortname": "SATRA BÙI VĂN BA"
+ },
+ {
+  "storeID": "ST000756",
+  "name": "SATRA ĐINH ĐỨC THIỆN 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA ĐINH ĐỨC THIỆN 2"
+ },
+ {
+  "storeID": "ST000764",
+  "name": "VINMART SA ĐÉC",
+  "retail": "HT VINMART",
+  "shortname": "VINMART SA ĐÉC"
+ },
+ {
+  "storeID": "ST000755",
+  "name": "SATRA NGUYỄN VĂN BỨA",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN VĂN BỨA"
+ },
+ {
+  "storeID": "ST000763",
+  "name": "CF NGUYỄN ẢNH THỦ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN ẢNH THỦ"
+ },
+ {
+  "storeID": "ST000757",
+  "name": "SATRA A19\/12 QL50",
+  "retail": "HT SATRA",
+  "shortname": "SATRA A19\/12 QL50"
+ },
+ {
+  "storeID": "ST000769",
+  "name": "SATRA PHÚ ĐỊNH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA PHÚ ĐỊNH"
+ },
+ {
+  "storeID": "ST000765",
+  "name": "CF RIVERSIDE THẢO ĐIỀN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF RIVERSIDE THẢO ĐIỀN"
+ },
+ {
+  "storeID": "ST000751",
+  "name": "QUẦY DUYÊN HẢI",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY DUYÊN HẢI"
+ },
+ {
+  "storeID": "ST000770",
+  "name": "SATRA THỐNG NHẤT 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA THỐNG NHẤT 2"
+ },
+ {
+  "storeID": "ST000771",
+  "name": "SATRA HUỲNH TẤN PHÁT 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA HUỲNH TẤN PHÁT 2"
+ },
+ {
+  "storeID": "ST000774",
+  "name": "CF NQ TĂNG LONG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ TĂNG LONG"
+ },
+ {
+  "storeID": "ST000766",
+  "name": "CF NQ PHƯỚC BÌNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ PHƯỚC BÌNH"
+ },
+ {
+  "storeID": "ST000775",
+  "name": "CF TỈNH LỘ 43",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TỈNH LỘ 43"
+ },
+ {
+  "storeID": "ST000772",
+  "name": "SATRA 793 NG.DUY TRINH",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 793 NG.D. TRINH"
+ },
+ {
+  "storeID": "ST000777",
+  "name": "CF NGUYỄN THỊ SÓC",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN THỊ SÓC"
+ },
+ {
+  "storeID": "ST000776",
+  "name": "CF ĐÔNG TĂNG LONG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐÔNG TĂNG LONG"
+ },
+ {
+  "storeID": "ST000773",
+  "name": "SATRA DƯƠNG ĐÌNH HỘI 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA D. ĐÌNH HỘI 2"
+ },
+ {
+  "storeID": "ST001154",
+  "name": "CF BÔNG SAO",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÔNG SAO"
+ },
+ {
+  "storeID": "ST000780",
+  "name": "SATRA NGUYỄN XIỂN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN XIỂN"
+ },
+ {
+  "storeID": "ST000778",
+  "name": "CF HẬU LÂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HẬU LÂN"
+ },
+ {
+  "storeID": "ST000768",
+  "name": "AEON CITI NAM LONG",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI NAM LONG"
+ },
+ {
+  "storeID": "ST000784",
+  "name": "CF TRẦN VĂN DANH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRẦN VĂN DANH"
+ },
+ {
+  "storeID": "ST000791",
+  "name": "CF SMILE BÌNH LỢI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF SMILE BÌNH LỢI"
+ },
+ {
+  "storeID": "ST000782",
+  "name": "SATRA TỈNH LỘ 43",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TỈNH LỘ 43"
+ },
+ {
+  "storeID": "ST000786",
+  "name": "CF PHAN ANH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHAN ANH"
+ },
+ {
+  "storeID": "ST000767",
+  "name": "AEON CITI LẠC LONG QUÂN",
+  "retail": "HT AEON CITI",
+  "shortname": "AEON CITI LẠC LONG QUÂN"
+ },
+ {
+  "storeID": "ST000785",
+  "name": "CF 399 PHAN VĂN TRỊ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 399 PHAN VĂN TRỊ"
+ },
+ {
+  "storeID": "ST000783",
+  "name": "SATRA TRẦN VĂN QUANG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TRẦN VĂN QUANG"
+ },
+ {
+  "storeID": "ST000781",
+  "name": "SATRA TRỊNH THỊ MIẾNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TRỊNH THỊ MIẾNG"
+ },
+ {
+  "storeID": "ST000787",
+  "name": "CF NGUYỄN HỮU TIẾN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN HỮU TIẾN"
+ },
+ {
+  "storeID": "ST000789",
+  "name": "CF 30 HỒ VĂN LONG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 30 HỒ VĂN LONG"
+ },
+ {
+  "storeID": "ST000790",
+  "name": "CF THẠNH LỘC",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF THẠNH LỘC"
+ },
+ {
+  "storeID": "ST000779",
+  "name": "QUẦY CẦN GIUỘC",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY CẦN GIUỘC"
+ },
+ {
+  "storeID": "ST000795",
+  "name": "CF CC BELLEZA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC BELLEZA"
+ },
+ {
+  "storeID": "ST000796",
+  "name": "CF TÂN CHÁNH HIỆP 10",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN CHÁNH HIỆP 10"
+ },
+ {
+  "storeID": "ST000797",
+  "name": "CF NQ SÔNG HƯƠNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ SÔNG HƯƠNG"
+ },
+ {
+  "storeID": "ST000798",
+  "name": "CF NQ LÊ ĐỨC THỌ 3",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ LÊ ĐỨC THỌ 3"
+ },
+ {
+  "storeID": "ST000799",
+  "name": "CF NQ ĐƯỜNG 48",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ ĐƯỜNG 48"
+ },
+ {
+  "storeID": "ST000800",
+  "name": "SATRA 23 ĐƯỜNG 8",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 23 ĐƯỜNG 8"
+ },
+ {
+  "storeID": "ST000801",
+  "name": "SATRA LÊ VĂN LƯƠNG 4",
+  "retail": "HT SATRA",
+  "shortname": "SATRA LÊ VĂN LƯƠNG 4"
+ },
+ {
+  "storeID": "ST000802",
+  "name": "SATRA NGUYỄN VĂN TẠO 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN VĂN TẠO 2"
+ },
+ {
+  "storeID": "ST000813",
+  "name": "VINMART CÀ MAU",
+  "retail": "HT VINMART",
+  "shortname": "VINMART CÀ MAU"
+ },
+ {
+  "storeID": "ST000815",
+  "name": "CF 12 TRƯỜNG THỌ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 12 TRƯỜNG THỌ"
+ },
+ {
+  "storeID": "ST000761",
+  "name": "CF NQ M.MILLEMMIUM",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ M.MILLEMMIUM"
+ },
+ {
+  "storeID": "ST000816",
+  "name": "CF HIỆP BÌNH PHƯỚC",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HIỆP BÌNH PHƯỚC"
+ },
+ {
+  "storeID": "ST000817",
+  "name": "CF CC EASTERN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC EASTERN"
+ },
+ {
+  "storeID": "ST000818",
+  "name": "CF CC DRAGON HILL",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC DRAGON HILL"
+ },
+ {
+  "storeID": "ST000819",
+  "name": "CF NQ TÂN MAI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ TÂN MAI"
+ },
+ {
+  "storeID": "ST000803",
+  "name": "SATRA THẠNH LỘC",
+  "retail": "HT SATRA",
+  "shortname": "SATRA THẠNH LỘC"
+ },
+ {
+  "storeID": "ST000793",
+  "name": "QUẦY TIỂU CẦN",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY TIỂU CẦN"
+ },
+ {
+  "storeID": "ST000820",
+  "name": "QUẦY ĐỒNG PHÚ",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY ĐỒNG PHÚ"
+ },
+ {
+  "storeID": "ST000804",
+  "name": "CF 111 PHẠM NGŨ LÃO",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF 111 PHẠM NGŨ LÃO"
+ },
+ {
+  "storeID": "ST000805",
+  "name": "CF NGUYỄN THỊ MINH KHAI",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF NGUYỄN THỊ MINH KHAI"
+ },
+ {
+  "storeID": "ST000806",
+  "name": "CF 171 PHẠM HÙNG",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF 171 PHẠM HÙNG"
+ },
+ {
+  "storeID": "ST000807",
+  "name": "CF 91 TRẦN VIỆT CHÂU",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF 91 TRẦN VIỆT CHÂU"
+ },
+ {
+  "storeID": "ST000808",
+  "name": "CF 72A NGUYỄN VĂN CỪ",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF 72A NGUYỄN VĂN CỪ"
+ },
+ {
+  "storeID": "ST000809",
+  "name": "CF 134 MẬU THÂN",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF 134 MẬU THÂN"
+ },
+ {
+  "storeID": "ST000810",
+  "name": "CF TÂY ĐÔ",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF TÂY ĐÔ"
+ },
+ {
+  "storeID": "ST000811",
+  "name": "CF 44\/13 LÊ HỒNG PHONG",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF 44\/13 LÊ HỒNG PHONG"
+ },
+ {
+  "storeID": "ST000812",
+  "name": "CF 154B TRẦN QUANG DIỆU",
+  "retail": "HT COOPFOOD TỈNH",
+  "shortname": "CF 154B TRẦN QUANG DIỆU"
+ },
+ {
+  "storeID": "ST000822",
+  "name": "CF TÂN HOÀ ĐÔNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN HOÀ ĐÔNG"
+ },
+ {
+  "storeID": "ST000821",
+  "name": "CF HIM LAM Q.9",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HIM LAM Q.9"
+ },
+ {
+  "storeID": "ST000825",
+  "name": "QUẦY CẦN THƠ 1",
+  "retail": "HT COOPMART TỈNH",
+  "shortname": "QUẦY CẦN THƠ 1"
+ },
+ {
+  "storeID": "ST000823",
+  "name": "CF DƯƠNG THỊ MƯỜI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF DƯƠNG THỊ MƯỜI"
+ },
+ {
+  "storeID": "ST000824",
+  "name": "CF BÌNH AN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÌNH AN"
+ },
+ {
+  "storeID": "ST000826",
+  "name": "SATRA CỦ CHI 13",
+  "retail": "HT SATRA",
+  "shortname": "SATRA CỦ CHI 13"
+ },
+ {
+  "storeID": "ST000827",
+  "name": "SATRA 80 MAN THIỆN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 80 MAN THIỆN"
+ },
+ {
+  "storeID": "ST000828",
+  "name": "SATRA NGUYỄN THỊ KIỂU 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA NGUYỄN THỊ KIỂU 2"
+ },
+ {
+  "storeID": "ST000829",
+  "name": "SATRA B6\/14 QL50",
+  "retail": "HT SATRA",
+  "shortname": "SATRA B6\/14 QL50"
+ },
+ {
+  "storeID": "ST000830",
+  "name": "SATRA DĐÔNG HƯNG THUẬN",
+  "retail": "HT SATRA",
+  "shortname": "SATRA DĐÔNG HƯNG THUẬN"
+ },
+ {
+  "storeID": "ST000831",
+  "name": "SATRA VĨNH LỘC 2",
+  "retail": "HT SATRA",
+  "shortname": "SATRA VĨNH LỘC 2"
+ },
+ {
+  "storeID": "ST000833",
+  "name": "CF 45 ĐINH TIÊN HOÀNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 45 ĐINH TIÊN HOÀNG"
+ },
+ {
+  "storeID": "ST000892",
+  "name": "CO.OP FOOD TAM PHÚ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TAM PHÚ"
+ },
+ {
+  "storeID": "ST000834",
+  "name": "CF PHƯỚC LONG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHƯỚC LONG"
+ },
+ {
+  "storeID": "ST000836",
+  "name": "CF 1034 TỈNH LỘ 15",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 1034 TỈNH LỘ 15"
+ },
+ {
+  "storeID": "ST000837",
+  "name": "CF KHANG GIA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF KHANG GIA"
+ },
+ {
+  "storeID": "ST000838",
+  "name": "CF 699 NG. ẢNH THỦ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 699 NG. ẢNH THỦ"
+ },
+ {
+  "storeID": "ST000839",
+  "name": "CF 192 VƯỜN LÀI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 192 VƯỜN LÀI"
+ },
+ {
+  "storeID": "ST000840",
+  "name": "CF NG. THỊ ĐẶNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NG. THỊ ĐẶNG"
+ },
+ {
+  "storeID": "ST000843",
+  "name": "CF NG. TRƯỜNG TỘ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NG. TRƯỜNG TỘ"
+ },
+ {
+  "storeID": "ST000844",
+  "name": "CF LÊ VĂN CHÍ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ VĂN CHÍ"
+ },
+ {
+  "storeID": "ST000845",
+  "name": "CF ĐẶNG THUỲ TRÂM",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐẶNG THUỲ TRÂM"
+ },
+ {
+  "storeID": "ST000846",
+  "name": "CF CITIGATE TOWER",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CITIGATE TOWER"
+ },
+ {
+  "storeID": "ST000841",
+  "name": "CF TRẦN VĂN QUANG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRẦN VĂN QUANG"
+ },
+ {
+  "storeID": "ST000842",
+  "name": "CF 628 TỈNH LỘ 8",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 628 TỈNH LỘ 8"
+ },
+ {
+  "storeID": "ST000848",
+  "name": "CF XA LỘ HÀ NỘI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF XA LỘ HÀ NỘI"
+ },
+ {
+  "storeID": "ST000852",
+  "name": "CF NQ MERITA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ MERITA"
+ },
+ {
+  "storeID": "ST000853",
+  "name": "CF VĨNH PHÚ 41",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VĨNH PHÚ 41"
+ },
+ {
+  "storeID": "ST000854",
+  "name": "CF PHAN ĐĂNG GIẢNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHAN ĐĂNG GIẢNG"
+ },
+ {
+  "storeID": "ST000849",
+  "name": "CF TOPAZ CITY",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TOPAZ CITY"
+ },
+ {
+  "storeID": "ST000850",
+  "name": "CF CẦU ÔNG DẦU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CẦU ÔNG DẦU"
+ },
+ {
+  "storeID": "ST000792",
+  "name": "QUẦY BÌNH TÂN 2",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY BÌNH TÂN 2"
+ },
+ {
+  "storeID": "ST000847",
+  "name": "SATRA TÂN CẢNG",
+  "retail": "HT SATRA",
+  "shortname": "SATRA TÂN CẢNG"
+ },
+ {
+  "storeID": "ST000855",
+  "name": "CF VẠN KIẾP",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VẠN KIẾP"
+ },
+ {
+  "storeID": "ST000851",
+  "name": "CF PHAN VĂN HÂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHAN VĂN HÂN"
+ },
+ {
+  "storeID": "ST000857",
+  "name": "CF 183 NGUYỄN VĂN ĐẬU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 183 NGUYỄN VĂN ĐẬU"
+ },
+ {
+  "storeID": "ST000858",
+  "name": "CF TRƯƠNG VĂN THÀNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRƯƠNG VĂN THÀNH"
+ },
+ {
+  "storeID": "ST000859",
+  "name": "CF NQ TRUNG TUYẾN CITY",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ TRUNG TUYẾN CITY"
+ },
+ {
+  "storeID": "ST000856",
+  "name": "CF KDC ĐẠI PHÚC",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF KDC ĐẠI PHÚC"
+ },
+ {
+  "storeID": "ST000860",
+  "name": "CF 151\/24B TRẦN HOÀNG NA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 151\/24B TRẦN HOÀNG NA"
+ },
+ {
+  "storeID": "ST000861",
+  "name": "CF FUJI GIA BÌNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF FUJI GIA BÌNH"
+ },
+ {
+  "storeID": "ST000867",
+  "name": "CF NQ BẾN HẢI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ BẾN HẢI"
+ },
+ {
+  "storeID": "ST000862",
+  "name": "CF TAM HÀ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TAM HÀ"
+ },
+ {
+  "storeID": "ST000863",
+  "name": "CF BÙI HỮU NGHĨA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÙI HỮU NGHĨA"
+ },
+ {
+  "storeID": "ST000869",
+  "name": "CF NQ NGUYỄN TUYỂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ NGUYỄN TUYỂN"
+ },
+ {
+  "storeID": "ST001127",
+  "name": "OSIFOOD PHƯƠNG VIỆT",
+  "retail": "HT COOPFOOD",
+  "shortname": "OSIFOOD PHƯƠNG VIỆT"
+ },
+ {
+  "storeID": "ST000868",
+  "name": "CF CC TÂY NGUYÊN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC TÂY NGUYÊN"
+ },
+ {
+  "storeID": "ST000871",
+  "name": "CF 556 NGUYỄN THỊ ĐỊNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 556 NGUYỄN THỊ ĐỊNH"
+ },
+ {
+  "storeID": "ST000872",
+  "name": "CF KDC TRUNG SƠN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF KDC TRUNG SƠN"
+ },
+ {
+  "storeID": "ST000873",
+  "name": "CF 1187 LÊ VĂN LƯƠNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 1187 LÊ VĂN LƯƠNG"
+ },
+ {
+  "storeID": "ST000874",
+  "name": "CF 235 NƠ TRANG LONG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 235 NƠ TRANG LONG"
+ },
+ {
+  "storeID": "ST000187",
+  "name": "CF NQ AN PHÚ ĐÔNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ AN PHÚ ĐÔNG"
+ },
+ {
+  "storeID": "ST000875",
+  "name": "CF 302 BÀU CÁT ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 302 BÀU CÁT "
+ },
+ {
+  "storeID": "ST000876",
+  "name": "CF CC HOÀNG KIM THẾ GIA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC HOÀNG KIM THẾ GIA"
+ },
+ {
+  "storeID": "ST000877",
+  "name": "CF 144\/5 LIÊN KHU 4-5",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 144\/5 LIÊN KHU 4-5"
+ },
+ {
+  "storeID": "ST000878",
+  "name": "CF NQ 95 BẮC HẢI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ 95 BẮC HẢI"
+ },
+ {
+  "storeID": "ST000879",
+  "name": "CF 227 NGUYỄN VĂN CỪ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 227 NGUYỄN VĂN CỪ"
+ },
+ {
+  "storeID": "ST000236",
+  "name": "CF 13-15 DC11 KDC VIỆT-SING",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 13-15 DC11 KDC VIỆT-SING"
+ },
+ {
+  "storeID": "ST000077",
+  "name": "CF 729 ĐỖ XUÂN HỢP",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 729 ĐỖ XUÂN HỢP"
+ },
+ {
+  "storeID": "ST000002",
+  "name": "CF 240 LÊ THỊ HOA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 240 LÊ THỊ HOA"
+ },
+ {
+  "storeID": "ST000107",
+  "name": "CF 292 TRẦN THỊ CỜ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 292 TRẦN THỊ CỜ"
+ },
+ {
+  "storeID": "ST000237",
+  "name": "CF NQ PHỐ ĐÔNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ PHỐ ĐÔNG"
+ },
+ {
+  "storeID": "ST000284",
+  "name": "CF 22 LÂM VĂN BỀN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 22 LÂM VĂN BỀN"
+ },
+ {
+  "storeID": "ST000334",
+  "name": "CF NQ GIA HÒA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NQ GIA HÒA"
+ },
+ {
+  "storeID": "ST000267",
+  "name": "CF 12\/6B TRẦN VĂN MƯỜI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 12\/6B TRẦN VĂN MƯỜI"
+ },
+ {
+  "storeID": "ST000359",
+  "name": "CF 349 NGUYỄN THÁI BÌNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 349 NGUYỄN THÁI BÌNH"
+ },
+ {
+  "storeID": "ST000432",
+  "name": "VINMART SALA",
+  "retail": "HT VINMART",
+  "shortname": "VINMART SALA"
+ },
+ {
+  "storeID": "ST000384",
+  "name": "VINMART TRUNG SƠN",
+  "retail": "HT VINMART",
+  "shortname": "VINMART TRUNG SƠN"
+ },
+ {
+  "storeID": "ST000383",
+  "name": "VINMART HƯNG GIA",
+  "retail": "HT VINMART",
+  "shortname": "VINMART HƯNG GIA"
+ },
+ {
+  "storeID": "ST000411",
+  "name": "VINMART BELLEZA",
+  "retail": "HT VINMART",
+  "shortname": "VINMART BELLEZA"
+ },
+ {
+  "storeID": "ST000415",
+  "name": "VINMART DIAMOND",
+  "retail": "HT VINMART",
+  "shortname": "VINMART DIAMOND"
+ },
+ {
+  "storeID": "ST000694",
+  "name": "VINMART NEW CITY",
+  "retail": "HT VINMART",
+  "shortname": "VINMART NEW CITY"
+ },
+ {
+  "storeID": "ST000382",
+  "name": "VINMART HƯNG PHÚC",
+  "retail": "HT VINMART",
+  "shortname": "VINMART HƯNG PHÚC"
+ },
+ {
+  "storeID": "ST000415",
+  "name": "VINMART DIAMOND",
+  "retail": "HT VINMART",
+  "shortname": "VINMART DIAMOND"
+ },
+ {
+  "storeID": "ST000832",
+  "name": "VINMART XUÂN KHÁNH",
+  "retail": "HT VINMART",
+  "shortname": "VINMART XUÂN KHÁNH"
+ },
+ {
+  "storeID": "ST001197",
+  "name": "OSIFOOD THỦ THIÊM",
+  "retail": "HT COOPFOOD",
+  "shortname": "OSIFOOD THỦ THIÊM"
+ },
+ {
+  "storeID": "ST000882",
+  "name": "VINMART TÂY NINH",
+  "retail": "HT VINMART",
+  "shortname": "VINMART TÂY NINH"
+ },
+ {
+  "storeID": "ST000866",
+  "name": "CF TÂN KIM",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN KIM"
+ },
+ {
+  "storeID": "ST000884",
+  "name": "VINMART DĨ AN 2",
+  "retail": "HT VINMART",
+  "shortname": "VINMART DĨ AN 2"
+ },
+ {
+  "storeID": "ST000885",
+  "name": "CF 40\/51 LÊ THỊ HỒNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 40\/51 LÊ THỊ HỒNG"
+ },
+ {
+  "storeID": "ST000883",
+  "name": "VINMART CAO LÃNH",
+  "retail": "HT VINMART",
+  "shortname": "VINMART CAO LÃNH"
+ },
+ {
+  "storeID": "ST000886",
+  "name": "COOPFOOD AN LỘC",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF AN LỘC"
+ },
+ {
+  "storeID": "ST000887",
+  "name": "COOPFOOD 551 LÊ VĂN KHƯƠNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 551 LÊ VĂN KHƯƠNG"
+ },
+ {
+  "storeID": "ST000899",
+  "name": "COOPMART SCA CAO THẮNG",
+  "retail": "HT COOPMART",
+  "shortname": "CM SCA CAO THẮNG"
+ },
+ {
+  "storeID": "ST000900",
+  "name": "COOPMART SCA PHẠM VĂN CHIÊU",
+  "retail": "HT COOPMART",
+  "shortname": "CM SCA PHẠM VĂN CHIÊU"
+ },
+ {
+  "storeID": "ST000898",
+  "name": "COOPMART SCA ÂU CƠ",
+  "retail": "HT COOPMART",
+  "shortname": "CM SCA ÂU CƠ"
+ },
+ {
+  "storeID": "ST000901",
+  "name": "COOPMART BÌNH THỦY",
+  "retail": "HT COOPMART",
+  "shortname": "CM BÌNH THỦY"
+ },
+ {
+  "storeID": "ST000903",
+  "name": "CF CC LINH TÂY",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC LINH TÂY"
+ },
+ {
+  "storeID": "ST000904",
+  "name": "CM SCA PHẠM VĂN ĐỒNG",
+  "retail": "HT COOPMART",
+  "shortname": "CM SCA PHẠM VĂN ĐỒNG"
+ },
+ {
+  "storeID": "ST000908",
+  "name": "CF 9 VIEW",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 9 VIEW"
+ },
+ {
+  "storeID": "ST000910",
+  "name": "VINMART SÓC TRĂNG",
+  "retail": "HT VINMART",
+  "shortname": "VINMART SÓC TRĂNG"
+ },
+ {
+  "storeID": "ST000907",
+  "name": "CM TAM BÌNH",
+  "retail": "HT COOPMART",
+  "shortname": "CM TAM BÌNH"
+ },
+ {
+  "storeID": "ST000909",
+  "name": "CF THỦ THIÊM GARDEN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF THỦ THIÊM GARDEN"
+ },
+ {
+  "storeID": "ST000905",
+  "name": "CM THOẠI SƠN",
+  "retail": "HT COOPMART",
+  "shortname": "CM THOẠI SƠN"
+ },
+ {
+  "storeID": "ST000912",
+  "name": "CF TRẦN QUỐC THẢO",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRẦN QUỐC THẢO"
+ },
+ {
+  "storeID": "ST000913",
+  "name": "CF VÕ TRƯỜNG TOẢN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VÕ TRƯỜNG TOẢN"
+ },
+ {
+  "storeID": "ST000916",
+  "name": "COOP SÀI GÒN MIA",
+  "retail": "HT COOPFOOD",
+  "shortname": "COOP SÀI GÒN MIA"
+ },
+ {
+  "storeID": "ST000917",
+  "name": "CF PHẠM VĂN HAI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHẠM VĂN HAI"
+ },
+ {
+  "storeID": "ST000906",
+  "name": "CF HÀ ĐÔ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HÀ ĐÔ"
+ },
+ {
+  "storeID": "ST000920",
+  "name": "CF BD NGUYỄN DU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BD NGUYỄN DU"
+ },
+ {
+  "storeID": "ST000921",
+  "name": "CF BD NGUYỄN THÁI HỌC",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BD NGUYỄN THÁI HỌC"
+ },
+ {
+  "storeID": "ST000926",
+  "name": "CF 137 NGUYỄN VĂN ĐẬU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 137 NGUYỄN VĂN ĐẬU"
+ },
+ {
+  "storeID": "ST000927",
+  "name": "CF 302 LÊ VĂN LƯƠNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 302 LÊ VĂN LƯƠNG"
+ },
+ {
+  "storeID": "ST000928",
+  "name": "CF PHÚ HỮU",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHÚ HỮU"
+ },
+ {
+  "storeID": "ST000929",
+  "name": "CF 275 TỈNH LỘ 15",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 275 TỈNH LỘ 15"
+ },
+ {
+  "storeID": "ST000933",
+  "name": "SATRA 367A PHAN VĂN TRỊ",
+  "retail": "HT SATRA",
+  "shortname": "SATRA 367A PHAN VĂN TRỊ"
+ },
+ {
+  "storeID": "ST000930",
+  "name": "CF CC EHOME",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC EHOME"
+ },
+ {
+  "storeID": "ST000932",
+  "name": "CF SAMSORA RIVERSIDE",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF SAMSORA RIVERSIDE"
+ },
+ {
+  "storeID": "ST000931",
+  "name": "CF 269 LÊ ĐỨC THỌ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 269 LÊ ĐỨC THỌ"
+ },
+ {
+  "storeID": "ST000936",
+  "name": "CF ĐS1 TÊN LỬA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐS1 TÊN LỬA"
+ },
+ {
+  "storeID": "ST000943",
+  "name": "VINMART QUANG TRUNG",
+  "retail": "HT VINMART",
+  "shortname": "VINMART QUANG TRUNG"
+ },
+ {
+  "storeID": "ST000942",
+  "name": "VINMART PHAN VĂN TRỊ",
+  "retail": "HT VINMART",
+  "shortname": "VINMART PHAN VĂN TRỊ"
+ },
+ {
+  "storeID": "ST000937",
+  "name": "CF 206-208 ĐÔNG BẮC",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 206-208 ĐÔNG BẮC"
+ },
+ {
+  "storeID": "ST000938",
+  "name": "CF LIÊN ẤP 2-6",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LIÊN ẤP 2-6"
+ },
+ {
+  "storeID": "ST000940",
+  "name": "CF 257 TÂY THẠNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 257 TÂY THẠNH"
+ },
+ {
+  "storeID": "ST000949",
+  "name": "CF XUYÊN Á",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF XUYÊN Á"
+ },
+ {
+  "storeID": "ST000939",
+  "name": "CF NGUYỄN THÔNG 1",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN THÔNG 1"
+ },
+ {
+  "storeID": "ST000954",
+  "name": "CF TÂN LẬP",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÂN LẬP"
+ },
+ {
+  "storeID": "ST000955",
+  "name": "QUẦY TÂN THÀNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "QUẦY TÂN THÀNH"
+ },
+ {
+  "storeID": "ST000956",
+  "name": "CF ĐƯỜNG SỐ 3",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐƯỜNG SỐ 3"
+ },
+ {
+  "storeID": "ST000957",
+  "name": "CF LÊ ĐÌNH CẨN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÊ ĐÌNH CẨN"
+ },
+ {
+  "storeID": "ST000958",
+  "name": "CF LONG TRƯỜNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LONG TRƯỜNG"
+ },
+ {
+  "storeID": "ST000959",
+  "name": "CF MAN THIỆN 2",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF MAN THIỆN 2"
+ },
+ {
+  "storeID": "ST000960",
+  "name": "CF MAN THIỆN 96",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF MAN THIỆN 96"
+ },
+ {
+  "storeID": "ST000961",
+  "name": "CF MAN THIỆN 658",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF MAN THIỆN 658"
+ },
+ {
+  "storeID": "ST000962",
+  "name": "CF PHONG PHÚ (BC)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF PHONG PHÚ (BC)"
+ },
+ {
+  "storeID": "ST000963",
+  "name": "CF AN DƯƠNG VƯƠNG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF AN DƯƠNG VƯƠNG"
+ },
+ {
+  "storeID": "ST000964",
+  "name": "CF SAVIMEX",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF SAVIMEX"
+ },
+ {
+  "storeID": "ST000965",
+  "name": "CF 63A LINH TÂY",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 63A LINH TÂY"
+ },
+ {
+  "storeID": "ST000966",
+  "name": "CF TÔ NGỌC VÂN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TÔ NGỌC VÂN"
+ },
+ {
+  "storeID": "ST000967",
+  "name": "CF ĐẤT MỚI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐẤT MỚI"
+ },
+ {
+  "storeID": "ST000968",
+  "name": "CF KDC THANH NIÊN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF KDC THANH NIÊN"
+ },
+ {
+  "storeID": "ST000969",
+  "name": "CF TRƯƠNG CÔNG ĐỊNH (ST)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF TRƯƠNG CÔNG ĐỊNH (ST)"
+ },
+ {
+  "storeID": "ST000970",
+  "name": "CF BÌNH KHÁNH",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BÌNH KHÁNH"
+ },
+ {
+  "storeID": "ST000947",
+  "name": "CF HIỆP THÀNH (BD)",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF HIỆP THÀNH (BD)"
+ },
+ {
+  "storeID": "ST000971",
+  "name": "VINMART BIÊN HÒA",
+  "retail": "HT VINMART",
+  "shortname": "VINMART BIÊN HÒA"
+ },
+ {
+  "storeID": "ST000972",
+  "name": "VINMART LONG THÀNH",
+  "retail": "HT VINMART",
+  "shortname": "VINMART LONG THÀNH"
+ },
+ {
+  "storeID": "ST000983",
+  "name": "CF QUÁCH ĐÌNH BẢO",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF QUÁCH ĐÌNH BẢO"
+ },
+ {
+  "storeID": "ST000985",
+  "name": "QUẦY TÔ KÝ",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY TÔ KÝ"
+ },
+ {
+  "storeID": "ST000986",
+  "name": "QUẦY XTRA SƯ VẠN HẠNH",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY XTRA SƯ VẠN HẠNH"
+ },
+ {
+  "storeID": "ST000973",
+  "name": "CF AG NGUYỄN TRƯỜNG TỘ",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF AG NGUYỄN TRƯỜNG TỘ"
+ },
+ {
+  "storeID": "ST000974",
+  "name": "CF BL NGUYỄN THỊ MINH KHAI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BL NGUYỄN THỊ MINH KHAI"
+ },
+ {
+  "storeID": "ST000975",
+  "name": "CF BL LÊ DUẨN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF BL LÊ DUẨN"
+ },
+ {
+  "storeID": "ST000976",
+  "name": "CF VL BÀ LANG",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF VL BÀ LANG"
+ },
+ {
+  "storeID": "ST000984",
+  "name": "QUẦY THÁP MƯỜI",
+  "retail": "HT COOPMART",
+  "shortname": "QUẦY THÁP MƯỜI"
+ },
+ {
+  "storeID": "ST000979",
+  "name": "CF CM NGÔ QUYỀN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CM NGÔ QUYỀN"
+ },
+ {
+  "storeID": "ST000980",
+  "name": "CF CC SAFIRA KHANG ĐIỀN",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC SAFIRA KHANG ĐIỀN"
+ },
+ {
+  "storeID": "ST000981",
+  "name": "CF LÃNH BINH THÁI",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF LÃNH BINH THÁI"
+ },
+ {
+  "storeID": "ST000982",
+  "name": "CF NGUYỄN VĂN TẠO",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF NGUYỄN VĂN TẠO"
+ },
+ {
+  "storeID": "ST000988",
+  "name": "CF CC LACASA",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF CC LACASA"
+ },
+ {
+  "storeID": "ST000989",
+  "name": "CF ĐƯỜNG SỐ 339",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF ĐƯỜNG SỐ 339"
+ },
+ {
+  "storeID": "ST000990",
+  "name": "CF 15 ĐƯỜNG SỐ 1",
+  "retail": "HT COOPFOOD",
+  "shortname": "CF 15 ĐƯỜNG SỐ 1"
+ },
+ {
+  "storeID": "ST000993",
+  "name": "QUẦY BÀ RỊA",
+  "shortname": "QUẦY BÀ RỊA"
+ },
+ {
+  "storeID": "ST000994",
+  "name": "CO.OP FINELINE PHÚ MỸ HƯNG",
+  "shortname": "CO.OP FINELINE PHÚ MỸ HƯNG"
+ },
+ {
+  "storeID": "ST000995",
+  "name": "CF KDC VIỆT SING DA6",
+  "shortname": "CF KDC VIỆT SING DA6"
+ },
+ {
+  "storeID": "ST000996",
+  "name": "CF NGUYỄN VĂN  DUNG",
+  "shortname": "CF NGUYỄN VĂN  DUNG"
+ },
+ {
+  "storeID": "ST001001",
+  "name": "CF 60 HỒ VĂN TƯ",
+  "shortname": "CF 60 HỒ VĂN TƯ"
+ },
+ {
+  "storeID": "ST001002",
+  "name": "QUẦY THẮNG LỢI 2",
+  "shortname": "QUẦY THẮNG LỢI 2"
+ },
+ {
+  "storeID": "ST001007",
+  "name": "CF LOVERA KHANG ĐIỀN",
+  "shortname": "CF LOVERA KHANG ĐIỀN"
+ },
+ {
+  "storeID": "ST001008",
+  "name": "QUẦY HÙNG VƯƠNG",
+  "shortname": "QUẦY HÙNG VƯƠNG"
+ },
+ {
+  "storeID": "ST000998",
+  "name": "CF MOSSCOW",
+  "shortname": "CF MOSSCOW"
+ },
+ {
+  "storeID": "ST001012",
+  "name": "QUẦY TP SÁNG NHÀ BÈ",
+  "shortname": "QUẦY TP SÁNG NHÀ BÈ"
+ },
+ {
+  "storeID": "ST001013",
+  "name": "QUẦY THỊT TP SÁNG VINHOMES 01",
+  "shortname": "QUẦY THỊT TP SÁNG VINHOMES 01"
+ },
+ {
+  "storeID": "ST001014",
+  "name": "QUẦY THỊT TP SÁNG VINHOMES 02",
+  "shortname": "QUẦY THỊT TP SÁNG VINHOMES 02"
+ },
+ {
+  "storeID": "ST001015",
+  "name": "CF HOÀNG HỮU NAM",
+  "shortname": "CF HOÀNG HỮU NAM"
+ },
+ {
+  "storeID": "ST001034",
+  "name": "QUẦY OSIFOOD PHƯỚC LONG",
+  "shortname": "QUẦY OSIFOOD PHƯỚC LONG"
+ },
+ {
+  "storeID": "ST001035",
+  "name": "WINMART BẠC LIÊU 2",
+  "shortname": "WINMART BẠC LIÊU 2"
+ },
+ {
+  "storeID": "ST001036",
+  "name": "WINMART MỸ THO",
+  "shortname": "WINMART MỸ THO"
+ },
+ {
+  "storeID": "ST001070",
+  "name": "CF EHOME 3",
+  "shortname": "CF EHOME 3"
+ },
+ {
+  "storeID": "ST001081",
+  "name": "CF NGUYỄN SỸ SÁCH",
+  "shortname": "CF NGUYỄN SỸ SÁCH"
+ },
+ {
+  "storeID": "ST001084",
+  "name": "CH PHÚC AN",
+  "shortname": "CH PHÚC AN"
+ },
+ {
+  "storeID": "ST001087",
+  "name": "CF TRUNG MỸ TÂY",
+  "shortname": "CF TRUNG MỸ TÂY"
+ },
+ {
+  "storeID": "ST001096",
+  "name": "CF AKARI CITY",
+  "shortname": "CF AKARI CITY"
+ },
+ {
+  "storeID": "ST001097",
+  "name": "CF PHAN ĐÌNH PHÙNG",
+  "shortname": "CF PHAN ĐÌNH PHÙNG"
+ },
+ {
+  "storeID": "ST001088",
+  "name": "WINMART VŨNG TÀU",
+  "shortname": "WINMART VŨNG TÀU"
+ },
+ {
+  "storeID": "ST001105",
+  "name": "WINMART NAM LONG",
+  "shortname": "WINMART NAM LONG"
+ },
+ {
+  "storeID": "ST001004",
+  "name": "VINMART THẢO ĐIỀN",
+  "shortname": "VINMART THẢO ĐIỀN"
+ },
+ {
+  "storeID": "ST001003",
+  "name": "VINMART LANDMARK 81",
+  "shortname": "VINMART LANDMARK 81"
+ },
+ {
+  "storeID": "ST001017",
+  "name": "WINMART LÊ VĂN VIỆT",
+  "shortname": "WINMART LÊ VĂN VIỆT"
+ },
+ {
+  "storeID": "ST001075",
+  "name": "WINMART PHỔ QUANG",
+  "shortname": "WINMART PHỔ QUANG"
+ },
+ {
+  "storeID": "ST001083",
+  "name": "WINMART THỦ ĐỨC",
+  "shortname": "WINMART THỦ ĐỨC"
+ },
+ {
+  "storeID": "ST001108",
+  "name": "KINGFOOD PHAN HUY ÍCH",
+  "shortname": "KINGFOOD PHAN HUY ÍCH"
+ },
+ {
+  "storeID": "ST001112",
+  "name": "SATRA FOODS TRẦN CHIÊN",
+  "shortname": "SATRA FOODS TRẦN CHIÊN"
+ },
+ {
+  "storeID": "ST001115",
+  "name": "SATRA 555 TỈNH LỘ 7 ( CỦ CHI)",
+  "shortname": "SATRA 555 TỈNH LỘ 7 ( CỦ CHI)"
+ },
+ {
+  "storeID": "ST001095",
+  "name": "JV KINH DƯƠNG VƯƠNG",
+  "shortname": "JV KINH DƯƠNG VƯƠNG"
+ },
+ {
+  "storeID": "ST001119",
+  "name": "KF NGUYỄN THỊ TÚ",
+  "shortname": "KF NGUYỄN THỊ TÚ"
+ },
+ {
+  "storeID": "ST001113",
+  "name": "SATRA TRẦN NÃO",
+  "shortname": "SATRA TRẦN NÃO"
+ },
+ {
+  "storeID": "ST001114",
+  "name": "SATRA 47 NGUYÊN HỒNG",
+  "shortname": "SATRA 47 NGUYÊN HỒNG"
+ },
+ {
+  "storeID": "ST001122",
+  "name": "OSI FOOD CITIGATE",
+  "shortname": "OSI FOOD CITIGATE"
+ },
+ {
+  "storeID": "ST001124",
+  "name": "OSI FOOD PHƯỚC HIỆP",
+  "shortname": "OSI FOOD PHƯỚC HIỆP"
+ },
+ {
+  "storeID": "ST001123",
+  "name": "KF LÊ VĂN LƯƠNG",
+  "shortname": "KF LÊ VĂN LƯƠNG"
+ },
+ {
+  "storeID": "ST001125",
+  "name": "CF CC HOÀNG ANH GOLD HOUSE",
+  "shortname": "CF CC HOÀNG ANH GOLD HOUSE"
+ },
+ {
+  "storeID": "ST001126",
+  "name": "CF BÌNH CHUẨN",
+  "shortname": "CF BÌNH CHUẨN"
+ },
+ {
+  "storeID": "ST001139",
+  "name": "OSIFOOD NGUYỄN VĂN CÔNG",
+  "shortname": "OSIFOOD NGUYỄN VĂN CÔNG"
+ },
+ {
+  "storeID": "ST001145",
+  "name": "OSIFOOD NGÔ QUYỀN",
+  "shortname": "OSIFOOD NGÔ QUYỀN"
+ },
+ {
+  "storeID": "ST001141",
+  "name": "CF TRẦN TẤN 70",
+  "shortname": "CF TRẦN TẤN 70"
+ },
+ {
+  "storeID": "DC014865",
+  "name": "CH 57 ĐƯỜNG SỐ 3",
+  "shortname": "CH 57 ĐƯỜNG SỐ 3"
+ },
+ {
+  "storeID": "DC014828",
+  "name": "CH 342 NGUYỄN TRÃI",
+  "shortname": "CH 342 NGUYỄN TRÃI"
+ },
+ {
+  "storeID": "DC014854",
+  "name": "CH 65A ĐƯỜNG 339, P. PHƯỚC LONG B, Q.9",
+  "shortname": "CH 65A ĐƯỜNG 339, P. PHƯỚC LONG B, Q.9"
+ },
+ {
+  "storeID": "DC014858",
+  "name": "CH SỐ 14 THIÊN PHƯỚC",
+  "shortname": "CH SỐ 14 THIÊN PHƯỚC"
+ },
+ {
+  "storeID": "DC014835",
+  "name": "CH 36A\/1 NGUYỄN ẢNH THỦ",
+  "shortname": "CH 36A\/1 NGUYỄN ẢNH THỦ"
+ },
+ {
+  "storeID": "DC014833",
+  "name": "CH 27\/10 NGUYỄN ẢNH THỦ",
+  "shortname": "CH 27\/10 NGUYỄN ẢNH THỦ"
+ },
+ {
+  "storeID": "DC014851",
+  "name": "CH 05 ĐƯỜNG SỐ 3",
+  "shortname": "CH 05 ĐƯỜNG SỐ 3"
+ },
+ {
+  "storeID": "DC014852",
+  "name": "47G PHAN VĂN HÂN",
+  "shortname": "47G PHAN VĂN HÂN"
+ },
+ {
+  "storeID": "DC014824",
+  "name": "SIÊU THỊ BÌNH HOÀ – 290A NƠ TRANG LONG",
+  "shortname": "SIÊU THỊ BÌNH HOÀ – 290A NƠ TRANG LONG"
+ },
+ {
+  "storeID": "DC014831",
+  "name": "CH 675A NGUYỄN KIỆM",
+  "shortname": "CH 675A NGUYỄN KIỆM"
+ },
+ {
+  "storeID": "DC014830",
+  "name": "CH 318\/13 PHẠM VĂN HAI",
+  "shortname": "CH 318\/13 PHẠM VĂN HAI"
+ },
+ {
+  "storeID": "DC014838",
+  "name": "CH 123B TRẦN HỮU TRANG",
+  "shortname": "CH 123B TRẦN HỮU TRANG"
+ },
+ {
+  "storeID": "DC014834",
+  "name": "CH 814–814B TRƯỜNG CHINH",
+  "shortname": "CH 814–814B TRƯỜNG CHINH"
+ },
+ {
+  "storeID": "DC014868",
+  "name": "CỬA HÀNG 312 THÍCH QUẢNG ĐỨC",
+  "shortname": "CỬA HÀNG 312 THÍCH QUẢNG ĐỨC"
+ },
+ {
+  "storeID": "DC014826",
+  "name": "CH 40 - 42 NGUYỄN THÁI HỌC",
+  "shortname": "CH 40 - 42 NGUYỄN THÁI HỌC"
+ },
+ {
+  "storeID": "DC014845",
+  "name": "CH 21-23 PHAN CHU TRINH",
+  "shortname": "CH 21-23 PHAN CHU TRINH"
+ },
+ {
+  "storeID": "DC014825",
+  "name": "CH 251 LÊ THÁNH TÔN",
+  "shortname": "CH 251 LÊ THÁNH TÔN"
+ },
+ {
+  "storeID": "DC014867",
+  "name": "CH 754 XÔ VIẾT NGHỆ TĨNH",
+  "shortname": "CH 754 XÔ VIẾT NGHỆ TĨNH"
+ },
+ {
+  "storeID": "DC014837",
+  "name": "CH 79-81 THỐNG NHẤT",
+  "shortname": "CH 79-81 THỐNG NHẤT"
+ },
+ {
+  "storeID": "DC014836",
+  "name": "CH 156-158 PHAN ĐÌNH PHÙNG",
+  "shortname": "CH 156-158 PHAN ĐÌNH PHÙNG"
+ },
+ {
+  "storeID": "DC014829",
+  "name": "CH 31 PHÚ HÒA",
+  "shortname": "CH 31 PHÚ HÒA"
+ },
+ {
+  "storeID": "DC014862",
+  "name": "CH SỐ 4 LÊ THỊ HỒNG",
+  "shortname": "CH SỐ 4 LÊ THỊ HỒNG"
+ },
+ {
+  "storeID": "DC014859",
+  "name": "CH 264A NGUYỄN THÁI BÌNH, P.12, Q.TÂN BÌNH, TP.HCM",
+  "shortname": "CH 264A NGUYỄN THÁI BÌNH, P.12, Q.TÂN BÌNH, TP.HCM"
+ },
+ {
+  "storeID": "DC014827",
+  "name": "CH KIOS SỐ 10 CHỢ NGUYỄN VĂN TRỖI",
+  "shortname": "CH KIOS SỐ 10 CHỢ NGUYỄN VĂN TRỖI"
+ },
+ {
+  "storeID": "DC014840",
+  "name": "CH 189 HOÀNG VĂN THỤ",
+  "shortname": "CH 189 HOÀNG VĂN THỤ"
+ },
+ {
+  "storeID": "DC014849",
+  "name": "CH 322 NGUYỄN CHÍ THANH",
+  "shortname": "CH 322 NGUYỄN CHÍ THANH"
+ },
+ {
+  "storeID": "DC014832",
+  "name": "CH 368 NGUYỄN THỊ ĐỊNH",
+  "shortname": "CH 368 NGUYỄN THỊ ĐỊNH"
+ },
+ {
+  "storeID": "DC014841",
+  "name": "CH 340 BÙI HỮU NGHĨA",
+  "shortname": "CH 340 BÙI HỮU NGHĨA"
+ },
+ {
+  "storeID": "DC014844",
+  "name": "CH 19 LÊ THẠCH",
+  "shortname": "CH 19 LÊ THẠCH"
+ },
+ {
+  "storeID": "DC014843",
+  "name": "CH 320 BẠCH ĐẰNG",
+  "shortname": "CH 320 BẠCH ĐẰNG"
+ },
+ {
+  "storeID": "DC014846",
+  "name": "CH 345 NGUYỄN VĂN TẠO",
+  "shortname": "CH 345 NGUYỄN VĂN TẠO"
+ },
+ {
+  "storeID": "DC014855",
+  "name": "CỬA HÀNG GTSP 23 LÊ THẠCH",
+  "shortname": "CỬA HÀNG GTSP 23 LÊ THẠCH"
+ },
+ {
+  "storeID": "DC014847",
+  "name": "CH 62 HOÀNG HOA THÁM",
+  "shortname": "CH 62 HOÀNG HOA THÁM"
+ },
+ {
+  "storeID": "DC014848",
+  "name": "CH 43 ĐƯỜNG SỐ 1",
+  "shortname": "CH 43 ĐƯỜNG SỐ 1"
+ },
+ {
+  "storeID": "DC014842",
+  "name": "CH 1\/1B THỐNG NHẤT",
+  "shortname": "CH 1\/1B THỐNG NHẤT"
+ },
+ {
+  "storeID": "DC014850",
+  "name": "CH 344 LÊ VĂN VIỆT",
+  "shortname": "CH 344 LÊ VĂN VIỆT"
+ },
+ {
+  "storeID": "DC014861",
+  "name": "CH 39 KHU PHỐ 2",
+  "shortname": "CH 39 KHU PHỐ 2"
+ },
+ {
+  "storeID": "DC014853",
+  "name": "CH 420 NƠ TRANG LONG",
+  "shortname": "CH 420 NƠ TRANG LONG"
+ },
+ {
+  "storeID": "ST001149",
+  "name": "CF THOẠI NGỌC HẦU",
+  "shortname": "CF THOẠI NGỌC HẦU"
+ },
+ {
+  "storeID": "ST001153",
+  "name": "OSIFOOD LIÊN PHƯỜNG",
+  "shortname": "OSIFOOD LIÊN PHƯỜNG"
+ },
+ {
+  "storeID": "ST001158",
+  "name": "WINMART NOVIA PHẠM VĂN ĐỒNG",
+  "shortname": "WINMART NOVIA PHẠM VĂN ĐỒNG"
+ },
+ {
+  "storeID": "ST001170",
+  "name": "CF HOÀNG QUÂN 2",
+  "shortname": "CF HOÀNG QUÂN 2"
+ },
+ {
+  "storeID": "ST001171",
+  "name": "CO.OP FOOD TÂY HÒA 149",
+  "shortname": "CO.OP FOOD TÂY HÒA 149"
+ },
+ {
+  "storeID": "ST001181",
+  "name": "CF ĐS 8 LINH TRUNG",
+  "shortname": "CF ĐS 8 LINH TRUNG"
+ },
+ {
+  "storeID": "ST000952",
+  "name": "CF NGÔ THÌ NHẬM",
+  "shortname": "CF NGÔ THÌ NHẬM"
+ },
+ {
+  "storeID": "ST001174",
+  "name": "OSIFOOD THỐNG NHẤT",
+  "shortname": "OSIFOOD THỐNG NHẤT"
+ },
+ {
+  "storeID": "ST001176",
+  "name": "CF 87 LẠC LONG QUÂN",
+  "shortname": "CF 87 LẠC LONG QUÂN"
+ },
+ {
+  "storeID": "ST001172",
+  "name": "CF 205 BÌNH THỚI",
+  "shortname": "CF 205 BÌNH THỚI"
+ },
+ {
+  "storeID": "ST001173",
+  "name": "CF 557 KHA VẠN CÂN",
+  "shortname": "CF 557 KHA VẠN CÂN"
+ },
+ {
+  "storeID": "ST001187",
+  "name": "CF CHUNG CƯ HÀ ĐÔ",
+  "shortname": "CF CHUNG CƯ HÀ ĐÔ"
+ },
+ {
+  "storeID": "ST001192",
+  "name": "OSIFOOD VINHOME Q9",
+  "shortname": "OSIFOOD VINHOME Q9"
+ },
+ {
+  "storeID": "ST000915",
+  "name": "CF RIVERA POINT",
+  "shortname": "CF RIVERA POINT"
+ },
+ {
+  "storeID": "ST000987",
+  "name": "CF CC SAIGON CO.OP",
+  "shortname": "CF CC SAIGON CO.OP"
+ },
+ {
+  "storeID": "ST001210",
+  "name": "QUẦY CÁI BÈ",
+  "shortname": "QUẦY CÁI BÈ"
+ },
+ {
+  "storeID": "ST001217",
+  "name": "SATRA HOÀNG NGỌC PHÁCH",
+  "shortname": "SATRA HOÀNG NGỌC PHÁCH"
+ },
+ {
+  "storeID": "ST001213",
+  "name": "CF NGUYÊN HỒNG",
+  "shortname": "CF NGUYÊN HỒNG"
+ },
+ {
+  "storeID": "ST001211",
+  "name": "QUẦY CHỢ MỚI - AG",
+  "shortname": "QUẦY CHỢ MỚI - AG"
+ },
+ {
+  "storeID": "ST001226",
+  "name": "CF CC ORIGAMI S10.03",
+  "shortname": "CF CC ORIGAMI S10.03"
+ }
+]
