@@ -157,9 +157,9 @@ const RequestForm = () => {
         //   },
         // };
         data.push(rows);
-        setRows([]);
+        // setRows([]);
         
-        console.log(data);
+        console.log(rows);
       })
       .catch((err) => {
         console.log(err, " error");

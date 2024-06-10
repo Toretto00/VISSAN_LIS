@@ -79,7 +79,7 @@ const History = () => {
     dayjs.utc()
   );
   const [quantity, setQuantity] = useState("");
-  const [rows, setRows] = useState<row>();
+  const [rows, setRows] = useState<row[]>([]);
 
   const router = useRouter();
 
@@ -88,12 +88,12 @@ const History = () => {
   }, []);
 
   const handleLoadProductList = async () => {
-    fetch("./data/Product.json")
+    fetch("./data/HistoryReport.json")
       .then(function (res) {
         return res.json();
       })
       .then((data) => {
-        setProductList(data);
+        setRows(data);
 
         console.log(data);
       })
@@ -128,7 +128,7 @@ const History = () => {
       quantity: quantity,
       rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
     };
-    setRows(newRow);
+    // setRows(newRow);
     resetValue();
   };
 
