@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const domain = "http://localhost:44313";
+const domain = "https://localhost:7242";
 // const domain = "https://toretto.azurewebsites.net";
 
 const apiRequestTimeOut = 6000;

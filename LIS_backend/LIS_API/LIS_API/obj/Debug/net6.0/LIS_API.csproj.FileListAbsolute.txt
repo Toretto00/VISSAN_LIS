@@ -61,9 +61,10 @@ D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\staticwebasse
 D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\staticwebassets.build.json
 D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\staticwebassets.development.json
 D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\scopedcss\bundle\LIS_API.styles.css
-D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\LIS_API.csproj.CopyComplete
 D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\LIS_API.dll
 D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\refint\LIS_API.dll
 D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\LIS_API.pdb
 D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\LIS_API.genruntimeconfig.cache
 D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\ref\LIS_API.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\LIS_API.sourcelink.json
+D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Debug\net6.0\LIS_API.csproj.Up2Date

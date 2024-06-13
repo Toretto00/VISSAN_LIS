@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 // import "@/app/globals.module.css";
 import styles from "./history.module.scss";
 
+import api from "@/app/api/client";
+
 import FullFeaturedCrudGrid from "@/components/requestDataGrid/page";
 
 import {
@@ -36,6 +38,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import Header from "@/components/header/header";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 const theme = createTheme({
   palette: {
@@ -79,7 +82,7 @@ const History = () => {
     dayjs.utc()
   );
   const [quantity, setQuantity] = useState("");
-  const [rows, setRows] = useState<row[]>([]);
+  const [rows, setRows] = useState([]);
 
   const router = useRouter();
 
@@ -88,49 +91,24 @@ const History = () => {
   }, []);
 
   const handleLoadProductList = async () => {
-    fetch("./data/HistoryReport.json")
-      .then(function (res) {
-        return res.json();
-      })
-      .then((data) => {
-        setRows(data);
-
-        console.log(data);
-      })
-      .catch(function (err) {
-        console.log(err, " error");
-      });
+    api.get(`Invoices/${localStorage.getItem("userID")}`).then((res) => {
+      setRows(res.data);
+    });
   };
 
-  const resetValue = () => {
-    setProductName("");
-    setManufactureDate(dayjs());
-    setQuantity("");
-  };
-
-  const handleAddSample = () => {
-    if (productSelected === null) {
-      setDisplay("flex");
-      return;
-    }
-    if (manufactureDate === null) {
-      setDisplay("flex");
-      return;
-    }
-    if (quantity === "") {
-      setDisplay("flex");
-      return;
-    }
-    const newRow = {
-      id: -1,
-      name: productSelected,
-      unit: unit,
-      quantity: quantity,
-      rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
-    };
-    // setRows(newRow);
-    resetValue();
-  };
+  const columns: GridColDef<(typeof rows)[number]>[] = [
+    { field: "id", headerName: "ID", width: 90 },
+    {
+      field: "date",
+      headerName: "Date",
+      width: 150,
+    },
+    {
+      field: "status",
+      headerName: "Status",
+      width: 150,
+    },
+  ];
 
   return (
     <ThemeProvider theme={theme}>
@@ -186,7 +164,24 @@ const History = () => {
             Thêm
           </Button> */}
 
-          <FullFeaturedCrudGrid Row={rows} />
+          {/* <FullFeaturedCrudGrid Row={rows} /> */}
+
+          <Box sx={{ height: 400, width: "100%" }}>
+            <DataGrid
+              rows={rows}
+              columns={columns}
+              initialState={{
+                pagination: {
+                  paginationModel: {
+                    pageSize: 5,
+                  },
+                },
+              }}
+              pageSizeOptions={[5]}
+              checkboxSelection
+              disableRowSelectionOnClick
+            />
+          </Box>
 
           {/* <Button
             fullWidth

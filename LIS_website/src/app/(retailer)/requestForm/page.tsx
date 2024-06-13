@@ -4,7 +4,7 @@ import React, { useEffect, useState, useCallback } from "react";
 
 import { useRouter } from "next/navigation";
 
-import { promises as fs } from "fs";
+import api from "@/app/api/client";
 
 // import "@/app/globals.module.css";
 import styles from "./requestForm.module.scss";
@@ -38,6 +38,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import Header from "@/components/header/header";
+import { ok } from "assert";
 
 const theme = createTheme({
   palette: {
@@ -47,21 +48,26 @@ const theme = createTheme({
   },
 });
 
+interface category {
+  id: number;
+  name: string;
+  code: string;
+}
+
 interface product {
   id: number;
-  category: number;
+  category: category;
   name: string;
   code: string;
   description: string;
   created: string;
   updated: string;
-  no: 1;
 }
 
 interface row {
   id: number;
   name: product | undefined;
-  quantity: string;
+  quantity: number;
   unit: string;
   rowManufactureDate: any;
 }
@@ -90,18 +96,16 @@ const RequestForm = () => {
   }, []);
 
   const handleLoadProductList = async () => {
-    fetch("./data/Product.json")
-      .then(function (res) {
-        return res.json();
+    api
+      .get("Products")
+      .then((res: any) => {
+        // if (res.status === 200) {
+        //   res.then((data: any) => {
+        //   });
+        //   }
+        setProductList(res.data);
       })
-      .then((data) => {
-        setProductList(data);
-
-        console.log(data);
-      })
-      .catch(function (err) {
-        console.log(err, " error");
-      });
+      .catch((e) => console.log(e));
   };
 
   const resetValue = () => {
@@ -127,7 +131,7 @@ const RequestForm = () => {
       id: rows.length + 1,
       name: productSelected,
       unit: unit,
-      quantity: quantity,
+      quantity: +quantity,
       rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
     };
     const newRows = [...rows];
@@ -137,33 +141,29 @@ const RequestForm = () => {
   };
 
   const handleSendRequest = () => {
-    fetch("./data/HistoryReport.json")
+    api
+      .post("Invoices", {
+        date: dayjs.utc(),
+        status: "pending",
+        user: localStorage.getItem("userID"),
+        created: dayjs.utc(),
+        updated: dayjs.utc(),
+      })
       .then((res) => {
-        return res.json();
+        if (res.status === 201) {
+          rows.forEach((element) => {
+            api.post("Invoice_Product", {
+              product: element.name?.id,
+              invoice: +res.data.id,
+              quantity: +quantity,
+              created: manufactureDate?.toString(),
+              updated: manufactureDate?.toString(),
+            });
+          });
+        }
       })
-      .then((data) => {
-        // setProductList(data);
-        // const newrow = {
-        //   id: -1,
-        //   name: productSelected,
-        //   unit: unit,
-        //   quantity: quantity,
-        //   rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
-        // };
-        // const newData = {
-        //   store: {
-        //     book: data,
-        //     bicycle: newrow,
-        //   },
-        // };
-        data.push(rows);
-        // setRows([]);
-        
-        console.log(rows);
-      })
-      .catch((err) => {
-        console.log(err, " error");
-      });
+      .catch((e) => console.log(e));
+    setRows([]);
   };
 
   return (

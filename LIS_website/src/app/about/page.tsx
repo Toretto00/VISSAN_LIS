@@ -7,7 +7,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Link from "next/link";
 import { Divider } from "@mui/material";
 import Image from "next/image";
-import styled from "styled-components";
+// import styled from "styled-components";
 import "./page.css";
 import LinearProgress, {
   linearProgressClasses,
@@ -16,7 +16,7 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import YouTube from "react-youtube";
+// import YouTube from "react-youtube";
 
 function About() {
   const [scrollPosition, setScrollPosition] = React.useState(0);
@@ -591,7 +591,7 @@ function About() {
           handleVideoClose();
         }}
       >
-        {showVideo && (
+        {/* {showVideo && (
           <YouTube
             videoId="XHOmBV4js_E"
             style={{
@@ -609,7 +609,7 @@ function About() {
               },
             }}
           />
-        )}
+        )} */}
       </div>
       <Container
         maxWidth="xl"

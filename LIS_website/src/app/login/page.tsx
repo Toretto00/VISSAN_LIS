@@ -22,33 +22,45 @@ const Login = () => {
 
   useEffect(() => {
     // setLoading(true);
-    if (localStorage.getItem("storeID")) router.push("requestForm");
+    if (localStorage.getItem("userID")) router.push("requestForm");
   }, []);
 
   const handleLogin = () => {
-    fetch("./data/User.json")
-      .then(function (res) {
-        return res.json();
+    api
+      .post("Users/Login", {
+        username: username,
+        password: password,
       })
-      .then((data) => {
-        data.forEach((element: any) => {
-          if (element.username === username) {
-            if (element.password === password) {
-              localStorage.setItem("storeID", element.storeID);
-              setLoading(true);
-              SETJWT(element.role);
-              SETUSERNAME(username);
-              SETPASSWORD(password);
-              resetValue();
-              router.push("requestForm");
-            } else {
-            }
-          }
-        });
-      })
-      .catch(function (err) {
-        console.log(err, " error");
+      .then((res) => {
+        localStorage.setItem("userID", res.data.id);
+        localStorage.setItem("role", res.data.role);
+        resetValue();
+        router.push("requestForm");
+        setLoading(true);
       });
+    // fetch("./data/User.json")
+    //   .then(function (res) {
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     data.forEach((element: any) => {
+    //       if (element.username === username) {
+    //         if (element.password === password) {
+    //           localStorage.setItem("storeID", element.storeID);
+    //           setLoading(true);
+    //           SETJWT(element.role);
+    //           SETUSERNAME(username);
+    //           SETPASSWORD(password);
+    //           resetValue();
+    //           router.push("requestForm");
+    //         } else {
+    //         }
+    //       }
+    //     });
+    //   })
+    //   .catch(function (err) {
+    //     console.log(err, " error");
+    //   });
   };
 
   const resetValue = () => {

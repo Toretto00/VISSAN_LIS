@@ -165,8 +165,7 @@ function Header() {
     id: number,
     link: string
   ) => {
-    if (JWT !== "") {
-      // setPopperAnchorEl(event.currentTarget);
+    if (!localStorage.getItem("userID")) {
       setSelectedButton(id);
       router.push(link);
     } else router.push("/login");
@@ -206,7 +205,7 @@ function Header() {
   //   setIsMenuItemHovered("");
   // }
   const handleAccountButtonClick = () => {
-    if (localStorage.getItem("storeID")) router.push("/myAccount");
+    if (localStorage.getItem("userID")) router.push("/myAccount");
     else router.push("/login");
   };
 
