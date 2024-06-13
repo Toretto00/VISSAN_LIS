@@ -30,13 +30,16 @@ namespace LIS_API.Controllers
 
         // GET: api/Invoice_Product/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Invoice_Product>> GetInvoice_Product(int id)
+        public List<Invoice_Product> GetInvoice_Product(int id)
         {
-            var invoice_Product = await _context.Invoice_Products.FindAsync(id);
+            var invoice_Product = _context.Invoice_Products.Where(x => x.invoice.Id == id)
+                .Include(x => x.product)
+                .Include(x => x.invoice)
+                .ToList();
 
             if (invoice_Product == null)
             {
-                return NotFound();
+                return null;
             }
 
             return invoice_Product;

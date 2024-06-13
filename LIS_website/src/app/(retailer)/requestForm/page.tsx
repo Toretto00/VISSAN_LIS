@@ -99,10 +99,6 @@ const RequestForm = () => {
     api
       .get("Products")
       .then((res: any) => {
-        // if (res.status === 200) {
-        //   res.then((data: any) => {
-        //   });
-        //   }
         setProductList(res.data);
       })
       .catch((e) => console.log(e));

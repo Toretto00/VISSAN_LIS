@@ -1,25 +1,17 @@
 "use client";
 
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
-// import "@/app/globals.module.css";
-import styles from "./history.module.scss";
-
 import api from "@/app/api/client";
 
-import {
-  Container,
-  Box,
-  Alert,
-  createTheme,
-  ThemeProvider,
-} from "@mui/material";
+import FullFeaturedCrudGrid from "@/components/requestDataGrid/page";
+
+import { Container, Box, createTheme, ThemeProvider } from "@mui/material";
 
 import dayjs, { Dayjs } from "dayjs";
 
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -37,78 +29,101 @@ const theme = createTheme({
 });
 
 interface product {
-  id: number;
-  category: number;
+  id: 2;
+  category: null;
   name: string;
   code: string;
-  description: string;
+  description: null;
   created: string;
   updated: string;
-  no: 1;
+}
+
+interface invoice {
+  id: number;
+  date: string;
+  status: string;
+  user: null;
+  created: string;
+  updated: string;
 }
 
 interface row {
-  id: number;
-  name: product | undefined;
-  quantity: string;
-  unit: string;
-  rowManufactureDate: any;
+  id: 2;
+  product: product;
+  invoice: invoice;
+  quantity: 0;
+  created: string;
+  updated: string;
 }
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-const History = () => {
+const HistoryDetail = ({ params }: { params: { invoice: string } }) => {
   const [loading, setLoading] = useState(false);
-  const [display, setDisplay] = useState("none");
-  const [productList, setProductList] = useState<product[]>([]);
   const [productSelected, setProductSelected] = useState<product | null>();
   const [unit, setUnit] = useState("Kg");
-
-  const [productName, setProductName] = useState("");
-  const [manufactureDate, setManufactureDate] = useState<Dayjs | null>(
-    dayjs.utc()
-  );
-  const [quantity, setQuantity] = useState("");
-  const [rows, setRows] = useState([]);
+  const [rows, setRows] = useState<row[]>([]);
 
   const router = useRouter();
+
+  const searchParams = useSearchParams();
+  const search = searchParams.get("listings_id");
 
   useEffect(() => {
     handleLoadProductList();
   }, []);
 
   const handleLoadProductList = async () => {
-    api.get(`Invoices/${localStorage.getItem("userID")}`).then((res) => {
+    api.get(`Invoice_Product/${search}`).then((res: any) => {
       setRows(res.data);
+      console.log(res.data);
     });
   };
 
   const columns: GridColDef<(typeof rows)[number]>[] = [
-    { field: "id", headerName: "ID", width: 90 },
+    { field: "id", headerName: "ID", width: 70 },
     {
-      field: "date",
-      headerName: "Date",
-      width: 150,
+      field: "product.code",
+      headerName: "Mã sản phẩm",
+      valueGetter: (value, row) => {
+        return `${row.product.code}`;
+      },
+      width: 320,
+      editable: true,
     },
     {
-      field: "status",
-      headerName: "Status",
-      width: 150,
+      field: "product.name",
+      headerName: "Tên sản phẩm",
+      valueGetter: (value, row) => {
+        return `${row.product.name}`;
+      },
+      width: 320,
+      editable: true,
+    },
+    {
+      field: "quantity",
+      headerName: "Số lượng",
+      width: 180,
+      editable: true,
+    },
+    {
+      field: "unit",
+      headerName: "Đơn vị",
+      width: 180,
+      editable: true,
+    },
+    {
+      field: "created",
+      headerName: "Ngày sản xuất",
+      width: 240,
+      editable: true,
     },
   ];
 
-  const searchParams = useSearchParams();
-
-  const handleRowClick: GridEventListener<"rowClick"> = (param) => {
-    const params = new URLSearchParams(searchParams);
-    params.set("listings_id", param.id.toString());
-    router.push(`/history/${param.id}?${params.toString()}`);
-  };
-
   return (
     <ThemeProvider theme={theme}>
-      <div className={styles.login}>
+      <div style={{ marginTop: "120px" }}>
         <Container maxWidth="lg">
           <Box sx={{ height: 400, width: "100%" }}>
             <DataGrid
@@ -124,22 +139,12 @@ const History = () => {
               pageSizeOptions={[5]}
               checkboxSelection
               disableRowSelectionOnClick
-              onRowClick={handleRowClick}
             />
           </Box>
-          <Alert
-            severity="warning"
-            sx={{ display: display }}
-            onClose={() => {
-              setDisplay("none");
-            }}
-          >
-            Vui lòng nhập đầy đủ thông tin!
-          </Alert>
         </Container>
       </div>
     </ThemeProvider>
   );
 };
 
-export default History;
+export default HistoryDetail;
