@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ElementType, useEffect, useState } from "react";
+import React, { ElementType, useEffect, useState, Suspense } from "react";
 
 import Image from "next/image";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
@@ -461,389 +461,395 @@ const ProductDetail = ({ params }: { params: { productID: string } }) => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      {isLoading ? (
-        <LoadingPage />
-      ) : (
-        <div>
-          <ScrollToTopButton />
-          <div className={Style.wrapper}>
-            {/* Breadcrumbs */}
-            <Container maxWidth="xl">
-              <Breadcrumbs
-                separator="›"
-                aria-label="breadcrumb"
-                className={Style.breadcrumbsBanner}
-              >
-                <Link
-                  underline="none"
-                  color="inherit"
-                  href="/"
-                  className={Style.breadCrumbsLink}
+    <Suspense>
+      <ThemeProvider theme={theme}>
+        {isLoading ? (
+          <LoadingPage />
+        ) : (
+          <div>
+            <ScrollToTopButton />
+            <div className={Style.wrapper}>
+              {/* Breadcrumbs */}
+              <Container maxWidth="xl">
+                <Breadcrumbs
+                  separator="›"
+                  aria-label="breadcrumb"
+                  className={Style.breadcrumbsBanner}
                 >
-                  Home
-                </Link>
-                <Link
-                  underline="none"
-                  color="inherit"
-                  href="/"
-                  className={Style.breadCrumbsLink}
-                >
-                  {listingData.category.name}
-                </Link>
-                <Typography color="var(--primary-color)">
-                  {listingData.title}
-                </Typography>
-              </Breadcrumbs>
-            </Container>
-
-            <Divider />
-            <Container maxWidth="xl">
-              {/* Heading */}
-              <Grid container spacing={2} className={Style.productHeading}>
-                <Grid item xs={12} sm={12} md={8} lg={8}>
-                  <div className={Style.productCondition}>For Sell</div>
-                  <Typography
-                    variant="h2"
-                    component="h2"
-                    className={Style.productTitle}
+                  <Link
+                    underline="none"
+                    color="inherit"
+                    href="/"
+                    className={Style.breadCrumbsLink}
                   >
+                    Home
+                  </Link>
+                  <Link
+                    underline="none"
+                    color="inherit"
+                    href="/"
+                    className={Style.breadCrumbsLink}
+                  >
+                    {listingData.category.name}
+                  </Link>
+                  <Typography color="var(--primary-color)">
                     {listingData.title}
                   </Typography>
-                  <Breadcrumbs className={Style.productHeaderInfo}>
-                    <div>
-                      <LocationOnIcon />
-                      <Typography>{listingData.contact.address}</Typography>
-                    </div>
-                    <div>
-                      <VisibilityIcon />
-                      <Typography>Views: {listingData.view_count}</Typography>
-                    </div>
-                  </Breadcrumbs>
-                </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4}>
-                  <div className={Style.productPriceWrap}>
-                    <Typography className={Style.productPrice}>
-                      ${listingData.price}
-                    </Typography>
-                    <Typography className={Style.productPriceType}>
-                      {"("}
-                      {"fixed"}
-                      {")"}
-                    </Typography>
-                  </div>
-                  <div className={Style.btnArea}>
-                    {iconPriceBtn.map((item) => (
-                      <IconButton key={item.title} className={Style.iconBtn}>
-                        <item.icon className={Style.icon} />
-                      </IconButton>
-                    ))}
-                  </div>
-                </Grid>
-              </Grid>
+                </Breadcrumbs>
+              </Container>
 
-              <Grid container spacing={2} className={Style.listingContentArea}>
-                <Grid
-                  item
-                  className={Style.listingContent}
-                  xs={12}
-                  sm={12}
-                  md={8}
-                  lg={8}
-                >
-                  {/* Image slider */}
-                  <div className={Style.sliderWrapper}>
-                    <Carousel
-                      interval={6000}
-                      indicatorIconButtonProps={{
-                        style: {
-                          marginRight: "6px",
-                          marginTop: "6px",
-                          color: "gray",
-                          opacity: "0.6",
-                        },
-                      }}
-                      activeIndicatorIconButtonProps={{
-                        style: {
-                          opacity: "1",
-                        },
-                      }}
-                      indicatorContainerProps={{
-                        style: {
-                          marginTop: "12px",
-                          textAlign: "left",
-                        },
-                      }}
-                      IndicatorIcon={listingData.images.map((item, i) => (
-                        <Image
-                          key={i}
-                          src={item.url}
-                          height={100}
-                          width={125}
-                          alt={item.alt}
-                          className={Style.productImage}
-                        />
-                      ))}
+              <Divider />
+              <Container maxWidth="xl">
+                {/* Heading */}
+                <Grid container spacing={2} className={Style.productHeading}>
+                  <Grid item xs={12} sm={12} md={8} lg={8}>
+                    <div className={Style.productCondition}>For Sell</div>
+                    <Typography
+                      variant="h2"
+                      component="h2"
+                      className={Style.productTitle}
                     >
-                      {listingData.images.map((item, i) => (
-                        <Item key={i} item={item} />
-                      ))}
-                    </Carousel>
-                  </div>
-
-                  {/* Overview */}
-                  <Card variant="outlined" className={Style.productOverview}>
-                    <CardContent>
-                      <Typography
-                        variant="h3"
-                        component="h3"
-                        className={Style.itemHeading}
-                      >
-                        Overview
+                      {listingData.title}
+                    </Typography>
+                    <Breadcrumbs className={Style.productHeaderInfo}>
+                      <div>
+                        <LocationOnIcon />
+                        <Typography>{listingData.contact.address}</Typography>
+                      </div>
+                      <div>
+                        <VisibilityIcon />
+                        <Typography>Views: {listingData.view_count}</Typography>
+                      </div>
+                    </Breadcrumbs>
+                  </Grid>
+                  <Grid item xs={12} sm={12} md={4} lg={4}>
+                    <div className={Style.productPriceWrap}>
+                      <Typography className={Style.productPrice}>
+                        ${listingData.price}
                       </Typography>
-                      <Grid container spacing={2} rowSpacing={6}>
-                        <Grid item xs={12} sm={4} md={4} lg={3}>
-                          <div className={Style.amenitiesList}>
-                            <div className={Style.amenitiesIcon}>
-                              <LocalOfferIcon />
-                            </div>
-                            <div className={Style.amenitiesContent}>
-                              <Typography className={Style.headingTitle}>
-                                ID No
-                              </Typography>
-                              <Typography className={Style.value}>
-                                {listingData.listing_id}
-                              </Typography>
-                            </div>
-                          </div>
-                        </Grid>
-                        {overviewIcon.map((item, i = 1) => (
-                          <Grid key={i} item xs={12} sm={4} md={4} lg={3}>
+                      <Typography className={Style.productPriceType}>
+                        {"("}
+                        {"fixed"}
+                        {")"}
+                      </Typography>
+                    </div>
+                    <div className={Style.btnArea}>
+                      {iconPriceBtn.map((item) => (
+                        <IconButton key={item.title} className={Style.iconBtn}>
+                          <item.icon className={Style.icon} />
+                        </IconButton>
+                      ))}
+                    </div>
+                  </Grid>
+                </Grid>
+
+                <Grid
+                  container
+                  spacing={2}
+                  className={Style.listingContentArea}
+                >
+                  <Grid
+                    item
+                    className={Style.listingContent}
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={8}
+                  >
+                    {/* Image slider */}
+                    <div className={Style.sliderWrapper}>
+                      <Carousel
+                        interval={6000}
+                        indicatorIconButtonProps={{
+                          style: {
+                            marginRight: "6px",
+                            marginTop: "6px",
+                            color: "gray",
+                            opacity: "0.6",
+                          },
+                        }}
+                        activeIndicatorIconButtonProps={{
+                          style: {
+                            opacity: "1",
+                          },
+                        }}
+                        indicatorContainerProps={{
+                          style: {
+                            marginTop: "12px",
+                            textAlign: "left",
+                          },
+                        }}
+                        IndicatorIcon={listingData.images.map((item, i) => (
+                          <Image
+                            key={i}
+                            src={item.url}
+                            height={100}
+                            width={125}
+                            alt={item.alt}
+                            className={Style.productImage}
+                          />
+                        ))}
+                      >
+                        {listingData.images.map((item, i) => (
+                          <Item key={i} item={item} />
+                        ))}
+                      </Carousel>
+                    </div>
+
+                    {/* Overview */}
+                    <Card variant="outlined" className={Style.productOverview}>
+                      <CardContent>
+                        <Typography
+                          variant="h3"
+                          component="h3"
+                          className={Style.itemHeading}
+                        >
+                          Overview
+                        </Typography>
+                        <Grid container spacing={2} rowSpacing={6}>
+                          <Grid item xs={12} sm={4} md={4} lg={3}>
                             <div className={Style.amenitiesList}>
                               <div className={Style.amenitiesIcon}>
-                                <item.icon />
+                                <LocalOfferIcon />
                               </div>
                               <div className={Style.amenitiesContent}>
                                 <Typography className={Style.headingTitle}>
-                                  {listingData.custom_fields[i].label}
+                                  ID No
                                 </Typography>
                                 <Typography className={Style.value}>
-                                  {listingData.custom_fields[i].value[0].data}
+                                  {listingData.listing_id}
                                 </Typography>
                               </div>
                             </div>
                           </Grid>
-                        ))}
-                      </Grid>
-                    </CardContent>
-                  </Card>
+                          {overviewIcon.map((item, i = 1) => (
+                            <Grid key={i} item xs={12} sm={4} md={4} lg={3}>
+                              <div className={Style.amenitiesList}>
+                                <div className={Style.amenitiesIcon}>
+                                  <item.icon />
+                                </div>
+                                <div className={Style.amenitiesContent}>
+                                  <Typography className={Style.headingTitle}>
+                                    {listingData.custom_fields[i].label}
+                                  </Typography>
+                                  <Typography className={Style.value}>
+                                    {listingData.custom_fields[i].value[0].data}
+                                  </Typography>
+                                </div>
+                              </div>
+                            </Grid>
+                          ))}
+                        </Grid>
+                      </CardContent>
+                    </Card>
 
-                  {/* About */}
-                  <Card variant="outlined">
-                    <CardContent>
-                      <Typography
-                        variant="h3"
-                        component="h3"
-                        className={Style.itemHeading}
-                      >
-                        About This Listing
-                      </Typography>
-                      {splitDescription().map((item, i) => (
-                        <Typography key={i} component="p" gutterBottom>
-                          {item}
+                    {/* About */}
+                    <Card variant="outlined">
+                      <CardContent>
+                        <Typography
+                          variant="h3"
+                          component="h3"
+                          className={Style.itemHeading}
+                        >
+                          About This Listing
                         </Typography>
-                      ))}
-                    </CardContent>
-                  </Card>
-
-                  {/* Amenities */}
-                  <Card variant="outlined">
-                    <CardContent>
-                      <Typography
-                        variant="h3"
-                        component="h3"
-                        className={Style.itemHeading}
-                      >
-                        Features & Amenities
-                      </Typography>
-                      <Grid container spacing={2}>
-                        {listingData.custom_fields[0].value.map((item, i) => (
-                          <Grid key={i} item xs={6} sm={4} md={4} lg={4}>
-                            <FormControlLabel
-                              label={item.data}
-                              control={
-                                <Checkbox
-                                  checked
-                                  className={Style.amenityValue}
-                                />
-                              }
-                              className={Style.amenityValue}
-                            />
-                          </Grid>
+                        {splitDescription().map((item, i) => (
+                          <Typography key={i} component="p" gutterBottom>
+                            {item}
+                          </Typography>
                         ))}
-                      </Grid>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
 
-                  {/* Feedback */}
-                  <Card variant="outlined">
-                    <CardContent>
-                      <Typography
-                        variant="h3"
-                        component="h3"
-                        className={Style.itemHeading}
-                      >
-                        Leave feedback about this
-                      </Typography>
-                      <Grid container spacing={2}>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
-                          <TextField
-                            fullWidth
-                            variant="outlined"
-                            placeholder="Comment *"
-                            multiline
-                            rows={10}
-                          />
+                    {/* Amenities */}
+                    <Card variant="outlined">
+                      <CardContent>
+                        <Typography
+                          variant="h3"
+                          component="h3"
+                          className={Style.itemHeading}
+                        >
+                          Features & Amenities
+                        </Typography>
+                        <Grid container spacing={2}>
+                          {listingData.custom_fields[0].value.map((item, i) => (
+                            <Grid key={i} item xs={6} sm={4} md={4} lg={4}>
+                              <FormControlLabel
+                                label={item.data}
+                                control={
+                                  <Checkbox
+                                    checked
+                                    className={Style.amenityValue}
+                                  />
+                                }
+                                className={Style.amenityValue}
+                              />
+                            </Grid>
+                          ))}
                         </Grid>
-                        <Grid item xs={12} sm={12} md={6} lg={6}>
-                          <TextField
-                            fullWidth
-                            variant="outlined"
-                            placeholder="Name *"
-                          />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={6} lg={6}>
-                          <TextField
-                            fullWidth
-                            variant="outlined"
-                            placeholder="Emal *"
-                          />
-                        </Grid>
+                      </CardContent>
+                    </Card>
 
-                        <Grid item xs={3} sm={3} md={3} lg={3}>
-                          <Button
-                            variant="contained"
-                            className={Style.submitBtn}
-                          >
-                            Submit Review
-                          </Button>
-                        </Grid>
-                      </Grid>
-                    </CardContent>
-                  </Card>
-                </Grid>
-
-                <Grid
-                  item
-                  className={Style.listingSidebar}
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
-                >
-                  <Card className={Style.listingUserInfo}>
-                    <CardContent>
-                      <Typography
-                        variant="h3"
-                        component="h3"
-                        className={Style.heading}
-                      >
-                        Contact Listing Owner
-                      </Typography>
-                      <Box component="form">
-                        <Grid container spacing={2} rowSpacing={2}>
-                          <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={12}
-                            lg={4}
-                            className={Style.userAva}
-                          >
-                            <Avatar
-                              sx={{ width: 88, height: 88 }}
-                              src="/tom_steven-150x150.jpg"
-                            ></Avatar>
-                          </Grid>
-                          <Grid item xs={12} sm={12} md={12} lg={8}>
-                            <Typography
-                              variant="h5"
-                              component="h5"
-                              className={Style.userName}
-                            >
-                              {userData?.username}
-                            </Typography>
-                            <Typography>
-                              Phone: {listingData.contact.phone}
-                            </Typography>
-                            <Typography>
-                              Email: {listingData.contact.email}
-                            </Typography>
-                          </Grid>
-
+                    {/* Feedback */}
+                    <Card variant="outlined">
+                      <CardContent>
+                        <Typography
+                          variant="h3"
+                          component="h3"
+                          className={Style.itemHeading}
+                        >
+                          Leave feedback about this
+                        </Typography>
+                        <Grid container spacing={2}>
                           <Grid item xs={12} sm={12} md={12} lg={12}>
                             <TextField
                               fullWidth
-                              required
-                              type="text"
                               variant="outlined"
-                              placeholder="Name*"
-                              // helperText="This field is required."
-                            />
-                          </Grid>
-                          <Grid item xs={12} sm={12} md={12} lg={12}>
-                            <TextField
-                              fullWidth
-                              required
-                              type="email"
-                              variant="outlined"
-                              placeholder="Email*"
-                              // helperText="This field is required."
-                            />
-                          </Grid>
-                          <Grid item xs={12} sm={12} md={12} lg={12}>
-                            <TextField
-                              fullWidth
-                              required
-                              type="phone"
-                              variant="outlined"
-                              placeholder="Phone*"
-                              // helperText="This field is required."
-                            />
-                          </Grid>
-                          <Grid item xs={12} sm={12} md={12} lg={12}>
-                            <TextField
-                              fullWidth
-                              required
-                              variant="outlined"
-                              placeholder="Message*"
-                              // helperText="This field is required."
+                              placeholder="Comment *"
                               multiline
-                              rows={4}
+                              rows={10}
                             />
                           </Grid>
-                          <Grid item xs={12} sm={12} md={12} lg={12}>
-                            <Button
+                          <Grid item xs={12} sm={12} md={6} lg={6}>
+                            <TextField
                               fullWidth
-                              type="submit"
+                              variant="outlined"
+                              placeholder="Name *"
+                            />
+                          </Grid>
+                          <Grid item xs={12} sm={12} md={6} lg={6}>
+                            <TextField
+                              fullWidth
+                              variant="outlined"
+                              placeholder="Emal *"
+                            />
+                          </Grid>
+
+                          <Grid item xs={3} sm={3} md={3} lg={3}>
+                            <Button
                               variant="contained"
-                              sx={{ height: "50px" }}
+                              className={Style.submitBtn}
                             >
-                              Send Message
+                              Submit Review
                             </Button>
                           </Grid>
                         </Grid>
-                      </Box>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+
+                  <Grid
+                    item
+                    className={Style.listingSidebar}
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    lg={4}
+                  >
+                    <Card className={Style.listingUserInfo}>
+                      <CardContent>
+                        <Typography
+                          variant="h3"
+                          component="h3"
+                          className={Style.heading}
+                        >
+                          Contact Listing Owner
+                        </Typography>
+                        <Box component="form">
+                          <Grid container spacing={2} rowSpacing={2}>
+                            <Grid
+                              item
+                              xs={12}
+                              sm={12}
+                              md={12}
+                              lg={4}
+                              className={Style.userAva}
+                            >
+                              <Avatar
+                                sx={{ width: 88, height: 88 }}
+                                src="/tom_steven-150x150.jpg"
+                              ></Avatar>
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={8}>
+                              <Typography
+                                variant="h5"
+                                component="h5"
+                                className={Style.userName}
+                              >
+                                {userData?.username}
+                              </Typography>
+                              <Typography>
+                                Phone: {listingData.contact.phone}
+                              </Typography>
+                              <Typography>
+                                Email: {listingData.contact.email}
+                              </Typography>
+                            </Grid>
+
+                            <Grid item xs={12} sm={12} md={12} lg={12}>
+                              <TextField
+                                fullWidth
+                                required
+                                type="text"
+                                variant="outlined"
+                                placeholder="Name*"
+                                // helperText="This field is required."
+                              />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={12}>
+                              <TextField
+                                fullWidth
+                                required
+                                type="email"
+                                variant="outlined"
+                                placeholder="Email*"
+                                // helperText="This field is required."
+                              />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={12}>
+                              <TextField
+                                fullWidth
+                                required
+                                type="phone"
+                                variant="outlined"
+                                placeholder="Phone*"
+                                // helperText="This field is required."
+                              />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={12}>
+                              <TextField
+                                fullWidth
+                                required
+                                variant="outlined"
+                                placeholder="Message*"
+                                // helperText="This field is required."
+                                multiline
+                                rows={4}
+                              />
+                            </Grid>
+                            <Grid item xs={12} sm={12} md={12} lg={12}>
+                              <Button
+                                fullWidth
+                                type="submit"
+                                variant="contained"
+                                sx={{ height: "50px" }}
+                              >
+                                Send Message
+                              </Button>
+                            </Grid>
+                          </Grid>
+                        </Box>
+                      </CardContent>
+                    </Card>
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Container>
-            <NewsLetter />
+              </Container>
+              <NewsLetter />
+            </div>
           </div>
-        </div>
-      )}
-    </ThemeProvider>
+        )}
+      </ThemeProvider>
+    </Suspense>
   );
 };
 

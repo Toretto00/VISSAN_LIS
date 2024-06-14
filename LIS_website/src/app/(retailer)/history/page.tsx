@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, Suspense } from "react";
 
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
@@ -107,38 +107,40 @@ const History = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className={styles.login}>
-        <Container maxWidth="lg">
-          <Box sx={{ height: 400, width: "100%" }}>
-            <DataGrid
-              rows={rows}
-              columns={columns}
-              initialState={{
-                pagination: {
-                  paginationModel: {
-                    pageSize: 5,
+    <Suspense>
+      <ThemeProvider theme={theme}>
+        <div className={styles.login}>
+          <Container maxWidth="lg">
+            <Box sx={{ height: 400, width: "100%" }}>
+              <DataGrid
+                rows={rows}
+                columns={columns}
+                initialState={{
+                  pagination: {
+                    paginationModel: {
+                      pageSize: 5,
+                    },
                   },
-                },
+                }}
+                pageSizeOptions={[5]}
+                checkboxSelection
+                disableRowSelectionOnClick
+                onRowClick={handleRowClick}
+              />
+            </Box>
+            <Alert
+              severity="warning"
+              sx={{ display: display }}
+              onClose={() => {
+                setDisplay("none");
               }}
-              pageSizeOptions={[5]}
-              checkboxSelection
-              disableRowSelectionOnClick
-              onRowClick={handleRowClick}
-            />
-          </Box>
-          <Alert
-            severity="warning"
-            sx={{ display: display }}
-            onClose={() => {
-              setDisplay("none");
-            }}
-          >
-            Vui lòng nhập đầy đủ thông tin!
-          </Alert>
-        </Container>
-      </div>
-    </ThemeProvider>
+            >
+              Vui lòng nhập đầy đủ thông tin!
+            </Alert>
+          </Container>
+        </div>
+      </ThemeProvider>
+    </Suspense>
   );
 };
 

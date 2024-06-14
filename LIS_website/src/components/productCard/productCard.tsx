@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
@@ -95,86 +95,92 @@ const ProductCard = (props: ProductCardProps) => {
   };
 
   return (
-    <div onClick={() => handleViewProductDetail()}>
-      <Card
-        className={Style.cardContainer}
-        sx={{ flexDirection: props.view === "grid" ? "column" : "row" }}
-      >
-        <div className={Style.productThumb}>
-          <div className={Style.productType}>
-            <span className={Style.productTypeBadge}>
-              For {props.product?.listingtype?.name}
-            </span>
-          </div>
-          <CardMedia
-            className={Style.cardImg}
-            component="img"
-            alt="picture"
-            height="240"
-            image={props?.product?.images[0]?.url}
-          />
-          <Typography className={Style.productPrice}>
-            {props.product?.price}
-          </Typography>
-          <div className={Style.listingAction}>
-            <IconButton aria-label="like" className={Style.actionBtn}>
-              <FavoriteBorderIcon className={Style.icon} />
-            </IconButton>
-            <IconButton aria-label="compare" className={Style.actionBtn}>
-              <CompareArrowsIcon className={Style.icon} />
-            </IconButton>
-          </div>
-        </div>
-        <div className={Style.contentWrap}>
-          <CardContent>
-            <Typography gutterBottom component="div" sx={{ color: "#00c194" }}>
-              {props.product?.category?.name}
+    <Suspense>
+      <div onClick={() => handleViewProductDetail()}>
+        <Card
+          className={Style.cardContainer}
+          sx={{ flexDirection: props.view === "grid" ? "column" : "row" }}
+        >
+          <div className={Style.productThumb}>
+            <div className={Style.productType}>
+              <span className={Style.productTypeBadge}>
+                For {props.product?.listingtype?.name}
+              </span>
+            </div>
+            <CardMedia
+              className={Style.cardImg}
+              component="img"
+              alt="picture"
+              height="240"
+              image={props?.product?.images[0]?.url}
+            />
+            <Typography className={Style.productPrice}>
+              {props.product?.price}
             </Typography>
-            <Typography
-              noWrap
-              gutterBottom
-              variant="h3"
-              component="h3"
-              className={Style.title}
-            >
-              {props.product.title}
-            </Typography>
-            <div className={Style.entryMeta}>
-              <LocationOnIcon />
-              <Typography gutterBottom>
-                {props.product?.contact?.location?.name}
+            <div className={Style.listingAction}>
+              <IconButton aria-label="like" className={Style.actionBtn}>
+                <FavoriteBorderIcon className={Style.icon} />
+              </IconButton>
+              <IconButton aria-label="compare" className={Style.actionBtn}>
+                <CompareArrowsIcon className={Style.icon} />
+              </IconButton>
+            </div>
+          </div>
+          <div className={Style.contentWrap}>
+            <CardContent>
+              <Typography
+                gutterBottom
+                component="div"
+                sx={{ color: "#00c194" }}
+              >
+                {props.product?.category?.name}
               </Typography>
-            </div>
-            <Grid container className={Style.listInformation}>
-              <Grid item className={Style.productFeatures}>
-                <BedIcon className={Style.productFeaturesIcon} />
-                <Typography>Beds 4</Typography>
+              <Typography
+                noWrap
+                gutterBottom
+                variant="h3"
+                component="h3"
+                className={Style.title}
+              >
+                {props.product.title}
+              </Typography>
+              <div className={Style.entryMeta}>
+                <LocationOnIcon />
+                <Typography gutterBottom>
+                  {props.product?.contact?.location?.name}
+                </Typography>
+              </div>
+              <Grid container className={Style.listInformation}>
+                <Grid item className={Style.productFeatures}>
+                  <BedIcon className={Style.productFeaturesIcon} />
+                  <Typography>Beds 4</Typography>
+                </Grid>
+                <Grid className={Style.productFeatures}>
+                  <ShowerIcon className={Style.productFeaturesIcon} />
+                  <Typography>Baths 2</Typography>
+                </Grid>
+                <Grid className={Style.productFeatures}>
+                  <AspectRatioIcon className={Style.productFeaturesIcon} />
+                  <Typography>2000 Sqft</Typography>
+                </Grid>
               </Grid>
-              <Grid className={Style.productFeatures}>
-                <ShowerIcon className={Style.productFeaturesIcon} />
-                <Typography>Baths 2</Typography>
-              </Grid>
-              <Grid className={Style.productFeatures}>
-                <AspectRatioIcon className={Style.productFeaturesIcon} />
-                <Typography>2000 Sqft</Typography>
-              </Grid>
-            </Grid>
-          </CardContent>
-          <Divider className={Style.cardDivider} />
-          <CardActions className={Style.cardAction}>
-            <div className={Style.author}>
-              <Avatar
-                alt="Tom Steven"
-                src="/tom_steven-150x150.jpg"
-                className={Style.img}
-              />
-              <Typography>By Tom Steven</Typography>
-            </div>
-            <Button className={Style.cardButton}>Details</Button>
-          </CardActions>
-        </div>
-      </Card>
-    </div>
+            </CardContent>
+            <Divider className={Style.cardDivider} />
+            <CardActions className={Style.cardAction}>
+              <div className={Style.author}>
+                <Avatar
+                  alt="Tom Steven"
+                  src="/tom_steven-150x150.jpg"
+                  className={Style.img}
+                />
+                <Typography>By Tom Steven</Typography>
+              </div>
+              <Button className={Style.cardButton}>Details</Button>
+            </CardActions>
+          </div>
+        </Card>
+      </div>
+    </Suspense>
   );
 };
 

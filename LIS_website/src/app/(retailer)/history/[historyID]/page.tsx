@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
 import { useSearchParams, useRouter } from "next/navigation";
 
@@ -120,28 +120,30 @@ const HistoryDetail = ({ params }: { params: { invoice: string } }) => {
   ];
 
   return (
-    <ThemeProvider theme={theme}>
-      <div style={{ marginTop: "120px" }}>
-        <Container maxWidth="lg">
-          <Box sx={{ height: 400, width: "100%" }}>
-            <DataGrid
-              rows={rows}
-              columns={columns}
-              initialState={{
-                pagination: {
-                  paginationModel: {
-                    pageSize: 5,
+    <Suspense>
+      <ThemeProvider theme={theme}>
+        <div style={{ marginTop: "120px" }}>
+          <Container maxWidth="lg">
+            <Box sx={{ height: 400, width: "100%" }}>
+              <DataGrid
+                rows={rows}
+                columns={columns}
+                initialState={{
+                  pagination: {
+                    paginationModel: {
+                      pageSize: 5,
+                    },
                   },
-                },
-              }}
-              pageSizeOptions={[5]}
-              checkboxSelection
-              disableRowSelectionOnClick
-            />
-          </Box>
-        </Container>
-      </div>
-    </ThemeProvider>
+                }}
+                pageSizeOptions={[5]}
+                checkboxSelection
+                disableRowSelectionOnClick
+              />
+            </Box>
+          </Container>
+        </div>
+      </ThemeProvider>
+    </Suspense>
   );
 };
 
