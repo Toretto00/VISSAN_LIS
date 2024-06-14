@@ -26,7 +26,7 @@ const GlobalContext = createContext<ContextProps>({
   SETPASSWORD: (string) => "",
 });
 
-export const GlobalContextProvider = ({ children }) => {
+export const GlobalContextProvider = ({}) => {
   const [JWT, SETJWT] = useState("");
   const [USERNAME, SETUSERNAME] = useState("");
   const [PASSWORD, SETPASSWORD] = useState("");
@@ -34,9 +34,7 @@ export const GlobalContextProvider = ({ children }) => {
   return (
     <GlobalContext.Provider
       value={{ JWT, SETJWT, USERNAME, SETUSERNAME, PASSWORD, SETPASSWORD }}
-    >
-      {children}
-    </GlobalContext.Provider>
+    ></GlobalContext.Provider>
   );
 };
 

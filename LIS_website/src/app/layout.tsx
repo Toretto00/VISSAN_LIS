@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body>
-        <GlobalContextProvider>
-          <section>{children}</section>
-        </GlobalContextProvider>
+        <section>{children}</section>
+        {/* <GlobalContextProvider>
+        </GlobalContextProvider> */}
       </body>
     </html>
   );
