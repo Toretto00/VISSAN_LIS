@@ -91,13 +91,13 @@ const categoryCheck = [
   { label: "Education" },
 ];
 
-interface properties {
-  listingType: string;
-  category: number;
-  loading: boolean;
-}
+// interface properties {
+//   listingType: string;
+//   category: number;
+//   loading: boolean;
+// }
 
-const FormInfo = (props: properties) => {
+const FormInfo = (props: any) => {
   const [listingTitle, setListingTitle] = useState("");
   const [listingPrice, setListingPrice] = useState("");
   const [listingParking, setListingParking] = useState(-1);
@@ -117,61 +117,6 @@ const FormInfo = (props: properties) => {
   const [listingWasher, setListingWasher] = useState(-1);
   const { JWT } = useGlobalContext();
 
-  // const handleCheckAmenities = (event: React.ChangeEvent) => {
-  //   switch (event.target.name) {
-  //     case "TV cable":
-  //       if (event.target.checked) setListingTV(1);
-  //       else setListingTV(-1);
-  //       break;
-  //     case "Air conditioning":
-  //       if (event.target.checked) setListingAir(2);
-  //       else setListingAir(-1);
-  //       break;
-  //     case "Barbeque":
-  //       if (event.target.checked) setListingBarbeque(3);
-  //       else setListingBarbeque(-1);
-  //       break;
-  //     case "Gym":
-  //       if (event.target.checked) setListingGym(4);
-  //       else setListingGym(-1);
-  //       break;
-  //     case "Swimming pool":
-  //       if (event.target.checked) setListingSwim(5);
-  //       else setListingSwim(-1);
-  //       break;
-  //     case "Laudry":
-  //       if (event.target.checked) setListingLaundry(6);
-  //       else setListingLaundry(-1);
-  //       break;
-  //     case "Microwave":
-  //       if (event.target.checked) setListingMicrowave(7);
-  //       else setListingMicrowave(-1);
-  //       break;
-  //     case "Outdoor Shower":
-  //       if (event.target.checked) setListingOutdoor(8);
-  //       else setListingOutdoor(-1);
-  //       break;
-  //     case "Lawn":
-  //       if (event.target.checked) setListingLawn(9);
-  //       else setListingLawn(-1);
-  //       break;
-  //     case "Refrigerator":
-  //       if (event.target.checked) setListingRefrigerator(10);
-  //       else setListingRefrigerator(-1);
-  //       break;
-  //     case "Sauna":
-  //       if (event.target.checked) SetListingSauna(11);
-  //       else SetListingSauna(-1);
-  //       break;
-  //     case "Washer":
-  //       if (event.target.checked) setListingWasher(12);
-  //       else setListingWasher(-1);
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // };
-
   const router = useRouter();
 
   const handleSubmitForm = () => {
@@ -182,12 +127,6 @@ const FormInfo = (props: properties) => {
       api
         .post(
           `Listings?author_id=4&title=${listingTitle}&price=${listingPrice}&category_id=${props.category}&listing_type=${props.listingType}&tv=${listingTV}&air=${listingAir}&barbeque=${listingBarbeque}&gym=${listingGym}&swim=${listingSwim}&laundry=${listingLaundry}&microwave=${listingMicrowave}&outdoor=${listingOutdoor}&lawn=${listingLawn}&refrigerator=${listingRefRigerator}&sauna=${listingSauna}&washer=${listingWasher}&parking=16&bed=${listingBed}&bath=${listingBath}`
-
-          //   {
-          //     headers: {
-          //       Authorization: `Bearer ${JWT}`,
-          //     },
-          //   }
         )
         .then((res) => {
           if (res) {
@@ -490,9 +429,6 @@ const FormInfo = (props: properties) => {
                           disablePortal
                           id="combo-box-demo"
                           options={bed}
-                          // onChange={(e, value) => {
-                          //   setListingBed(value.id);
-                          // }}
                           sx={{ width: 300 }}
                           renderInput={(params) => <TextField {...params} />}
                         />
