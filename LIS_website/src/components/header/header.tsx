@@ -49,7 +49,7 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-    window.localStorage.clear();
+    window?.localStorage?.clear();
     router.replace("/login");
   };
 
@@ -70,7 +70,7 @@ const Header = () => {
 
           {/* button */}
           <Box className={Style.buttonContainer}>
-            {(window.localStorage.getItem("role") === "admin"
+            {(window?.localStorage?.getItem("role") === "admin"
               ? adminPages
               : userPages
             ).map((page) => (
