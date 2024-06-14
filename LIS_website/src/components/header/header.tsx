@@ -1,36 +1,12 @@
 "use client";
 
-import * as React from "react";
-
-import { Transform } from "stream";
 import Image from "next/image";
-import Link from "next/link";
+
 import { useRouter } from "next/navigation";
 
 import Style from "./header.module.scss";
 
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import Badge from "@mui/material/Badge";
-import Typography from "@mui/material/Typography";
-import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import MenuIcon from "@mui/icons-material/Menu";
-import AddIcon from "@mui/icons-material/Add";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { MenuItem } from "@mui/material";
-import Popper from "@mui/material/Popper";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-
-import { useGlobalContext } from "@/app/Context/store";
-
+import { AppBar, Box, Toolbar, Container, Button } from "@mui/material";
 interface pages {
   id: number;
   page: string;
@@ -43,11 +19,7 @@ let userPages: pages[] = [
   { id: 3, page: "Lịch sử", link: "/history" },
 ];
 
-let adminPages: {
-  id: number;
-  page: string;
-  link: string;
-}[] = [
+let adminPages: pages[] = [
   {
     id: 1,
     page: "Đơn hàng",
@@ -64,18 +36,15 @@ let adminPages: {
     link: "/property",
   },
 ];
+
 const Header = () => {
   const router = useRouter();
-
-  const [selectedButton, setSelectedButton] = React.useState(1);
 
   const handleRoute = (
     event: React.MouseEvent<HTMLElement>,
     id: number,
     link: string
   ) => {
-    // setPopperAnchorEl(event.currentTarget);
-    setSelectedButton(id);
     router.push(link);
   };
 

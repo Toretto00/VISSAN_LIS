@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 
 import api from "@/app/api/client";
-
-import FullFeaturedCrudGrid from "@/components/requestDataGrid/page";
 
 import { Container, Box, createTheme, ThemeProvider } from "@mui/material";
 
