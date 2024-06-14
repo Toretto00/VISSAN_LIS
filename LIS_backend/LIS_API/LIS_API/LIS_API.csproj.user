@@ -14,6 +14,6 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>LIS_API.Models.LISContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\Properties\PublishProfiles\Vissan - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\Properties\PublishProfiles\LISAPI20240614135420 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

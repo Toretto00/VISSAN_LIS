@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const domain = "https://10.0.31.145:45456";
+const domain = "https://lisapi20240614135420.azurewebsites.net";
 // const domain = "https://localhost:7242";
 // const domain = "https://toretto.azurewebsites.net";
 
