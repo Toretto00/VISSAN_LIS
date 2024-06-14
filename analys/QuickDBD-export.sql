@@ -14,6 +14,9 @@ INSERT INTO Categories (name, code) VALUES (N'Heo',N'heo'),
 (N'HEO TẾT',N'HEO'),
 (N'GIÒ SỐNG 200GR (đvt: cây)',N'1006058002');
 
+INSERT INTO [Users] VALUES (N'1',N'1',N'user'),
+	(N'admin',N'admin',N'admin');
+
 INSERT INTO [Products] (categoryid, name, code, description, created, updated) VALUES (1,N'HEO BÊN (MẢNH)',1101057022,NULL,'2018-01-06 12:19:21','2018-09-18 23:11:02'),
 	(1,N'ĐÙI HEO',1101131003,NULL,'2018-01-06 12:19:21','2018-09-18 23:11:02'),
 	(1,N'VAI HEO',1101019004,NULL,'2018-01-06 12:19:21','2018-09-18 23:11:02'),

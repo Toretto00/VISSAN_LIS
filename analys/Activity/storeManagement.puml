@@ -1,0 +1,9 @@
+@startuml
+!pragma useVerticalIf on
+start
+repeat
+:Đăng nhập;
+repeat while(Kiểm tra đăng nhập?) is (no) not (yes)
+:Hiển thị trang đặt hàng và tab báo tồn, lịch sửa và thông tin tài khoản;
+stop
+@enduml

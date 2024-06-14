@@ -4,23 +4,33 @@
 
   .buttonContainer {
     display: flex;
-    // flex-direction: row;
-    margin: 0 8px 0 8px;
+    justify-content: center;
     flex: 1;
+
+    .headerBtn {
+      text-transform: none;
+      padding: 15px 32px;
+      font-size: 16px;
+      color: black;
+      height: 86px; // Đặt chiều cao cố định cho nút
+      &:hover {
+        color: #fe0302;
+        transition: none;
+        background-color: transparent;
+      }
+    }
   }
 
-  .headerBtn {
-    justify-content: left;
-    text-transform: "none";
-    padding: "30px 15px"; // Thêm padding cho nút
-    font-size: "16px";
-    border-radius: "0";
-    color: "white";
-    height: "86px"; // Đặt chiều cao cố định cho nút
+  .logoutBtn{
+    text-transform: none;
+    padding: 15px 32px;
+    font-size: 16px;
+    background-color: transparent;
+    color: black;
+
     &:hover {
-      color: "#50f5dc";
-      border-bottom: "3px solid #50ffe4";
-      transition: "none";
+      background-color: #fe0302;
+      color: white;
     }
   }
 }
