@@ -36,7 +36,7 @@ import KeyIcon from "@mui/icons-material/Key";
 import PhoneIcon from "@mui/icons-material/Phone";
 import GroupsIcon from "@mui/icons-material/Groups";
 
-import ProductCard from "@/components/productCard/productCard";
+// import ProductCard from "@/components/productCard/productCard";
 import LoadingPage from "@/components/loadingPage/loading";
 
 const categories: string[] = [
@@ -819,7 +819,7 @@ const Home = () => {
               <Grid container spacing={4}>
                 {listingsData.slice(0, 6).map((item, i) => (
                   <Grid key={i} item xs={12} sm={12} md={4} lg={4}>
-                    <ProductCard view="grid" product={item} />
+                    {/* <ProductCard view="grid" product={item} /> */}
                   </Grid>
                 ))}
               </Grid>
