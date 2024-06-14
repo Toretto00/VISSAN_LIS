@@ -141,7 +141,8 @@ const RequestForm = () => {
       .post("Invoices", {
         date: dayjs.utc(),
         status: "pending",
-        user: window?.localStorage?.getItem("userID"),
+        user:
+          typeof window !== "undefined" ? localStorage.getItem("userID") : 1,
         created: dayjs.utc(),
         updated: dayjs.utc(),
       })

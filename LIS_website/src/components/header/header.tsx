@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import Image from "next/image";
 
 import { useRouter } from "next/navigation";
@@ -37,8 +39,14 @@ let adminPages: pages[] = [
   },
 ];
 
+var role: string | null;
+
 const Header = () => {
   const router = useRouter();
+
+  useEffect(() => {
+    role = localStorage.getItem("role");
+  });
 
   const handleRoute = (
     event: React.MouseEvent<HTMLElement>,
@@ -49,7 +57,7 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-    window?.localStorage?.clear();
+    if (typeof window !== "undefined") localStorage.clear();
     router.replace("/login");
   };
 
@@ -70,10 +78,7 @@ const Header = () => {
 
           {/* button */}
           <Box className={Style.buttonContainer}>
-            {(window?.localStorage?.getItem("role") === "admin"
-              ? adminPages
-              : userPages
-            ).map((page) => (
+            {(role === "admin" ? adminPages : userPages).map((page) => (
               <Button
                 key={page.id}
                 className={Style.headerBtn}

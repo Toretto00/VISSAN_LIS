@@ -22,7 +22,7 @@ const Login = () => {
 
   useEffect(() => {
     // setLoading(true);
-    if (window?.localStorage?.getItem("userID")) router.push("requestForm");
+    if (localStorage.getItem("userID")) router.push("requestForm");
   }, []);
 
   const handleLogin = () => {
@@ -32,8 +32,10 @@ const Login = () => {
         password: password,
       })
       .then((res) => {
-        window?.localStorage?.setItem("userID", res.data.id);
-        window?.localStorage?.setItem("role", res.data.role);
+        if (typeof window !== "undefined") {
+          localStorage.setItem("userID", res.data.id);
+          localStorage.setItem("role", res.data.role);
+        }
         resetValue();
         router.push("requestForm");
         setLoading(true);
