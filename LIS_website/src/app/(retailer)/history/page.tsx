@@ -79,7 +79,7 @@ const History = () => {
   }, []);
 
   const handleLoadProductList = async () => {
-    api.get(`Invoices/${localStorage.getItem("userID")}`).then((res) => {
+    api.get(`Invoices/${window.localStorage.getItem("userID")}`).then((res) => {
       setRows(res.data);
     });
   };
