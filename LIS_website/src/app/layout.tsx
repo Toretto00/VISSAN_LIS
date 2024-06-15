@@ -1,15 +1,16 @@
 "use client";
 
 import "./globals.css";
-//import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
-import Header from "@/components/header/header";
-import Footer from "@/components/footer";
+import { createTheme, ThemeProvider } from "@mui/material";
 
-import { GlobalContextProvider } from "./Context/store";
-
-const inter = Inter({ subsets: ["latin"] });
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#fe0302", // Replace with your preferred color
+    },
+  },
+});
 
 export default function RootLayout({
   children,
@@ -18,11 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body>
-        <section>{children}</section>
-        {/* <GlobalContextProvider>
-        </GlobalContextProvider> */}
-      </body>
+      <ThemeProvider theme={theme}>
+        <body>
+          <div>{children}</div>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

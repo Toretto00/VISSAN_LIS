@@ -9,7 +9,7 @@
   --header-height: 86px;
   --secondary-color: #eaf7f4;
 
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: white;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
@@ -92,6 +92,7 @@ input {
 
 html,
 body {
+  margin: 0;
   max-width: 100vw;
   overflow-x: hidden;
 }
