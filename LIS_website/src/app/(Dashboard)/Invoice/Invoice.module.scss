@@ -1,0 +1,40 @@
+.container{
+    padding: 0 24px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+
+    .infoContainer{
+        background-color: white;
+        border-radius: 6px;
+
+        .info{
+            display: flex;
+            justify-content: space-between;
+            border-radius: 6;
+            align-items: center;            
+            padding: 24px;
+
+            .infoHeading{
+                color: rgb( 47 43 61 / 0.9);
+                font-size: 1.5rem;
+            }
+
+            .infoTitle{
+                color: rgb( 47 43 61 / 0.7);
+                font-size: 0.9375rem;
+            }
+
+            .infoIcon{
+                padding: 8px;
+                background-color: rgb( 47 43 61 / 0.12);
+                border-radius: 6px;
+            }
+        }
+    }
+
+    .tableContainer{
+        margin-top: 1.5rem;
+    }
+
+}

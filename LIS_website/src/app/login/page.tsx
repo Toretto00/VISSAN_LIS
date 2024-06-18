@@ -26,10 +26,6 @@ const Login = () => {
   const [username, setUsernameLogin] = useState("");
   const [password, setPasswordLogin] = useState("");
 
-  useEffect(() => {
-    if (localStorage.getItem("userID")) router.push("requestForm");
-  }, []);
-
   const handleLogin = () => {
     api
       .post("Users/Login", {
@@ -44,7 +40,7 @@ const Login = () => {
         resetValue();
         res.data.role === "user"
           ? router.push("requestForm")
-          : router.push("Dashboard");
+          : router.push("Dashboards");
       });
   };
 

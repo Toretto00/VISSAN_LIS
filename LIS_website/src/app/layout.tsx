@@ -2,6 +2,10 @@
 
 import "./globals.css";
 
+import { useEffect } from "react";
+
+import { useRouter } from "next/navigation";
+
 import { createTheme, ThemeProvider } from "@mui/material";
 
 const theme = createTheme({
@@ -17,6 +21,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (localStorage.getItem("role") === "user") router.push("requestForm");
+    else if (localStorage.getItem("role") === "admin")
+      router.push("/Dashboards");
+    else router.push("/login");
+  }, []);
+
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <ThemeProvider theme={theme}>

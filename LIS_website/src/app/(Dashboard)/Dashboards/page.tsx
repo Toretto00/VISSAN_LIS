@@ -1,7 +1,7 @@
 import DrawerSideBar from "@/components/drawerSideBar/page";
 
 const Dashboard = () => {
-  return <DrawerSideBar />;
+  return <div>Dashboard</div>;
 };
 
 export default Dashboard;
