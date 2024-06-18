@@ -4,6 +4,7 @@ using LIS_backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LIS_backend.Migrations
 {
     [DbContext(typeof(LISContext))]
-    partial class LISContextModelSnapshot : ModelSnapshot
+    [Migration("20240618143845_update-inventory")]
+    partial class updateinventory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,38 +66,6 @@ namespace LIS_backend.Migrations
                     b.HasIndex("locationid");
 
                     b.ToTable("Inventories");
-                });
-
-            modelBuilder.Entity("LIS_backend.Models.Inventory_Product", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<string>("created")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("inventoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("productid")
-                        .HasColumnType("int");
-
-                    b.Property<int>("quantity")
-                        .HasColumnType("int");
-
-                    b.Property<string>("updated")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("inventoryId");
-
-                    b.HasIndex("productid");
-
-                    b.ToTable("Inventory_Products");
                 });
 
             modelBuilder.Entity("LIS_backend.Models.Invoice", b =>
@@ -278,21 +249,6 @@ namespace LIS_backend.Migrations
                         .HasForeignKey("locationid");
 
                     b.Navigation("location");
-                });
-
-            modelBuilder.Entity("LIS_backend.Models.Inventory_Product", b =>
-                {
-                    b.HasOne("LIS_backend.Models.Inventory", "inventory")
-                        .WithMany()
-                        .HasForeignKey("inventoryId");
-
-                    b.HasOne("LIS_backend.Models.Product", "product")
-                        .WithMany()
-                        .HasForeignKey("productid");
-
-                    b.Navigation("inventory");
-
-                    b.Navigation("product");
                 });
 
             modelBuilder.Entity("LIS_backend.Models.Invoice", b =>

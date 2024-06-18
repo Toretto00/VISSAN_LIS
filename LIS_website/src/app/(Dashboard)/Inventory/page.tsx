@@ -103,20 +103,6 @@ interface Inventory {
     retailsystem: string;
     shortname: string;
   };
-  product: {
-    id: number;
-    category: {
-      id: number;
-      name: string;
-      code: string;
-    };
-    name: string;
-    code: string;
-    description: string;
-    created: string;
-    updated: string;
-  };
-  quantity: number;
   created: string;
   updated: string;
 }
@@ -149,27 +135,6 @@ const Inventory = () => {
       valueGetter: (value, row) => {
         return `${row.location.retailsystem}`;
       },
-    },
-    {
-      field: "product.code",
-      headerName: "Mã phẩm",
-      width: 240,
-      valueGetter: (value, row) => {
-        return `${row.product.code}`;
-      },
-    },
-    {
-      field: "product.name",
-      headerName: "Tên sản phẩm",
-      width: 240,
-      valueGetter: (value, row) => {
-        return `${row.product.name}`;
-      },
-    },
-    {
-      field: "quantity",
-      headerName: "Số lượng",
-      width: 240,
     },
     {
       field: "created",
@@ -207,11 +172,8 @@ const Inventory = () => {
   };
 
   const handleCreateInventory = () => {
-    api.post("/Inventories", [
+    api.post("Inventories?location=ST000003", [
       {
-        location: {
-          storeid: "ST000003",
-        },
         product: {
           code: "1101057022",
         },

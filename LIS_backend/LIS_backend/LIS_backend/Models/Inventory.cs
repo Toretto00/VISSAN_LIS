@@ -6,9 +6,7 @@ namespace LIS_backend.Models
     {
         [Key]
         public int Id { get; set; }
-        public StoreLocation location { get; set; }
-        public Product product { get; set; }
-        public int quantity { get; set; }
+        public StoreLocation location { get; set; }        
         public string created { get; set; }
         public string updated { get; set; }
     }

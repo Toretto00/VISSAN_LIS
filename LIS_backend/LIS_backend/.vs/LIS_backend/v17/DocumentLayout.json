@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\models\\user_location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\models\\user_location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\models\\inventory_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\models\\inventory_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\models\\storelocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\models\\storelocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\invoice_productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\invoice_productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\inventory_productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\inventory_productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 248,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,59 +43,85 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "LIS_backend\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwF0AAABsAAAA",
+              "Title": "Invoice_ProductController.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\Invoice_ProductController.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Controllers\\Invoice_ProductController.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\Invoice_ProductController.cs",
+              "RelativeToolTip": "LIS_backend\\Controllers\\Invoice_ProductController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T07:28:42.036Z",
+              "WhenOpened": "2024-06-18T16:29:14.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "LIS_backend\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T16:29:00.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InventoriesController.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Controllers\\InventoriesController.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
+              "RelativeToolTip": "LIS_backend\\Controllers\\InventoriesController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAWwDIAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T14:43:18.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Inventory_ProductController.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\Inventory_ProductController.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Controllers\\Inventory_ProductController.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\Inventory_ProductController.cs",
+              "RelativeToolTip": "LIS_backend\\Controllers\\Inventory_ProductController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBoAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T15:22:22.293Z",
               "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 248,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Program.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Program.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Program.cs",
-              "RelativeToolTip": "LIS_backend\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T07:55:07.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "StoreLocation.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\StoreLocation.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Models\\StoreLocation.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\StoreLocation.cs",
-              "RelativeToolTip": "LIS_backend\\Models\\StoreLocation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAARAAAA",
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Inventory.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Models\\Inventory.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Inventory.cs",
+              "RelativeToolTip": "LIS_backend\\Models\\Inventory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T07:33:28.571Z",
+              "WhenOpened": "2024-06-18T14:44:41.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "User_Location.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\User_Location.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Models\\User_Location.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\User_Location.cs",
-              "RelativeToolTip": "LIS_backend\\Models\\User_Location.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Inventory_Product.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Inventory_Product.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Models\\Inventory_Product.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Inventory_Product.cs",
+              "RelativeToolTip": "LIS_backend\\Models\\Inventory_Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T07:30:30.695Z",
+              "WhenOpened": "2024-06-18T14:54:03.604Z",
               "EditorCaption": ""
             }
           ]

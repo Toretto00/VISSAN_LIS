@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LIS_backend.Models;
+using NuGet.Versioning;
 
 namespace LIS_backend.Controllers
 {
@@ -24,21 +25,30 @@ namespace LIS_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Inventory>>> GetInventories()
         {
-            return await _context.Inventories.Include(x => x.product).Include(x => x.location).ToListAsync();
+            return await _context.Inventories.Include(x=>x.location).ToListAsync();
         }
 
         // GET: api/Inventories/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Inventory>> GetInventory(int id)
+        public async Task<ActionResult> GetInventory(int id)
         {
-            var inventory = await _context.Inventories.FindAsync(id);
+            var inventory = _context.Inventories.Where(x=>x.Id == id).Include(x=>x.location).FirstOrDefault();
+
+            var products = _context.Inventory_Products.Where(x => x.inventory.Id == id).Include(x => x.product).ToList();
+
+            var temp = new List<Product>();
+
+            for (int i = 0; i< products.Count(); i++)
+            {
+                temp.Add(products[i].product);
+            }
 
             if (inventory == null)
             {
                 return NotFound();
             }
 
-            return inventory;
+            return Ok(new { store = inventory.location, products = temp});
         }
 
         // PUT: api/Inventories/5
@@ -75,21 +85,28 @@ namespace LIS_backend.Controllers
         // POST: api/Inventories
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<List<Inventory>> PostInventory(List<Inventory> inventories)
+        public async Task<Inventory> PostInventory(List<Inventory_Product> inventory_Products, string location)
         {
-            for (int i = 0; i < inventories.Count; i++)
+            var inventory = new Inventory();
+            inventory.location = _context.StoreLocation.Where(x=>x.storeid == location).FirstOrDefault();
+            inventory.created = inventory_Products[0].created;
+            inventory.updated = inventory_Products[0].updated;
+            _context.Inventories.Add(inventory);
+            await _context.SaveChangesAsync();
+
+            for(int i = 0; i < inventory_Products.Count(); i++)
             {
-                var newInventory = new Inventory();
-                newInventory.location = _context.StoreLocation.Where(x => x.storeid == inventories[i].location.storeid).FirstOrDefault();
-                newInventory.product = _context.Products.Where(x => x.code == inventories[i].product.code).FirstOrDefault();
-                newInventory.quantity = inventories[i].quantity;
-                newInventory.created = inventories[i].created;
-                newInventory.updated = inventories[i].updated;
-                _context.Inventories.Add(newInventory);
+                var product = new Inventory_Product();
+                product.inventory = _context.Inventories.Where(x=>x.Id == inventory.Id).FirstOrDefault();
+                product.product = _context.Products.Where(x => x.code == inventory_Products[i].product.code).FirstOrDefault();
+                product.quantity = inventory_Products[i].quantity;
+                product.created = inventory_Products[i].created;
+                product.updated = inventory_Products[i].updated;
+                _context.Inventory_Products.Add(product);
                 await _context.SaveChangesAsync();
             }
 
-            return inventories;
+            return inventory;
         }
 
         // DELETE: api/Inventories/5

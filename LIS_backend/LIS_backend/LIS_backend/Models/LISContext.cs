@@ -11,6 +11,7 @@ namespace LIS_backend.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
+        public DbSet<Inventory_Product> Inventory_Products { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Invoice_Product> Invoice_Products { get; set; }
         public DbSet<StoreLocation> StoreLocation { get; set; }
