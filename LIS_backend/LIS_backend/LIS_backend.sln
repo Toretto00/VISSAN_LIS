@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIS_backend", "LIS_backend\LIS_backend.csproj", "{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AA318FD-5E12-4738-B769-5EF2E175D0FA}
+	EndGlobalSection
+EndGlobal

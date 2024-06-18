@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="IIS Web Application Name" description="" value="LISAPI20240614135420" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_API\\LIS_API\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
-  </parameter>
-  <parameter name="LIS_API.Models.LISContext" description="" value="Data Source=lis-apidbserver.database.windows.net,1433;Initial Catalog=LIS_API_db;User ID=toretto;Password=Pcb0941819910" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_API\\LIS_API\\obj\\Release\\net8\.0\\PubTmp\\EFSQLScripts\\LIS_API\.Models\.LISContext\.sql$" />
-  </parameter>
-</parameters>

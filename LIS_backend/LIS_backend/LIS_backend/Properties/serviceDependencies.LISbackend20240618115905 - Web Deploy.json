@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/LISbackend20240618115905/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsLISDB_650B14B070",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/lis-backenddbserver/databases/LIS_backend_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:LISDB",
+      "dynamicId": null
+    }
+  }
+}

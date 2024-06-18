@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sitemanifest>
-  <IisApp path="D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Release\net8.0\PubTmp\Out\" />
-  <dbfullsql path="D:\Project\VISSAN_LIS\LIS_backend\LIS_API\LIS_API\obj\Release\net8.0\PubTmp\EFSQLScripts\LIS_API.Models.LISContext.sql" />
-</sitemanifest>
