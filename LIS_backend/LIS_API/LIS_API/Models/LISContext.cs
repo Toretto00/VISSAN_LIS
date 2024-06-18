@@ -12,7 +12,6 @@ namespace LIS_API.Models
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Invoice_Product> Invoice_Products { get; set; }
-        public DbSet<StoreLocation> StoreLocations { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<User_Location> User_Locations { get; set; }
     }

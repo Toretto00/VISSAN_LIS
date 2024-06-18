@@ -4,6 +4,7 @@ using LIS_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LIS_API.Migrations
 {
     [DbContext(typeof(LISContext))]
-    partial class LISContextModelSnapshot : ModelSnapshot
+    [Migration("20240618012839_update-refkey")]
+    partial class updaterefkey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,7 +55,7 @@ namespace LIS_API.Migrations
                     b.Property<string>("created")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("locationid")
+                    b.Property<int>("location")
                         .HasColumnType("int");
 
                     b.Property<int?>("productid")
@@ -65,8 +68,6 @@ namespace LIS_API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("locationid");
 
                     b.HasIndex("productid");
 
@@ -176,6 +177,9 @@ namespace LIS_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("retailName")
                         .HasColumnType("nvarchar(max)");
 
@@ -193,7 +197,7 @@ namespace LIS_API.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("StoreLocation");
+                    b.ToTable("StoreLocations");
                 });
 
             modelBuilder.Entity("LIS_API.Models.User", b =>
@@ -229,7 +233,7 @@ namespace LIS_API.Migrations
                     b.Property<string>("created")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("storeLocationid")
+                    b.Property<int>("storeLocation")
                         .HasColumnType("int");
 
                     b.Property<string>("updated")
@@ -240,8 +244,6 @@ namespace LIS_API.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("storeLocationid");
-
                     b.HasIndex("userid");
 
                     b.ToTable("User_Locations");
@@ -249,15 +251,9 @@ namespace LIS_API.Migrations
 
             modelBuilder.Entity("LIS_API.Models.Inventory", b =>
                 {
-                    b.HasOne("LIS_API.Models.StoreLocation", "location")
-                        .WithMany()
-                        .HasForeignKey("locationid");
-
                     b.HasOne("LIS_API.Models.Product", "product")
                         .WithMany()
                         .HasForeignKey("productid");
-
-                    b.Navigation("location");
 
                     b.Navigation("product");
                 });
@@ -297,15 +293,9 @@ namespace LIS_API.Migrations
 
             modelBuilder.Entity("LIS_API.Models.User_Location", b =>
                 {
-                    b.HasOne("LIS_API.Models.StoreLocation", "storeLocation")
-                        .WithMany()
-                        .HasForeignKey("storeLocationid");
-
                     b.HasOne("LIS_API.Models.User", "user")
                         .WithMany()
                         .HasForeignKey("userid");
-
-                    b.Navigation("storeLocation");
 
                     b.Navigation("user");
                 });

@@ -1,10 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 
 import {
-  //   MuiDrawer,
-  //   DrawerHeader,
   IconButton,
   Divider,
   List,
@@ -22,8 +20,26 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ReceiptIcon from "@mui/icons-material/Receipt";
+import InventoryIcon from "@mui/icons-material/Inventory";
+import PriceChangeIcon from "@mui/icons-material/PriceChange";
 
 import Style from "./drawerSideBar.module.scss";
+import SideBarButon from "./sideBarBtn/page";
+
+interface sidebarBtn {
+  name: string;
+  icon: ReactElement;
+  link: string;
+}
+
+const listBtn: sidebarBtn[] = [
+  { name: "Dashboards", icon: <DashboardIcon />, link: "/Dashboards" },
+  { name: "Invoice", icon: <ReceiptIcon />, link: "/Invoice" },
+  { name: "Inventory", icon: <InventoryIcon />, link: "/Inventory" },
+  { name: "Price", icon: <PriceChangeIcon />, link: "" },
+];
 
 const drawerWidth = 240;
 
@@ -42,9 +58,9 @@ const closedMixin = (theme: Theme): CSSObject => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: "hidden",
-  width: `calc(${theme.spacing(7)} + 1px)`,
+  width: `calc(${theme.spacing(12)} + 1px)`,
   [theme.breakpoints.up("sm")]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
+    width: `calc(${theme.spacing(12)} + 1px)`,
   },
 });
 
@@ -52,7 +68,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-end",
-  padding: theme.spacing(0, 1),
+  // padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
@@ -76,7 +92,12 @@ const Drawer = styled(MuiDrawer, {
 
 const DrawerSideBar = () => {
   const theme = useTheme();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [focus, setFocus] = useState(listBtn[0].name);
+
+  const handleFocus = (name: string) => {
+    setFocus(name);
+  };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -93,28 +114,17 @@ const DrawerSideBar = () => {
         </IconButton>
       </DrawerHeader>
       <Divider />
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding sx={{ display: "block" }}>
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? "initial" : "center",
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : "auto",
-                  justifyContent: "center",
-                }}
-              >
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-            </ListItemButton>
-          </ListItem>
+      <List className={Style.btnContainer}>
+        {listBtn.map((item, index) => (
+          <SideBarButon
+            key={index}
+            name={item.name}
+            icon={item.icon}
+            link={item.link}
+            open={open}
+            focus={focus}
+            onFocus={handleFocus}
+          />
         ))}
       </List>
       <Divider />
