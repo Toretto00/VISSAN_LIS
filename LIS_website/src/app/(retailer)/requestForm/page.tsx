@@ -196,9 +196,6 @@ const RequestForm = () => {
     if (typeof window !== "undefined") {
       rows.forEach((element) => {
         newInventory.push({
-          location: {
-            storeid: localStorage.getItem("store"),
-          },
           product: {
             code: element?.name?.code,
           },
@@ -207,7 +204,12 @@ const RequestForm = () => {
           updated: dayjs(),
         });
       });
-      api.post("Inventories", newInventory).catch((e) => console.log(e));
+      api
+        .post(
+          `Inventories?location=${localStorage.getItem("store")}`,
+          newInventory
+        )
+        .catch((e) => console.log(e));
       setRows([]);
     }
   };

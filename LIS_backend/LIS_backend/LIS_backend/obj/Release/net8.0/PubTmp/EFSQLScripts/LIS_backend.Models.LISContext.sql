@@ -890,3 +890,120 @@ GO
 COMMIT;
 GO
 
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240618143845_update-inventory'
+)
+BEGIN
+    ALTER TABLE [Inventories] DROP CONSTRAINT [FK_Inventories_Products_productid];
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240618143845_update-inventory'
+)
+BEGIN
+    DROP INDEX [IX_Inventories_productid] ON [Inventories];
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240618143845_update-inventory'
+)
+BEGIN
+    DECLARE @var33 sysname;
+    SELECT @var33 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Inventories]') AND [c].[name] = N'productid');
+    IF @var33 IS NOT NULL EXEC(N'ALTER TABLE [Inventories] DROP CONSTRAINT [' + @var33 + '];');
+    ALTER TABLE [Inventories] DROP COLUMN [productid];
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240618143845_update-inventory'
+)
+BEGIN
+    DECLARE @var34 sysname;
+    SELECT @var34 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Inventories]') AND [c].[name] = N'quantity');
+    IF @var34 IS NOT NULL EXEC(N'ALTER TABLE [Inventories] DROP CONSTRAINT [' + @var34 + '];');
+    ALTER TABLE [Inventories] DROP COLUMN [quantity];
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240618143845_update-inventory'
+)
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20240618143845_update-inventory', N'8.0.6');
+END;
+GO
+
+COMMIT;
+GO
+
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240618150023_update-inventory-table'
+)
+BEGIN
+    CREATE TABLE [Inventory_Products] (
+        [id] int NOT NULL IDENTITY,
+        [inventoryId] int NULL,
+        [productid] int NULL,
+        [quantity] int NOT NULL,
+        [created] nvarchar(max) NULL,
+        [updated] nvarchar(max) NULL,
+        CONSTRAINT [PK_Inventory_Products] PRIMARY KEY ([id]),
+        CONSTRAINT [FK_Inventory_Products_Inventories_inventoryId] FOREIGN KEY ([inventoryId]) REFERENCES [Inventories] ([Id]),
+        CONSTRAINT [FK_Inventory_Products_Products_productid] FOREIGN KEY ([productid]) REFERENCES [Products] ([id])
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240618150023_update-inventory-table'
+)
+BEGIN
+    CREATE INDEX [IX_Inventory_Products_inventoryId] ON [Inventory_Products] ([inventoryId]);
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240618150023_update-inventory-table'
+)
+BEGIN
+    CREATE INDEX [IX_Inventory_Products_productid] ON [Inventory_Products] ([productid]);
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240618150023_update-inventory-table'
+)
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20240618150023_update-inventory-table', N'8.0.6');
+END;
+GO
+
+COMMIT;
+GO
+
