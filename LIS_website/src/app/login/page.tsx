@@ -36,6 +36,7 @@ const Login = () => {
         if (typeof window !== "undefined") {
           localStorage.setItem("userID", res.data.id);
           localStorage.setItem("role", res.data.role);
+          localStorage.setItem("store", res.data.store);
         }
         resetValue();
         res.data.role === "user"

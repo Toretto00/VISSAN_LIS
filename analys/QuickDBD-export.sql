@@ -725,6 +725,12 @@ INSERT INTO [StoreLocation] (storeID, retailName, retailSystem, shortname) VALUE
 	(N'ST000748',N'QUẦY THỊT CO.OP FOOD 87 PHAN SÀO NAM (P.11, Q.TÂN BÌNH)',N'HT COOPFOOD',N'CF 87 PHAN SÀO NAM'),
 	(N'ST000433',N'QUẦY THỊT SIMPLY SUNNY',N'HT AUCHAN',N'AUCHAN PHẠM VĂN ĐỒNG');
 
+INSERT INTO User_Locations (userid, storeLocationid) VALUES ('1','2');
+
+INSERT INTO Users (username, password, role) VALUES ('2','2','user');
+
+INSERT INTO User_Locations (userid, storeLocationid) VALUES ('2','3');
+
 ALTER TABLE [dbo].[Inventories]
 DROP CONSTRAINT FK_Inventories_StoreLocations_locationid;
 
