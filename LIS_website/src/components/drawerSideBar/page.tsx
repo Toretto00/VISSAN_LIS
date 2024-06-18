@@ -38,7 +38,7 @@ const listBtn: sidebarBtn[] = [
   { name: "Dashboards", icon: <DashboardIcon />, link: "/Dashboards" },
   { name: "Invoice", icon: <ReceiptIcon />, link: "/Invoice" },
   { name: "Inventory", icon: <InventoryIcon />, link: "/Inventory" },
-  { name: "Price", icon: <PriceChangeIcon />, link: "" },
+  { name: "Price", icon: <PriceChangeIcon />, link: "/Price" },
 ];
 
 const drawerWidth = 240;
