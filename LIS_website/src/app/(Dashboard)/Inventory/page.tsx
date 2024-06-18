@@ -144,6 +144,19 @@ const Inventory = () => {
       .catch((e) => console.log(e));
   };
 
+  const handleCreateInventory = () => {
+    api.post("/Inventories", {
+      location: {
+        storeid: "ST000003",
+      },
+      product: {
+        code: "1101057022",
+      },
+      quantity: 1,
+      created: "string",
+      updated: "string",
+    });
+  };
   return (
     <Box className={Style.container}>
       {/* infomation */}
@@ -172,7 +185,9 @@ const Inventory = () => {
         {/* Actions */}
         <Box className={Style.tableAction}>
           <Box>
-            <Button variant="contained">Create inventory</Button>
+            <Button variant="contained" onClick={handleCreateInventory}>
+              Create inventory
+            </Button>
           </Box>
           <Box>
             <Autocomplete
