@@ -93,25 +93,87 @@ interface product {
   updated: string;
 }
 
+interface Inventory {
+  id: number;
+  location: {
+    id: number;
+    warehouseid: string;
+    storeid: string;
+    retailname: string;
+    retailsystem: string;
+    shortname: string;
+  };
+  product: {
+    id: number;
+    category: {
+      id: number;
+      name: string;
+      code: string;
+    };
+    name: string;
+    code: string;
+    description: string;
+    created: string;
+    updated: string;
+  };
+  quantity: number;
+  created: string;
+  updated: string;
+}
+
 const Inventory = () => {
   const [productList, setProductList] = useState<product[]>([]);
   const [infoList, setInfoList] = useState<infoContent[]>([]);
-  const [rows, setRows] = useState([]);
+  const [rows, setRows] = useState<Inventory[]>([]);
   const columns: GridColDef<(typeof rows)[number]>[] = [
-    { field: "location.storeID", headerName: "Mã cửa hàng", width: 240 },
+    {
+      field: "location.storeid",
+      headerName: "Mã cửa hàng",
+      width: 240,
+      valueGetter: (value, row) => {
+        return `${row.location.storeid}`;
+      },
+    },
     {
       field: "location.name",
       headerName: "Tên cửa hàng",
       width: 320,
+      valueGetter: (value, row) => {
+        return `${row.location.retailname}`;
+      },
     },
     {
-      field: "status",
+      field: "location.retailsystem",
       headerName: "Hệ thống",
+      width: 240,
+      valueGetter: (value, row) => {
+        return `${row.location.retailsystem}`;
+      },
+    },
+    {
+      field: "product.code",
+      headerName: "Mã phẩm",
+      width: 240,
+      valueGetter: (value, row) => {
+        return `${row.product.code}`;
+      },
+    },
+    {
+      field: "product.name",
+      headerName: "Tên sản phẩm",
+      width: 240,
+      valueGetter: (value, row) => {
+        return `${row.product.name}`;
+      },
+    },
+    {
+      field: "quantity",
+      headerName: "Số lượng",
       width: 240,
     },
     {
-      field: "status",
-      headerName: "Ngày báo tốn",
+      field: "created",
+      headerName: "Ngày báo tồn",
       width: 240,
     },
   ];
@@ -145,17 +207,19 @@ const Inventory = () => {
   };
 
   const handleCreateInventory = () => {
-    api.post("/Inventories", {
-      location: {
-        storeid: "ST000003",
+    api.post("/Inventories", [
+      {
+        location: {
+          storeid: "ST000003",
+        },
+        product: {
+          code: "1101057022",
+        },
+        quantity: 1,
+        created: "string",
+        updated: "string",
       },
-      product: {
-        code: "1101057022",
-      },
-      quantity: 1,
-      created: "string",
-      updated: "string",
-    });
+    ]);
   };
   return (
     <Box className={Style.container}>
@@ -218,7 +282,7 @@ const Inventory = () => {
           initialState={{
             pagination: {
               paginationModel: {
-                pageSize: 5,
+                pageSize: 10,
               },
             },
           }}

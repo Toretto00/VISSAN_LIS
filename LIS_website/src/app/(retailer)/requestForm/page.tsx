@@ -72,6 +72,34 @@ interface row {
   rowManufactureDate: any;
 }
 
+interface Inventory {
+  id: number;
+  location: {
+    id: number;
+    warehouseid: string;
+    storeid: string;
+    retailname: string;
+    retailsystem: string;
+    shortname: string;
+  };
+  product: {
+    id: number;
+    category: {
+      id: number;
+      name: string;
+      code: string;
+    };
+    name: string;
+    code: string;
+    description: string;
+    created: string;
+    updated: string;
+  };
+  quantity: number;
+  created: string;
+  updated: string;
+}
+
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
@@ -163,6 +191,27 @@ const RequestForm = () => {
     setRows([]);
   };
 
+  const handleCreateInventory = () => {
+    let newInventory: any[] = [];
+    if (typeof window !== "undefined") {
+      rows.forEach((element) => {
+        newInventory.push({
+          location: {
+            storeid: localStorage.getItem("store"),
+          },
+          product: {
+            code: element?.name?.code,
+          },
+          quantity: element?.quantity,
+          created: dayjs(),
+          updated: dayjs(),
+        });
+      });
+      api.post("Inventories", newInventory).catch((e) => console.log(e));
+      setRows([]);
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div className={styles.login}>
@@ -191,7 +240,10 @@ const RequestForm = () => {
               type="number"
               label="Số lượng"
               value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
+              onChange={(e) => {
+                setQuantity(e.target.value);
+                // console.log(e.target.value);
+              }}
               className={styles.formChild}
             />
             <TextField
@@ -225,7 +277,8 @@ const RequestForm = () => {
             className="btn--submit"
             type="submit"
             onClick={(e) => {
-              handleSendRequest();
+              // handleSendRequest();
+              handleCreateInventory();
             }}
           >
             Send

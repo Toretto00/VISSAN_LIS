@@ -89,7 +89,9 @@ namespace LIS_backend.Controllers
                 return NotFound("Invalid password");
             }
 
-            return Ok(new { id = newUser.id, role = newUser.role });
+            var store = _context.User_Locations.Where(x => x.user.id == newUser.id).Include(x=>x.storeLocation).FirstAsync();
+
+            return Ok(new { id = newUser.id, role = newUser.role, store = store.Result.storeLocation.storeid });
         }
         [HttpPost]
         [Route("Register")]

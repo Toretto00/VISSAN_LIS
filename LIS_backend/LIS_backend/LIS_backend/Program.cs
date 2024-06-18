@@ -14,7 +14,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000", "http://10.0.31.145:3000", "https://vissan.vercel.app").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+            policy.WithOrigins("https://localhost:3000", "https://10.0.31.145:3000", "https://vissan.vercel.app").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
         });
 });
 

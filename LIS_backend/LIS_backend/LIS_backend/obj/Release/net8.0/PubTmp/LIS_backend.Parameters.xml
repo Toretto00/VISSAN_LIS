@@ -3,4 +3,7 @@
   <parameter name="IIS Web Application Name" description="" value="LISbackend20240618115905" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
   </parameter>
+  <parameter name="LIS_backend.Models.LISContext" description="" value="Data Source=lis-backend-databasedbserver.database.windows.net,1433;Initial Catalog=LIS_backend_database;User ID=toretto;Password=Pcb0941819910" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\obj\\Release\\net8\.0\\PubTmp\\EFSQLScripts\\LIS_backend\.Models\.LISContext\.sql$" />
+  </parameter>
 </parameters>
