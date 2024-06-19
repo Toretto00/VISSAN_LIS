@@ -4,6 +4,8 @@ import { useState, ReactElement, useEffect } from "react";
 
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
+import * as XLSX from "xlsx";
+
 import Style from "./Inventory.module.scss";
 
 import api from "@/app/api/client";
@@ -196,6 +198,20 @@ const Inventory = () => {
     router.push(`/Inventory/${param.id}?${params.toString()}`);
   };
 
+  const handleDownloadInventory = () => {
+    api
+      .get("Inventories/ExportExcel", { responseType: "arraybuffer" })
+      .then((res) => {
+        const data = new Uint8Array(res.data);
+        const workbook = XLSX.read(data, { type: "array" });
+        // const sheetName = workbook.SheetNames[0];
+        // const sheet = workbook.Sheets[sheetName];
+        // const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        XLSX.writeFile(workbook, "Inventory.xlsx");
+      });
+  };
+
   return (
     <Container maxWidth="xl">
       <Box className={Style.container}>
@@ -227,8 +243,8 @@ const Inventory = () => {
           {/* Actions */}
           <Box className={Style.tableAction}>
             <Box>
-              <Button variant="contained" onClick={handleCreateInventory}>
-                Create inventory
+              <Button variant="contained" onClick={handleDownloadInventory}>
+                Download
               </Button>
             </Box>
             <Box>
