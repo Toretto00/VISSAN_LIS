@@ -38,7 +38,6 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import Header from "@/components/header/header";
-import { ok } from "assert";
 
 const theme = createTheme({
   palette: {
@@ -102,6 +101,7 @@ interface Inventory {
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
+dayjs.tz.guess();
 
 const RequestForm = () => {
   const [loading, setLoading] = useState(false);
@@ -112,7 +112,7 @@ const RequestForm = () => {
 
   const [productName, setProductName] = useState("");
   const [manufactureDate, setManufactureDate] = useState<Dayjs | null>(
-    dayjs.utc()
+    dayjs.utc("+7")
   );
   const [quantity, setQuantity] = useState("");
   const [rows, setRows] = useState<row[]>([]);
@@ -161,6 +161,7 @@ const RequestForm = () => {
     const newRows = [...rows];
     newRows.push(newRow);
     setRows(newRows);
+    console.log(manufactureDate?.format("DD/MM/YYYY HH:MM:SS").toString());
     resetValue();
   };
 
@@ -200,8 +201,8 @@ const RequestForm = () => {
             code: element?.name?.code,
           },
           quantity: element?.quantity,
-          created: dayjs(),
-          updated: dayjs(),
+          created: manufactureDate?.format("DD/MM/YYYY HH:MM").toString(),
+          updated: manufactureDate?.format("DD/MM/YYYY HH:MM").toString(),
         });
       });
       api

@@ -7,6 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LIS_backend.Models;
 using NuGet.Versioning;
+using System.Data;
+using DocumentFormat.OpenXml.Office2010.Excel;
+using ClosedXML.Excel;
+using System.Diagnostics.Tracing;
+using ClosedXML.Extensions;
 
 namespace LIS_backend.Controllers
 {
@@ -25,7 +30,57 @@ namespace LIS_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Inventory>>> GetInventories()
         {
-            return await _context.Inventories.Include(x=>x.location).ToListAsync();
+            return await _context.Inventories.Include(x=>x.location).OrderBy(x=>x.created).Reverse().ToListAsync();
+        }
+        [HttpGet("ExportExcel")]
+        public ActionResult ExportExcel()
+        {
+            var data = GetData();
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                var sheet1 = wb.AddWorksheet(data, "Inventory");
+                sheet1.Row(1).CellsUsed().Style.Fill.BackgroundColor = XLColor.Green;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    wb.SaveAs(ms);
+                    return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Inventory.xlsx");
+                }
+            }
+        }
+
+        [NonAction]
+        private DataTable GetData() 
+        {
+            DataTable dt = new DataTable();
+            dt.TableName = "Inventory";
+            dt.Columns.Add("Mã cửa hàng", typeof(string));
+            dt.Columns.Add("Tên cửa hàng", typeof(string));
+            dt.Columns.Add("Hệ thống", typeof(string));
+            dt.Columns.Add("Mã sản phẩm", typeof(string));
+            dt.Columns.Add("Tên sản phẩm", typeof(string));
+            dt.Columns.Add("Số lượng", typeof(int));
+            dt.Columns.Add("Ngày", typeof(string));
+
+            var inventory = _context.Inventories.Include(x => x.location).ToList();
+
+            for (int i = 0; i < inventory.Count(); i++)
+            {
+                var products = _context.Inventory_Products.Where(x => x.inventory.Id == inventory[i].Id).Include(x => x.product).ToList();
+                
+                for(int j=0;j < products.Count; j++)
+                {
+
+                    dt.Rows.Add(inventory[i].location.storeid,
+                        inventory[i].location.retailname,
+                        inventory[i].location.retailsystem,
+                        products[j].product.code,
+                        products[j].product.name,
+                        products[j].quantity,
+                        inventory[i].created);
+                }
+            }
+
+            return dt;
         }
 
         // GET: api/Inventories/5
