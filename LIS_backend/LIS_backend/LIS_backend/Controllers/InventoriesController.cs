@@ -12,6 +12,7 @@ using DocumentFormat.OpenXml.Office2010.Excel;
 using ClosedXML.Excel;
 using System.Diagnostics.Tracing;
 using ClosedXML.Extensions;
+using DocumentFormat.OpenXml.Office2010.ExcelAc;
 
 namespace LIS_backend.Controllers
 {
@@ -28,14 +29,24 @@ namespace LIS_backend.Controllers
 
         // GET: api/Inventories
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Inventory>>> GetInventories()
+        public List<Inventory> GetInventories(string date)
         {
-            return await _context.Inventories.Include(x=>x.location).OrderBy(x=>x.created).Reverse().ToListAsync();
+            //var inventory = _context.Inventories.Where(x => date.Contains(x.created)).Include(x => x.location).ToList();
+
+            //var inventory = from i in _context.Inventories
+            //                where i.created.IndexOf(date) > -1
+            //                orderby i.created
+            //                select i;
+
+            var inventory = _context.Inventories.Where(x => x.created.IndexOf(date) != -1).Include(x => x.location).ToList();
+
+
+            return inventory;
         }
         [HttpGet("ExportExcel")]
-        public ActionResult ExportExcel()
+        public ActionResult ExportExcel(string date)
         {
-            var data = GetData();
+            var data = GetData(date);
             using (XLWorkbook wb = new XLWorkbook())
             {
                 var sheet1 = wb.AddWorksheet(data, "Inventory");
@@ -49,7 +60,7 @@ namespace LIS_backend.Controllers
         }
 
         [NonAction]
-        private DataTable GetData() 
+        private DataTable GetData(string date) 
         {
             DataTable dt = new DataTable();
             dt.TableName = "Inventory";
@@ -61,14 +72,20 @@ namespace LIS_backend.Controllers
             dt.Columns.Add("Số lượng", typeof(int));
             dt.Columns.Add("Ngày", typeof(string));
 
-            var inventory = _context.Inventories.Include(x => x.location).ToList();
+            var inventory = _context.Inventories
+                .Where(x => x.created.IndexOf(date) != -1)
+                .Include(x => x.location).ToList();
 
             for (int i = 0; i < inventory.Count(); i++)
             {
-                var products = _context.Inventory_Products.Where(x => x.inventory.Id == inventory[i].Id).Include(x => x.product).ToList();
-                
+                var products = _context.Inventory_Products
+                    .Where(x => x.inventory.Id == inventory[i].Id)
+                    .Include(x => x.product).ToList();
+                                
                 for(int j=0;j < products.Count; j++)
                 {
+                    if (products[j].product == null)
+                        continue;
 
                     dt.Rows.Add(inventory[i].location.storeid,
                         inventory[i].location.retailname,

@@ -4,6 +4,10 @@ import { useState, ReactElement, useEffect } from "react";
 
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
+import dayjs, { Dayjs } from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+
 import * as XLSX from "xlsx";
 
 import Style from "./Inventory.module.scss";
@@ -22,6 +26,11 @@ import {
 } from "@mui/material";
 
 import { DataGrid, GridColDef, GridEventListener } from "@mui/x-data-grid";
+
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
@@ -81,22 +90,6 @@ var infoContentList: infoContent[] = [
   },
 ];
 
-interface category {
-  id: number;
-  name: string;
-  code: string;
-}
-
-interface product {
-  id: number;
-  category: category;
-  name: string;
-  code: string;
-  description: string;
-  created: string;
-  updated: string;
-}
-
 interface Inventory {
   id: number;
   location: {
@@ -111,10 +104,14 @@ interface Inventory {
   updated: string;
 }
 
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
 const Inventory = () => {
-  const [productList, setProductList] = useState<product[]>([]);
   const [infoList, setInfoList] = useState<infoContent[]>([]);
   const [rows, setRows] = useState<Inventory[]>([]);
+  const [date, setDate] = useState<Dayjs | null>(dayjs());
+
   const columns: GridColDef<(typeof rows)[number]>[] = [
     {
       field: "location.storeid",
@@ -153,12 +150,15 @@ const Inventory = () => {
 
   useEffect(() => {
     handleLoadProductList();
-  }, []);
+  }, [date]);
 
   const handleLoadProductList = async () => {
-    api.get("Inventories").then((res) => {
-      setRows(res.data);
-    });
+    api
+      .get(`Inventories?date=${date?.format("DD/MM/YYYY").toString()}`)
+      .then((res: any) => {
+        setRows(res.data);
+        console.log(res.data);
+      });
   };
 
   const handleGetInfo = () => {
@@ -175,19 +175,6 @@ const Inventory = () => {
       .catch((e) => console.log(e));
   };
 
-  const handleCreateInventory = () => {
-    api.post("Inventories?location=ST000003", [
-      {
-        product: {
-          code: "1101057022",
-        },
-        quantity: 1,
-        created: "string",
-        updated: "string",
-      },
-    ]);
-  };
-
   const router = useRouter();
 
   const searchParams = useSearchParams();
@@ -200,17 +187,19 @@ const Inventory = () => {
 
   const handleDownloadInventory = () => {
     api
-      .get("Inventories/ExportExcel", { responseType: "arraybuffer" })
+      .get(
+        `Inventories/ExportExcel?date=${date?.format("DD/MM/YYYY").toString()}`,
+        { responseType: "arraybuffer" }
+      )
       .then((res) => {
         const data = new Uint8Array(res.data);
         const workbook = XLSX.read(data, { type: "array" });
-        // const sheetName = workbook.SheetNames[0];
-        // const sheet = workbook.Sheets[sheetName];
-        // const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
         XLSX.writeFile(workbook, "Inventory.xlsx");
       });
   };
+
+  const handleChangeDate = () => {};
 
   return (
     <Container maxWidth="xl">
@@ -243,28 +232,25 @@ const Inventory = () => {
           {/* Actions */}
           <Box className={Style.tableAction}>
             <Box>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer components={["DatePicker"]}>
+                  <DatePicker
+                    timezone="Asia/Ho_Chi_Minh"
+                    format="DD/MM/YYYY"
+                    value={date}
+                    onChange={(newValue: any) => {
+                      newValue.format("DD/MM/YYYY");
+                      setDate(newValue);
+                      console.log(date?.toDate().toString());
+                    }}
+                  />
+                </DemoContainer>
+              </LocalizationProvider>
+            </Box>
+            <Box>
               <Button variant="contained" onClick={handleDownloadInventory}>
                 Download
               </Button>
-            </Box>
-            <Box>
-              <Autocomplete
-                sx={{ width: 300 }}
-                options={productList}
-                // onChange={(event, value) => setProductSelected(value)}
-                autoHighlight
-                // getOptionLabel={(option) => option.name}
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    label="Tên sản phẩm"
-                    inputProps={{
-                      ...params.inputProps,
-                      autoComplete: "new-password", // disable autocomplete and autofill
-                    }}
-                  />
-                )}
-              />
             </Box>
           </Box>
 

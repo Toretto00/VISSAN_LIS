@@ -34,9 +34,9 @@
               "Title": "InventoriesController.cs",
               "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
               "RelativeDocumentMoniker": "LIS_backend\\Controllers\\InventoriesController.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
-              "RelativeToolTip": "LIS_backend\\Controllers\\InventoriesController.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAwwEgAAAA+AAAA",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs*",
+              "RelativeToolTip": "LIS_backend\\Controllers\\InventoriesController.cs*",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAUwEsAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T14:43:18.896Z",
               "EditorCaption": ""
@@ -70,8 +70,7 @@
               "RelativeToolTip": "LIS_backend\\Models\\Inventory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T14:44:41.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T14:44:41.798Z"
             }
           ]
         }
