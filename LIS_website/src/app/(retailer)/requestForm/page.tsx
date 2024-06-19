@@ -112,7 +112,7 @@ const RequestForm = () => {
 
   const [productName, setProductName] = useState("");
   const [manufactureDate, setManufactureDate] = useState<Dayjs | null>(
-    dayjs.utc("+7")
+    dayjs.utc()
   );
   const [quantity, setQuantity] = useState("");
   const [rows, setRows] = useState<row[]>([]);
