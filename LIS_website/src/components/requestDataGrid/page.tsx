@@ -32,9 +32,6 @@ export default function FullFeaturedCrudGrid(props: any) {
 
   const onGetExporProduct = (title?: string, worksheetname?: string) => {
     try {
-      // setLoading(true);
-      // const response = await fetch('https://fakestoreapi.com/products');
-      // Check if the action result contains data and if it's an array
       if (rows && Array.isArray(rows)) {
         const dataToExport = rows.map((row: any) => ({
           title: row.id,
@@ -62,12 +59,6 @@ export default function FullFeaturedCrudGrid(props: any) {
 
   useEffect(() => {
     if (props.Row == undefined) return;
-    // props.Row["id"] = rows.length + 1;
-    // const newRows = [...rows];
-    // const newRow = props.Row;
-    // newRows.push(newRow);
-    // console.log(rows);
-    // setRows(newRows);
     setRows(props.Row);
   }, [props.Row]);
 

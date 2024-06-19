@@ -37,10 +37,12 @@ namespace LIS_backend.Controllers
             var products = _context.Inventory_Products.Where(x => x.inventory.Id == id).Include(x => x.product).ToList();
 
             var temp = new List<Product>();
+            var quantity = new List<int>();
 
             for (int i = 0; i< products.Count(); i++)
             {
                 temp.Add(products[i].product);
+                quantity.Add(products[i].quantity);
             }
 
             if (inventory == null)
@@ -48,7 +50,7 @@ namespace LIS_backend.Controllers
                 return NotFound();
             }
 
-            return Ok(new { store = inventory.location, products = temp});
+            return Ok(new { store = inventory.location, products = temp, quantity = quantity, created = inventory.created, updated = inventory.updated});
         }
 
         // PUT: api/Inventories/5
