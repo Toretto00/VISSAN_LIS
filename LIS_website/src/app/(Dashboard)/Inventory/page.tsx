@@ -2,6 +2,8 @@
 
 import { useState, ReactElement, useEffect } from "react";
 
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
+
 import Style from "./Inventory.module.scss";
 
 import api from "@/app/api/client";
@@ -11,7 +13,7 @@ import {
   Grid,
   Paper,
   Typography,
-  Divider,
+  Container,
   Button,
   Autocomplete,
   TextField,
@@ -183,78 +185,93 @@ const Inventory = () => {
       },
     ]);
   };
+
+  const router = useRouter();
+
+  const searchParams = useSearchParams();
+
+  const handleRowClick: GridEventListener<"rowClick"> = (param) => {
+    const params = new URLSearchParams(searchParams);
+    params.set("inventory_id", param.id.toString());
+    router.push(`/Inventory/${param.id}?${params.toString()}`);
+  };
+
   return (
-    <Box className={Style.container}>
-      {/* infomation */}
-      <Grid container className={Style.infoContainer}>
-        {infoList.map((item, index) => (
-          <Grid key={index} item lg={3} md={6} xs={12}>
-            <Paper elevation={0} className={Style.info}>
-              <Box>
-                <Typography
-                  variant="h4"
-                  component="h4"
-                  className={Style.infoHeading}
-                >
-                  {item.number}
-                </Typography>
-                <Typography className={Style.infoTitle}>{item.name}</Typography>
-              </Box>
-              <Box className={Style.infoIcon}>{item.icon}</Box>
-            </Paper>
-          </Grid>
-        ))}
-      </Grid>
+    <Container maxWidth="xl">
+      <Box className={Style.container}>
+        {/* infomation */}
+        <Grid container className={Style.infoContainer}>
+          {infoList.map((item, index) => (
+            <Grid key={index} item lg={3} md={6} xs={12}>
+              <Paper elevation={0} className={Style.info}>
+                <Box>
+                  <Typography
+                    variant="h4"
+                    component="h4"
+                    className={Style.infoHeading}
+                  >
+                    {item.number}
+                  </Typography>
+                  <Typography className={Style.infoTitle}>
+                    {item.name}
+                  </Typography>
+                </Box>
+                <Box className={Style.infoIcon}>{item.icon}</Box>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
 
-      {/* Table */}
-      <Box className={Style.tableContainer}>
-        {/* Actions */}
-        <Box className={Style.tableAction}>
-          <Box>
-            <Button variant="contained" onClick={handleCreateInventory}>
-              Create inventory
-            </Button>
+        {/* Table */}
+        <Box className={Style.tableContainer}>
+          {/* Actions */}
+          <Box className={Style.tableAction}>
+            <Box>
+              <Button variant="contained" onClick={handleCreateInventory}>
+                Create inventory
+              </Button>
+            </Box>
+            <Box>
+              <Autocomplete
+                sx={{ width: 300 }}
+                options={productList}
+                // onChange={(event, value) => setProductSelected(value)}
+                autoHighlight
+                // getOptionLabel={(option) => option.name}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    label="Tên sản phẩm"
+                    inputProps={{
+                      ...params.inputProps,
+                      autoComplete: "new-password", // disable autocomplete and autofill
+                    }}
+                  />
+                )}
+              />
+            </Box>
           </Box>
-          <Box>
-            <Autocomplete
-              sx={{ width: 300 }}
-              options={productList}
-              // onChange={(event, value) => setProductSelected(value)}
-              autoHighlight
-              // getOptionLabel={(option) => option.name}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Tên sản phẩm"
-                  inputProps={{
-                    ...params.inputProps,
-                    autoComplete: "new-password", // disable autocomplete and autofill
-                  }}
-                />
-              )}
-            />
-          </Box>
-        </Box>
 
-        {/* List */}
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          className={Style.table}
-          initialState={{
-            pagination: {
-              paginationModel: {
-                pageSize: 10,
+          {/* List */}
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            className={Style.table}
+            initialState={{
+              pagination: {
+                paginationModel: {
+                  pageSize: 10,
+                },
               },
-            },
-          }}
-          pageSizeOptions={[5]}
-          checkboxSelection
-          disableRowSelectionOnClick
-          // onRowClick={handleRowClick}
-        />
+            }}
+            pageSizeOptions={[5]}
+            checkboxSelection
+            disableRowSelectionOnClick
+            onRowClick={handleRowClick}
+          />
+        </Box>
       </Box>
-    </Box>
+    </Container>
   );
 };
 export default Inventory;

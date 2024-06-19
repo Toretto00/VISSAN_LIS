@@ -24,10 +24,10 @@ export default function RootLayout({
   const router = useRouter();
 
   useEffect(() => {
-    if (localStorage.getItem("role") === "user") router.push("requestForm");
-    else if (localStorage.getItem("role") === "admin")
-      router.push("/Dashboards");
-    else router.push("/login");
+    // if (localStorage.getItem("role") === "user") router.push("requestForm");
+    // else if (localStorage.getItem("role") === "admin")
+    //   router.push("/Dashboards");
+    // else router.push("/login");
   }, []);
 
   return (

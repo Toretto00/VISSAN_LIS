@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LIS_backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2defd6a33a5e13a740fdbea991d071080aac116")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f92ff1cc9798f52148095080cf93c80607d65e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("LIS_backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LIS_backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

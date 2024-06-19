@@ -1,0 +1,68 @@
+.container{
+    min-height: 100vh;
+    padding: 24px 0;
+
+    .InventoryContent{
+        padding: 3rem
+    }
+    .inventoryHeader{
+        display: flex;
+        justify-content: space-between;
+        background-color: #f3f2f3;
+        padding: 1.5rem;
+        border-radius: 6px;
+
+        .firmInfo{
+            display: flex;
+            align-items: center;
+
+            .title{
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-left: 12px;
+            }
+
+            
+        }
+    }
+
+    .subTitle{
+        margin-top: 16px;
+    }
+
+    .textColor{
+        color: rgb( 47 43 61 / 0.7);
+    }
+
+    .store{
+        padding: 24px 0;
+    }
+
+    .totalContainer{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 24px 0;
+
+        .total{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;            
+            min-width: 200px;
+        }
+    }
+
+    .actions{
+        background-color: white;
+        border-radius: 6px;
+        padding: 24px;
+
+        .button{
+            background-color: rgb( 128 131 144 / 0.16);
+            color: #808390;
+            text-transform: none;
+        }
+    }
+
+}
