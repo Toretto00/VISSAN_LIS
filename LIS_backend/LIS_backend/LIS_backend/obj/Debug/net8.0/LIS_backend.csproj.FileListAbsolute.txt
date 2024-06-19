@@ -251,3 +251,10 @@ D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\obj\Debug\net8.0\refin
 D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\obj\Debug\net8.0\LIS_backend.pdb
 D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\obj\Debug\net8.0\LIS_backend.genruntimeconfig.cache
 D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\obj\Debug\net8.0\ref\LIS_backend.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Debug\net8.0\ClosedXML.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Debug\net8.0\ExcelNumberFormat.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Debug\net8.0\Irony.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Debug\net8.0\SixLabors.Fonts.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Debug\net8.0\System.IO.Packaging.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Debug\net8.0\XLParser.dll
