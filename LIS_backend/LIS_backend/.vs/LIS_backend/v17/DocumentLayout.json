@@ -21,7 +21,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 297,
+          "DockedWidth": 353,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -34,9 +34,9 @@
               "Title": "InventoriesController.cs",
               "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
               "RelativeDocumentMoniker": "LIS_backend\\Controllers\\InventoriesController.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs*",
-              "RelativeToolTip": "LIS_backend\\Controllers\\InventoriesController.cs*",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAUwEsAAAA6AAAA",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
+              "RelativeToolTip": "LIS_backend\\Controllers\\InventoriesController.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAQwFIAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T14:43:18.896Z",
               "EditorCaption": ""
@@ -44,7 +44,7 @@
           ]
         },
         {
-          "DockedWidth": 199,
+          "DockedWidth": 143,
           "SelectedChildIndex": 0,
           "Children": [
             {

@@ -25,7 +25,18 @@ import {
   TextField,
 } from "@mui/material";
 
-import { DataGrid, GridColDef, GridEventListener } from "@mui/x-data-grid";
+import {
+  GridRowModesModel,
+  GridRowModes,
+  DataGrid,
+  GridColDef,
+  GridActionsCellItem,
+  GridEventListener,
+  GridRowId,
+  GridRowSelectionModel,
+  GridRowModel,
+  GridRowEditStopReasons,
+} from "@mui/x-data-grid";
 
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -36,7 +47,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
 import PendingActionsOutlinedIcon from "@mui/icons-material/PendingActionsOutlined";
-
+import DeleteIcon from "@mui/icons-material/Delete";
 interface infoContent {
   number: number;
   name: string;
@@ -111,6 +122,30 @@ const Inventory = () => {
   const [infoList, setInfoList] = useState<infoContent[]>([]);
   const [rows, setRows] = useState<Inventory[]>([]);
   const [date, setDate] = useState<Dayjs | null>(dayjs());
+  const [rowSelectionModel, setRowSelectionModel] =
+    useState<GridRowSelectionModel>([]);
+
+  const handleDeleteRowSelection = () => {
+    api
+      .delete("Inventories", { data: rowSelectionModel })
+      .then((res) => {
+        handleLoadProductList();
+      })
+      .catch((e) => console.log(e));
+  };
+
+  const handleDeleteClick = (id: GridRowId) => () => {
+    let list: any[] = [];
+    list.push(id);
+    api
+      .delete("Inventories", {
+        data: list,
+      })
+      .then((res) => {
+        handleLoadProductList();
+      })
+      .catch((e) => console.log(e));
+  };
 
   const columns: GridColDef<(typeof rows)[number]>[] = [
     {
@@ -141,6 +176,32 @@ const Inventory = () => {
       field: "created",
       headerName: "Ngày báo tồn",
       width: 240,
+    },
+    {
+      field: "actions",
+      type: "actions",
+      headerName: "Actions",
+      width: 100,
+      cellClassName: "actions",
+      getActions: ({ id }) => {
+        return [
+          // <GridActionsCellItem
+          //   key={id}
+          //   icon={<EditIcon />}
+          //   label="Edit"
+          //   className="textPrimary"
+          //   onClick={handleEditClick(id)}
+          //   color="inherit"
+          // />,
+          <GridActionsCellItem
+            key={id}
+            icon={<DeleteIcon />}
+            label="Delete"
+            onClick={handleDeleteClick(id)}
+            color="inherit"
+          />,
+        ];
+      },
     },
   ];
 
@@ -187,7 +248,7 @@ const Inventory = () => {
 
   const handleDownloadInventory = () => {
     api
-      .get(
+      .post(
         `Inventories/ExportExcel?date=${date?.format("DD/MM/YYYY").toString()}`,
         { responseType: "arraybuffer" }
       )
@@ -199,13 +260,11 @@ const Inventory = () => {
       });
   };
 
-  const handleChangeDate = () => {};
-
   return (
     <Container maxWidth="xl">
       <Box className={Style.container}>
         {/* infomation */}
-        <Grid container className={Style.infoContainer}>
+        {/* <Grid container className={Style.infoContainer}>
           {infoList.map((item, index) => (
             <Grid key={index} item lg={3} md={6} xs={12}>
               <Paper elevation={0} className={Style.info}>
@@ -225,7 +284,7 @@ const Inventory = () => {
               </Paper>
             </Grid>
           ))}
-        </Grid>
+        </Grid> */}
 
         {/* Table */}
         <Box className={Style.tableContainer}>
@@ -251,6 +310,13 @@ const Inventory = () => {
               <Button variant="contained" onClick={handleDownloadInventory}>
                 Download
               </Button>
+              <Button
+                variant="contained"
+                onClick={handleDeleteRowSelection}
+                disabled={rowSelectionModel.length <= 0 ? true : false}
+              >
+                Delete
+              </Button>
             </Box>
           </Box>
 
@@ -270,6 +336,10 @@ const Inventory = () => {
             checkboxSelection
             disableRowSelectionOnClick
             onRowClick={handleRowClick}
+            onRowSelectionModelChange={(newRowSelectionModel) => {
+              setRowSelectionModel(newRowSelectionModel);
+            }}
+            rowSelectionModel={rowSelectionModel}
           />
         </Box>
       </Box>
