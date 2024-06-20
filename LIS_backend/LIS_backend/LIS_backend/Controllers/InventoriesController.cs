@@ -31,19 +31,11 @@ namespace LIS_backend.Controllers
         [HttpGet]
         public List<Inventory> GetInventories(string date)
         {
-            //var inventory = _context.Inventories.Where(x => date.Contains(x.created)).Include(x => x.location).ToList();
-
-            //var inventory = from i in _context.Inventories
-            //                where i.created.IndexOf(date) > -1
-            //                orderby i.created
-            //                select i;
-
             var inventory = _context.Inventories.Where(x => x.created.IndexOf(date) != -1).Include(x => x.location).ToList();
-
 
             return inventory;
         }
-        [HttpGet("ExportExcel")]
+        [HttpPost("ExportExcel")]
         public ActionResult ExportExcel(string date)
         {
             var data = GetData(date);
@@ -72,7 +64,25 @@ namespace LIS_backend.Controllers
             dt.Columns.Add("Số lượng", typeof(int));
             dt.Columns.Add("Ngày", typeof(string));
 
-            var inventory = _context.Inventories
+            var inventory = new List<Inventory>();
+
+            //if (id.Count > 0)
+            //{
+            //    for (int k = 0; k < id.Count; k++)
+            //    {
+            //        inventory.Add(_context.Inventories
+            //    .Where(x => x.created.IndexOf(date) != -1 && x.Id == id[k])
+            //    .Include(x => x.location).FirstOrDefault());
+            //    }
+            //}
+            //else
+            //{
+            //    inventory = _context.Inventories
+            //    .Where(x => x.created.IndexOf(date) != -1)
+            //    .Include(x => x.location).ToList();
+            //}
+
+            inventory = _context.Inventories
                 .Where(x => x.created.IndexOf(date) != -1)
                 .Include(x => x.location).ToList();
 
@@ -184,19 +194,36 @@ namespace LIS_backend.Controllers
         }
 
         // DELETE: api/Inventories/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteInventory(int id)
+        [HttpDelete]
+        public async Task<IActionResult> DeleteInventory([FromBody] List<int> id)
         {
-            var inventory = await _context.Inventories.FindAsync(id);
-            if (inventory == null)
+            for(int i = 0; i < id.Count(); i++)
             {
-                return NotFound();
+                var inventory = await _context.Inventories.FindAsync(id[i]);
+
+                if (inventory == null)
+                {
+                    return NotFound();
+                }
+
+                var products = _context.Inventory_Products.Where(x => x.inventory.Id == id[i]).Include(x => x.product).ToList();
+
+                if (products.Count > 0)
+                {
+
+                    for (int j = 0; j < products.Count(); j++)
+                    {
+                        _context.Inventory_Products.Remove(products[j]);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+
+                _context.Inventories.Remove(inventory);
+                await _context.SaveChangesAsync();
             }
+            
 
-            _context.Inventories.Remove(inventory);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            return Ok("Delete success");
         }
 
         private bool InventoryExists(int id)
