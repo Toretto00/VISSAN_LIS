@@ -25,7 +25,17 @@ import {
   TextField,
 } from "@mui/material";
 
-import { DataGrid, GridColDef, GridEventListener } from "@mui/x-data-grid";
+import {
+  GridRowModesModel,
+  GridRowModes,
+  DataGrid,
+  GridColDef,
+  GridActionsCellItem,
+  GridEventListener,
+  GridRowId,
+  GridRowModel,
+  GridRowEditStopReasons,
+} from "@mui/x-data-grid";
 
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -36,7 +46,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
 import PendingActionsOutlinedIcon from "@mui/icons-material/PendingActionsOutlined";
-
+import DeleteIcon from "@mui/icons-material/Delete";
 interface infoContent {
   number: number;
   name: string;
@@ -112,6 +122,14 @@ const Inventory = () => {
   const [rows, setRows] = useState<Inventory[]>([]);
   const [date, setDate] = useState<Dayjs | null>(dayjs());
 
+  const handleDeleteClick = (id: GridRowId) => () => {
+    const newRows = rows.filter((row) => row?.id !== id);
+    // newRows.map((row, index) => {
+    //   row["id"] = index + 1;
+    // });
+    // setRows(newRows);
+  };
+
   const columns: GridColDef<(typeof rows)[number]>[] = [
     {
       field: "location.storeid",
@@ -141,6 +159,32 @@ const Inventory = () => {
       field: "created",
       headerName: "Ngày báo tồn",
       width: 240,
+    },
+    {
+      field: "actions",
+      type: "actions",
+      headerName: "Actions",
+      width: 100,
+      cellClassName: "actions",
+      getActions: ({ id }) => {
+        return [
+          // <GridActionsCellItem
+          //   key={id}
+          //   icon={<EditIcon />}
+          //   label="Edit"
+          //   className="textPrimary"
+          //   onClick={handleEditClick(id)}
+          //   color="inherit"
+          // />,
+          <GridActionsCellItem
+            key={id}
+            icon={<DeleteIcon />}
+            label="Delete"
+            onClick={handleDeleteClick(id)}
+            color="inherit"
+          />,
+        ];
+      },
     },
   ];
 
