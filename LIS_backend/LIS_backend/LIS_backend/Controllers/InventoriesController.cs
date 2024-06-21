@@ -118,14 +118,14 @@ namespace LIS_backend.Controllers
 
             var products = _context.Inventory_Products.Where(x => x.inventory.Id == id).Include(x => x.product).ToList();
 
-            var temp = new List<Product>();
-            var quantity = new List<int>();
+            //var temp = new List<Product>();
+            //var quantity = new List<int>();
 
-            for (int i = 0; i< products.Count(); i++)
-            {
-                temp.Add(products[i].product);
-                quantity.Add(products[i].quantity);
-            }
+            //for (int i = 0; i< products.Count(); i++)
+            //{
+            //    temp.Add(products[i].product);
+            //    quantity.Add(products[i].quantity);
+            //}
 
             if (inventory == null)
             {
@@ -138,7 +138,7 @@ namespace LIS_backend.Controllers
         // PUT: api/Inventories/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutInventory(int id, List<Inventory_Product> inventory_products)
+        public async Task<IActionResult> PutInventory(int id, [FromBody] List<Inventory_Product> inventory_products)
         {
             var inventory = await _context.Inventories.Where(x=>x.Id==id).FirstOrDefaultAsync();
             
@@ -202,7 +202,7 @@ namespace LIS_backend.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok("Edit success");
         }
 
         // POST: api/Inventories

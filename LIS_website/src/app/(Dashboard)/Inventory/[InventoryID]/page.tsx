@@ -86,7 +86,9 @@ const InventoryDetail = () => {
   const [total, setTotal] = useState<number>();
 
   const [edit, setEdit] = useState(false);
-  var editRow: any[] = [];
+
+  const [editRow, setEditRow] = useState<any[]>([]);
+  // var editRow: any[] = [];
 
   const router = useRouter();
 
@@ -143,9 +145,13 @@ const InventoryDetail = () => {
   };
 
   const handleSaveChange = () => {
-    api.put(`Inventories/${search}`, editRow);
+    console.log(editRow);
+    api
+      .put(`Inventories/${search}`, editRow)
+      .then((res) => console.log(res.data))
+      .catch((e) => console.log(e));
     router.back();
-    editRow = [];
+    // editRow = [];
     setEdit(false);
   };
 
@@ -159,18 +165,36 @@ const InventoryDetail = () => {
     index: number
   ) => {
     let count = 0;
-    for (let i = 0; i < editRow.length; i++) {
-      if (editRow[i].id === product_inventory_id) {
+    // for (let i = 0; i < editRow.length; i++) {
+    //   if (editRow[i].id === product_inventory_id) {
+    //     count++;
+    //     editRow[i].quantity = quantity;
+    //   }
+    // }
+    // if (count === 0)
+    //   editRow.push({
+    //     id: product_inventory_id,
+    //     quantity: quantity,
+    //     updated: dayjs().format("DD/MM/YYYY").toString(),
+    //   });
+
+    let temp: any[] = editRow;
+    for (let i = 0; i < temp.length; i++) {
+      if (temp[i].id === product_inventory_id) {
         count++;
-        editRow[i].quantity = quantity;
+        temp[i].quantity = quantity;
+        setEditRow(temp);
       }
     }
-    if (count === 0)
-      editRow.push({
+    if (count === 0) {
+      temp.push({
         id: product_inventory_id,
         quantity: quantity,
         updated: dayjs().format("DD/MM/YYYY").toString(),
       });
+      setEditRow(temp);
+    }
+    console.log(editRow);
   };
 
   return (
@@ -314,7 +338,7 @@ const InventoryDetail = () => {
                 <Button
                   variant="contained"
                   fullWidth
-                  disabled={!edit}
+                  disabled={!edit || editRow.length <= 0}
                   onClick={handleSaveChange}
                 >
                   Save Change
