@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,12 +35,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Program.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Program.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Program.cs",
+              "RelativeToolTip": "LIS_backend\\Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAC4AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T06:09:52.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "InventoriesController.cs",
               "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
               "RelativeDocumentMoniker": "LIS_backend\\Controllers\\InventoriesController.cs",
               "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
               "RelativeToolTip": "LIS_backend\\Controllers\\InventoriesController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAQwFIAAAAPAAAA",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAswJYAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T14:43:18.896Z",
               "EditorCaption": ""
@@ -49,20 +66,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Inventory_Product.cs",
               "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Inventory_Product.cs",
               "RelativeDocumentMoniker": "LIS_backend\\Models\\Inventory_Product.cs",
               "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Inventory_Product.cs",
               "RelativeToolTip": "LIS_backend\\Models\\Inventory_Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T14:54:03.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Inventory.cs",
               "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Inventory.cs",
               "RelativeDocumentMoniker": "LIS_backend\\Models\\Inventory.cs",
@@ -70,7 +87,8 @@
               "RelativeToolTip": "LIS_backend\\Models\\Inventory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T14:44:41.798Z"
+              "WhenOpened": "2024-06-18T14:44:41.798Z",
+              "EditorCaption": ""
             }
           ]
         }

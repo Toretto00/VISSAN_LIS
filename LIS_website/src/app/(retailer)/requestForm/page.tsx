@@ -201,8 +201,8 @@ const RequestForm = () => {
             code: element?.name?.code,
           },
           quantity: element?.quantity,
-          created: manufactureDate?.format("DD/MM/YYYY HH:MM").toString(),
-          updated: manufactureDate?.format("DD/MM/YYYY HH:MM").toString(),
+          created: manufactureDate?.format("DD/MM/YYYY").toString(),
+          updated: manufactureDate?.format("DD/MM/YYYY").toString(),
         });
       });
       api

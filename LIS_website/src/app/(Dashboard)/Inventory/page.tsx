@@ -177,32 +177,32 @@ const Inventory = () => {
       headerName: "Ngày báo tồn",
       width: 240,
     },
-    {
-      field: "actions",
-      type: "actions",
-      headerName: "Actions",
-      width: 100,
-      cellClassName: "actions",
-      getActions: ({ id }) => {
-        return [
-          // <GridActionsCellItem
-          //   key={id}
-          //   icon={<EditIcon />}
-          //   label="Edit"
-          //   className="textPrimary"
-          //   onClick={handleEditClick(id)}
-          //   color="inherit"
-          // />,
-          <GridActionsCellItem
-            key={id}
-            icon={<DeleteIcon />}
-            label="Delete"
-            onClick={handleDeleteClick(id)}
-            color="inherit"
-          />,
-        ];
-      },
-    },
+    // {
+    //   field: "actions",
+    //   type: "actions",
+    //   headerName: "Actions",
+    //   width: 100,
+    //   cellClassName: "actions",
+    //   getActions: ({ id }) => {
+    //     return [
+    // <GridActionsCellItem
+    //   key={id}
+    //   icon={<EditIcon />}
+    //   label="Edit"
+    //   className="textPrimary"
+    //   onClick={handleEditClick(id)}
+    //   color="inherit"
+    // />,
+    //       <GridActionsCellItem
+    //         key={id}
+    //         icon={<DeleteIcon />}
+    //         label="Delete"
+    //         onClick={handleDeleteClick(id)}
+    //         color="inherit"
+    //       />,
+    //     ];
+    //   },
+    // },
   ];
 
   useEffect(() => {
