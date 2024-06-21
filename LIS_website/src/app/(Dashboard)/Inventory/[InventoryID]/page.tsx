@@ -24,16 +24,39 @@ import {
   TableRow,
   Divider,
   Button,
+  TextField,
 } from "@mui/material";
 
 import Style from "./InventoryDetail.module.scss";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
 interface product {
   id: number;
-  category: string;
-  name: string;
-  code: string;
-  description: string;
+  inventory: {
+    id: number;
+    location: {
+      id: number;
+      warehouseid: string;
+      storeid: string;
+      retailname: string;
+      retailsystem: string;
+      shortname: string;
+    };
+    created: string;
+    updated: string;
+  };
+  product: {
+    id: number;
+    category: null;
+    name: string;
+    code: string;
+    description: string;
+    created: string;
+    updated: string;
+  };
+  quantity: number;
   created: string;
   updated: string;
 }
@@ -48,10 +71,12 @@ interface data {
     shortname: string;
   };
   products: product[];
-  quantity: number[];
   created: string;
   updated: string;
 }
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 const InventoryDetail = () => {
   const searchParams = useSearchParams();
@@ -60,9 +85,14 @@ const InventoryDetail = () => {
   const [data, setData] = useState<data>();
   const [total, setTotal] = useState<number>();
 
+  const [edit, setEdit] = useState(false);
+  var editRow: any[] = [];
+
+  const router = useRouter();
+
   useEffect(() => {
     handleLoadInventoryDetail();
-  }, [total]);
+  }, [data]);
 
   const handleLoadInventoryDetail = () => {
     api
@@ -70,8 +100,8 @@ const InventoryDetail = () => {
       .then((res) => {
         setData(res.data);
         var temp = 0;
-        data?.quantity.map((item) => {
-          temp = temp + item;
+        data?.products.map((item) => {
+          temp = temp + item.quantity;
         });
         setTotal(temp);
       })
@@ -84,7 +114,7 @@ const InventoryDetail = () => {
         const dataToExport = data.products.map((row: any, index) => ({
           code: row.code,
           name: row.name,
-          quantity: data.quantity[index],
+          quantity: row.quantity[index],
           unit: "Kg",
         }));
         // Create Excel workbook and worksheet
@@ -94,13 +124,10 @@ const InventoryDetail = () => {
         // Save the workbook as an Excel file
         XLSX.writeFile(workbook, `${title}.xlsx`);
         console.log(`Exported data to ${title}.xlsx`);
-        // setLoading(false);
       } else {
-        // setLoading(false);
         console.log("#==================Export Error");
       }
     } catch (error: any) {
-      // setLoading(false);
       console.log("#==================Export Error", error.message);
     }
   };
@@ -109,6 +136,41 @@ const InventoryDetail = () => {
     let title = search + "_" + data?.created;
     let worksheet = "#" + search;
     onGetExporProduct(title, worksheet);
+  };
+
+  const handleEdit = () => {
+    setEdit(true);
+  };
+
+  const handleSaveChange = () => {
+    api.put(`Inventories/${search}`, editRow);
+    router.back();
+    editRow = [];
+    setEdit(false);
+  };
+
+  const handleCancelChange = () => {
+    setEdit(false);
+  };
+
+  const handleEditQuantity = (
+    product_inventory_id: number,
+    quantity: number,
+    index: number
+  ) => {
+    let count = 0;
+    for (let i = 0; i < editRow.length; i++) {
+      if (editRow[i].id === product_inventory_id) {
+        count++;
+        editRow[i].quantity = quantity;
+      }
+    }
+    if (count === 0)
+      editRow.push({
+        id: product_inventory_id,
+        quantity: quantity,
+        updated: dayjs().format("DD/MM/YYYY").toString(),
+      });
   };
 
   return (
@@ -141,13 +203,13 @@ const InventoryDetail = () => {
                   # {search}
                 </Typography>
                 <Typography className={Style.subTitle}>
-                  Created: {data?.created}
+                  Ngày tạo: {data?.created}
                 </Typography>
               </Box>
             </Box>
             <Box className={Style.store}>
               <Typography sx={{ mb: "12px", fontWeight: "500" }}>
-                Store:
+                Cửa hàng:
               </Typography>
               <Typography className={Style.textColor}>
                 {data?.store.storeid}
@@ -179,11 +241,26 @@ const InventoryDetail = () => {
                         }}
                       >
                         <TableCell component="th" scope="row">
-                          {row.code}
+                          {row.product.code}
                         </TableCell>
-                        <TableCell align="right">{row.name}</TableCell>
+                        <TableCell align="right">{row.product.name}</TableCell>
                         <TableCell align="right">
-                          {data.quantity[index]}
+                          {edit ? (
+                            <TextField
+                              // value={dataCopy[index].quantity}
+                              defaultValue={row.quantity}
+                              type="number"
+                              onChange={(e) =>
+                                handleEditQuantity(
+                                  row.id,
+                                  parseInt(e.target.value),
+                                  index
+                                )
+                              }
+                            />
+                          ) : (
+                            <Typography>{row.quantity}</Typography>
+                          )}
                         </TableCell>
                         <TableCell align="right">Kg</TableCell>
                       </TableRow>
@@ -194,12 +271,12 @@ const InventoryDetail = () => {
             </Box>
             <Box className={Style.totalContainer}>
               <Box className={Style.total}>
-                <Typography className={Style.textColor}>Subtotal:</Typography>
+                <Typography className={Style.textColor}>Tạm tính:</Typography>
                 <Typography>{total}</Typography>
               </Box>
               <Divider className={Style.total} sx={{ margin: "12px 0" }} />
               <Box className={Style.total}>
-                <Typography className={Style.textColor}>Total:</Typography>
+                <Typography className={Style.textColor}>Tổng cộng:</Typography>
                 <Typography>{total}</Typography>
               </Box>
             </Box>
@@ -224,8 +301,33 @@ const InventoryDetail = () => {
                 </Button>
               </Grid>
               <Grid item lg={6}>
-                <Button variant="contained" fullWidth className={Style.button}>
+                <Button
+                  variant="contained"
+                  fullWidth
+                  className={Style.button}
+                  onClick={handleEdit}
+                >
                   Edit
+                </Button>
+              </Grid>
+              <Grid item lg={12}>
+                <Button
+                  variant="contained"
+                  fullWidth
+                  disabled={!edit}
+                  onClick={handleSaveChange}
+                >
+                  Save Change
+                </Button>
+              </Grid>
+              <Grid item lg={12}>
+                <Button
+                  variant="contained"
+                  fullWidth
+                  disabled={!edit}
+                  onClick={handleCancelChange}
+                >
+                  Cancel
                 </Button>
               </Grid>
             </Grid>

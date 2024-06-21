@@ -132,20 +132,59 @@ namespace LIS_backend.Controllers
                 return NotFound();
             }
 
-            return Ok(new { store = inventory.location, products = temp, quantity = quantity, created = inventory.created, updated = inventory.updated});
+            return Ok(new { store = inventory.location, products = products, created = inventory.created, updated = inventory.updated});
         }
 
         // PUT: api/Inventories/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutInventory(int id, Inventory inventory)
+        public async Task<IActionResult> PutInventory(int id, List<Inventory_Product> inventory_products)
         {
-            if (id != inventory.Id)
+            var inventory = await _context.Inventories.Where(x=>x.Id==id).FirstOrDefaultAsync();
+            
+            if (inventory == null)
             {
                 return BadRequest();
             }
 
-            _context.Entry(inventory).State = EntityState.Modified;
+            inventory.updated = inventory_products[0].updated;
+            _context.SaveChanges();
+
+            if (inventory_products.Count() > 0)
+            {
+                for (int i = 0; i < inventory_products.Count(); i++)
+                {
+                    //var temp = _context.Inventory_Products.Where(x => x.id == inventory_products[i].id).FirstOrDefault();
+                    
+                    if (inventory_products[i] != null)
+                    {
+                        _context.Entry(inventory_products[i]).State = EntityState.Modified;
+                        //if (inventory_products[i].product != null)
+                        //{
+                        //    temp.product = _context.Products.Where(x => x.code == inventory_products[i].product.code).FirstOrDefault();
+                        //}
+                        //if (inventory_products[i].quantity != null)
+                        //{
+                        //    temp.
+                        //}
+                        try
+                        {
+                            await _context.SaveChangesAsync();
+                        }
+                        catch (DbUpdateConcurrencyException)
+                        {
+                            if (!_context.Inventory_Products.Any(e => e.id == inventory_products[i].id))
+                            {
+                                return NotFound();
+                            }
+                            else
+                            {
+                                throw;
+                            }
+                        }
+                    }
+                }
+            }
 
             try
             {
