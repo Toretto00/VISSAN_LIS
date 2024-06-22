@@ -34,11 +34,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <ThemeProvider theme={theme}>
         <body
-          style={
-            {
-              // backgroundColor: "rgb( 47 43 61 / 0.9)",
-            }
-          }
+          style={{
+            backgroundColor: "#F8F7FA",
+          }}
         >
           <div>{children}</div>
         </body>
