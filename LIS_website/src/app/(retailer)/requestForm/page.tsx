@@ -26,6 +26,7 @@ import {
   createTheme,
   ThemeProvider,
   Autocomplete,
+  Grid,
 } from "@mui/material";
 
 import dayjs, { Dayjs } from "dayjs";
@@ -38,6 +39,9 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import Header from "@/components/header/header";
+
+import AddIcon from "@mui/icons-material/Add";
+import SendIcon from "@mui/icons-material/Send";
 
 const theme = createTheme({
   palette: {
@@ -216,13 +220,29 @@ const RequestForm = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className={styles.login}>
-        {/* <Header /> */}
-        <Container maxWidth="lg">
-          <Box className={styles.form}>
+    <div className={styles.container}>
+      {/* <Header /> */}
+      <Container maxWidth="lg">
+        <Grid container spacing={2} sx={{ mb: "16px" }}>
+          <Grid item lg={3} md={4} xs={12}>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={["DatePicker"]}>
+                <DatePicker
+                  timezone="Asia/Ho_Chi_Minh"
+                  format="DD/MM/YYYY"
+                  label="Ngày sản xuất"
+                  value={manufactureDate}
+                  onChange={setManufactureDate}
+                  sx={{ width: "100%" }}
+                />
+              </DemoContainer>
+            </LocalizationProvider>
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={2}>
+          <Grid item lg={3} md={4} xs={6}>
             <Autocomplete
-              sx={{ width: 300 }}
               options={productList}
               onChange={(event, value) => setProductSelected(value)}
               autoHighlight
@@ -238,66 +258,68 @@ const RequestForm = () => {
                 />
               )}
             />
+          </Grid>
+          <Grid item lg={3} md={4} xs={3}>
             <TextField
               required
+              fullWidth
               type="number"
               label="Số lượng"
               value={quantity}
               onChange={(e) => {
                 setQuantity(e.target.value);
-                // console.log(e.target.value);
               }}
               className={styles.formChild}
             />
+          </Grid>
+          <Grid item lg={3} md={4} xs={3}>
             <TextField
               disabled
+              fullWidth
               label="KG"
               value={unit}
               onChange={(e) => setUnit(e.target.value)}
               className={styles.formChild}
             />
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DemoContainer components={["DatePicker"]}>
-                <DatePicker
-                  timezone="Asia/Ho_Chi_Minh"
-                  format="DD/MM/YYYY"
-                  label="Ngày sản xuất"
-                  value={manufactureDate}
-                  onChange={setManufactureDate}
-                />
-              </DemoContainer>
-            </LocalizationProvider>
-          </Box>
-          <Button variant="contained" onClick={() => handleAddSample()}>
-            Thêm
-          </Button>
+          </Grid>
+          <Grid item lg={3} md={6} xs={12}>
+            <Button
+              variant="contained"
+              fullWidth
+              onClick={() => handleAddSample()}
+              sx={{ height: "100%" }}
+            >
+              <AddIcon sx={{ mr: "6px" }} />
+              Thêm
+            </Button>
+          </Grid>
+        </Grid>
 
-          <FullFeaturedCrudGrid Row={rows} />
+        <FullFeaturedCrudGrid Row={rows} />
 
-          <Button
-            fullWidth
-            variant="contained"
-            className="btn--submit"
-            type="submit"
-            onClick={(e) => {
-              // handleSendRequest();
-              handleCreateInventory();
-            }}
-          >
-            Send
-          </Button>
-          <Alert
-            severity="warning"
-            sx={{ display: display }}
-            onClose={() => {
-              setDisplay("none");
-            }}
-          >
-            Vui lòng nhập đầy đủ thông tin!
-          </Alert>
-        </Container>
-      </div>
-    </ThemeProvider>
+        <Button
+          fullWidth
+          variant="contained"
+          type="submit"
+          onClick={(e) => {
+            // handleSendRequest();
+            handleCreateInventory();
+          }}
+        >
+          <SendIcon sx={{ mr: "6px" }} />
+          Gửi
+        </Button>
+        {/* <Alert
+          severity="warning"
+          sx={{ display: display }}
+          onClose={() => {
+            setDisplay("none");
+          }}
+        >
+          Vui lòng nhập đầy đủ thông tin!
+        </Alert> */}
+      </Container>
+    </div>
   );
 };
 

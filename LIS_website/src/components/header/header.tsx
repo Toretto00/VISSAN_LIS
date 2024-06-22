@@ -9,6 +9,8 @@ import { useRouter } from "next/navigation";
 import Style from "./header.module.scss";
 
 import { AppBar, Box, Toolbar, Container, Button } from "@mui/material";
+
+import LogoutIcon from "@mui/icons-material/Logout";
 interface pages {
   id: number;
   page: string;
@@ -16,28 +18,28 @@ interface pages {
 }
 
 let userPages: pages[] = [
-  { id: 1, page: "Đặt hàng", link: "/requestForm" },
+  // { id: 1, page: "Đặt hàng", link: "/requestForm" },
   { id: 2, page: "Báo hàng tồn", link: "/requestForm" },
-  { id: 3, page: "Lịch sử", link: "/history" },
+  // { id: 3, page: "Lịch sử", link: "/history" },
 ];
 
-let adminPages: pages[] = [
-  {
-    id: 1,
-    page: "Đơn hàng",
-    link: "/",
-  },
-  {
-    id: 2,
-    page: "Tồn kho",
-    link: "/",
-  },
-  {
-    id: 3,
-    page: "Sản phẩm",
-    link: "/property",
-  },
-];
+// let adminPages: pages[] = [
+//   {
+//     id: 1,
+//     page: "Đơn hàng",
+//     link: "/",
+//   },
+//   {
+//     id: 2,
+//     page: "Tồn kho",
+//     link: "/",
+//   },
+//   {
+//     id: 3,
+//     page: "Sản phẩm",
+//     link: "/property",
+//   },
+// ];
 
 var role: string | null;
 
@@ -46,7 +48,7 @@ const Header = () => {
 
   useEffect(() => {
     role = localStorage.getItem("role");
-  });
+  }, []);
 
   const handleRoute = (
     event: React.MouseEvent<HTMLElement>,
@@ -70,15 +72,15 @@ const Header = () => {
             <Image
               priority
               src="/logo-vissan.png"
-              width={119}
-              height={105}
+              width={84}
+              height={70}
               alt="Logo"
             />
           </Box>
 
           {/* button */}
           <Box className={Style.buttonContainer}>
-            {(role === "admin" ? adminPages : userPages).map((page) => (
+            {userPages.map((page) => (
               <Button
                 key={page.id}
                 className={Style.headerBtn}
@@ -92,6 +94,7 @@ const Header = () => {
           {/* Logout button */}
           <Box>
             <Button className={Style.logoutBtn} onClick={handleLogout}>
+              <LogoutIcon sx={{ mr: "4px" }} />
               Logout
             </Button>
           </Box>

@@ -1,20 +1,11 @@
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  //   min-height: 100vh;
-  background-color: var(--secondary-color);
+.container {
+  margin-bottom: 16px;
   padding-top: calc(var(--header-height) + 32px);
-  margin-bottom: var(--header-height);
-
-  .productTypes {
-    flex-direction: row;
-  }
-
+  
   .form {
-    display: flex;
+    // display: flex;
     // flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
 
     .formChild {
       margin-bottom: 6px;
@@ -35,20 +26,4 @@
   &:hover {
     background-color: #00c194;
   }
-}
-
-.hello {
-  text-align: center;
-  h2 {
-    font-size: 50px;
-    font-weight: 700;
-    font-style: bold;
-    margin-bottom: 20px;
-  }
-  p {
-    margin-bottom: 40px;
-  }
-}
-.sign-up {
-  font-size: 13px;
 }
