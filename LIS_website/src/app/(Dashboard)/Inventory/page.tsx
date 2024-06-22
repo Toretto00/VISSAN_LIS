@@ -2,7 +2,7 @@
 
 import { useState, ReactElement, useEffect } from "react";
 
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 
 import dayjs, { Dayjs } from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -14,28 +14,14 @@ import Style from "./Inventory.module.scss";
 
 import api from "@/app/api/client";
 
-import {
-  Box,
-  Grid,
-  Paper,
-  Typography,
-  Container,
-  Button,
-  Autocomplete,
-  TextField,
-} from "@mui/material";
+import { Box, Container, Button } from "@mui/material";
 
 import {
-  GridRowModesModel,
-  GridRowModes,
   DataGrid,
   GridColDef,
-  GridActionsCellItem,
   GridEventListener,
   GridRowId,
   GridRowSelectionModel,
-  GridRowModel,
-  GridRowEditStopReasons,
 } from "@mui/x-data-grid";
 
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
@@ -47,7 +33,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
 import PendingActionsOutlinedIcon from "@mui/icons-material/PendingActionsOutlined";
-import DeleteIcon from "@mui/icons-material/Delete";
+
 interface infoContent {
   number: number;
   name: string;
@@ -177,32 +163,6 @@ const Inventory = () => {
       headerName: "Ngày báo tồn",
       width: 240,
     },
-    // {
-    //   field: "actions",
-    //   type: "actions",
-    //   headerName: "Actions",
-    //   width: 100,
-    //   cellClassName: "actions",
-    //   getActions: ({ id }) => {
-    //     return [
-    // <GridActionsCellItem
-    //   key={id}
-    //   icon={<EditIcon />}
-    //   label="Edit"
-    //   className="textPrimary"
-    //   onClick={handleEditClick(id)}
-    //   color="inherit"
-    // />,
-    //       <GridActionsCellItem
-    //         key={id}
-    //         icon={<DeleteIcon />}
-    //         label="Delete"
-    //         onClick={handleDeleteClick(id)}
-    //         color="inherit"
-    //       />,
-    //     ];
-    //   },
-    // },
   ];
 
   useEffect(() => {

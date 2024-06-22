@@ -151,7 +151,6 @@ const InventoryDetail = () => {
       .then((res) => console.log(res.data))
       .catch((e) => console.log(e));
     router.back();
-    // editRow = [];
     setEdit(false);
   };
 
@@ -165,19 +164,6 @@ const InventoryDetail = () => {
     index: number
   ) => {
     let count = 0;
-    // for (let i = 0; i < editRow.length; i++) {
-    //   if (editRow[i].id === product_inventory_id) {
-    //     count++;
-    //     editRow[i].quantity = quantity;
-    //   }
-    // }
-    // if (count === 0)
-    //   editRow.push({
-    //     id: product_inventory_id,
-    //     quantity: quantity,
-    //     updated: dayjs().format("DD/MM/YYYY").toString(),
-    //   });
-
     let temp: any[] = editRow;
     for (let i = 0; i < temp.length; i++) {
       if (temp[i].id === product_inventory_id) {
@@ -271,7 +257,6 @@ const InventoryDetail = () => {
                         <TableCell align="right">
                           {edit ? (
                             <TextField
-                              // value={dataCopy[index].quantity}
                               defaultValue={row.quantity}
                               type="number"
                               onChange={(e) =>

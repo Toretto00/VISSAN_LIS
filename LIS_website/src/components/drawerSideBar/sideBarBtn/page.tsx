@@ -10,6 +10,11 @@ const SideBarButon = (props: any) => {
   const router = useRouter();
 
   const handleButtonClick = (name: string) => {
+    if (name === "Logout" && typeof window !== undefined) {
+      localStorage.clear();
+      router.push(props.link);
+      return;
+    }
     props.onFocus(name);
     router.push(props.link);
   };

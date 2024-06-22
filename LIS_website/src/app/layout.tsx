@@ -24,16 +24,22 @@ export default function RootLayout({
   const router = useRouter();
 
   useEffect(() => {
-    // if (localStorage.getItem("role") === "user") router.push("requestForm");
-    // else if (localStorage.getItem("role") === "admin")
-    //   router.push("/Dashboards");
-    // else router.push("/login");
+    if (localStorage.getItem("role") === "user") router.push("requestForm");
+    else if (localStorage.getItem("role") === "admin")
+      router.push("/Dashboards");
+    else router.push("/login");
   }, []);
 
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <ThemeProvider theme={theme}>
-        <body>
+        <body
+          style={
+            {
+              // backgroundColor: "rgb( 47 43 61 / 0.9)",
+            }
+          }
+        >
           <div>{children}</div>
         </body>
       </ThemeProvider>
