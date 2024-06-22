@@ -1,6 +1,7 @@
 .container {
   margin-bottom: 16px;
   padding-top: calc(var(--header-height) + 32px);
+  background-color: white;
   
   .form {
     // display: flex;
@@ -9,7 +10,7 @@
 
     .formChild {
       margin-bottom: 6px;
-      background-color: white;
+      background-color: #ffffff;
     }
   }
 }
