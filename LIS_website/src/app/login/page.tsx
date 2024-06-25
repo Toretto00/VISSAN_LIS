@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import Style from "./login.module.scss";
 
@@ -23,6 +23,7 @@ import WavingHandIcon from "@mui/icons-material/WavingHand";
 
 const Login = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [username, setUsernameLogin] = useState("");
   const [password, setPasswordLogin] = useState("");
 
@@ -33,6 +34,8 @@ const Login = () => {
         password: password,
       })
       .then((res) => {
+        const params = new URLSearchParams(searchParams);
+        params.set("requestType", "1");
         if (typeof window !== "undefined") {
           localStorage.setItem("userID", res.data.id);
           localStorage.setItem("role", res.data.role);
@@ -40,7 +43,7 @@ const Login = () => {
         }
         resetValue();
         res.data.role === "user"
-          ? router.push("requestForm")
+          ? router.push(`requestForm?${params.toString()}`)
           : router.push("Dashboards");
       });
   };

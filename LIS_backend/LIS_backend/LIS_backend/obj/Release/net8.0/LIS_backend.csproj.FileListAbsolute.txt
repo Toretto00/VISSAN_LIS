@@ -258,3 +258,5 @@ D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Release\net8.0\Iro
 D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Release\net8.0\SixLabors.Fonts.dll
 D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Release\net8.0\System.IO.Packaging.dll
 D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Release\net8.0\XLParser.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Release\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Project\VISSAN_LIS\LIS_backend\LIS_backend\LIS_backend\bin\Release\net8.0\Microsoft.AspNetCore.OpenApi.dll
