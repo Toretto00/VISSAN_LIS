@@ -28,14 +28,6 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { DataGrid, GridColDef, GridEventListener } from "@mui/x-data-grid";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#00a47e", // Replace with your preferred color
-    },
-  },
-});
-
 interface product {
   id: number;
   category: number;
@@ -59,26 +51,20 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 const History = () => {
-  const [loading, setLoading] = useState(false);
   const [display, setDisplay] = useState("none");
-  const [productList, setProductList] = useState<product[]>([]);
-  const [productSelected, setProductSelected] = useState<product | null>();
-  const [unit, setUnit] = useState("Kg");
 
-  const [productName, setProductName] = useState("");
   const [manufactureDate, setManufactureDate] = useState<Dayjs | null>(
     dayjs.utc()
   );
-  const [quantity, setQuantity] = useState("");
-  const [rows, setRows] = useState([]);
+  const [invoice, setInvoice] = useState([]);
 
   const router = useRouter();
 
   useEffect(() => {
-    handleLoadProductList();
+    handleLoadInvoice();
   }, []);
 
-  const handleLoadProductList = async () => {
+  const handleLoadInvoice = async () => {
     api
       .get(`Invoices/${window.sessionStorage.getItem("userID")}`, {
         headers: {
@@ -88,7 +74,7 @@ const History = () => {
         },
       })
       .then((res) => {
-        setRows(res.data);
+        setInvoice(res.data);
       })
       .catch((e) => {
         console.log(e);
@@ -97,16 +83,16 @@ const History = () => {
       });
   };
 
-  const columns: GridColDef<(typeof rows)[number]>[] = [
+  const invoiceColumns: GridColDef<[number]>[] = [
     { field: "id", headerName: "ID", width: 90 },
     {
       field: "date",
-      headerName: "Date",
+      headerName: "Ngày đặt hàng",
       width: 150,
     },
     {
       field: "status",
-      headerName: "Status",
+      headerName: "Trạng thái đơn hàng",
       width: 150,
     },
   ];
@@ -120,40 +106,24 @@ const History = () => {
   };
 
   return (
-    <Suspense>
-      <ThemeProvider theme={theme}>
-        <div className={styles.login}>
-          <Container maxWidth="lg">
-            <Box sx={{ height: 400, width: "100%" }}>
-              <DataGrid
-                rows={rows}
-                columns={columns}
-                initialState={{
-                  pagination: {
-                    paginationModel: {
-                      pageSize: 5,
-                    },
-                  },
-                }}
-                pageSizeOptions={[5]}
-                checkboxSelection
-                disableRowSelectionOnClick
-                onRowClick={handleRowClick}
-              />
-            </Box>
-            <Alert
-              severity="warning"
-              sx={{ display: display }}
-              onClose={() => {
-                setDisplay("none");
-              }}
-            >
-              Vui lòng nhập đầy đủ thông tin!
-            </Alert>
-          </Container>
-        </div>
-      </ThemeProvider>
-    </Suspense>
+    <Container maxWidth="lg">
+      <Box></Box>
+      <DataGrid
+        rows={invoice}
+        columns={invoiceColumns}
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: 5,
+            },
+          },
+        }}
+        pageSizeOptions={[5]}
+        checkboxSelection
+        disableRowSelectionOnClick
+        onRowClick={handleRowClick}
+      />
+    </Container>
   );
 };
 

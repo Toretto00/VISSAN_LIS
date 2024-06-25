@@ -310,25 +310,27 @@ const RequestForm = () => {
 
   const handleDeleteItem = (id: any, requestType: string) => {
     if (requestType === "1") {
-      if (typeof id !== "number") {
+      if (typeof id == "number") {
+        const temp = invoice;
+        const newRows = temp.filter((item) => item.id !== id);
+        newRows.map((row, index) => {
+          row["id"] = index + 1;
+        });
+        setInvoice(newRows);
+      } else {
         setInvoice([]);
-        return;
       }
-      const newRows = invoice.slice(id, 1);
-      // newRows.map((row, index) => {
-      //   row["id"] = index + 1;
-      // });
-      setInvoice(newRows);
     } else {
-      if (typeof id !== "number") {
+      if (typeof id == "number") {
+        const temp = inventory;
+        const newRows = temp.filter((item) => item.id !== id);
+        newRows.map((row, index) => {
+          row["id"] = index + 1;
+        });
+        setInventory(newRows);
+      } else {
         setInventory([]);
-        return;
       }
-      const newRows = inventory.slice(id, 1);
-      // newRows.map((row, index) => {
-      //   row["id"] = index + 1;
-      // });
-      setInventory(newRows);
     }
   };
 
