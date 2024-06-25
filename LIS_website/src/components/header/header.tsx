@@ -46,7 +46,7 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-    if (typeof window !== "undefined") localStorage.clear();
+    if (typeof window !== "undefined") sessionStorage.clear();
     router.replace("/login");
   };
 

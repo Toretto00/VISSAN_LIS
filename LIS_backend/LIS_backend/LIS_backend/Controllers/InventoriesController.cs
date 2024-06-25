@@ -13,11 +13,13 @@ using ClosedXML.Excel;
 using System.Diagnostics.Tracing;
 using ClosedXML.Extensions;
 using DocumentFormat.OpenXml.Office2010.ExcelAc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LIS_backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class InventoriesController : ControllerBase
     {
         private readonly LISContext _context;

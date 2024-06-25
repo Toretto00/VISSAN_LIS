@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\infocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\infocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 353,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InfoController.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InfoController.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Controllers\\InfoController.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InfoController.cs",
-              "RelativeToolTip": "LIS_backend\\Controllers\\InfoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T02:37:46.63Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -49,22 +28,9 @@
               "RelativeDocumentMoniker": "LIS_backend\\Controllers\\UsersController.cs",
               "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\UsersController.cs",
               "RelativeToolTip": "LIS_backend\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAIwCQAAAASAAAA",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAcwJkAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T02:18:06.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Program.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Program.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Program.cs",
-              "RelativeToolTip": "LIS_backend\\Program.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAiwDoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T06:09:52.002Z",
+              "WhenOpened": "2024-06-25T03:22:47.32Z",
               "EditorCaption": ""
             }
           ]

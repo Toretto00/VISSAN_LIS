@@ -28,15 +28,15 @@ namespace LIS_backend.Controllers
         }
 
         // GET: api/Users
-        [Authorize]
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
         }
-        [Authorize]
         // GET: api/Users/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -52,6 +52,7 @@ namespace LIS_backend.Controllers
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.id)
@@ -115,6 +116,7 @@ namespace LIS_backend.Controllers
 
         // DELETE: api/Users/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -149,7 +151,7 @@ namespace LIS_backend.Controllers
                 _configuration["JWTSettings:Issuer"],
                 _configuration["JWTSettings:Audience"],
                     claims: claims,
-                    expires: DateTime.UtcNow.AddHours(2),
+                    expires: DateTime.UtcNow.AddMinutes(30),
                     signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(jwtToken);

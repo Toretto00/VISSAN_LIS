@@ -140,7 +140,13 @@ const RequestForm = () => {
 
   const handleLoadProductList = async () => {
     api
-      .get("Products")
+      .get("Products", {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
       .then((res: any) => {
         setProductList(res.data);
       })
@@ -215,24 +221,50 @@ const RequestForm = () => {
 
   const handleSendRequest = () => {
     api
-      .post("Invoices", {
-        date: dayjs().format("DD/MM/YYYY").toString(),
-        status: "pending",
-        user:
-          typeof window !== "undefined" ? localStorage.getItem("userID") : 1,
-        created: dayjs().format("DD/MM/YYYY").toString(),
-        updated: dayjs().format("DD/MM/YYYY").toString(),
-      })
+      .post(
+        "Invoices",
+        {
+          date: dayjs().format("DD/MM/YYYY").toString(),
+          status: "pending",
+          user:
+            typeof window !== "undefined"
+              ? sessionStorage.getItem("userID")
+              : 1,
+          created: dayjs().format("DD/MM/YYYY").toString(),
+          updated: dayjs().format("DD/MM/YYYY").toString(),
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${
+              typeof window !== "undefined"
+                ? sessionStorage.getItem("token")
+                : ""
+            }`,
+          },
+        }
+      )
       .then((res) => {
         if (res.status === 201) {
           invoice.forEach((element) => {
-            api.post("Invoice_Product", {
-              product: element.name?.id,
-              invoice: +res.data.id,
-              quantity: +quantity,
-              created: manufactureDate?.toString(),
-              updated: manufactureDate?.toString(),
-            });
+            api.post(
+              "Invoice_Product",
+              {
+                product: element.name?.id,
+                invoice: +res.data.id,
+                quantity: +quantity,
+                created: manufactureDate?.toString(),
+                updated: manufactureDate?.toString(),
+              },
+              {
+                headers: {
+                  Authorization: `Bearer ${
+                    typeof window !== "undefined"
+                      ? sessionStorage.getItem("token")
+                      : ""
+                  }`,
+                },
+              }
+            );
           });
         }
       })
@@ -255,10 +287,23 @@ const RequestForm = () => {
       });
       api
         .post(
-          `Inventories?location=${localStorage.getItem("store")}`,
-          newInventory
+          `Inventories?location=${sessionStorage.getItem("store")}`,
+          newInventory,
+          {
+            headers: {
+              Authorization: `Bearer ${
+                typeof window !== "undefined"
+                  ? sessionStorage.getItem("token")
+                  : ""
+              }`,
+            },
+          }
         )
-        .catch((e) => console.log(e));
+        .catch((e) => {
+          console.log(e);
+          sessionStorage.clear();
+          router.push("/login");
+        });
       setInventory([]);
     }
   };

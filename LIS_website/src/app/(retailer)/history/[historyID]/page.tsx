@@ -73,10 +73,23 @@ const HistoryDetail = ({ params }: { params: { invoice: string } }) => {
   }, []);
 
   const handleLoadProductList = async () => {
-    api.get(`Invoice_Product/${search}`).then((res: any) => {
-      setRows(res.data);
-      console.log(res.data);
-    });
+    api
+      .get(`Invoice_Product/${search}`, {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
+      .then((res: any) => {
+        setRows(res.data);
+        console.log(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
   };
 
   const columns: GridColDef<(typeof rows)[number]>[] = [

@@ -37,9 +37,10 @@ const Login = () => {
         const params = new URLSearchParams(searchParams);
         params.set("requestType", "1");
         if (typeof window !== "undefined") {
-          localStorage.setItem("userID", res.data.id);
-          localStorage.setItem("role", res.data.role);
-          localStorage.setItem("store", res.data.store);
+          sessionStorage.setItem("userID", res.data.id);
+          sessionStorage.setItem("role", res.data.role);
+          sessionStorage.setItem("store", res.data.store);
+          sessionStorage.setItem("token", res.data.token);
         }
         resetValue();
         res.data.role === "user"

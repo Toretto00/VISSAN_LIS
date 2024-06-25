@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LIS_backend.Models;
 using LIS_backend.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LIS_backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class InvoicesController : ControllerBase
     {
         private readonly LISContext _context;
