@@ -79,9 +79,22 @@ const History = () => {
   }, []);
 
   const handleLoadProductList = async () => {
-    api.get(`Invoices/${window.localStorage.getItem("userID")}`).then((res) => {
-      setRows(res.data);
-    });
+    api
+      .get(`Invoices/${window.sessionStorage.getItem("userID")}`, {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
+      .then((res) => {
+        setRows(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
   };
 
   const columns: GridColDef<(typeof rows)[number]>[] = [

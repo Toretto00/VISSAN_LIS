@@ -2,6 +2,8 @@
 
 import { useState, ReactElement, useEffect } from "react";
 
+import { useRouter } from "next/navigation";
+
 import Style from "./Invoice.module.scss";
 
 import api from "@/app/api/client";
@@ -94,6 +96,8 @@ const Invoice = () => {
   const [infoList, setInfoList] = useState<infoContent[]>([]);
   const [rows, setRows] = useState([]);
 
+  const router = useRouter();
+
   useEffect(() => {
     handleGetInfo();
   }, [infoList]);
@@ -103,9 +107,22 @@ const Invoice = () => {
   }, []);
 
   const handleLoadProductList = async () => {
-    api.get("Invoices").then((res) => {
-      setRows(res.data);
-    });
+    api
+      .get("Invoices", {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
+      .then((res) => {
+        setRows(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
   };
 
   const columns: GridColDef<(typeof rows)[number]>[] = [
@@ -130,7 +147,13 @@ const Invoice = () => {
 
   const handleGetInfo = () => {
     api
-      .get("/Info")
+      .get("/Info", {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
       .then((res) => {
         var temp = infoContentList;
         temp[0].number = res.data.clients;
@@ -139,7 +162,11 @@ const Invoice = () => {
         temp[3].number = res.data.done;
         setInfoList(temp);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
   };
 
   return (

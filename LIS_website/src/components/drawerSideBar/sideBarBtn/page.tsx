@@ -11,7 +11,7 @@ const SideBarButon = (props: any) => {
 
   const handleButtonClick = (name: string) => {
     if (name === "Logout" && typeof window !== undefined) {
-      localStorage.clear();
+      sessionStorage.clear();
       router.push(props.link);
       return;
     }

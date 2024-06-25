@@ -98,7 +98,13 @@ const InventoryDetail = () => {
 
   const handleLoadInventoryDetail = () => {
     api
-      .get(`Inventories/${search}`)
+      .get(`Inventories/${search}`, {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
       .then((res) => {
         setData(res.data);
         var temp = 0;
@@ -107,7 +113,11 @@ const InventoryDetail = () => {
         });
         setTotal(temp);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
   };
 
   const onGetExporProduct = (title?: string, worksheetname?: string) => {
@@ -147,9 +157,19 @@ const InventoryDetail = () => {
   const handleSaveChange = () => {
     console.log(editRow);
     api
-      .put(`Inventories/${search}`, editRow)
+      .put(`Inventories/${search}`, editRow, {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
       .then((res) => console.log(res.data))
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
     router.back();
     setEdit(false);
   };

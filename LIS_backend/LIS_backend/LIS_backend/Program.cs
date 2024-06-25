@@ -36,7 +36,7 @@ builder.Services.AddSwaggerGen(s =>
         Title = "Vissan API",
         Description = "API for inventory and eshop"
     });
-    s.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme() {
+    s.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme {
         Name = "Authorization",
         Type = SecuritySchemeType.Http,
         Scheme = "Bearer",
@@ -69,7 +69,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
         ValidIssuer = builder.Configuration["JWTSettings:Issuer"],
-        ValidAudience = builder.Configuration["JWTSettings:Audiance"],
+        ValidAudience = builder.Configuration["JWTSettings:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWTSettings:SecretKey"])),
     };
 });

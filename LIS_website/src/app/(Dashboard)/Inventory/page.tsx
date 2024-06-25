@@ -113,11 +113,22 @@ const Inventory = () => {
 
   const handleDeleteRowSelection = () => {
     api
-      .delete("Inventories", { data: rowSelectionModel })
+      .delete("Inventories", {
+        data: rowSelectionModel,
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
       .then((res) => {
         handleLoadProductList();
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
   };
 
   const handleDeleteClick = (id: GridRowId) => () => {
@@ -126,11 +137,20 @@ const Inventory = () => {
     api
       .delete("Inventories", {
         data: list,
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
       })
       .then((res) => {
         handleLoadProductList();
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
   };
 
   const columns: GridColDef<(typeof rows)[number]>[] = [
@@ -175,16 +195,33 @@ const Inventory = () => {
 
   const handleLoadProductList = async () => {
     api
-      .get(`Inventories?date=${date?.format("DD/MM/YYYY").toString()}`)
+      .get(`Inventories?date=${date?.format("DD/MM/YYYY").toString()}`, {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
       .then((res: any) => {
         setRows(res.data);
         console.log(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
       });
   };
 
   const handleGetInfo = () => {
     api
-      .get("/Info")
+      .get("/Info", {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
+      })
       .then((res) => {
         var temp = infoContentList;
         temp[0].number = res.data.clients;
@@ -193,7 +230,11 @@ const Inventory = () => {
         temp[3].number = res.data.done;
         setInfoList(temp);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
   };
 
   const router = useRouter();
@@ -210,13 +251,27 @@ const Inventory = () => {
     api
       .post(
         `Inventories/ExportExcel?date=${date?.format("DD/MM/YYYY").toString()}`,
-        { responseType: "arraybuffer" }
+        {
+          responseType: "arraybuffer",
+          headers: {
+            Authorization: `Bearer ${
+              typeof window !== "undefined"
+                ? sessionStorage.getItem("token")
+                : ""
+            }`,
+          },
+        }
       )
       .then((res) => {
         const data = new Uint8Array(res.data);
         const workbook = XLSX.read(data, { type: "array" });
 
         XLSX.writeFile(workbook, "Inventory.xlsx");
+      })
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
       });
   };
 
