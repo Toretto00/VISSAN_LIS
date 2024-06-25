@@ -29,6 +29,32 @@ namespace LIS_backend.Controllers
         {
             return await _context.Invoices.ToListAsync();
         }
+        [HttpGet("StoreInvoices")]
+        public List<Invoice> GetStoreInvoices(int userid, string from, string to)
+        {
+            var invoice = new List<Invoice>();
+            if (from == null && to == null)
+            {
+                return invoice = _context.Invoices.Where(x => x.user.id == userid).ToList();
+            }
+            else if (from != null && to == null)
+            {
+                return invoice = _context.Invoices.Where(x => x.user.id == userid).Where(x => String.Compare(x.created, from) >= 0).ToList();
+            }
+            else if (from == null && to != null)
+            {
+                return invoice = _context.Invoices.Where(x => x.user.id == userid).Where(x => String.Compare(x.created, to) <= 0).ToList();
+            }
+            else if (from != null && to != null)
+            {
+                return invoice = _context.Invoices
+                    .Where(x => x.user.id == userid)
+                    .Where(x => String.Compare(x.created, from) >= 0)
+                    .Where(x => String.Compare(x.created, to) <= 0).ToList();
+            }
+
+            return invoice;
+        }
 
         // GET: api/Invoices/5
         [HttpGet("{id}")]

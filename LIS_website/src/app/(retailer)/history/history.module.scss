@@ -1,0 +1,15 @@
+.btn{
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+
+  &:hover{
+    background-color: transparent;
+  }
+}
+
+.btnFocus{
+  color: white;
+  border-radius: 0;
+  background-color: #fe0302;
+}
