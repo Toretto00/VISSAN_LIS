@@ -33,11 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <ThemeProvider theme={theme}>
-        <body
-          style={{
-            backgroundColor: "#F8F7FA",
-          }}
-        >
+        <body>
           <div>{children}</div>
         </body>
       </ThemeProvider>

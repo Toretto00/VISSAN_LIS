@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useCallback } from "react";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import api from "@/app/api/client";
 
@@ -35,6 +35,8 @@ import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+
+import { GridRowId } from "@mui/x-data-grid";
 
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
@@ -108,7 +110,6 @@ dayjs.extend(timezone);
 dayjs.tz.guess();
 
 const RequestForm = () => {
-  const [loading, setLoading] = useState(false);
   const [display, setDisplay] = useState("none");
   const [productList, setProductList] = useState<product[]>([]);
   const [productSelected, setProductSelected] = useState<product | null>();
@@ -119,9 +120,19 @@ const RequestForm = () => {
     dayjs.utc()
   );
   const [quantity, setQuantity] = useState("");
-  const [rows, setRows] = useState<row[]>([]);
+
+  const [requestType, setRequestType] = useState("");
+
+  const [inventory, setInventory] = useState<row[]>([]);
+  const [invoice, setInvoice] = useState<row[]>([]);
 
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const search = searchParams.get("requestType");
+
+  useEffect(() => {
+    if (search) setRequestType(search);
+  }, [search]);
 
   useEffect(() => {
     handleLoadProductList();
@@ -137,7 +148,7 @@ const RequestForm = () => {
   };
 
   const resetValue = () => {
-    setProductName("");
+    // setProductName("");
     setManufactureDate(dayjs());
     setQuantity("");
   };
@@ -155,33 +166,66 @@ const RequestForm = () => {
       setDisplay("flex");
       return;
     }
-    const newRow = {
-      id: rows.length + 1,
-      name: productSelected,
-      unit: unit,
-      quantity: +quantity,
-      rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
-    };
-    const newRows = [...rows];
-    newRows.push(newRow);
-    setRows(newRows);
-    console.log(manufactureDate?.format("DD/MM/YYYY HH:MM:SS").toString());
-    resetValue();
+    console.log(invoice);
+    let count = 0;
+    if (requestType === "1") {
+      let newRows = [...invoice];
+      newRows.forEach((element) => {
+        if (element.name?.code == productSelected?.code) {
+          element.quantity += parseInt(quantity);
+          count++;
+        }
+      });
+      if (count === 0) {
+        let newRow = {
+          id: invoice.length + 1,
+          name: productSelected,
+          unit: unit,
+          quantity: +quantity,
+          rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
+        };
+        newRows.push(newRow);
+      }
+      setInvoice(newRows);
+      resetValue();
+      return;
+    } else if (requestType === "2") {
+      let newRows = [...inventory];
+      newRows.forEach((element) => {
+        if (element.name?.code == productSelected?.code) {
+          element.quantity += parseInt(quantity);
+          count++;
+        }
+      });
+      if (count === 0) {
+        let newRow = {
+          id: inventory.length + 1,
+          name: productSelected,
+          unit: unit,
+          quantity: +quantity,
+          rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
+        };
+        newRows.push(newRow);
+      }
+      setInventory(newRows);
+      resetValue();
+      return;
+    }
   };
 
   const handleSendRequest = () => {
     api
       .post("Invoices", {
-        date: dayjs.utc(),
+        date: dayjs().format("DD/MM/YYYY").toString(),
         status: "pending",
         user:
           typeof window !== "undefined" ? localStorage.getItem("userID") : 1,
-        created: dayjs.utc(),
-        updated: dayjs.utc(),
+        created: dayjs().format("DD/MM/YYYY").toString(),
+        updated: dayjs().format("DD/MM/YYYY").toString(),
       })
       .then((res) => {
         if (res.status === 201) {
-          rows.forEach((element) => {
+          invoice.forEach((element) => {
             api.post("Invoice_Product", {
               product: element.name?.id,
               invoice: +res.data.id,
@@ -193,13 +237,13 @@ const RequestForm = () => {
         }
       })
       .catch((e) => console.log(e));
-    setRows([]);
+    setInvoice([]);
   };
 
   const handleCreateInventory = () => {
     let newInventory: any[] = [];
     if (typeof window !== "undefined") {
-      rows.forEach((element) => {
+      inventory.forEach((element) => {
         newInventory.push({
           product: {
             code: element?.name?.code,
@@ -215,7 +259,31 @@ const RequestForm = () => {
           newInventory
         )
         .catch((e) => console.log(e));
-      setRows([]);
+      setInventory([]);
+    }
+  };
+
+  const handleDeleteItem = (id: any, requestType: string) => {
+    if (requestType === "1") {
+      if (typeof id !== "number") {
+        setInvoice([]);
+        return;
+      }
+      const newRows = invoice.slice(id, 1);
+      // newRows.map((row, index) => {
+      //   row["id"] = index + 1;
+      // });
+      setInvoice(newRows);
+    } else {
+      if (typeof id !== "number") {
+        setInventory([]);
+        return;
+      }
+      const newRows = inventory.slice(id, 1);
+      // newRows.map((row, index) => {
+      //   row["id"] = index + 1;
+      // });
+      setInventory(newRows);
     }
   };
 
@@ -295,19 +363,22 @@ const RequestForm = () => {
           </Grid>
         </Grid>
 
-        <FullFeaturedCrudGrid Row={rows} />
+        <FullFeaturedCrudGrid
+          Row={requestType === "1" ? invoice : inventory}
+          requestType={requestType}
+          handleDeleteItem={handleDeleteItem}
+        />
 
         <Button
           fullWidth
           variant="contained"
           type="submit"
           onClick={(e) => {
-            // handleSendRequest();
-            handleCreateInventory();
+            requestType === "1" ? handleSendRequest() : handleCreateInventory();
           }}
         >
           <SendIcon sx={{ mr: "6px" }} />
-          Gửi
+          {requestType === "1" ? "Gửi yêu cầu đặt hàng" : "Gửi báo cáo tồn kho"}
         </Button>
         {/* <Alert
           severity="warning"

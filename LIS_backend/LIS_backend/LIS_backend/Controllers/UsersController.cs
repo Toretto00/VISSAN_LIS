@@ -6,6 +6,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LIS_backend.Models;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LIS_backend.Controllers
 {
@@ -14,19 +19,22 @@ namespace LIS_backend.Controllers
     public class UsersController : ControllerBase
     {
         private readonly LISContext _context;
+        private IConfiguration _configuration;
 
-        public UsersController(LISContext context)
+        public UsersController(LISContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         // GET: api/Users
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
         }
-
+        [Authorize]
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
@@ -91,7 +99,9 @@ namespace LIS_backend.Controllers
 
             var store = _context.User_Locations.Where(x => x.user.id == newUser.id).Include(x=>x.storeLocation).FirstAsync();
 
-            return Ok(new { id = newUser.id, role = newUser.role, store = store.Result.storeLocation.storeid });
+            var token = GenerateJWTToken(newUser);
+
+            return Ok(new { id = newUser.id, role = newUser.role, store = store.Result.storeLocation.storeid, token = token });
         }
         [HttpPost]
         [Route("Register")]
@@ -122,6 +132,27 @@ namespace LIS_backend.Controllers
         private bool UserExists(int id)
         {
             return _context.Users.Any(e => e.id == id);
+        }
+        private string GenerateJWTToken(User user)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWTSettings:SecretKey"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.id.ToString()),
+                new Claim(ClaimTypes.Name, user.username),
+                new Claim(ClaimTypes.Role, user.role),
+            };
+
+            var jwtToken = new JwtSecurityToken(
+                _configuration["JWTSettings:Issuer"],
+                _configuration["JWTSettings:Audience"],
+                    claims: claims,
+                    expires: DateTime.UtcNow.AddHours(2),
+                    signingCredentials: credentials);
+
+            return new JwtSecurityTokenHandler().WriteToken(jwtToken);
         }
     }
 }
