@@ -20,10 +20,8 @@ interface pages {
 let userPages: pages[] = [
   { id: 1, page: "Đặt hàng", link: "/requestForm" },
   { id: 2, page: "Báo hàng tồn", link: "/requestForm" },
-  // { id: 3, page: "Lịch sử", link: "/history" },
+  { id: 3, page: "Lịch sử", link: "/history" },
 ];
-
-var role: string | null;
 
 const Header = () => {
   const router = useRouter();
@@ -31,11 +29,6 @@ const Header = () => {
   const search = searchParams.get("requestType");
 
   const buttonClass = `${Style.headerBtn} ${Style.onFocus}`;
-
-  // useEffect(() => {
-  //   // console.log(search);
-  //   if(search)
-  // }, []);
 
   const handleRoute = (
     event: React.MouseEvent<HTMLElement>,
