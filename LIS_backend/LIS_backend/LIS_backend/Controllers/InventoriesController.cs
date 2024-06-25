@@ -37,6 +37,31 @@ namespace LIS_backend.Controllers
 
             return inventory;
         }
+        [HttpGet("StoreInventories")]
+        public List<Inventory> GetStoreInventories(string storeid, string from, string to )
+        {
+            var inventory = new List<Inventory>();
+            if (from == null && to == null)
+            {
+                return inventory = _context.Inventories.Where(x => x.location.storeid == storeid).ToList();
+            }
+            else if (from != null && to == null)
+            {
+                return inventory = _context.Inventories.Where(x => x.location.storeid == storeid).Where(x => String.Compare(x.created, from) >= 0).ToList();
+            }
+            else if (from == null && to != null)
+            {
+                return inventory = _context.Inventories.Where(x => x.location.storeid == storeid).Where(x => String.Compare(x.created, to) <= 0).ToList();
+            }
+            else if (from != null && to != null) {
+                return inventory = _context.Inventories
+                    .Where(x => x.location.storeid == storeid)
+                    .Where(x => String.Compare(x.created, from) >= 0)
+                    .Where(x => String.Compare(x.created, to) <= 0).ToList();
+            }
+
+            return inventory;
+        }
         [HttpPost("ExportExcel")]
         public ActionResult ExportExcel(string date)
         {

@@ -5,17 +5,11 @@ import { useEffect, useState, Suspense } from "react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 // import "@/app/globals.module.css";
-import styles from "./history.module.scss";
+import Styles from "./history.module.scss";
 
 import api from "@/app/api/client";
 
-import {
-  Container,
-  Box,
-  Alert,
-  createTheme,
-  ThemeProvider,
-} from "@mui/material";
+import { Container, Box, Grid, Button } from "@mui/material";
 
 import dayjs, { Dayjs } from "dayjs";
 
@@ -50,31 +44,78 @@ interface row {
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-const History = () => {
-  const [display, setDisplay] = useState("none");
+interface button {
+  id: number;
+  name: string;
+}
 
+let button: button[] = [
+  { id: 1, name: "Đặt hàng" },
+  { id: 2, name: "Tồn kho" },
+];
+
+const History = () => {
   const [manufactureDate, setManufactureDate] = useState<Dayjs | null>(
     dayjs.utc()
   );
   const [invoice, setInvoice] = useState([]);
+  const [inventory, setInventory] = useState([]);
+  const [btnFocus, setBtnFocus] = useState(1);
+
+  const [from, setFrom] = useState<string>("");
+  const [to, setTo] = useState<string>("");
 
   const router = useRouter();
 
   useEffect(() => {
     handleLoadInvoice();
+    handleLoadInventory();
   }, []);
 
   const handleLoadInvoice = async () => {
     api
-      .get(`Invoices/${window.sessionStorage.getItem("userID")}`, {
-        headers: {
-          Authorization: `Bearer ${
-            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
-          }`,
-        },
-      })
+      .get(
+        `Invoices/StoreInvoices?userid=${window.sessionStorage.getItem(
+          "userID"
+        )}&${from !== "" ? "from=" + from : ""}&${to !== "" ? "to=" + to : ""}`,
+        {
+          headers: {
+            Authorization: `Bearer ${
+              typeof window !== "undefined"
+                ? sessionStorage.getItem("token")
+                : ""
+            }`,
+          },
+        }
+      )
       .then((res) => {
         setInvoice(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
+  };
+
+  const handleLoadInventory = () => {
+    api
+      .get(
+        `Inventories/StoreInventories?storeid=${window.sessionStorage.getItem(
+          "store"
+        )}&${from !== "" ? "from=" + from : ""}&${to !== "" ? "to=" + to : ""}`,
+        {
+          headers: {
+            Authorization: `Bearer ${
+              typeof window !== "undefined"
+                ? sessionStorage.getItem("token")
+                : ""
+            }`,
+          },
+        }
+      )
+      .then((res) => {
+        setInventory(res.data);
       })
       .catch((e) => {
         console.log(e);
@@ -97,33 +138,71 @@ const History = () => {
     },
   ];
 
+  const inventoryColumns: GridColDef<[number]>[] = [
+    { field: "id", headerName: "ID", width: 90 },
+    {
+      field: "created",
+      headerName: "Ngày báo tồn",
+      width: 150,
+    },
+    {
+      field: "updated",
+      headerName: "Ngày cập nhật",
+      width: 150,
+    },
+  ];
+
   const searchParams = useSearchParams();
 
-  const handleRowClick: GridEventListener<"rowClick"> = (param) => {
-    const params = new URLSearchParams(searchParams);
-    params.set("listings_id", param.id.toString());
-    router.push(`/history/${param.id}?${params.toString()}`);
+  // const handleRowClick: GridEventListener<"rowClick"> = (param) => {
+  //   const params = new URLSearchParams(searchParams);
+  //   params.set("listings_id", param.id.toString());
+  //   router.push(`/history/${param.id}?${params.toString()}`);
+  // };
+
+  const handleChangeTab = (id: number) => {
+    setBtnFocus(id);
   };
 
   return (
-    <Container maxWidth="lg">
-      <Box></Box>
-      <DataGrid
-        rows={invoice}
-        columns={invoiceColumns}
-        initialState={{
-          pagination: {
-            paginationModel: {
-              pageSize: 5,
+    <div style={{ backgroundColor: "white", minHeight: "100vh" }}>
+      <Container maxWidth="lg" sx={{ pt: "94px" }}>
+        <Grid
+          container
+          sx={{
+            mt: "8px",
+          }}
+        >
+          {button.map((btn, index) => (
+            <Grid key={index} item lg={3}>
+              <Button
+                fullWidth
+                variant="contained"
+                className={btn.id === btnFocus ? Styles.btnFocus : Styles.btn}
+                onClick={(e) => handleChangeTab(btn.id)}
+              >
+                {btn.name}
+              </Button>
+            </Grid>
+          ))}
+        </Grid>
+        <DataGrid
+          rows={btnFocus === 1 ? invoice : inventory}
+          columns={btnFocus === 1 ? invoiceColumns : inventoryColumns}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 5,
+              },
             },
-          },
-        }}
-        pageSizeOptions={[5]}
-        checkboxSelection
-        disableRowSelectionOnClick
-        onRowClick={handleRowClick}
-      />
-    </Container>
+          }}
+          pageSizeOptions={[5, 10, 25]}
+          checkboxSelection
+          disableRowSelectionOnClick
+          // onRowClick={handleRowClick}
+        />
+      </Container>
+    </div>
   );
 };
 
