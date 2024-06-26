@@ -187,7 +187,7 @@ const RequestForm = () => {
           id: invoice.length + 1,
           name: productSelected,
           unit: unit,
-          quantity: +quantity,
+          quantity: parseInt(quantity),
           rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
         };
         newRows.push(newRow);
@@ -208,7 +208,7 @@ const RequestForm = () => {
           id: inventory.length + 1,
           name: productSelected,
           unit: unit,
-          quantity: +quantity,
+          quantity: parseInt(quantity),
           rowManufactureDate: manufactureDate?.format("DD/MM/YYYY").toString(),
         };
         newRows.push(newRow);
@@ -220,55 +220,57 @@ const RequestForm = () => {
   };
 
   const handleSendRequest = () => {
-    api
-      .post(
-        "Invoices",
-        {
-          date: dayjs().format("DD/MM/YYYY").toString(),
-          status: "pending",
-          user:
-            typeof window !== "undefined"
-              ? sessionStorage.getItem("userID")
-              : 1,
-          created: dayjs().format("DD/MM/YYYY").toString(),
-          updated: dayjs().format("DD/MM/YYYY").toString(),
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${
-              typeof window !== "undefined"
-                ? sessionStorage.getItem("token")
-                : ""
-            }`,
+    let newInvoice: any[] = [];
+    if (typeof window !== "undefined") {
+      invoice.forEach((element) => {
+        newInvoice.push({
+          product: {
+            code: element?.name?.code,
           },
-        }
-      )
-      .then((res) => {
-        if (res.status === 201) {
-          invoice.forEach((element) => {
-            api.post(
-              "Invoice_Product",
-              {
-                product: element.name?.id,
-                invoice: +res.data.id,
-                quantity: +quantity,
-                created: manufactureDate?.toString(),
-                updated: manufactureDate?.toString(),
-              },
-              {
-                headers: {
-                  Authorization: `Bearer ${
-                    typeof window !== "undefined"
-                      ? sessionStorage.getItem("token")
-                      : ""
-                  }`,
-                },
-              }
-            );
-          });
-        }
+          quantity: element?.quantity,
+          created: manufactureDate?.format("DD/MM/YYYY").toString(),
+          updated: manufactureDate?.format("DD/MM/YYYY").toString(),
+        });
+      });
+    }
+    api
+      .post(`Invoices?user=${sessionStorage.getItem("userID")}`, newInvoice, {
+        headers: {
+          Authorization: `Bearer ${
+            typeof window !== "undefined" ? sessionStorage.getItem("token") : ""
+          }`,
+        },
       })
-      .catch((e) => console.log(e));
+      // .then((res) => {
+      //   if (res.status === 201) {
+      //     invoice.forEach((element) => {
+      //       api.post(
+      //         "Invoice_Product",
+      //         {
+      //           product: element.name?.id,
+      //           invoice: +res.data.id,
+      //           quantity: parseInt(quantity),
+      //           created: manufactureDate?.toString(),
+      //           updated: manufactureDate?.toString(),
+      //         },
+      //         {
+      //           headers: {
+      //             Authorization: `Bearer ${
+      //               typeof window !== "undefined"
+      //                 ? sessionStorage.getItem("token")
+      //                 : ""
+      //             }`,
+      //           },
+      //         }
+      //       );
+      //     });
+      //   }
+      // })
+      .catch((e) => {
+        console.log(e);
+        sessionStorage.clear();
+        router.push("/login");
+      });
     setInvoice([]);
   };
 

@@ -58,16 +58,20 @@ namespace LIS_backend.Controllers
 
         // GET: api/Invoices/5
         [HttpGet("{id}")]
-        public List<Invoice> GetInvoice(int id)
+        public async Task<ActionResult> GetInvoice(int id)
         {
-            var invoice = _context.Invoices.Where(x => x.user.id == id).Include(x => x.user).ToList();
+            var invoice = _context.Invoices.Where(x => x.Id == id).Include(x => x.user).FirstOrDefault();
 
+            var products = _context.Invoice_Products.Where(x => x.invoice.Id == id).Include(x => x.product).ToList();
+
+            var store = _context.User_Locations.Where(x => x.user.id == invoice.user.id).Include(x => x.storeLocation).FirstOrDefault();
+            
             if (invoice == null)
             {
                 //return NotFound();
             }
 
-            return invoice;
+            return Ok(new { store = store.storeLocation, products = products, date = invoice.date, created = invoice.created, updated = invoice.updated });
         }
 
         // PUT: api/Invoices/5
@@ -104,35 +108,30 @@ namespace LIS_backend.Controllers
         // POST: api/Invoices
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<InvoiceDTO>> PostInvoice(InvoiceDTO invoice)
+        public async Task<Invoice> PostInvoice(List<Invoice_Product> invoice_Products, int user)
         {
-            var newInvoice = new Invoice()
-            {
-                date = invoice.date,
-                status = invoice.status,
-                user = await _context.Users.FindAsync(invoice.user),
-                created = invoice.created,
-                updated = invoice.updated,
-            };
-            _context.Invoices.Add(newInvoice);
+            var invoice = new Invoice();
+            invoice.user = _context.Users.Where(x=>x.id == user).FirstOrDefault();
+            invoice.date = invoice_Products[0].created;
+            invoice.status = "Đang xử lý";
+            invoice.created = invoice_Products[0].created;
+            invoice.updated = invoice_Products[0].updated;
+            _context.Invoices.Add(invoice);
             await _context.SaveChangesAsync();
 
-            //int invoiceId = newInvoice.Id;
+            for (int i = 0; i < invoice_Products.Count(); i++)
+            {
+                var product = new Invoice_Product();
+                product.invoice = _context.Invoices.Where(x=>x.Id==invoice.Id).FirstOrDefault();
+                product.product = _context.Products.Where(x => x.code == invoice_Products[i].product.code).FirstOrDefault();
+                product.quantity = invoice_Products[i].quantity;
+                product.created = invoice_Products[i].created;
+                product.updated = invoice_Products[i].updated;                
+                _context.Invoice_Products.Add(product);
+                await _context.SaveChangesAsync();
+            }
 
-            //for (int i = 0; i < products.LongCount(); i++) {
-            //    var newInvoiceProduct = new Invoice_Product()
-            //    {
-            //        user = await _context.Users.FindAsync(invoice.user),
-            //        invoice = await _context.Invoices.FindAsync(invoiceId),
-            //        quantity = quantity,
-            //        created = invoice.created,
-            //        updated = invoice.updated,
-            //    };
-            //    _context.Invoice_Products.Add(newInvoiceProduct);
-            //    await _context.SaveChangesAsync();
-            //}
-
-            return CreatedAtAction("GetInvoice", new { id = newInvoice.Id }, newInvoice);
+            return invoice;
         }
 
         // DELETE: api/Invoices/5
