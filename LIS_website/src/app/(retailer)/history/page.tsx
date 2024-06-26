@@ -9,7 +9,7 @@ import Styles from "./history.module.scss";
 
 import api from "@/app/api/client";
 
-import { Container, Box, Grid, Button } from "@mui/material";
+import { Container, Box, Grid, Button, Typography } from "@mui/material";
 
 import dayjs, { Dayjs } from "dayjs";
 
@@ -21,6 +21,8 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { DataGrid, GridColDef, GridEventListener } from "@mui/x-data-grid";
+
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
 
 interface product {
   id: number;
@@ -62,8 +64,8 @@ const History = () => {
   const [inventory, setInventory] = useState([]);
   const [btnFocus, setBtnFocus] = useState(1);
 
-  const [from, setFrom] = useState<string>("");
-  const [to, setTo] = useState<string>("");
+  const [from, setFrom] = useState<Dayjs | null>();
+  const [to, setTo] = useState<Dayjs | null>();
 
   const router = useRouter();
 
@@ -77,7 +79,13 @@ const History = () => {
       .get(
         `Invoices/StoreInvoices?userid=${window.sessionStorage.getItem(
           "userID"
-        )}&${from !== "" ? "from=" + from : ""}&${to !== "" ? "to=" + to : ""}`,
+        )}&${
+          from !== undefined
+            ? "from=" + from?.format("DD/MM/YYYY").toString()
+            : ""
+        }&${
+          to !== undefined ? "to=" + to?.format("DD/MM/YYYY").toString() : ""
+        }`,
         {
           headers: {
             Authorization: `Bearer ${
@@ -103,7 +111,13 @@ const History = () => {
       .get(
         `Inventories/StoreInventories?storeid=${window.sessionStorage.getItem(
           "store"
-        )}&${from !== "" ? "from=" + from : ""}&${to !== "" ? "to=" + to : ""}`,
+        )}&${
+          from !== undefined
+            ? "from=" + from?.format("DD/MM/YYYY").toString()
+            : ""
+        }&${
+          to !== undefined ? "to=" + to?.format("DD/MM/YYYY").toString() : ""
+        }`,
         {
           headers: {
             Authorization: `Bearer ${
@@ -154,11 +168,13 @@ const History = () => {
 
   const searchParams = useSearchParams();
 
-  // const handleRowClick: GridEventListener<"rowClick"> = (param) => {
-  //   const params = new URLSearchParams(searchParams);
-  //   params.set("listings_id", param.id.toString());
-  //   router.push(`/history/${param.id}?${params.toString()}`);
-  // };
+  const handleRowClick: GridEventListener<"rowClick"> = (param) => {
+    const params = new URLSearchParams(searchParams);
+    if (btnFocus === 1) params.set("type", "invoice");
+    else params.set("type", "inventory");
+    params.set("id", param.id.toString());
+    router.push(`/history/${param.id}?${params.toString()}`);
+  };
 
   const handleChangeTab = (id: number) => {
     setBtnFocus(id);
@@ -167,10 +183,51 @@ const History = () => {
   return (
     <div style={{ backgroundColor: "white", minHeight: "100vh" }}>
       <Container maxWidth="lg" sx={{ pt: "94px" }}>
+        <Grid container spacing={2} sx={{ justifyContent: "right" }}>
+          <Grid item lg={3}>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={["DatePicker"]}>
+                <DatePicker
+                  timezone="Asia/Ho_Chi_Minh"
+                  format="DD/MM/YYYY"
+                  label="Từ ngày"
+                  value={from}
+                  onChange={setFrom}
+                  sx={{ width: "100%" }}
+                />
+              </DemoContainer>
+            </LocalizationProvider>
+          </Grid>
+          <Grid item lg={3}>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={["DatePicker"]}>
+                <DatePicker
+                  timezone="Asia/Ho_Chi_Minh"
+                  format="DD/MM/YYYY"
+                  label="Đến ngày"
+                  value={to}
+                  onChange={setTo}
+                  sx={{ width: "100%" }}
+                />
+              </DemoContainer>
+            </LocalizationProvider>
+          </Grid>
+          <Grid item lg={3}>
+            <Button
+              variant="contained"
+              fullWidth
+              sx={{ height: "100%" }}
+              onClick={btnFocus === 1 ? handleLoadInvoice : handleLoadInventory}
+            >
+              <FilterAltIcon /> Lọc
+            </Button>
+          </Grid>
+        </Grid>
         <Grid
           container
           sx={{
-            mt: "8px",
+            mt: "16px",
+            height: "64px",
           }}
         >
           {button.map((btn, index) => (
@@ -199,7 +256,7 @@ const History = () => {
           pageSizeOptions={[5, 10, 25]}
           checkboxSelection
           disableRowSelectionOnClick
-          // onRowClick={handleRowClick}
+          onRowClick={handleRowClick}
         />
       </Container>
     </div>
