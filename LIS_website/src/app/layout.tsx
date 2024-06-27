@@ -1,42 +1,30 @@
-"use client";
+// Third-party Imports
+import 'react-perfect-scrollbar/dist/css/styles.css'
 
-import "./globals.css";
+// Type Imports
+import type { ChildrenType } from '@core/types'
 
-import { useEffect } from "react";
+// Style Imports
+import '@/app/globals.css'
 
-import { useRouter } from "next/navigation";
+// Generated Icon CSS Imports
+import '@assets/iconify-icons/generated-icons.css'
 
-import { createTheme, ThemeProvider } from "@mui/material";
+export const metadata = {
+  title: 'Admin Dashboard Template',
+  description:
+    'Admin Dashboard Template - is the most developer friendly & highly customizable Admin Dashboard Template based on MUI v5.'
+}
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#fe0302", // Replace with your preferred color
-    },
-  },
-});
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const router = useRouter();
-
-  useEffect(() => {
-    if (sessionStorage.getItem("role") === "user") router.push("requestForm");
-    else if (sessionStorage.getItem("role") === "admin")
-      router.push("/Dashboards");
-    else router.push("/login");
-  }, []);
+const RootLayout = ({ children }: ChildrenType) => {
+  // Vars
+  const direction = 'ltr'
 
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <ThemeProvider theme={theme}>
-        <body>
-          <div>{children}</div>
-        </body>
-      </ThemeProvider>
+    <html id='__next' lang='en' dir={direction} suppressHydrationWarning={true}>
+      <body className='flex is-full min-bs-full flex-auto flex-col'>{children}</body>
     </html>
-  );
+  )
 }
+
+export default RootLayout

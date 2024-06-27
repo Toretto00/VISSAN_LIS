@@ -1,9 +1,6 @@
-import Login from "./login/page";
+// Next Imports
+import { redirect } from 'next/navigation'
 
-export default function Root() {
-  return (
-    <div style={{ minHeight: "100vh" }}>
-      <Login />
-    </div>
-  );
+export default function Page() {
+  redirect('/home')
 }

@@ -1,19 +1,20 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ESNext",
+    "downlevelIteration": true,
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext",
-      "ES2015"
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -26,16 +27,43 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@core/*": [
+        "./src/@core/*"
+      ],
+      "@layouts/*": [
+        "./src/@layouts/*"
+      ],
+      "@menu/*": [
+        "./src/@menu/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@configs/*": [
+        "./src/configs/*"
+      ],
+      "@views/*": [
+        "./src/views/*"
+      ],
+      "@reducers/*": [
+        "./src/reducers/*"
       ]
     }
   },
   "include": [
+    ".eslintrc.js",
+    "next.config.js",
+    "postcss.config.js",
+    "tailwind.config.js",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/**/*.scss"
-, "src/app/register/page.tsx"  ],
+    ".next/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
