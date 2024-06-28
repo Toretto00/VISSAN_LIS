@@ -1,14 +1,7 @@
 // Third-party Imports
 import CredentialProvider from 'next-auth/providers/credentials'
 import GoogleProvider from 'next-auth/providers/google'
-
-//import { PrismaAdapter } from '@auth/prisma-adapter'
-//import { PrismaClient } from '@prisma/client'
 import type { NextAuthOptions } from 'next-auth'
-
-//import type { Adapter } from 'next-auth/adapters'
-
-//const prisma = new PrismaClient()
 
 export const authOptions: NextAuthOptions = {
   //adapter: PrismaAdapter(prisma) as Adapter,
@@ -124,7 +117,7 @@ export const authOptions: NextAuthOptions = {
     async session({ session, token }) {
       if (session.user) {
         // ** Add custom params to user in session which are added in `jwt()` callback via `token` parameter
-        session.user.name = token.name
+        session.user.name = token.name || ''
         session.user.store = token.store
         session.user.token = token.token
         session.user.role = token.role

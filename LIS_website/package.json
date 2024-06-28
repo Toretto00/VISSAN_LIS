@@ -24,6 +24,8 @@
     "@mui/lab": "5.0.0-alpha.167",
     "@mui/material": "5.15.12",
     "@mui/material-nextjs": "5.15.11",
+    "@tanstack/match-sorter-utils": "8.11.8",
+    "@tanstack/react-table": "8.13.2",
     "@mui/x-data-grid": "^7.6.1",
     "@mui/x-date-pickers": "^7.6.1",
     "@hookform/resolvers": "3.3.4",

@@ -14,7 +14,7 @@ import styled from '@emotion/styled'
 import type { VerticalNavContextProps } from '@menu/contexts/verticalNavContext'
 
 // Component Imports
-import AppLogo from '@core/svg/Logo'
+//import AppLogo from '@core/svg/Logo'
 
 // Config Imports
 import themeConfig from '@configs/themeConfig'
@@ -72,7 +72,8 @@ const Logo = () => {
   // return <Img src='/next.svg' width={100} height={25} alt='logo' /> // for example
   return (
     <Link href='/' className='flex items-center'>
-      <AppLogo className='text-2xl text-primary' />
+      {/* <AppLogo className='text-2xl text-primary' /> */}
+      <img src='/logo-vissan.png' height={40} width={40} alt='logo' />
       <LogoText
         ref={logoTextRef}
         isHovered={isHovered}

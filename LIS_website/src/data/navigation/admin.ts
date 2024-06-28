@@ -10,4 +10,9 @@ export default [
     href: '/admin/invoice',
     icon: 'tabler-info-circle'
   },
+  {
+    label: 'Category',
+    href: '/admin/category/list',
+    icon: 'tabler-category'
+  },
 ]
