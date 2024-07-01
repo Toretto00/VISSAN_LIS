@@ -121,7 +121,6 @@ const CategoryListTable = ({ tableData }: { tableData?: CategoryType[] }) => {
   }
 
   const destroyEvent = async (id: number) => {
-    debugger
     await destroy(id).then(res => res.json())
   }
 

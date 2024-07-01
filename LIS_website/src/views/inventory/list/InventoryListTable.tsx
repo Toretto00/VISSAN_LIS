@@ -8,7 +8,7 @@ import { InventoryType } from '@/types/inventoryTypes'
 
 // Componet Imports
 import CustomTextField from '@/@core/components/mui/TextField'
-import { fetches } from '@/stores/inventory'
+import { fetchesClient } from '@/stores/inventory'
 import { getCurrentUser } from '@/libs/session'
 
 // MUI Imports
@@ -91,7 +91,7 @@ const DebouncedInput = ({
 }
 
 const getData = async (date: string | undefined) => {
-  const res = await fetches(date !== undefined ? date : '')
+  const res = await fetchesClient(date !== undefined ? date : '')
 
   if (!res.ok) {
     throw new Error('Fail to fetch inventory data')

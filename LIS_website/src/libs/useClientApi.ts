@@ -1,4 +1,4 @@
-import { getCurrentUser } from "@/libs/session"
+import { getSession } from 'next-auth/react'
 
 interface UseFetchOptions {
   method?: string
@@ -11,9 +11,9 @@ interface UseFetchOptions {
 
 async function useApi({ method = 'GET', url, body = ''}: UseFetchOptions) {
   try {
-    const user = await getCurrentUser()
+    const session = await getSession()
 
-    const accessToken = user?.token
+    const accessToken = session?.user?.token
 
     if (method === 'GET') {
       return await fetch(`${process.env.API_URL}/api${url}`, {
