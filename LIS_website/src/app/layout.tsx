@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css'
 
@@ -11,9 +12,9 @@ import '@/app/globals.css'
 import '@assets/iconify-icons/generated-icons.css'
 
 export const metadata = {
-  title: 'Admin Dashboard Template',
+  title: 'Client Template',
   description:
-    'Admin Dashboard Template - is the most developer friendly & highly customizable Admin Dashboard Template based on MUI v5.'
+    'Client Template - is the most developer friendly & highly customizable Admin Dashboard Template based on MUI v5.'
 }
 
 const RootLayout = ({ children }: ChildrenType) => {

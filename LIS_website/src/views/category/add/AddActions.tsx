@@ -17,14 +17,14 @@ import MenuItem from '@mui/material/MenuItem'
 import Switch from '@mui/material/Switch'
 
 // Type Imports
-import type { Locale } from '@configs/i18n'
+// import type { Locale } from '@configs/i18n'
 
 // Component Imports
-import SendInvoiceDrawer from '@views/apps/invoice/shared/SendInvoiceDrawer'
+// import SendInvoiceDrawer from '@views/apps/invoice/shared/SendInvoiceDrawer'
 import CustomTextField from '@core/components/mui/TextField'
 
 // Util Imports
-import { getLocalizedUrl } from '@/utils/i18n'
+// import { getLocalizedUrl } from '@/utils/i18n'
 
 const AddActions = () => {
   // States

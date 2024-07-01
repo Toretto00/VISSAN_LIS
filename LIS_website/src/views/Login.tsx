@@ -32,6 +32,7 @@ import type { SubmitHandler } from 'react-hook-form'
 import type { Input } from 'valibot'
 
 import AuthIllustrationWrapper from './AuthIllustrationWrapper'
+
 import CustomTextField from '@core/components/mui/TextField'
 import Logo from '@components/layout/shared/Logo'
 
@@ -44,15 +45,12 @@ type FormData = Input<typeof schema>
 const schema = object({
   username: string([minLength(1, 'This field is required')]),
   password: string([
-    minLength(1, 'This field is required'),
+    minLength(1, 'This field is required')
     //minLength(5, 'Password must be at least 5 characters long')
   ])
 })
 
-
-
 const Login = () => {
-
   // States
   const [isPasswordShown, setIsPasswordShown] = useState(false)
   const [errorState, setErrorState] = useState<ErrorType | null>(null)
@@ -155,18 +153,13 @@ const Login = () => {
                       </InputAdornment>
                     )
                   }}
-                  {...(errors.password && { error: true, x : errors.password.message })}
+                  {...(errors.password && { error: true, x: errors.password.message })}
                 />
               )}
             />
             <div className='flex justify-between items-center gap-x-3 gap-y-1 flex-wrap'>
               <FormControlLabel control={<Checkbox />} label='Remember me' />
-              <Typography
-                className='text-end'
-                color='primary'
-                component={Link}
-                href='pages/auth/forgot-password-v1'
-              >
+              <Typography className='text-end' color='primary' component={Link} href='pages/auth/forgot-password-v1'>
                 Forgot password?
               </Typography>
             </div>

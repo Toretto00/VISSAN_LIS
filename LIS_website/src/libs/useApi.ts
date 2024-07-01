@@ -7,7 +7,7 @@ interface UseFetchOptions {
   token?: string
 }
 
-async function useApi({ method = 'GET', url, body = ''}: UseFetchOptions) {
+async function useApi({ method = 'GET', url, body = ''}: UseFetchOptions) { 
   try {
     const user = await getCurrentUser()
 
@@ -34,7 +34,7 @@ async function useApi({ method = 'GET', url, body = ''}: UseFetchOptions) {
       })
     }
 
-  } catch (error) {
+  } catch (error) {    
     throw new Error("Failed to fetch data", { cause: error })
   }
 }

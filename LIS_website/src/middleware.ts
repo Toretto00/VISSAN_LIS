@@ -1,6 +1,7 @@
 // Next Imports
 import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+
+// import type { NextRequest } from 'next/server'
 
 // Third-party Imports
 import { withAuth } from 'next-auth/middleware'

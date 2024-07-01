@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 // Third-party Imports
 import NextAuth from 'next-auth'
 

@@ -10,5 +10,15 @@ export default [
     href: '/client/invoice',
     icon: 'tabler-info-circle'
   },
+  {
+    label: 'Inventory',
+    href: '/client/inventory',
+    icon: 'tabler-info-circle'
+  },
+  {
+    label: "Calendar",
+    icon: 'tabler-calendar',
+    href: '/client/calendar'
+  },
 ]
 
