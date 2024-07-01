@@ -9,7 +9,6 @@ import { InventoryType } from '@/types/inventoryTypes'
 // Componet Imports
 import CustomTextField from '@/@core/components/mui/TextField'
 import { fetchesClient } from '@/stores/inventory'
-import { getCurrentUser } from '@/libs/session'
 
 // MUI Imports
 import { Card, MenuItem, Checkbox, Typography, IconButton, Button, TablePagination } from '@mui/material'
@@ -41,6 +40,7 @@ import dayjs from 'dayjs'
 // Style Imports
 import tableStyles from '@core/styles/table.module.css'
 import TablePaginationComponent from '@/components/TablePaginationComponent'
+import Link from 'next/link'
 
 type CategoryTypeWithAction = InventoryType & {
   action?: string
@@ -187,7 +187,9 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
         cell: ({ row }) => (
           <div className='flex items-center'>
             <IconButton>
-              <i className='tabler-eye text-[22px] text-textSecondary' />
+              <Link href={`preview/${row.original.id}`} className='flex'>
+                <i className='tabler-eye text-[22px] text-textSecondary' />
+              </Link>
             </IconButton>
             <IconButton>
               <i className='tabler-edit text-[22px] text-textSecondary' />
@@ -248,11 +250,11 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
               <DemoContainer components={['DatePicker']}>
                 <DatePicker
                   label='Ngày báo tồn'
-                  onChange={async value => {
+                  onChange={async (value) => {
                     let date = value?.format('DD/MM/YYYY').toString()
                     var data = await getData(date)
-                    // console.log(data)
-                    // setData(data)
+                    console.log(JSON.stringify(data))
+                    setData(data)
                   }}
                 />
               </DemoContainer>

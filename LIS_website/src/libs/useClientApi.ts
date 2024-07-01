@@ -9,14 +9,14 @@ interface UseFetchOptions {
 
 //const { data: session } = useSession()
 
-async function useApi({ method = 'GET', url, body = ''}: UseFetchOptions) {
+async function useClientApi({ method = 'GET', url, body = ''}: UseFetchOptions) {
   try {
     const session = await getSession()
 
     const accessToken = session?.user?.token
 
     if (method === 'GET') {
-      return await fetch(`${process.env.API_URL}/api${url}`, {
+      return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api${url}`, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -25,7 +25,7 @@ async function useApi({ method = 'GET', url, body = ''}: UseFetchOptions) {
         cache: 'no-store'
       })
     }else{
-      return await fetch(`${process.env.API_URL}/api/${url}`, {
+      return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${url}`, {
         method: method,
         headers: {
           Accept: "application/json",
@@ -41,4 +41,4 @@ async function useApi({ method = 'GET', url, body = ''}: UseFetchOptions) {
   }
 }
 
-export default useApi
+export default useClientApi
