@@ -30,20 +30,16 @@ const FooterContent = () => {
     >
       <p>
         <span className='text-textSecondary pr-2'>{`© ${new Date().getFullYear()}`}</span>
-        <Link href='' target='_blank' className='text-primary uppercase'>
+        <Link href='https://www.vissan.com.vn/' target='_blank' className='text-primary uppercase'>
           Vissan
         </Link>
       </p>
       {!isBreakpointReached && (
         <div className='flex items-center gap-4'>
-          <Link
-            href=''
-            target='_blank'
-            className='text-primary'
-          >
+          {/* <Link href='/' target='_blank' className='text-primary'>
             Documentation
-          </Link>
-          <Link href='' target='_blank' className='text-primary'>
+          </Link> */}
+          <Link href='https://www.vissan.com.vn/lien-he/' target='_blank' className='text-primary'>
             Support
           </Link>
         </div>

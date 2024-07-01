@@ -11,6 +11,11 @@ export default [
     icon: 'tabler-info-circle'
   },
   {
+    label: 'Inventory',
+    href: '/admin/inventory/list',
+    icon: 'tabler-category'
+  },
+  {
     label: 'Category',
     href: '/admin/category/list',
     icon: 'tabler-category'
