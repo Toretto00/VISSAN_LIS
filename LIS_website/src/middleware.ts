@@ -13,7 +13,6 @@ import type { NextRequestWithAuth } from 'next-auth/middleware'
 // Util Imports
 // import { getLocalizedUrl, isUrlMissingLocale } from '@/utils/i18n'
 import { ensurePrefix, withoutSuffix } from '@/utils/string'
-import { signOut } from 'next-auth/react'
 
 
 
