@@ -13,6 +13,7 @@ import type { NextRequestWithAuth } from 'next-auth/middleware'
 // Util Imports
 // import { getLocalizedUrl, isUrlMissingLocale } from '@/utils/i18n'
 import { ensurePrefix, withoutSuffix } from '@/utils/string'
+import { signOut } from 'next-auth/react'
 
 
 
@@ -76,6 +77,8 @@ export default withAuth(
     // Check if the user is logged in
     const isUserLoggedIn = !!token
 
+    // Check if the time is expired
+
     // Guest routes (Routes that can be accessed by guest users who are not logged in)
     const guestRoutes = ['login', 'register', 'forgot-password']
 
@@ -86,7 +89,7 @@ export default withAuth(
     const privateRoute = ![...guestRoutes, ...sharedRoutes].some(route => pathname.endsWith(route))
 
     // If the user is not logged in and is trying to access a private route, redirect to the login page
-    if (!isUserLoggedIn && privateRoute) {
+    if (!isUserLoggedIn && privateRoute ) {
       let redirectUrl = '/login'
 
       if (!(pathname === '/')) {
@@ -96,6 +99,19 @@ export default withAuth(
       }
 
       return localizedRedirect(redirectUrl, request)
+    } 
+    else {
+      if(token && Date.now() >= token.accessTokenExpires) {
+        signOut({ redirect: false })
+        
+        let redirectUrl = '/login'
+
+        if (!(pathname === '/')) {
+          const searchParamsStr = new URLSearchParams({ redirectTo: withoutSuffix(pathname, '/') }).toString()
+
+          redirectUrl += `?${searchParamsStr}`
+        }
+      }
     }
 
     // If the user is logged in and is trying to access a guest route, redirect to the root page

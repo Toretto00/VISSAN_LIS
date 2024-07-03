@@ -12,8 +12,11 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
 
-// Type Imports
-// import type { Locale } from '@configs/i18n'
+// Third-party Imports
+import * as XLSX from "xlsx";
+
+// Component Imports
+import { excelExport } from '@/stores/inventory'
 
 // Component Imports
 // import AddPaymentDrawer from '@views/apps/invoice/shared/AddPaymentDrawer'
@@ -22,19 +25,42 @@ import Button from '@mui/material/Button'
 // Util Imports
 // import { getLocalizedUrl } from '@/utils/i18n'
 
-const PreviewActions = ({ id }: { id: number }) => {
+// HandleClick
+const handleGetExcelFile = async (date: string, id: number) => {
+    const res = await excelExport(date, id)
+
+    if (!res.ok)
+        throw new Error("Fail to export excel file!")
+
+    return res.arrayBuffer();
+}
+const handleExcelExport = async (date: string, id: number) => {
+    try {
+        const data = await handleGetExcelFile(date, id)
+
+        const excel = new Uint8Array(data);
+
+        const workbook = XLSX.read(excel, { type: "array" });
+
+        XLSX.writeFile(workbook, "Inventory.xlsx");
+    } catch (error) {
+        // throw new Error(error);
+        console.log(error)
+    }
+}
+
+const PreviewActions = ({ id }: { id: string }) => {
     // States
     const [paymentDrawerOpen, setPaymentDrawerOpen] = useState(false)
     const [sendDrawerOpen, setSendDrawerOpen] = useState(false)
 
-    // Hooks
-    const { lang: locale } = useParams()
+
 
     return (
         <>
             <Card>
                 <CardContent className='flex flex-col gap-4'>
-                    <Button
+                    {/* <Button
                         fullWidth
                         variant='contained'
                         className='capitalize'
@@ -42,8 +68,8 @@ const PreviewActions = ({ id }: { id: number }) => {
                         onClick={() => setSendDrawerOpen(true)}
                     >
                         Send Invoice
-                    </Button>
-                    <Button fullWidth color='secondary' variant='tonal' className='capitalize'>
+                    </Button> */}
+                    <Button fullWidth color='secondary' variant='tonal' className='capitalize' onClick={() => handleExcelExport("", Number(id))}>
                         Download
                     </Button>
                     <div className='flex items-center gap-4'>
@@ -55,6 +81,7 @@ const PreviewActions = ({ id }: { id: number }) => {
                             variant='tonal'
                             className='capitalize'
                             href={`/apps/invoice/print/${id}`}
+                            disabled
                         >
                             Print
                         </Button>
@@ -64,12 +91,12 @@ const PreviewActions = ({ id }: { id: number }) => {
                             color='secondary'
                             variant='tonal'
                             className='capitalize'
-                        // href={getLocalizedUrl(`apps/invoice/edit/${id}`, locale as Locale)}
+                            href={`/admin/inventory/edit/${id}`}
                         >
                             Edit
                         </Button>
                     </div>
-                    <Button
+                    {/* <Button
                         fullWidth
                         color='success'
                         variant='contained'
@@ -78,7 +105,7 @@ const PreviewActions = ({ id }: { id: number }) => {
                         startIcon={<i className='tabler-currency-dollar' />}
                     >
                         Add Payment
-                    </Button>
+                    </Button> */}
                 </CardContent>
             </Card>
             {/* <AddPaymentDrawer open={paymentDrawerOpen} handleClose={() => setPaymentDrawerOpen(false)} />

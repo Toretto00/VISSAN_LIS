@@ -9,7 +9,7 @@ interface UseFetchOptions {
 
 //const { data: session } = useSession()
 
-async function useClientApi({ method = 'GET', url, body = ''}: UseFetchOptions) {
+async function useClientApi({ method = 'GET', url, body}: UseFetchOptions) {
   try {
     const session = await getSession()
 

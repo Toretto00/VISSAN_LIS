@@ -3,12 +3,15 @@
 // React Imports
 import { useState, useMemo, useEffect } from 'react'
 
+// Next Imports
+import { useRouter } from "next/navigation";
+
 // Type Imports
 import { InventoryType } from '@/types/inventoryTypes'
 
 // Componet Imports
 import CustomTextField from '@/@core/components/mui/TextField'
-import { fetchesClient } from '@/stores/inventory'
+import { fetchesClient, excelExport, deleteInventoryItem } from '@/stores/inventory'
 
 // MUI Imports
 import { Card, MenuItem, Checkbox, Typography, IconButton, Button, TablePagination } from '@mui/material'
@@ -36,17 +39,18 @@ import {
 import { rankItem } from '@tanstack/match-sorter-utils'
 import classnames from 'classnames'
 import dayjs from 'dayjs'
+import * as XLSX from "xlsx";
 
 // Style Imports
 import tableStyles from '@core/styles/table.module.css'
 import TablePaginationComponent from '@/components/TablePaginationComponent'
 import Link from 'next/link'
 
-type CategoryTypeWithAction = InventoryType & {
+type InventoryTypeWithAction = InventoryType & {
   action?: string
 }
 
-const columnHelper = createColumnHelper<CategoryTypeWithAction>()
+const columnHelper = createColumnHelper<InventoryTypeWithAction>()
 
 const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
   // Rank the item
@@ -100,13 +104,54 @@ const getData = async (date: string | undefined) => {
   return res.json()
 }
 
+const handleGetExcelFile = async (date: string | undefined, id: number) => {
+  const res = await excelExport(date, id)
+
+  if (!res.ok)
+    throw new Error("Fail to export excel file!")
+
+  return res.arrayBuffer();
+}
+const handleExcelExport = async (date: string | undefined, id: number) => {
+  try {
+    const data = await handleGetExcelFile(date, id)
+
+    const excel = new Uint8Array(data);
+
+    const workbook = XLSX.read(excel, { type: "array" });
+
+    XLSX.writeFile(workbook, "Inventory.xlsx");
+  } catch (error) {
+    // throw new Error(error);
+    console.log(error)
+  }
+}
+
 const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
   const [isSideBarOpen, setOpen] = useState(false)
   const [data, setData] = useState(...[tableData])
   const [rowSelection, setRowSelection] = useState({})
   const [globalFilter, setGlobalFilter] = useState('')
+  const [dateSelected, setDateSelected] = useState<string | undefined>(dayjs().format("DD/MM/YYYY").toString())
 
-  const columns = useMemo<ColumnDef<CategoryTypeWithAction, any>[]>(
+  const router = useRouter()
+
+  const destroyEvent = async (id: number) => {
+    let list: any[] = [];
+    list.push(id);
+
+    const res = await deleteInventoryItem(JSON.stringify(list));
+
+    if (!res.ok) {
+      throw new Error("Fail to delete inventory item!")
+    }
+
+    router.refresh()
+
+    return res.json()
+  }
+
+  const columns = useMemo<ColumnDef<InventoryTypeWithAction, any>[]>(
     () => [
       {
         id: 'select',
@@ -191,11 +236,13 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
                 <i className='tabler-eye text-[22px] text-textSecondary' />
               </Link>
             </IconButton>
-            <IconButton>
-              <i className='tabler-edit text-[22px] text-textSecondary' />
+            <IconButton >
+              <Link href={`edit/${row.original.id}`} className='flex'>
+                <i className='tabler-edit text-[22px] text-textSecondary' />
+              </Link>
             </IconButton>
             <IconButton
-            //  onClick={() => destroyEvent(row.original.id)}
+              onClick={() => destroyEvent(row.original.id)}
             >
               <i className='tabler-trash text-[22px] text-textSecondary' />
             </IconButton>
@@ -253,7 +300,7 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
                   onChange={async (value) => {
                     let date = value?.format('DD/MM/YYYY').toString()
                     var data = await getData(date)
-                    console.log(JSON.stringify(data))
+                    setDateSelected(date)
                     setData(data)
                   }}
                 />
@@ -270,6 +317,7 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
               variant='tonal'
               startIcon={<i className='tabler-upload' />}
               className='is-full sm:is-auto'
+              disabled
             >
               Import
             </Button>
@@ -278,6 +326,11 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
               variant='tonal'
               startIcon={<i className='tabler-download' />}
               className='is-full sm:is-auto'
+              onClick={() => {
+                if (tableData.length === 0)
+                  return
+                handleExcelExport(dateSelected, 0)
+              }}
             >
               Export
             </Button>

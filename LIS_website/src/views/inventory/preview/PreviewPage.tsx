@@ -8,7 +8,7 @@ import type { InventoryDetailType } from '@/types/inventoryTypes'
 import PreviewActions from './PreviewActions'
 import PreviewCard from './PreviewCard'
 
-const Preview = ({ inventoryData, id }: { inventoryData: InventoryDetailType; id: number }) => {
+const Preview = ({ inventoryData, id }: { inventoryData: InventoryDetailType; id: string }) => {
     return (
         <Grid container spacing={6}>
             <Grid item xs={12} md={9}>
