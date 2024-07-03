@@ -100,19 +100,6 @@ export default withAuth(
 
       return localizedRedirect(redirectUrl, request)
     } 
-    else {
-      if(token && Date.now() >= token.accessTokenExpires) {
-        signOut({ redirect: false })
-        
-        let redirectUrl = '/login'
-
-        if (!(pathname === '/')) {
-          const searchParamsStr = new URLSearchParams({ redirectTo: withoutSuffix(pathname, '/') }).toString()
-
-          redirectUrl += `?${searchParamsStr}`
-        }
-      }
-    }
 
     // If the user is logged in and is trying to access a guest route, redirect to the root page
     const isRequestedRouteIsGuestRoute = guestRoutes.some(route => pathname.endsWith(route))
