@@ -14,9 +14,9 @@ import type { BoxProps } from '@mui/material/Box'
 // Styles
 // import 'react-datepicker/dist/react-datepicker.css'
 
-type Props = ComponentProps<typeof ReactDatePickerComponent> & {
-  boxProps?: BoxProps
-}
+// type Props = ComponentProps<typeof ReactDatePickerComponent> & {
+//   boxProps?: BoxProps
+// }
 
 // Styled Components
 const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
@@ -123,11 +123,11 @@ const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
         color: theme.palette.text.primary,
         fontSize: theme.typography.body1.fontSize,
         '&.react-datepicker__day--selected.react-datepicker__day--in-selecting-range.react-datepicker__day--selecting-range-start, &.react-datepicker__day--selected.react-datepicker__day--range-start.react-datepicker__day--in-range, &.react-datepicker__day--range-start':
-          {
-            borderRadius: '18px 0px 0px 18px;',
-            color: `${theme.palette.common.white} !important`,
-            backgroundColor: `${theme.palette.primary.main} !important`
-          },
+        {
+          borderRadius: '18px 0px 0px 18px;',
+          color: `${theme.palette.common.white} !important`,
+          backgroundColor: `${theme.palette.primary.main} !important`
+        },
         '&.react-datepicker__day--range-end.react-datepicker__day--in-range': {
           borderRadius: '0px 18px 18px 0px',
           color: `${theme.palette.common.white} !important`,
@@ -137,12 +137,12 @@ const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
           outline: 0
         },
         '&.react-datepicker__day--outside-month, &.react-datepicker__day--disabled:not(.react-datepicker__day--selected)':
-          {
-            color: theme.palette.text.disabled,
-            '&:hover': {
-              backgroundColor: 'transparent'
-            }
-          },
+        {
+          color: theme.palette.text.disabled,
+          '&:hover': {
+            backgroundColor: 'transparent'
+          }
+        },
         '&.react-datepicker__day--highlighted, &.react-datepicker__day--highlighted:hover': {
           color: theme.palette.success.main,
           backgroundColor: 'var(--mui-palette-success-lightOpacity)',
@@ -237,14 +237,14 @@ const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
         backgroundColor: 'rgb(var(--mui-palette-primary-mainChannel) / 0.16)'
       },
       '& .react-datepicker__day--selected, & .react-datepicker__month-text--selected, & .react-datepicker__year-text--selected, & .react-datepicker__quarter-text--selected':
-        {
-          color: `${theme.palette.common.white} !important`,
-          backgroundColor: `${theme.palette.primary.main} !important`,
-          boxShadow: 'var(--mui-customShadows-primary-sm)',
-          '&:hover': {
-            backgroundColor: `${theme.palette.primary.dark} !important`
-          }
-        },
+      {
+        color: `${theme.palette.common.white} !important`,
+        backgroundColor: `${theme.palette.primary.main} !important`,
+        boxShadow: 'var(--mui-customShadows-primary-sm)',
+        '&:hover': {
+          backgroundColor: `${theme.palette.primary.dark} !important`
+        }
+      },
       '& .react-datepicker__header__dropdown': {
         '& .react-datepicker__month-dropdown-container:not(:last-child)': {
           marginRight: theme.spacing(8)
@@ -258,9 +258,9 @@ const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
           color: theme.palette.text.primary
         },
         '& .react-datepicker__month-read-view:hover .react-datepicker__month-read-view--down-arrow, & .react-datepicker__year-read-view:hover .react-datepicker__year-read-view--down-arrow':
-          {
-            borderColor: theme.palette.text.primary
-          },
+        {
+          borderColor: theme.palette.text.primary
+        },
         '& .react-datepicker__month-read-view--down-arrow, & .react-datepicker__year-read-view--down-arrow': {
           top: 4,
           borderColor: theme.palette.text.secondary
@@ -457,9 +457,9 @@ const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
         }
       },
       '& .react-datepicker__day:hover, & .react-datepicker__month-text:hover, & .react-datepicker__quarter-text:hover, & .react-datepicker__year-text:hover':
-        {
-          backgroundColor: theme.palette.action.hover
-        },
+      {
+        backgroundColor: theme.palette.action.hover
+      },
       '[data-skin="bordered"] &': {
         boxShadow: 'none',
         border: `1px solid var(--mui-palette-divider)`
@@ -480,15 +480,15 @@ const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
   }
 })
 
-const AppReactDatepicker = (props: Props) => {
-  // Props
-  const { boxProps, ...rest } = props
+// const AppReactDatepicker = (props: Props) => {
+//   // Props
+//   const { boxProps, ...rest } = props
 
-  return (
-    <StyledReactDatePicker {...boxProps}>
-      <ReactDatePickerComponent {...rest} />
-    </StyledReactDatePicker>
-  )
-}
+//   return (
+//     <StyledReactDatePicker {...boxProps}>
+//       {/* <ReactDatePickerComponent {...rest} /> */}
+//     </StyledReactDatePicker>
+//   )
+// }
 
-export default AppReactDatepicker
+// export default AppReactDatepicker

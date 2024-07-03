@@ -30,7 +30,7 @@ import Logo from '@components/layout/shared/Logo'
 import CustomTextField from '@core/components/mui/TextField'
 
 // Styled Component Imports
-import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
+// import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
 
 const EditCard = ({ invoiceData, id, data }: { invoiceData: InvoiceType; id: string; data: InvoiceType[] }) => {
   // States
@@ -81,7 +81,7 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData: InvoiceType; id: str
                         }}
                       />
                     </div>
-                    <div className='flex items-center'>
+                    {/* <div className='flex items-center'>
                       <Typography className='min-is-[95px] mie-4' color='text.primary'>
                         Date Issued:
                       </Typography>
@@ -104,7 +104,7 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData: InvoiceType; id: str
                         onChange={(date: Date) => setDueDate(date)}
                         customInput={<CustomTextField fullWidth />}
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

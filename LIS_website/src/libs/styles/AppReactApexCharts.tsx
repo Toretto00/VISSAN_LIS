@@ -6,14 +6,14 @@ import { styled } from '@mui/material/styles'
 import type { BoxProps } from '@mui/material/Box'
 
 // Third-party Imports
-import type { Props } from 'react-apexcharts'
+// import type { Props } from 'react-apexcharts'
 
 // Component Imports
-import ReactApexcharts from '@/libs/ApexCharts'
+// import ReactApexcharts from '@/libs/ApexCharts'
 
-type ApexChartWrapperProps = Props & {
-  boxProps?: BoxProps
-}
+// type ApexChartWrapperProps = Props & {
+//   boxProps?: BoxProps
+// }
 
 // Styled Components
 const ApexChartWrapper = styled(Box)<BoxProps>(({ theme }) => ({
@@ -80,9 +80,9 @@ const ApexChartWrapper = styled(Box)<BoxProps>(({ theme }) => ({
       textAnchor: theme.direction === 'rtl' ? 'start' : undefined
     },
     '& .apexcharts-text, & .apexcharts-tooltip-text, & .apexcharts-datalabel-label, & .apexcharts-datalabel, & .apexcharts-xaxistooltip-text, & .apexcharts-yaxistooltip-text, & .apexcharts-legend-text':
-      {
-        fontFamily: `${theme.typography.fontFamily} !important`
-      },
+    {
+      fontFamily: `${theme.typography.fontFamily} !important`
+    },
     '& .apexcharts-pie-label': {
       filter: 'none'
     },
@@ -92,15 +92,16 @@ const ApexChartWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   }
 }))
 
-const AppReactApexCharts = (props: ApexChartWrapperProps) => {
+const AppReactApexCharts = () => {
   // Props
-  const { boxProps, ...rest } = props
+  // const { boxProps, ...rest } = props
 
   return (
-    <ApexChartWrapper {...boxProps}>
-      <ReactApexcharts {...rest} />
-    </ApexChartWrapper>
-  )
+
+    // <ApexChartWrapper {...boxProps}>
+    //   <ReactApexcharts {...rest} />
+    // </ApexChartWrapper>
+    <></>)
 }
 
 export default AppReactApexCharts

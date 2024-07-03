@@ -57,6 +57,7 @@ export default function Page() {
   const [productList, setProductList] = useState<product[]>([])
   const [productSelected, setProductSelected] = useState<product | undefined>()
   const [unit, setUnit] = useState('Kg')
+
   // const [manufactureDate, setManufactureDate] = useState<Dayjs | null>()
   const [quantity, setQuantity] = useState('')
   const [inventory, setInventory] = useState<row[]>([])
@@ -69,10 +70,13 @@ export default function Page() {
 
   useEffect(() => {
     handleLoadProductList()
-  }, [session])
+  }, [])
 
   const handleLoadProductList = async () => {
-    if (!session) return
+    if (!session)
+
+      return
+
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Products`, {
         method: 'GET',
@@ -85,11 +89,13 @@ export default function Page() {
       const data = await res.json()
 
       if (res.status === 401) {
+
         throw new Error(JSON.stringify(data))
       }
 
       if (res.status === 200) {
         setProductList(data)
+
         return data
       }
 
@@ -113,31 +119,46 @@ export default function Page() {
     //   return
     // }
     let count = 0
-    let newRows = [...inventory]
+    const newRows = [...inventory]
+
     newRows.forEach(element => {
       if (element.name?.code == productSelected?.code) {
         element.quantity += parseInt(quantity)
         count++
       }
     })
+
     if (count === 0) {
-      let newRow = {
+      const newRow = {
+
         id: inventory.length + 1,
+
         name: productSelected,
+
         unit: unit,
+
         quantity: parseInt(quantity),
+
         // rowManufactureDate: manufactureDate?.format('DD/MM/YYYY').toString()
         rowManufactureDate: ''
+
       }
+
       newRows.push(newRow)
+
     }
+
     setInventory(newRows)
+
     resetValue()
+
     return
+
   }
 
   const handleSendRequest = async () => {
-    let newInvoice: any[] = []
+
+    const newInvoice: any[] = []
 
     if (typeof window !== 'undefined') {
       invoice.forEach(element => {
@@ -146,6 +167,7 @@ export default function Page() {
             code: element?.name?.code
           },
           quantity: element?.quantity,
+
           // created: manufactureDate?.format('DD/MM/YYYY').toString(),
           // updated: manufactureDate?.format('DD/MM/YYYY').toString()
           created: '',
@@ -190,11 +212,14 @@ export default function Page() {
     //     sessionStorage.clear()
     //     router.push('/login')
     //   })
+
     setInvoice([])
   }
 
   const handleCreateInventory = () => {
-    let newInventory: any[] = []
+
+    const newInventory: any[] = []
+
     if (typeof window !== 'undefined') {
       inventory.forEach(element => {
         newInventory.push({
@@ -202,12 +227,14 @@ export default function Page() {
             code: element?.name?.code
           },
           quantity: element?.quantity,
+
           // created: manufactureDate?.format('DD/MM/YYYY').toString(),
           // updated: manufactureDate?.format('DD/MM/YYYY').toString()
           created: '',
           updated: ''
         })
       })
+
       // api
       //   .post(`Inventories?location=${sessionStorage.getItem('store')}`, newInventory, {
       //     headers: {
@@ -224,15 +251,18 @@ export default function Page() {
   }
 
   const resetValue = () => {
+
     // setProductSelected(undefined)
     // setManufactureDate(dayjs())
     setQuantity('')
   }
 
   const handleDeleteItem = (id: any, requestType: string) => {
+
     if (typeof id == 'number') {
       const temp = [...inventory]
       const newRows = temp.filter(item => item.id !== id)
+
       newRows.map((row, index) => {
         row['id'] = index + 1
       })

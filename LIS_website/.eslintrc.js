@@ -50,7 +50,7 @@ module.exports = {
       }
     ],
     'newline-before-return': 'error',
-    "import/no-unresolved": [2, {commonts: true, amd: true}],
+    // "import/no-unresolved": [2, {commonts: true, amd: true}],
     'import/newline-after-import': [
       'error',
       {
@@ -113,7 +113,7 @@ module.exports = {
     'import/resolver': {
       typescript: {
         project: './tsconfig.json'
-      },
+      }
     }
   },
   overrides: [

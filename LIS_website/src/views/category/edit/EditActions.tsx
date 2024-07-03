@@ -20,8 +20,8 @@ import Switch from '@mui/material/Switch'
 // import type { Locale } from '@configs/i18n'
 
 // Component Imports
-import AddPaymentDrawer from '@views/apps/invoice/shared/AddPaymentDrawer'
-import SendInvoiceDrawer from '@views/apps/invoice/shared/SendInvoiceDrawer'
+// import AddPaymentDrawer from '@views/apps/invoice/shared/AddPaymentDrawer'
+// import SendInvoiceDrawer from '@views/apps/invoice/shared/SendInvoiceDrawer'
 import CustomTextField from '@core/components/mui/TextField'
 
 // Util Imports
@@ -56,7 +56,7 @@ const EditActions = ({ id }: { id: string }) => {
                 color='secondary'
                 variant='tonal'
                 className='capitalize'
-                href={getLocalizedUrl(`apps/invoice/preview/${id}`, locale as Locale)}
+                href={`apps/invoice/preview/${id}`}
               >
                 Preview
               </Button>
@@ -76,8 +76,8 @@ const EditActions = ({ id }: { id: string }) => {
             </Button>
           </CardContent>
         </Card>
-        <AddPaymentDrawer open={paymentDrawerOpen} handleClose={() => setPaymentDrawerOpen(false)} />
-        <SendInvoiceDrawer open={sendDrawerOpen} handleClose={() => setSendDrawerOpen(false)} />
+        {/* <AddPaymentDrawer open={paymentDrawerOpen} handleClose={() => setPaymentDrawerOpen(false)} />
+        <SendInvoiceDrawer open={sendDrawerOpen} handleClose={() => setSendDrawerOpen(false)} /> */}
       </Grid>
 
       <Grid item xs={12}>

@@ -7,7 +7,7 @@ import { useState, useMemo, useEffect } from 'react'
 import { useRouter } from "next/navigation";
 
 // Type Imports
-import { InventoryType } from '@/types/inventoryTypes'
+import type { InventoryType } from '@/types/inventoryTypes'
 
 // Componet Imports
 import CustomTextField from '@/@core/components/mui/TextField'
@@ -31,8 +31,6 @@ import {
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
-  ColumnDef,
-  FilterFn,
   createColumnHelper,
   flexRender
 } from '@tanstack/react-table'
@@ -40,6 +38,11 @@ import { rankItem } from '@tanstack/match-sorter-utils'
 import classnames from 'classnames'
 import dayjs from 'dayjs'
 import * as XLSX from "xlsx";
+
+import type {
+  ColumnDef,
+  FilterFn,
+} from '@tanstack/react-table'
 
 // Style Imports
 import tableStyles from '@core/styles/table.module.css'
@@ -108,10 +111,13 @@ const handleGetExcelFile = async (date: string | undefined, id: number) => {
   const res = await excelExport(date, id)
 
   if (!res.ok)
+
     throw new Error("Fail to export excel file!")
 
   return res.arrayBuffer();
+
 }
+
 const handleExcelExport = async (date: string | undefined, id: number) => {
   try {
     const data = await handleGetExcelFile(date, id)
@@ -137,7 +143,8 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
   const router = useRouter()
 
   const destroyEvent = async (id: number) => {
-    let list: any[] = [];
+    const list: any[] = [];
+
     list.push(id);
 
     const res = await deleteInventoryItem(JSON.stringify(list));
@@ -298,10 +305,13 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
                 <DatePicker
                   label='Ngày báo tồn'
                   onChange={async (value) => {
-                    let date = value?.format('DD/MM/YYYY').toString()
-                    var data = await getData(date)
+                    const date = value?.format('DD/MM/YYYY').toString()
+                    const data = await getData(date)
+
                     setDateSelected(date)
+
                     setData(data)
+
                   }}
                 />
               </DemoContainer>

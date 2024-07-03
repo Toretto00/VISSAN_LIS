@@ -23,7 +23,7 @@ import type { Theme } from '@mui/material/styles'
 import classnames from 'classnames'
 
 // Type Imports
-// import type { InvoiceType } from '@/types/apps/invoiceTypes'
+import type { InvoiceType } from '@/types/apps/invoiceTypes'
 import type { FormDataType } from './AddCustomerDrawer'
 
 // Component Imports
@@ -32,7 +32,7 @@ import Logo from '@components/layout/shared/Logo'
 import CustomTextField from '@core/components/mui/TextField'
 
 // Styled Component Imports
-import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
+// import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
 
 const AddAction = ({ invoiceData }: { invoiceData: InvoiceType[] }) => {
   // States
@@ -90,7 +90,7 @@ const AddAction = ({ invoiceData }: { invoiceData: InvoiceType[] }) => {
                         }}
                       />
                     </div>
-                    <div className='flex items-center'>
+                    {/* <div className='flex items-center'>
                       <Typography className='min-is-[95px] mie-4' color='text.primary'>
                         Date Issued:
                       </Typography>
@@ -115,7 +115,7 @@ const AddAction = ({ invoiceData }: { invoiceData: InvoiceType[] }) => {
                         onChange={(date: Date) => setDueDate(date)}
                         customInput={<CustomTextField fullWidth />}
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -147,11 +147,11 @@ const AddAction = ({ invoiceData }: { invoiceData: InvoiceType[] }) => {
                       <i className='tabler-plus text-base' />
                       Add New Customer
                     </MenuItem>
-                    {invoiceData.slice(0, 5).map((invoice: InvoiceType, index) => (
+                    {/* {invoiceData.slice(0, 5).map((invoice: InvoiceType, index) => (
                       <MenuItem key={index} value={invoice.id}>
                         {invoice.name}
                       </MenuItem>
-                    ))}
+                    ))} */}
                   </CustomTextField>
                   {selectData?.id ? (
                     <div>

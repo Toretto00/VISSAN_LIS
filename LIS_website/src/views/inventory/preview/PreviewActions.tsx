@@ -34,6 +34,7 @@ const handleGetExcelFile = async (date: string, id: number) => {
 
     return res.arrayBuffer();
 }
+
 const handleExcelExport = async (date: string, id: number) => {
     try {
         const data = await handleGetExcelFile(date, id)

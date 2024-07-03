@@ -53,7 +53,7 @@ const AddActions = () => {
               color='secondary'
               variant='tonal'
               className='capitalize'
-              href={getLocalizedUrl('apps/invoice/preview/4987', locale as Locale)}
+              href={'apps/invoice/preview/4987'}
             >
               Preview
             </Button>
@@ -62,7 +62,7 @@ const AddActions = () => {
             </Button>
           </CardContent>
         </Card>
-        <SendInvoiceDrawer open={sendDrawerOpen} handleClose={() => setSendDrawerOpen(false)} />
+        {/* <SendInvoiceDrawer open={sendDrawerOpen} handleClose={() => setSendDrawerOpen(false)} /> */}
       </Grid>
 
       <Grid item xs={12}>

@@ -56,6 +56,7 @@ const PreviewCard = ({ inventoryData, id }: { inventoryData: InventoryDetailType
 
     useEffect(() => {
         let sum = 0;
+
         inventoryData.products.forEach(item => {
             sum += item.quantity
         })

@@ -7,16 +7,16 @@ import type { Theme } from '@mui/material/styles'
 import type { BoxProps } from '@mui/material/Box'
 
 // Third-party imports
-import type { EditorProps } from 'react-draft-wysiwyg'
+// import type { EditorProps } from 'react-draft-wysiwyg'
 
-// Component Imports
-import Editor from '@/libs/Editor'
+// // Component Imports
+// import Editor from '@/libs/Editor'
 
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
+// import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 
-type Props = EditorProps & {
-  boxProps?: BoxProps
-}
+// type Props = EditorProps & {
+//   boxProps?: BoxProps
+// }
 
 // Styled Components
 const EditorWrapper = styled(Box)<BoxProps>(({ theme }: { theme: Theme }) => ({
@@ -77,20 +77,20 @@ const EditorWrapper = styled(Box)<BoxProps>(({ theme }: { theme: Theme }) => ({
         minHeight: 38
       },
       '& .rdw-link-modal-input, & .rdw-embedded-modal-link-input, & .rdw-image-modal-url-input, & .rdw-embedded-modal-size-input, & .rdw-image-modal-size-input':
-        {
-          fontSize: '1rem',
-          background: 'none',
-          padding: theme.spacing(0, 3.5),
-          color: theme.vars.palette.text.primary,
-          borderColor: theme.vars.palette.divider,
-          borderRadius: theme.vars.shape.borderRadius,
-          '&:focus': {
-            borderColor: theme.vars.palette.primary.main
-          },
-          '&::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder': {
-            color: theme.vars.palette.text.disabled
-          }
+      {
+        fontSize: '1rem',
+        background: 'none',
+        padding: theme.spacing(0, 3.5),
+        color: theme.vars.palette.text.primary,
+        borderColor: theme.vars.palette.divider,
+        borderRadius: theme.vars.shape.borderRadius,
+        '&:focus': {
+          borderColor: theme.vars.palette.primary.main
         },
+        '&::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder': {
+          color: theme.vars.palette.text.disabled
+        }
+      },
       '& .rdw-link-modal-btn, & .rdw-embedded-modal-btn, & .rdw-image-modal-btn': {
         border: 0,
         lineHeight: 1.71,
@@ -138,24 +138,24 @@ const EditorWrapper = styled(Box)<BoxProps>(({ theme }: { theme: Theme }) => ({
 
       ...(theme.direction === 'rtl'
         ? {
-            '& .public-DraftStyleDefault-block': {
-              direction: 'ltr !important',
-              textAlign: 'left !important'
-            }
+          '& .public-DraftStyleDefault-block': {
+            direction: 'ltr !important',
+            textAlign: 'left !important'
           }
+        }
         : {})
     }
   }
 }))
 
-const AppReactDraftWysiwyg = (props: Props) => {
-  const { boxProps, ...rest } = props
+// const AppReactDraftWysiwyg = (props: Props) => {
+//   const { boxProps, ...rest } = props
 
-  return (
-    <EditorWrapper {...boxProps}>
-      <Editor {...rest} />
-    </EditorWrapper>
-  )
-}
+//   return (
+//     <EditorWrapper {...boxProps}>
+//       {/* <Editor {...rest} /> */}
+//     </EditorWrapper>
+//   )
+// }
 
-export default AppReactDraftWysiwyg
+// export default AppReactDraftWysiwyg

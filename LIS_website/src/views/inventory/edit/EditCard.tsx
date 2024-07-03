@@ -30,7 +30,8 @@ import Logo from '@components/layout/shared/Logo'
 import CustomTextField from '@core/components/mui/TextField'
 
 // Styled Component Imports
-import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
+
+// import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
 
 const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailType; id: string; data: InventoryDetailType[] }) => {
     // States
