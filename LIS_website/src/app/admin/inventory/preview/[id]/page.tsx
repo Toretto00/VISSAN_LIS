@@ -33,3 +33,5 @@ const PreviewPage = async ({ params }: { params: { id: string, date: string } })
 }
 
 export default PreviewPage
+
+export const dynamic = 'force-dynamic';

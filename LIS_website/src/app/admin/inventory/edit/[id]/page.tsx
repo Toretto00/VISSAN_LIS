@@ -40,3 +40,5 @@ const EditPage = async ({ params }: { params: { id: string } }) => {
 }
 
 export default EditPage
+
+export const dynamic = 'force-dynamic';

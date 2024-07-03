@@ -31,3 +31,5 @@ const Inventory = async () => {
 }
 
 export default Inventory
+
+export const dynamic = 'force-dynamic';

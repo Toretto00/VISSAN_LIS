@@ -31,3 +31,5 @@ const Category = async () => {
 }
 
 export default Category
+
+export const dynamic = 'force-dynamic';
