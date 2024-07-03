@@ -337,8 +337,6 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
               startIcon={<i className='tabler-download' />}
               className='is-full sm:is-auto'
               onClick={() => {
-                if (tableData.length === 0)
-                  return
                 handleExcelExport(dateSelected, 0)
               }}
             >

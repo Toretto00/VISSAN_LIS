@@ -12,9 +12,9 @@ import '@/app/globals.css'
 import '@assets/iconify-icons/generated-icons.css'
 
 export const metadata = {
-  title: 'Client Template',
+  title: 'Vissan',
   description:
-    'Client Template - is the most developer friendly & highly customizable Admin Dashboard Template based on MUI v5.'
+    'Vissan'
 }
 
 const RootLayout = ({ children }: ChildrenType) => {
@@ -22,7 +22,7 @@ const RootLayout = ({ children }: ChildrenType) => {
   const direction = 'ltr'
 
   return (
-    <html id='__next' lang='en' dir={direction} suppressHydrationWarning={true}>
+    <html id='__next' suppressHydrationWarning={true}>
       <body className='flex is-full min-bs-full flex-auto flex-col'>{children}</body>
     </html>
   )

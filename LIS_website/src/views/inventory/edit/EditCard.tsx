@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import type { SyntheticEvent } from 'react'
 
 // MUI Imports
@@ -39,6 +39,17 @@ const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailT
     const [count, setCount] = useState(1)
     const [issueDate, setIssueDate] = useState(new Date(inventoryData.created))
     const [dueDate, setDueDate] = useState(new Date(inventoryData.created))
+
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        let sum = 0;
+
+        inventoryData.products.forEach(item => {
+            sum += item.quantity
+        })
+        setTotal(sum)
+    }, [inventoryData])
 
     // Hooks
     const isBelowMdScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
@@ -99,7 +110,7 @@ const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailT
                             <Divider className='border-dashed' />
                         </Grid>
                         <Grid item xs={12}>
-                            {Array.from(Array(count).keys()).map((item, index) => (
+                            {inventoryData.products.map((item, index) => (
                                 <div
                                     key={index}
                                     className={classnames('repeater-item flex relative mbe-4 border rounded', {
@@ -109,27 +120,46 @@ const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailT
                                     })}
                                 >
                                     <Grid container spacing={5} className='m-0 pbe-5'>
-                                        <Grid item lg={6} md={5} xs={12}>
+                                        <Grid item lg={1} md={1} sm={1} xs={12}>
+                                            <Typography className='font-medium md:absolute md:-top-8' color='text.primary'>
+                                                ID
+                                            </Typography>
+                                            <Typography className='mbe-5'>
+                                                {index + 1}
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item lg={2} md={2} sm={2} xs={12}>
+                                            <Typography className='font-medium md:absolute md:-top-8' color='text.primary'>
+                                                Code
+                                            </Typography>
+                                            <Typography className='mbe-5'>
+                                                {item.product.code}
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item lg={5} md={5} sm={5} xs={12}>
                                             <Typography className='font-medium md:absolute md:-top-8' color='text.primary'>
                                                 Item
                                             </Typography>
-                                            <CustomTextField select fullWidth defaultValue='App Design' className='mbe-5'>
+                                            <Typography className='mbe-5'>
+                                                {item.product.name}
+                                            </Typography>
+                                            {/* <CustomTextField select fullWidth defaultValue={item.product.name} className='mbe-5'>
                                                 <MenuItem value='App Design'>App Design</MenuItem>
                                                 <MenuItem value='App Customization'>App Customization</MenuItem>
                                                 <MenuItem value='ABC Template'>ABC Template</MenuItem>
                                                 <MenuItem value='App Development'>App Development</MenuItem>
-                                            </CustomTextField>
-                                            <CustomTextField rows={2} fullWidth multiline defaultValue='Customization & Bug Fixes' />
+                                            </CustomTextField> */}
+                                            {/* <CustomTextField rows={2} fullWidth multiline defaultValue='Customization & Bug Fixes' /> */}
                                         </Grid>
-                                        <Grid item lg={2} md={3} xs={12}>
+                                        <Grid item lg={2} md={2} sm={2} xs={12}>
                                             <Typography className='font-medium md:absolute md:-top-8' color='text.primary'>
-                                                Cost
+                                                Quantity
                                             </Typography>
                                             <CustomTextField
                                                 {...(isBelowMdScreen && { fullWidth: true })}
                                                 type='number'
-                                                placeholder='24'
-                                                defaultValue='24'
+                                                placeholder={item.quantity.toString()}
+                                                defaultValue={item.quantity}
                                                 className='mbe-5'
                                                 InputProps={{ inputProps: { min: 0 } }}
                                             />
@@ -154,7 +184,7 @@ const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailT
                                                 </div>
                                             </div> */}
                                         </Grid>
-                                        <Grid item md={2} xs={12}>
+                                        {/* <Grid item md={2} xs={12}>
                                             <Typography className='font-medium md:absolute md:-top-8' color='text.primary'>
                                                 Hours
                                             </Typography>
@@ -165,12 +195,12 @@ const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailT
                                                 defaultValue='1'
                                                 InputProps={{ inputProps: { min: 0 } }}
                                             />
-                                        </Grid>
-                                        <Grid item md={2} xs={12}>
+                                        </Grid> */}
+                                        <Grid item md={2} sm={2} xs={12}>
                                             <Typography className='font-medium md:absolute md:-top-8' color='text.primary'>
                                                 Price
                                             </Typography>
-                                            <Typography>$24.00</Typography>
+                                            <Typography></Typography>
                                         </Grid>
                                     </Grid>
                                     <div className='flex flex-col justify-start border-is'>
@@ -180,7 +210,7 @@ const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailT
                                     </div>
                                 </div>
                             ))}
-                            <Grid item xs={12}>
+                            {/* <Grid item xs={12}>
                                 <Button
                                     size='small'
                                     variant='contained'
@@ -189,7 +219,7 @@ const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailT
                                 >
                                     Add Item
                                 </Button>
-                            </Grid>
+                            </Grid> */}
                         </Grid>
                         <Grid item xs={12}>
                             <Divider className='border-dashed' />
@@ -209,26 +239,26 @@ const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailT
                                     <div className='flex items-center justify-between'>
                                         <Typography>Subtotal:</Typography>
                                         <Typography className='font-medium' color='text.primary'>
-                                            $1800
+                                            {total}
                                         </Typography>
                                     </div>
                                     <div className='flex items-center justify-between'>
                                         <Typography>Discount:</Typography>
                                         <Typography className='font-medium' color='text.primary'>
-                                            $28
+
                                         </Typography>
                                     </div>
                                     <div className='flex items-center justify-between'>
                                         <Typography>Tax:</Typography>
                                         <Typography className='font-medium' color='text.primary'>
-                                            21%
+
                                         </Typography>
                                     </div>
                                     <Divider className='mlb-2' />
                                     <div className='flex items-center justify-between'>
                                         <Typography>Total:</Typography>
                                         <Typography className='font-medium' color='text.primary'>
-                                            $1690
+                                            {total}
                                         </Typography>
                                     </div>
                                 </div>
@@ -253,7 +283,7 @@ const EditCard = ({ inventoryData, id, data }: { inventoryData: InventoryDetailT
                         </Grid> */}
                     </Grid>
                 </CardContent>
-            </Card>
+            </Card >
         </>
     )
 }
