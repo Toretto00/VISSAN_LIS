@@ -115,7 +115,8 @@ export default withAuth(
     // If pathname already contains a locale, return next() else redirect with localized URL
     return NextResponse.next()
   },
-  {
+  {    
+    secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
 
       authorized: () => {
