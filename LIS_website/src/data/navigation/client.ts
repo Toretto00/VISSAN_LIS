@@ -5,20 +5,22 @@ export default [
     href: '/client/dashboard',
     icon: 'tabler-smart-home'
   },
-  {
-    label: 'Invoice',
-    href: '/client/invoice',
-    icon: 'tabler-info-circle'
-  },
+
+  // {
+  //   label: 'Invoice',
+  //   href: '/client/invoice',
+  //   icon: 'tabler-info-circle'
+  // },
   {
     label: 'Inventory',
     href: '/client/inventory',
     icon: 'tabler-info-circle'
   },
-  {
-    label: "Calendar",
-    icon: 'tabler-calendar',
-    href: '/client/calendar'
-  },
+  
+  // {
+  //   label: "Calendar",
+  //   icon: 'tabler-calendar',
+  //   href: '/client/calendar'
+  // },
 ]
 
