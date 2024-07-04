@@ -71,7 +71,7 @@ export const authOptions: NextAuthOptions = {
     // ** ...add more providers here
   ],
   
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_URL,
 
   // ** Please refer to https://next-auth.js.org/configuration/options#session for more `session` options
   session: {

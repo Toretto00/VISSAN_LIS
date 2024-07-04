@@ -116,7 +116,7 @@ export default withAuth(
     return NextResponse.next()
   },
   {    
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: process.env.NEXTAUTH_URL,
     callbacks: {
 
       authorized: () => {
