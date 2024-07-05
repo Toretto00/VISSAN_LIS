@@ -13,7 +13,7 @@ export default [
   // },
   {
     label: 'Inventory',
-    href: '/client/inventory',
+    href: '/client/inventory/add',
     icon: 'tabler-info-circle'
   },
   

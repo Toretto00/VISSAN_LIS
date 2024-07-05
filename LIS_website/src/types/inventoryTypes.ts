@@ -1,3 +1,5 @@
+import type { ProductType } from "./productTypes"
+
 export type InventoryType = {
     id: number,
     location: {
@@ -56,4 +58,9 @@ export type InventoryDetailType = {
   created: string,
   updated: string
         
+}
+
+export type InventoryProductType = {
+  product: ProductType,
+  quantity: number
 }

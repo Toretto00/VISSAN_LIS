@@ -153,7 +153,8 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
       throw new Error("Fail to delete inventory item!")
     }
 
-    router.refresh()
+    // router.refresh()
+    window.location.reload()
 
     return res.json()
   }

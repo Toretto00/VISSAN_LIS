@@ -20,3 +20,7 @@ export async function excelExport(date: string | undefined, id: number) {
 export async function deleteInventoryItem(data: any) {
   return await UseClientApi({method:"DELETE", url: `/Inventories`, body: data })
 }
+
+export async function newInventory(data: any, location: string) {
+  return await UseClientApi({method:"POST", url: `/Inventories?location=${location}`, body: data })
+}
