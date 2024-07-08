@@ -5,6 +5,10 @@ export async function fetches(date: string) {
     return await UseApi({url: `/inventories?date=${date}` })
 }
 
+export async function getInventory(storeid: string) {
+  return await UseApi({url: `/Inventories/StoreInventories?storeid=${storeid}` })
+}
+
 export async function InventoryDetail(id: number) {
   return await UseApi({url: `/inventories/${id}` })
 }

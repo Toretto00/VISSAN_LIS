@@ -1,0 +1,37 @@
+// Next Imports
+import { redirect } from 'next/navigation'
+
+// Type Imports
+// import type { InventoryDetailType } from '@/types/inventoryTypes'
+
+// Component Imports
+import Preview from '@views/client/inventory/preview/PreviewPage'
+import { InventoryDetail } from '@/stores/inventory'
+
+const getData = async (id: number) => {
+    // Vars
+    const res = await InventoryDetail(id);
+
+    if (!res.ok) {
+        throw new Error('Failed to fetch inventory detail data')
+    }
+
+    return res.json()
+}
+
+const PreviewPage = async ({ params }: { params: { id: string, date: string } }) => {
+    // Vars
+    const data = await getData(Number(params.id))
+
+    // const filteredData = data.filter((invoice: InventoryDetailType) => invoice.id === params.id)[0]
+
+    if (!data) {
+        redirect('/not-found')
+    }
+
+    return <Preview inventoryData={data} id={params.id} />
+}
+
+export default PreviewPage
+
+export const dynamic = 'force-dynamic';
