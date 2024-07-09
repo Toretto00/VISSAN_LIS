@@ -3,7 +3,6 @@ import { Grid } from "@mui/material";
 
 // Component Imports
 import { getProduct } from "@/stores/product";
-import AddForm from "@/views/client/inventory/add/AddForm";
 import AddCard from "@views/client/inventory/add/AddCard"
 import AddActions from "@views/client/inventory/add/AddActions"
 
@@ -29,9 +28,6 @@ const AddPage = async () => {
 
   return (
     <Grid container spacing={6}>
-      {/* <Grid item xs={12} lg={12}>
-        <AddForm productData={productData} />
-      </Grid> */}
       <AddProvider>
         <Grid item xs={12} md={9}>
           <AddCard productData={productData} storeid={storeid} />

@@ -353,7 +353,7 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
             </Button>
           </div>
         </div>
-        <div className='over-flox-x-auto'>
+        <div className='overflow-x-auto'>
           <table className={tableStyles.table}>
             <thead>
               {table.getHeaderGroups().map(headerGroup => (

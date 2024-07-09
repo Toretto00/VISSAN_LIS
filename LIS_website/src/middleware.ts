@@ -14,7 +14,7 @@ import type { NextRequestWithAuth } from 'next-auth/middleware'
 // import { getLocalizedUrl, isUrlMissingLocale } from '@/utils/i18n'
 import { ensurePrefix, withoutSuffix } from '@/utils/string'
 
-
+import { getSession } from 'next-auth/react'
 
 // const getLocale = (request: NextRequest): string | undefined => {
 //   // Try to get locale from URL
@@ -77,6 +77,15 @@ export default withAuth(
     const isUserLoggedIn = !!token
 
     // Check if the time is expired
+    // const currentdate = new Date();
+ 
+    // const session = await getSession()
+
+    // if(session && session.expires <= currentdate.toString()){
+
+    //   return NextResponse.redirect(new URL('/login', request.url))
+      
+    // }    
 
     // Guest routes (Routes that can be accessed by guest users who are not logged in)
     const guestRoutes = ['login', 'register', 'forgot-password']

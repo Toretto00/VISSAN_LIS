@@ -8,9 +8,18 @@ import Grid from '@mui/material/Grid'
 // import type { InvoiceType } from '@/types/apps/invoiceTypes'
 
 // Component Imports
-import EditCard from '@views/inventory/edit/EditCard'
+// import EditCard from '@views/inventory/edit/EditCard'
 import EditActions from '@views/inventory/edit/EditActions'
 import { InventoryDetail } from '@/stores/inventory'
+
+// import { Suspense } from 'react'
+import LoadingPage from '@/app/loading'
+
+import dynamic from 'next/dynamic';
+
+const EditCard = dynamic(() => import('@views/inventory/edit/EditCard'), {
+    loading: () => <LoadingPage />,
+});
 
 const getData = async (id: number) => {
     // Vars
@@ -41,4 +50,4 @@ const EditPage = async ({ params }: { params: { id: string } }) => {
 
 export default EditPage
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';

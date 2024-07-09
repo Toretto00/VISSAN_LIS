@@ -1,5 +1,4 @@
 import { getCurrentUser } from "@/libs/session"
-import { signOut } from "next-auth/react"
 
 interface UseFetchOptions {
   method?: string
@@ -38,7 +37,6 @@ async function useApi({ method = 'GET', url, body = ''}: UseFetchOptions) {
     }
 
   } catch (error) {
-    signOut();
     throw new Error("Failed to fetch data", { cause: error })
   }
 }
