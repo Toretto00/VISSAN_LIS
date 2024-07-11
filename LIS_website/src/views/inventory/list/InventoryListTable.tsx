@@ -8,14 +8,16 @@ import { useRouter } from "next/navigation";
 
 // Type Imports
 import type { InventoryType } from '@/types/inventoryTypes'
+import type { Dayjs } from 'dayjs';
+import type { StoreLocationType } from '@/types/storeLocationTypes';
+import type { TextFieldProps } from '@mui/material/TextField'
 
 // Componet Imports
 import CustomTextField from '@/@core/components/mui/TextField'
-import { fetchesClient, excelExport, deleteInventoryItem } from '@/stores/inventory'
+import { fetchesClient, excelExport, deleteInventoryItem, GetStoreInventories } from '@/stores/inventory'
 
 // MUI Imports
-import { Card, MenuItem, Checkbox, Typography, IconButton, Button, TablePagination } from '@mui/material'
-import type { TextFieldProps } from '@mui/material/TextField'
+import { Card, CardHeader, MenuItem, Checkbox, Typography, IconButton, Button, TablePagination } from '@mui/material'
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
@@ -97,8 +99,8 @@ const DebouncedInput = ({
   return <CustomTextField {...props} value={value} onChange={e => setValue(e.target.value)} />
 }
 
-const getData = async (date: string | undefined) => {
-  const res = await fetchesClient(date !== undefined ? date : '')
+const getData = async (storeid: string, startDate: string, endDate: string) => {
+  const res = await GetStoreInventories("", startDate, endDate)
 
   if (!res.ok) {
     throw new Error('Fail to fetch inventory data')
@@ -107,20 +109,20 @@ const getData = async (date: string | undefined) => {
   return res.json()
 }
 
-const handleGetExcelFile = async (date: string | undefined, id: number) => {
-  const res = await excelExport(date, id)
+const handleGetExcelFile = async (from: string, to: string, id: number) => {
+  const res = await excelExport(from, to, id)
 
   if (!res.ok)
 
-    throw new Error("Fail to export excel file!")
+    throw new Error("Fail to get excel file!")
 
   return res.arrayBuffer();
 
 }
 
-const handleExcelExport = async (date: string | undefined, id: number) => {
+const handleExcelExport = async (from: string, to: string, id: number) => {
   try {
-    const data = await handleGetExcelFile(date, id)
+    const data = await handleGetExcelFile(from, to, id)
 
     const excel = new Uint8Array(data);
 
@@ -128,17 +130,19 @@ const handleExcelExport = async (date: string | undefined, id: number) => {
 
     XLSX.writeFile(workbook, "Inventory.xlsx");
   } catch (error) {
-    // throw new Error(error);
-    console.log(error)
+    throw new Error("Fail to export excel file!");
   }
 }
 
-const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
+const InventoryListTable = ({ tableData, storeLocations }: { tableData: InventoryType[], storeLocations: StoreLocationType[] }) => {
   const [isSideBarOpen, setOpen] = useState(false)
   const [data, setData] = useState(...[tableData])
   const [rowSelection, setRowSelection] = useState({})
   const [globalFilter, setGlobalFilter] = useState('')
   const [dateSelected, setDateSelected] = useState<string | undefined>(dayjs().format("DD/MM/YYYY").toString())
+  const [startDate, setStartDate] = useState<Dayjs | null>(null)
+  const [endDate, setEndDate] = useState<Dayjs>(dayjs())
+  const [selectStore, setSelectStore] = useState<StoreLocationType | null>(null)
 
   const router = useRouter()
 
@@ -294,14 +298,106 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
   return (
     <>
       <Card>
+        <CardHeader title={
+          <Typography variant='h5' color='text.primary'>
+            Filters
+          </Typography>
+        } />
         <div className='flex justify-between flex-col items-start md:flex-row md:items-center p-6 border-bs gap-4'>
-          <CustomTextField select value={table.getState().pagination.pageSize}>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DemoContainer components={['DatePicker']}>
+              <DatePicker
+                label='Từ ngày'
+                value={startDate}
+                maxDate={endDate}
+                format='DD/MM/YYYY'
+                onChange={(date: any) => {
+                  setStartDate((prev: any) => prev = date)
+                }}
+              />
+            </DemoContainer>
+            <DemoContainer components={['DatePicker']}>
+              <DatePicker
+                label='Đến ngày'
+                value={endDate}
+                minDate={startDate}
+                maxDate={dayjs()}
+                format='DD/MM/YYYY'
+                onChange={(date: any) => {
+                  setEndDate((prev: any) => prev = date)
+                }}
+              />
+            </DemoContainer>
+          </LocalizationProvider>
+          {/* <CustomTextField select
+            value={selectStore ? selectStore : ""}
+            onChange={e => {
+              e.preventDefault()
+
+              const code = e.target.value
+              const store = storeLocations.find(item => item.storeid === code)!
+
+              setSelectStore(prev => prev = store)
+            }}
+          >
+            {storeLocations.map((store, index) => (
+              <MenuItem
+                key={store.storeid}
+                value={store.storeid}
+                className='p-4'
+              >
+                {store.storeid}
+              </MenuItem>
+            ))}
+          </CustomTextField> */}
+          <Button
+            color='secondary'
+            variant='tonal'
+            startIcon={<i className='tabler-refresh' />}
+            className='is-full sm:is-auto p-4'
+            disabled={!startDate && !selectStore}
+            onClick={async (e) => {
+              e.preventDefault()
+
+              setStartDate((prev: any) => prev = null)
+              setEndDate((prev: any) => prev = dayjs())
+
+              // setSelectStore((prev: any) => prev = null)
+
+              const data = await getData("", dayjs().format("DD/MM/YYYY").toString(), endDate.format("DD/MM/YYYY").toString())
+
+              setData(prev => prev = data)
+            }}
+          >
+            Đặt lại bộ lọc
+          </Button>
+          <Button
+            variant='contained'
+            startIcon={<i className='tabler-report-search' />}
+            className='is-full sm:is-auto p-4'
+            disabled={!startDate}
+            onClick={async (e) => {
+              e.preventDefault()
+
+              const data = await getData("", (!startDate ? "" : startDate.format("DD/MM/YYYY").toString()), endDate.format("DD/MM/YYYY").toString())
+
+              setData(prev => prev = data)
+            }}>
+            Xem kết quả
+          </Button>
+        </div>
+        <div className='flex justify-between flex-col items-start md:flex-row md:items-center p-6 border-bs gap-4'>
+          <CustomTextField select
+            value={table.getState().pagination.pageSize}
+            onChange={e => table.setPageSize(Number(e.target.value))}
+            className='is-[70px]'
+          >
             <MenuItem value='10'>10</MenuItem>
             <MenuItem value='25'>25</MenuItem>
             <MenuItem value='50'>50</MenuItem>
           </CustomTextField>
           <div className='flex flex-col sm:flex-row is-full sm:is-auto items-start sm:items-center gap-4'>
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
+            {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={['DatePicker']}>
                 <DatePicker
                   label='Ngày báo tồn'
@@ -316,14 +412,14 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
                   }}
                 />
               </DemoContainer>
-            </LocalizationProvider>
+            </LocalizationProvider> */}
             <DebouncedInput
               value={globalFilter ?? ''}
               onChange={value => setGlobalFilter(String(value))}
               placeholder='Search Inventory'
               className='is-full sm:is-auto'
             />
-            <Button
+            {/* <Button
               color='secondary'
               variant='tonal'
               startIcon={<i className='tabler-upload' />}
@@ -331,15 +427,16 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
               disabled
             >
               Import
-            </Button>
+            </Button> */}
             <Button
               color='secondary'
               variant='tonal'
               startIcon={<i className='tabler-download' />}
               className='is-full sm:is-auto'
               onClick={() => {
-                handleExcelExport(dateSelected, 0)
+                handleExcelExport(startDate ? startDate.format("DD/MM/YYYY").toString() : endDate.format("DD/MM/YYYY").toString(), endDate.format("DD/MM/YYYY").toString(), 0)
               }}
+              disabled={data.length === 0}
             >
               Export
             </Button>
@@ -417,7 +514,7 @@ const InventoryListTable = ({ tableData }: { tableData: InventoryType[] }) => {
             table.setPageIndex(page)
           }}
         />
-      </Card>
+      </Card >
     </>
   )
 }

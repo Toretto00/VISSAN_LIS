@@ -1,6 +1,7 @@
 import Grid from '@mui/material/Grid'
 
 import { fetches } from '@/stores/inventory'
+import { getStoreLocation } from '@/stores/storeLocations'
 
 // Component Imports
 import InventoryList from '@/views/inventory/list/InventoryList'
@@ -18,13 +19,24 @@ const getData = async () => {
   return res.json()
 }
 
+const getStoreLocations = async () => {
+  const res = await getStoreLocation()
+
+  if (!res.ok) {
+    throw new Error('Fail to fetch store locations data')
+  }
+
+  return res.json()
+}
+
 const Inventory = async () => {
   const data = await getData()
+  const storeLocations = await getStoreLocations()
 
   return (
     <Grid container>
       <Grid item xs={12}>
-        <InventoryList inventoryData={data} />
+        <InventoryList inventoryData={data} storeLocations={storeLocations} />
       </Grid>
     </Grid>
   )

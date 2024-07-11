@@ -26,8 +26,8 @@ import { excelExport } from '@/stores/inventory'
 // import { getLocalizedUrl } from '@/utils/i18n'
 
 // HandleClick
-const handleGetExcelFile = async (date: string, id: number) => {
-    const res = await excelExport(date, id)
+const handleGetExcelFile = async (from: string, to: string, id: number) => {
+    const res = await excelExport(from, to, id)
 
     if (!res.ok)
         throw new Error("Fail to export excel file!")
@@ -35,9 +35,9 @@ const handleGetExcelFile = async (date: string, id: number) => {
     return res.arrayBuffer();
 }
 
-const handleExcelExport = async (date: string, id: number) => {
+const handleExcelExport = async (from: string, to: string, id: number) => {
     try {
-        const data = await handleGetExcelFile(date, id)
+        const data = await handleGetExcelFile(from, to, id)
 
         const excel = new Uint8Array(data);
 
@@ -70,7 +70,7 @@ const PreviewActions = ({ id }: { id: string }) => {
                     >
                         Send Invoice
                     </Button> */}
-                    <Button fullWidth color='secondary' variant='tonal' className='capitalize' onClick={() => handleExcelExport("", Number(id))} disabled>
+                    <Button fullWidth color='secondary' variant='tonal' className='capitalize' onClick={() => handleExcelExport("", "", Number(id))} disabled>
                         Download
                     </Button>
                     <div className='flex items-center gap-4'>

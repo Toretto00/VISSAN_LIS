@@ -25,7 +25,7 @@ async function useClientApi({ method = 'GET', url, body}: UseFetchOptions) {
         cache: 'no-store'
       })
     }else{
-      return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${url}`, {
+      return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api${url}`, {
         method: method,
         headers: {
           Accept: "application/json",

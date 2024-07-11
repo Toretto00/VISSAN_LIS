@@ -14,7 +14,7 @@ export default [
   {
     label: 'Inventory',
     href: '/client/inventory/list',
-    icon: 'tabler-info-circle'
+    icon: 'tabler-archive'
   },
   
   // {

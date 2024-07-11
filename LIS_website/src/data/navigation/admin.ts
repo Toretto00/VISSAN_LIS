@@ -14,7 +14,7 @@ export default [
   {
     label: 'Inventory',
     href: '/admin/inventory/list',
-    icon: 'tabler-category'
+    icon: 'tabler-archive'
   },
   {
     label: 'Category',

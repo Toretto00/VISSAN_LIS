@@ -7,10 +7,8 @@ import InventoryList from '@/views/client/inventory/list/InventoryList'
 
 import { getCurrentUser } from "@/libs/session"
 
-const getData = async () => {
-    const user = await getCurrentUser()
+const getData = async (storeid: string) => {
 
-    const storeid = user?.store.storeid
 
     const res = await getInventory(storeid)
 
@@ -22,12 +20,16 @@ const getData = async () => {
 }
 
 const Inventory = async () => {
-    const data = await getData()
+    const user = await getCurrentUser()
+
+    const storeid = user?.store.storeid
+
+    const data = await getData(storeid)
 
     return (
         <Grid container>
             <Grid item xs={12}>
-                <InventoryList inventoryData={data} />
+                <InventoryList inventoryData={data} storeid={storeid} />
             </Grid>
         </Grid>
     )

@@ -15,7 +15,6 @@ const LoadingLogo = () => {
                 alignItems: "center"
             }}>
                 <Image
-                    priority
                     src={"/logo-vissan.png"}
                     alt="loading logo"
                     width={178}

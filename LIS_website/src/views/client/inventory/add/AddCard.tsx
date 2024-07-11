@@ -143,12 +143,7 @@ const AddAction = ({ productData, storeid }: { productData: ProductType[], store
                                                 {productData.map((item, index) => (
                                                     <MenuItem key={item.id} value={item.code}>{item.name}</MenuItem>
                                                 ))}
-                                                {/* <MenuItem value='App Design'>App Design</MenuItem>
-                                                <MenuItem value='App Customization'>App Customization</MenuItem>
-                                                <MenuItem value='ABC Template'>ABC Template</MenuItem>
-                                                <MenuItem value='App Development'>App Development</MenuItem> */}
                                             </CustomTextField>
-                                            {/* <CustomTextField rows={2} fullWidth multiline defaultValue='Customization & Bug Fixes' /> */}
                                         </Grid>
                                         <Grid item lg={2} md={3} xs={12}>
                                             <Typography className='font-medium md:absolute md:-top-8'>Cost</Typography>
