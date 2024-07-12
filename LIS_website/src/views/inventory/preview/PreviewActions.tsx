@@ -43,7 +43,7 @@ const handleExcelExport = async (from: string, to: string, id: number) => {
 
         const workbook = XLSX.read(excel, { type: "array" });
 
-        XLSX.writeFile(workbook, "Inventory.xlsx");
+        XLSX.writeFile(workbook, id + "_" + "Inventory.xlsx");
     } catch (error) {
         // throw new Error(error);
         console.log(error)
@@ -54,8 +54,6 @@ const PreviewActions = ({ id }: { id: string }) => {
     // States
     const [paymentDrawerOpen, setPaymentDrawerOpen] = useState(false)
     const [sendDrawerOpen, setSendDrawerOpen] = useState(false)
-
-
 
     return (
         <>
@@ -76,13 +74,20 @@ const PreviewActions = ({ id }: { id: string }) => {
                     <div className='flex items-center gap-4'>
                         <Button
                             fullWidth
-                            target='_blank'
-                            component={Link}
+
+                            // target='_blank'
+                            // component={Link}
                             color='secondary'
                             variant='tonal'
                             className='capitalize'
-                            href={`/apps/invoice/print/${id}`}
-                            disabled
+
+                            // href={`/apps/invoice/print/${id}`}
+                            // disabled
+                            onClick={() => {
+                                setTimeout(() => {
+                                    window.print()
+                                }, 100)
+                            }}
                         >
                             Print
                         </Button>

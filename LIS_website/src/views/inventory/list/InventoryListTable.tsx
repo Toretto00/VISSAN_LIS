@@ -11,6 +11,10 @@ import type { InventoryType } from '@/types/inventoryTypes'
 import type { Dayjs } from 'dayjs';
 import type { StoreLocationType } from '@/types/storeLocationTypes';
 import type { TextFieldProps } from '@mui/material/TextField'
+import type {
+  ColumnDef,
+  FilterFn,
+} from '@tanstack/react-table'
 
 // Componet Imports
 import CustomTextField from '@/@core/components/mui/TextField'
@@ -40,11 +44,6 @@ import { rankItem } from '@tanstack/match-sorter-utils'
 import classnames from 'classnames'
 import dayjs from 'dayjs'
 import * as XLSX from "xlsx";
-
-import type {
-  ColumnDef,
-  FilterFn,
-} from '@tanstack/react-table'
 
 // Style Imports
 import tableStyles from '@core/styles/table.module.css'
@@ -128,7 +127,7 @@ const handleExcelExport = async (from: string, to: string, id: number) => {
 
     const workbook = XLSX.read(excel, { type: "array" });
 
-    XLSX.writeFile(workbook, "Inventory.xlsx");
+    XLSX.writeFile(workbook, (from !== dayjs().format("DD/MM/YYYY").toString() ? from + "_" : "") + (to !== "" ? to + "_" : "") + (id.toString() !== "0" ? id.toString() + "_" : "") + "Inventory.xlsx");
   } catch (error) {
     throw new Error("Fail to export excel file!");
   }

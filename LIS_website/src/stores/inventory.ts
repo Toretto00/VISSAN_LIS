@@ -21,8 +21,8 @@ export async function GetStoreInventories(storeid: string, startDate: string, en
   return await UseClientApi({url: '/Inventories/StoreInventories?' +(storeid===""?"":`storeid=`+storeid) + (startDate===""?"":`&from=${startDate}`)+ (endDate===""?"":`&to=${endDate}`) })
 }
 
-export async function excelExport(from: string, to: string, id: number) {
-  return await UseClientApi({method:"POST", url: `/Inventories/ExportExcel?`+(from===""?"":`from=`+from) + (to===""?"":`&to=${to}`)+ (id===0?"&id=0":`id=${id}`) })
+export async function excelExport(from: string, to: string, id: number) {  
+  return await UseClientApi({method:"POST", url: `/Inventories/ExportExcel?`+(from===""?"":`from=`+from) + (to===""?"":`&to=${to}`)+ (id===0?"&id=0":`id=${id}`),body:'' })
 }
 
 export async function deleteInventoryItem(data: any) {

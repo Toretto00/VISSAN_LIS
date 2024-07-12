@@ -60,7 +60,7 @@ const EditActions = ({ id }: { id: string }) => {
                             >
                                 Preview
                             </Button>
-                            <Button fullWidth color='secondary' variant='tonal' className='capitalize'>
+                            <Button fullWidth color='secondary' variant='tonal' className='capitalize' disabled>
                                 Save
                             </Button>
                         </div>

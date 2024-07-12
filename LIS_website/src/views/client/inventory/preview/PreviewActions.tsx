@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 // Next Imports
 import Link from 'next/link'
@@ -55,8 +55,6 @@ const PreviewActions = ({ id }: { id: string }) => {
     const [paymentDrawerOpen, setPaymentDrawerOpen] = useState(false)
     const [sendDrawerOpen, setSendDrawerOpen] = useState(false)
 
-
-
     return (
         <>
             <Card>
@@ -76,13 +74,20 @@ const PreviewActions = ({ id }: { id: string }) => {
                     <div className='flex items-center gap-4'>
                         <Button
                             fullWidth
-                            target='_blank'
-                            component={Link}
+
+                            // target='_blank'
+                            // component={Link}
                             color='secondary'
                             variant='tonal'
                             className='capitalize'
-                            href={`/apps/invoice/print/${id}`}
-                            disabled
+
+                            // href={`/apps/invoice/print/${id}`}
+                            // disabled
+                            onClick={() => {
+                                setTimeout(() => {
+                                    window.print()
+                                }, 100)
+                            }}
                         >
                             Print
                         </Button>
@@ -93,7 +98,7 @@ const PreviewActions = ({ id }: { id: string }) => {
                             variant='tonal'
                             className='capitalize'
                             disabled
-                            href={`/admin/inventory/edit/${id}`}
+                            href={`/client/inventory/edit/${id}`}
                         >
                             Edit
                         </Button>
