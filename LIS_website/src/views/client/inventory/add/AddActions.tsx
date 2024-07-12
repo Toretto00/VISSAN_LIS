@@ -58,6 +58,7 @@ const AddActions = () => {
             const res = await newInventory(JSON.stringify(inventory), session?.user.store.storeid)
 
             if (!res.ok) {
+
                 throw new Error("Fail to post new inventory!")
             }
 

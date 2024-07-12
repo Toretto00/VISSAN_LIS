@@ -8,11 +8,18 @@ import InventoryList from '@/views/inventory/list/InventoryList'
 
 // Third-party Imports
 import dayjs from 'dayjs'
+import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
 
 const getData = async () => {
   const res = await fetches(dayjs().format('DD/MM/YYYY').toString())
 
   if (!res.ok) {
+    if (res.status === 401) {
+      cookies().delete("next-auth.session-token")
+      redirect("/login")
+    }
+
     throw new Error('Fail to fetch inventory data')
   }
 

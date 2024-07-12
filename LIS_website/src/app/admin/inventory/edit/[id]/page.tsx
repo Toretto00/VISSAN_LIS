@@ -1,5 +1,6 @@
 // Next Imports
 import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
 
 // MUI Imports
 import Grid from '@mui/material/Grid'
@@ -26,6 +27,11 @@ const getData = async (id: number) => {
     const res = await InventoryDetail(id);
 
     if (!res.ok) {
+        if (res.status === 401) {
+            cookies().delete("next-auth.session-token")
+            redirect("/login")
+        }
+
         throw new Error('Failed to fetch inventory detail data')
     }
 

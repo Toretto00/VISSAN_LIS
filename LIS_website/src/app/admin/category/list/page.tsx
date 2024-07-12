@@ -6,11 +6,19 @@ import CategoryList from '@/views/category/list'
 
 import { fetches } from "@/stores/category"
 
+import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
+
 const getData = async () => {
   // Vars
   const res = await fetches({})
 
   if (!res.ok) {
+    if (res.status === 401) {
+      cookies().delete("next-auth.session-token")
+      redirect("/login")
+    }
+
     throw new Error('Failed to fetch category data')
   }
 

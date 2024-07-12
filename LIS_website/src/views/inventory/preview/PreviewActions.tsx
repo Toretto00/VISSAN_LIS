@@ -50,7 +50,7 @@ const handleExcelExport = async (from: string, to: string, id: number) => {
     }
 }
 
-const PreviewActions = ({ id }: { id: string }) => {
+const PreviewActions = ({ id, handlePrint }: { id: string, handlePrint: () => void }) => {
     // States
     const [paymentDrawerOpen, setPaymentDrawerOpen] = useState(false)
     const [sendDrawerOpen, setSendDrawerOpen] = useState(false)
@@ -83,11 +83,7 @@ const PreviewActions = ({ id }: { id: string }) => {
 
                             // href={`/apps/invoice/print/${id}`}
                             // disabled
-                            onClick={() => {
-                                setTimeout(() => {
-                                    window.print()
-                                }, 100)
-                            }}
+                            onClick={handlePrint}
                         >
                             Print
                         </Button>

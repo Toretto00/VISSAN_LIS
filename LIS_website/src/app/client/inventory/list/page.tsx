@@ -7,12 +7,18 @@ import InventoryList from '@/views/client/inventory/list/InventoryList'
 
 import { getCurrentUser } from "@/libs/session"
 
+import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
+
 const getData = async (storeid: string) => {
-
-
     const res = await getInventory(storeid)
 
     if (!res.ok) {
+        if (res.status === 401) {
+            cookies().delete("next-auth.session-token")
+            redirect("/login")
+        }
+
         throw new Error('Fail to fetch client inventory data')
     }
 

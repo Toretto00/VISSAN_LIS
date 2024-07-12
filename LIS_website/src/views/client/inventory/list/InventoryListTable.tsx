@@ -4,7 +4,7 @@
 import { useState, useMemo, useEffect } from 'react'
 
 // Next Imports
-import { useRouter } from "next/navigation";
+import { useRouter, redirect } from "next/navigation";
 import Link from 'next/link'
 
 // Type Imports
@@ -108,32 +108,6 @@ const getData = async (storeid: string, startDate: string, endDate: string) => {
   return res.json()
 }
 
-// const handleGetExcelFile = async (date: string | undefined, id: number) => {
-//   const res = await excelExport(date, id)
-
-//   if (!res.ok)
-
-//     throw new Error("Fail to export excel file!")
-
-//   return res.arrayBuffer();
-
-// }
-
-// const handleExcelExport = async (date: string | undefined, id: number) => {
-//   try {
-//     const data = await handleGetExcelFile(date, id)
-
-//     const excel = new Uint8Array(data);
-
-//     const workbook = XLSX.read(excel, { type: "array" });
-
-//     XLSX.writeFile(workbook, "Inventory.xlsx");
-//   } catch (error) {
-//     // throw new Error(error);
-//     console.log(error)
-//   }
-// }
-
 const InventoryListTable = ({ tableData, storeid }: { tableData: InventoryType[], storeid: string }) => {
 
   // States
@@ -145,23 +119,6 @@ const InventoryListTable = ({ tableData, storeid }: { tableData: InventoryType[]
 
   // Hooks
   const router = useRouter()
-
-  const destroyEvent = async (id: number) => {
-    const list: any[] = [];
-
-    list.push(id);
-
-    const res = await deleteInventoryItem(JSON.stringify(list));
-
-    if (!res.ok) {
-      throw new Error("Fail to delete inventory item!")
-    }
-
-    // router.refresh()
-    window.location.reload()
-
-    return res.json()
-  }
 
   const columns = useMemo<ColumnDef<InventoryTypeWithAction, any>[]>(
     () => [
@@ -199,37 +156,6 @@ const InventoryListTable = ({ tableData, storeid }: { tableData: InventoryType[]
           </div>
         )
       }),
-
-      // columnHelper.accessor('location.storeid', {
-      //   header: 'Mã cửa hàng',
-      //   cell: ({ row }) => (
-      //     <div className='flex items-center'>
-      //       <Typography className='capitalize' color='text.primary'>
-      //         {row.original.location.storeid}
-      //       </Typography>
-      //     </div>
-      //   )
-      // }),
-      // columnHelper.accessor('location.retailname', {
-      //   header: 'Tên cửa hàng',
-      //   cell: ({ row }) => (
-      //     <div className='flex items-center'>
-      //       <Typography className='capitalize' color='text.primary'>
-      //         {row.original.location.retailname}
-      //       </Typography>
-      //     </div>
-      //   )
-      // }),
-      // columnHelper.accessor('location.retailsystem', {
-      //   header: 'Tên hệ thống',
-      //   cell: ({ row }) => (
-      //     <div className='flex items-center'>
-      //       <Typography className='capitalize' color='text.primary'>
-      //         {row.original.location.retailsystem}
-      //       </Typography>
-      //     </div>
-      //   )
-      // }),
       columnHelper.accessor('created', {
         header: 'Ngày báo tồn kho',
         cell: ({ row }) => (
@@ -249,16 +175,6 @@ const InventoryListTable = ({ tableData, storeid }: { tableData: InventoryType[]
                 <i className='tabler-eye text-[22px] text-textSecondary' />
               </Link>
             </IconButton>
-            {/* <IconButton >
-              <Link href={`edit/${row.original.id}`} className='flex'>
-                <i className='tabler-edit text-[22px] text-textSecondary' />
-              </Link>
-            </IconButton> */}
-            {/* <IconButton
-              onClick={() => destroyEvent(row.original.id)}
-            >
-              <i className='tabler-trash text-[22px] text-textSecondary' />
-            </IconButton> */}
           </div>
         ),
         enableSorting: false
@@ -382,26 +298,6 @@ const InventoryListTable = ({ tableData, storeid }: { tableData: InventoryType[]
               placeholder='Tìm'
               className='is-full sm:is-auto'
             />
-            {/* <Button
-              color='secondary'
-              variant='tonal'
-              startIcon={<i className='tabler-upload' />}
-              className='is-full sm:is-auto'
-              disabled
-            >
-              Import
-            </Button>
-            <Button
-              color='secondary'
-              variant='tonal'
-              startIcon={<i className='tabler-download' />}
-              className='is-full sm:is-auto'
-              onClick={() => {
-                handleExcelExport(dateSelected, 0)
-              }}
-            >
-              Export
-            </Button> */}
             <Button
               variant='contained'
               startIcon={<i className='tabler-plus' />}
