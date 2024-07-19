@@ -9,13 +9,17 @@ import { getCurrentUser } from "@/libs/session"
 
 import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
+import { signOut } from 'next-auth/react'
 
 const getData = async (storeid: string) => {
     const res = await getInventory(storeid)
 
     if (!res.ok) {
         if (res.status === 401) {
-            cookies().delete("next-auth.session-token")
+            // Sign out from the app
+            await signOut({ redirect: false })
+
+            // cookies().delete("next-auth.session-token")
             redirect("/login")
         }
 

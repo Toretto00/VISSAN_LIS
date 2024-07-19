@@ -72,7 +72,7 @@ const UserDropdown = () => {
     <>
       <Avatar
         ref={anchorRef}
-        alt={session?.user?.name || ''}
+        alt={session?.user?.name.toString() || ''}
         src={session?.user?.image || ''}
         onClick={handleDropdownOpen}
         className='cursor-pointer bs-[38px] is-[38px]'

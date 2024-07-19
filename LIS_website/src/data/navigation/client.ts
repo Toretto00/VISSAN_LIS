@@ -5,14 +5,13 @@ export default [
     href: '/client/dashboard',
     icon: 'tabler-smart-home'
   },
-
-  // {
-  //   label: 'Invoice',
-  //   href: '/client/invoice',
-  //   icon: 'tabler-info-circle'
-  // },
   {
-    label: 'Inventory',
+    label: 'Đặt hàng',
+    href: '/client/invoice/list',
+    icon: 'tabler-file-invoice'
+  },
+  {
+    label: 'Báo tồn kho',
     href: '/client/inventory/list',
     icon: 'tabler-archive'
   },

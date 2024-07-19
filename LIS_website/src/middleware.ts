@@ -16,6 +16,8 @@ import { ensurePrefix, withoutSuffix } from '@/utils/string'
 
 import { getSession } from 'next-auth/react'
 
+// import { DateTime } from 'luxon';
+
 // const getLocale = (request: NextRequest): string | undefined => {
 //   // Try to get locale from URL
 //   const urlLocale = i18n.locales.find(locale => request.nextUrl.pathname.startsWith(`/${locale}`))
@@ -77,15 +79,14 @@ export default withAuth(
     const isUserLoggedIn = !!token
 
     // Check if the time is expired
-    // const currentdate = new Date();
- 
-    // const session = await getSession()
+    // const now = new Date()
+    // let expire = new Date()
 
-    // if(session && session.expires <= currentdate.toString()){
+    // if(request.nextauth.token?.accessTokenExpires !== undefined) {
+    //   expire = new Date(request.nextauth.token?.accessTokenExpires)
+    // }
 
-    //   return NextResponse.redirect(new URL('/login', request.url))
-      
-    // }    
+    // const isTokenExpired = request.nextauth.token?.accessTokenExpires && expire < now
 
     // Guest routes (Routes that can be accessed by guest users who are not logged in)
     const guestRoutes = ['login', 'register', 'forgot-password']
@@ -97,7 +98,7 @@ export default withAuth(
     const privateRoute = ![...guestRoutes, ...sharedRoutes].some(route => pathname.endsWith(route))
 
     // If the user is not logged in and is trying to access a private route, redirect to the login page
-    if (!isUserLoggedIn && privateRoute ) {
+    if ((!isUserLoggedIn && privateRoute)) {
       let redirectUrl = '/login'
 
       if (!(pathname === '/')) {
