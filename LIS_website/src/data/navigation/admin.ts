@@ -5,12 +5,11 @@ export default [
     href: '/admin/dashboard',
     icon: 'tabler-smart-home'
   },
-  
-  // {
-  //   label: 'Invoice',
-  //   href: '/admin/invoice',
-  //   icon: 'tabler-info-circle'
-  // },
+  {
+    label: 'Invoice',
+    href: '/admin/invoice/list',
+    icon: 'tabler-file-invoice'
+  },
   {
     label: 'Inventory',
     href: '/admin/inventory/list',

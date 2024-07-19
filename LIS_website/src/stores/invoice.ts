@@ -29,9 +29,13 @@ export async function getInvoiceDetail(id: number) {
 //   return await UseClientApi({method:"POST", url: `/Inventories/ExportExcel?`+(from===""?"":`from=`+from) + (to===""?"":`&to=${to}`)+ (id===0?"&id=0":`id=${id}`),body:'' })
 // }
 
-// export async function deleteInventoryItem(data: any) {
-//   return await UseClientApi({method:"DELETE", url: `/Inventories`, body: data })
-// }
+export async function putInvoice(id: number, data: any) {
+  return await UseClientApi({method:"PUT", url: `/Invoices/${id}`, body: data })
+}
+
+export async function deleteInvoice(id: number) {
+  return await UseClientApi({method:"DELETE", url: `/Invoices/${id}`, body: "" })
+}
 
 export async function postInvoice(data: any, user: number, storeid: string ) {
   return await UseClientApi({method:"POST", url: `/Invoices?user=${user}&storeid=${storeid}`, body: data })
