@@ -1,0 +1,64 @@
+name: dockercompose703899633535216259
+services:
+  lis_backend:
+    build:
+      context: D:\Project\VISSAN_LIS\LIS_backend\LIS_backend
+      dockerfile: Dockerfile
+    container_name: lisbackend
+    depends_on:
+      lis_db:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      DB_HOST: lis_db
+      DB_PORT: "1433"
+    image: lisbackend
+    networks:
+      lis: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: C:\Users\phanc\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\phanc\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  lis_db:
+    container_name: db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "12345678"
+    expose:
+      - "1433"
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      lis: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+    restart: always
+networks:
+  lis:
+    name: dockercompose703899633535216259_lis

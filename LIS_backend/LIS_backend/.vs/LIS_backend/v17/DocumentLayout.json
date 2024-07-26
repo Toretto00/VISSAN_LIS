@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\invoicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\invoicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85425632-2F26-4534-9B45-3446E7DC4A42}|docker-compose.dcproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{85425632-2F26-4534-9B45-3446E7DC4A42}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\models\\user_location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\models\\user_location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|d:\\project\\vissan_lis\\lis_backend\\lis_backend\\lis_backend\\models\\invoice_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F499DE-82B3-4B66-97AD-81AF26D7EFBF}|LIS_backend\\LIS_backend.csproj|solutionrelative:lis_backend\\models\\invoice_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,68 +34,100 @@
       "DocumentGroups": [
         {
           "DockedWidth": 391,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 428,
+          "SelectedChildIndex": 1,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "User_Location.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\User_Location.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Models\\User_Location.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\User_Location.cs",
-              "RelativeToolTip": "LIS_backend\\Models\\User_Location.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "LIS_backend\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAIwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T02:47:06.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Invoice.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Invoice.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Models\\Invoice.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Invoice.cs",
-              "RelativeToolTip": "LIS_backend\\Models\\Invoice.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T08:56:23.642Z",
+              "WhenOpened": "2024-07-25T09:22:33.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InvoicesController.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InvoicesController.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Controllers\\InvoicesController.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InvoicesController.cs",
-              "RelativeToolTip": "LIS_backend\\Controllers\\InvoicesController.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAcwHcAAAAuAAAA",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\appsettings.json",
+              "RelativeDocumentMoniker": "LIS_backend\\appsettings.json",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\appsettings.json",
+              "RelativeToolTip": "LIS_backend\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAABwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-25T09:08:45.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAACJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-07-25T03:38:07.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Program.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Program.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Program.cs",
+              "RelativeToolTip": "LIS_backend\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAFUAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T08:54:44.394Z",
+              "WhenOpened": "2024-07-25T02:42:03.953Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 315,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 202,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InventoriesController.cs",
-              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
-              "RelativeDocumentMoniker": "LIS_backend\\Controllers\\InventoriesController.cs",
-              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Controllers\\InventoriesController.cs",
-              "RelativeToolTip": "LIS_backend\\Controllers\\InventoriesController.cs",
-              "ViewState": "AQIAAOMAAAAAAAAAAAAuwPoAAAB+AAAA",
+              "DocumentIndex": 5,
+              "Title": "Invoice_Product.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Invoice_Product.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Models\\Invoice_Product.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Invoice_Product.cs",
+              "RelativeToolTip": "LIS_backend\\Models\\Invoice_Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T02:43:10.726Z",
+              "WhenOpened": "2024-07-18T01:16:53.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Invoice.cs",
+              "RelativeDocumentMoniker": "LIS_backend\\Models\\Invoice.cs",
+              "ToolTip": "D:\\Project\\VISSAN_LIS\\LIS_backend\\LIS_backend\\LIS_backend\\Models\\Invoice.cs",
+              "RelativeToolTip": "LIS_backend\\Models\\Invoice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T01:15:57.402Z",
               "EditorCaption": ""
             }
           ]

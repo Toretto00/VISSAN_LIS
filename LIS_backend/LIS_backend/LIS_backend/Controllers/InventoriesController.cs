@@ -14,6 +14,9 @@ using System.Diagnostics.Tracing;
 using ClosedXML.Extensions;
 using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using Microsoft.AspNetCore.Authorization;
+using System.Globalization;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Humanizer;
 
 namespace LIS_backend.Controllers
 {
@@ -33,53 +36,146 @@ namespace LIS_backend.Controllers
         [HttpGet]
         public List<Inventory> GetInventories(string date)
         {
-            var inventory = _context.Inventories.Where(x => x.created.IndexOf(date) != -1).Include(x => x.location).ToList();
+            var inventory = _context.Inventories.Where(x => x.created.IndexOf(date) != -1).OrderByDescending(x => x.Id).Include(x => x.location).ToList();
 
             return inventory;
         }
         [HttpGet("StoreInventories")]
-        public List<Inventory> GetStoreInventories(string storeid, string from, string to )
+        public List<Inventory> GetStoreInventories(string storeid, string from, string to)
         {
             var inventory = new List<Inventory>();
-            if (from == null && to == null)
+            if (storeid != null)
             {
-                return inventory = _context.Inventories.Where(x => x.location.storeid == storeid).ToList();
-            }
-            else if (from != null && to == null)
+                if (from == null && to == null)
+                {
+                    return inventory = _context.Inventories.Where(x => x.location.storeid == storeid).OrderByDescending(x => x.Id).Include(x => x.location).ToList();
+                }
+                else if (from != null && to == null)
+                {
+                    inventory = _context.Inventories
+                        .Where(x => x.location.storeid == storeid).OrderByDescending(x => x.Id)
+                        .Include(x => x.location).ToList();
+
+                    var result = new List<Inventory>();
+
+                    for (int i = 0; i < inventory.Count; i++)
+                    {
+                        if (CompareDates(inventory[i].created, from) >= 0)
+                            result.Add(inventory[i]);
+                    }
+
+                    return result;
+                }
+                else if (from == null && to != null)
+                {
+                    inventory = _context.Inventories
+                        .Where(x => x.location.storeid == storeid).OrderByDescending(x => x.Id)
+                        .Include(x => x.location).ToList();
+
+                    var result = new List<Inventory>();
+
+                    for (int i = 0; i < inventory.Count; i++)
+                    {
+                        if (CompareDates(inventory[i].created, to) <= 0)
+                            result.Add(inventory[i]);
+                    }
+
+                    return result;
+                }
+                else if (from != null && to != null) {
+                    inventory = _context.Inventories
+                        .Where(x => x.location.storeid == storeid).OrderByDescending(x => x.Id)
+                        .ToList();
+
+                    var result = new List<Inventory>();
+
+                    for (int i = 0; i < inventory.Count; i++)
+                    {
+                        if (CompareDates(inventory[i].created, from) >= 0 && CompareDates(inventory[i].created, to) <= 0)
+                            result.Add(inventory[i]);
+                    }
+
+                    return result;
+                }
+            } else
             {
-                return inventory = _context.Inventories.Where(x => x.location.storeid == storeid).Where(x => String.Compare(x.created, from) >= 0).ToList();
-            }
-            else if (from == null && to != null)
-            {
-                return inventory = _context.Inventories.Where(x => x.location.storeid == storeid).Where(x => String.Compare(x.created, to) <= 0).ToList();
-            }
-            else if (from != null && to != null) {
-                return inventory = _context.Inventories
-                    .Where(x => x.location.storeid == storeid)
-                    .Where(x => String.Compare(x.created, from) >= 0)
-                    .Where(x => String.Compare(x.created, to) <= 0).ToList();
+                if (from == null && to == null)
+                {
+                    return inventory = _context.Inventories.Include(x => x.location).OrderByDescending(x => x.Id).ToList();
+                }
+                else if (from != null && to == null)
+                {
+                    inventory = _context.Inventories
+                        .Include(x => x.location).OrderByDescending(x => x.Id).ToList();
+
+                    var result = new List<Inventory>();
+
+                    for (int i = 0; i < inventory.Count; i++)
+                    {
+                        if (CompareDates(inventory[i].created, from) >= 0)
+                            result.Add(inventory[i]);
+                    }
+
+                    return result;
+                }
+                else if (from == null && to != null)
+                {
+                    inventory = _context.Inventories
+                        .Include(x => x.location).OrderByDescending(x => x.Id).ToList();
+
+                    var result = new List<Inventory>();
+
+                    for (int i = 0; i < inventory.Count; i++)
+                    {
+                        if (CompareDates(inventory[i].created, to) <= 0)
+                            result.Add(inventory[i]);
+                    }
+
+                    return result;
+                }
+                else if (from != null && to != null)
+                {
+                    inventory = _context.Inventories.Include(x => x.location).OrderByDescending(x => x.Id).ToList();
+
+                    var result = new List<Inventory>();
+
+                    for(int i = 0; i< inventory.Count; i++)
+                    {
+                        if (CompareDates(inventory[i].created,from) >= 0 && CompareDates(inventory[i].created, to) <= 0)
+                            result.Add(inventory[i]);
+                    }
+
+                    return result;
+                }
             }
 
             return inventory;
         }
         [HttpPost("ExportExcel")]
-        public ActionResult ExportExcel(string date)
+        public ActionResult ExportExcel(string from, string to, int id)
         {
-            var data = GetData(date);
-            using (XLWorkbook wb = new XLWorkbook())
+            try
             {
-                var sheet1 = wb.AddWorksheet(data, "Inventory");
-                sheet1.Row(1).CellsUsed().Style.Fill.BackgroundColor = XLColor.Green;
-                using (MemoryStream ms = new MemoryStream())
+                var data = GetData(from, to, id);
+
+                using (XLWorkbook wb = new XLWorkbook())
                 {
-                    wb.SaveAs(ms);
-                    return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Inventory.xlsx");
+                    var sheet1 = wb.AddWorksheet(data, "Inventory");
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        wb.SaveAs(ms);
+                        return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Inventory.xlsx");
+                    }
                 }
-            }
+
+            } catch
+            {
+                return BadRequest("fail to get data!");
+            }            
         }
 
         [NonAction]
-        private DataTable GetData(string date) 
+        private DataTable GetData(string from, string to, int id) 
         {
             DataTable dt = new DataTable();
             dt.TableName = "Inventory";
@@ -93,30 +189,47 @@ namespace LIS_backend.Controllers
 
             var inventory = new List<Inventory>();
 
-            //if (id.Count > 0)
-            //{
-            //    for (int k = 0; k < id.Count; k++)
-            //    {
-            //        inventory.Add(_context.Inventories
-            //    .Where(x => x.created.IndexOf(date) != -1 && x.Id == id[k])
-            //    .Include(x => x.location).FirstOrDefault());
-            //    }
-            //}
-            //else
-            //{
-            //    inventory = _context.Inventories
-            //    .Where(x => x.created.IndexOf(date) != -1)
-            //    .Include(x => x.location).ToList();
-            //}
+            var result = new List<Inventory>();
 
-            inventory = _context.Inventories
-                .Where(x => x.created.IndexOf(date) != -1)
-                .Include(x => x.location).ToList();
+            if (id != 0)
+            {
+                result = _context.Inventories
+                    .Where(x => x.Id == id).Include(x=>x.location).ToList();
+            }
+            else
+            {
+                inventory = _context.Inventories.Include(x=>x.location).ToList();
 
-            for (int i = 0; i < inventory.Count(); i++)
+                //if (from != null && to == null)
+                //{                   
+                //    for (int i = 0; i < inventory.Count; i++)
+                //    {
+                //        if (CompareDates(inventory[i].created, from) >= 0)
+                //            result.Add(inventory[i]);
+                //    }
+                //}
+                //else if (from == null && to != null)
+                //{
+                //    for (int i = 0; i < inventory.Count; i++)
+                //    {
+                //        if (CompareDates(inventory[i].created, to) <= 0)
+                //            result.Add(inventory[i]);
+                //    }
+                //}
+                //else if (from != null && to != null)
+                //{
+                for (int i = 0; i < inventory.Count; i++)
+                {
+                    if (CompareDates(inventory[i].created, from) >= 0 && CompareDates(inventory[i].created, to) <= 0)
+                        result.Add(inventory[i]);
+                }
+                //}
+            }
+
+            for (int i = 0; i < result.Count; i++)
             {
                 var products = _context.Inventory_Products
-                    .Where(x => x.inventory.Id == inventory[i].Id)
+                    .Where(x => x.inventory.Id == result[i].Id)
                     .Include(x => x.product).ToList();
                                 
                 for(int j=0;j < products.Count; j++)
@@ -124,13 +237,13 @@ namespace LIS_backend.Controllers
                     if (products[j].product == null)
                         continue;
 
-                    dt.Rows.Add(inventory[i].location.storeid,
-                        inventory[i].location.retailname,
-                        inventory[i].location.retailsystem,
+                    dt.Rows.Add(result[i].location.storeid,
+                        result[i].location.retailname,
+                        result[i].location.retailsystem,
                         products[j].product.code,
                         products[j].product.name,
                         products[j].quantity,
-                        inventory[i].created);
+                        result[i].created);
                 }
             }
 
@@ -159,7 +272,7 @@ namespace LIS_backend.Controllers
                 return NotFound();
             }
 
-            return Ok(new { store = inventory.location, products = products, created = inventory.created, updated = inventory.updated});
+            return Ok(new {id = inventory.Id, store = inventory.location, products = products, created = inventory.created, updated = inventory.updated});
         }
 
         // PUT: api/Inventories/5
@@ -295,6 +408,27 @@ namespace LIS_backend.Controllers
         private bool InventoryExists(int id)
         {
             return _context.Inventories.Any(e => e.Id == id);
+        }
+        public static int CompareDates(string date1, string date2)
+        {
+            // Parse the date strings into DateTime objects
+            DateTime parsedDate1 = ParseDate(date1);
+            DateTime parsedDate2 = ParseDate(date2);
+
+            // Compare the DateTime objects
+            return DateTime.Compare(parsedDate1, parsedDate2);
+        }
+
+        private static DateTime ParseDate(string date)
+        {   
+            // Split the date string into day, month, year
+            string[] parts = date.Split('/');
+            int day = int.Parse(parts[0].Trim());
+            int month = int.Parse(parts[1].Trim());
+            int year = int.Parse(parts[2].Trim());
+
+            // Create a DateTime object
+            return new DateTime(year, month, day);
         }
     }
 }

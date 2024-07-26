@@ -51,16 +51,20 @@ namespace LIS_backend.Controllers
 
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("ChangePassword")]
         [Authorize]
-        public async Task<IActionResult> PutUser(int id, User user)
+        public async Task<IActionResult> PutUser(string username, string newPassword)
         {
-            if (id != user.id)
+            var user = _context.Users.Where(x => x.username == username).FirstOrDefault();
+
+            if (user == null)
             {
-                return BadRequest();
+                return BadRequest("User invalid");
             }
 
-            _context.Entry(user).State = EntityState.Modified;
+            user.password = newPassword;
+
+            //_context.Entry(user).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +72,7 @@ namespace LIS_backend.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(id))
+                if (!UserExists(username))
                 {
                     return NotFound();
                 }
@@ -102,7 +106,7 @@ namespace LIS_backend.Controllers
 
             var token = GenerateJWTToken(newUser);
 
-            return Ok(new { id = newUser.id, role = newUser.role, store = store.Result.storeLocation.storeid, token = token });
+            return Ok(new { id = newUser.id, role = newUser.role, store = store.Result.storeLocation, token = token, expire = DateTime.UtcNow.AddMinutes(30) });
         }
         [HttpPost]
         [Route("Register")]
@@ -131,9 +135,9 @@ namespace LIS_backend.Controllers
             return NoContent();
         }
 
-        private bool UserExists(int id)
+        private bool UserExists(string username)
         {
-            return _context.Users.Any(e => e.id == id);
+            return _context.Users.Any(e => e.username == username);
         }
         private string GenerateJWTToken(User user)
         {

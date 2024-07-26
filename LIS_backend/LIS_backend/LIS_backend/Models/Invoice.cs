@@ -9,6 +9,7 @@ namespace LIS_backend.Models
         public string date { get; set; }
         public string status { get; set; }
         public User user { get; set; }
+        public StoreLocation location { get; set; }
         public string created { get; set; }
         public string updated { get; set; }
     }

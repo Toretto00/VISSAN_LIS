@@ -1007,3 +1007,46 @@ GO
 COMMIT;
 GO
 
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240718014123_update-invoice-table'
+)
+BEGIN
+    ALTER TABLE [Invoices] ADD [locationid] int NULL;
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240718014123_update-invoice-table'
+)
+BEGIN
+    CREATE INDEX [IX_Invoices_locationid] ON [Invoices] ([locationid]);
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240718014123_update-invoice-table'
+)
+BEGIN
+    ALTER TABLE [Invoices] ADD CONSTRAINT [FK_Invoices_StoreLocation_locationid] FOREIGN KEY ([locationid]) REFERENCES [StoreLocation] ([id]);
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20240718014123_update-invoice-table'
+)
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20240718014123_update-invoice-table', N'8.0.6');
+END;
+GO
+
+COMMIT;
+GO
+

@@ -10,34 +10,34 @@ import Preview from '@views/inventory/preview/PreviewPage'
 import { InventoryDetail } from '@/stores/inventory'
 
 const getData = async (id: number) => {
-    // Vars
-    const res = await InventoryDetail(id);
+  // Vars
+  const res = await InventoryDetail(id)
 
-    if (!res.ok) {
-        if (res.status === 401) {
-            cookies().delete("next-auth.session-token")
-            redirect("/login")
-        }
-
-        throw new Error('Failed to fetch inventory detail data')
+  if (!res.ok) {
+    if (res.status === 401) {
+      cookies().delete('next-auth.session-token')
+      redirect('/login')
     }
 
-    return res.json()
+    throw new Error('Failed to fetch inventory detail data')
+  }
+
+  return res.json()
 }
 
-const PreviewPage = async ({ params }: { params: { id: string, date: string } }) => {
-    // Vars
-    const data = await getData(Number(params.id))
+const PreviewPage = async ({ params }: { params: { id: string; date: string } }) => {
+  // Vars
+  const data = await getData(Number(params.id))
 
-    // const filteredData = data.filter((invoice: InventoryDetailType) => invoice.id === params.id)[0]
+  // const filteredData = data.filter((invoice: InventoryDetailType) => invoice.id === params.id)[0]
 
-    if (!data) {
-        redirect('/not-found')
-    }
+  if (!data) {
+    redirect('/not-found')
+  }
 
-    return <Preview inventoryData={data} id={params.id} />
+  return <Preview inventoryData={data} id={params.id} />
 }
 
 export default PreviewPage
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'

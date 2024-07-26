@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("https://localhost:3000", "https://10.0.30.54:3000", "https://vissan.vercel.app")
+            policy.WithOrigins("https://localhost:3000", "http://localhost:3000", "https://vissan-git-custom-layout-toretto00s-projects.vercel.app", "https://vissan.vercel.app", "https://lisbackend20240618115905.azurewebsites.net")
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowAnyOrigin();
@@ -79,6 +79,12 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    //using (var scope = app.Services.CreateScope())
+    //{
+    //    var db = scope.ServiceProvider.GetRequiredService<LISContext>();
+    //    db.Database.Migrate();
+    //}
+
     app.UseSwagger();
     app.UseSwaggerUI();
 }

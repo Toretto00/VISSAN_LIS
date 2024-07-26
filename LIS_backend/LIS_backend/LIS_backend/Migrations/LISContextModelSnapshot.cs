@@ -111,6 +111,9 @@ namespace LIS_backend.Migrations
                     b.Property<string>("date")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("locationid")
+                        .HasColumnType("int");
+
                     b.Property<string>("status")
                         .HasColumnType("nvarchar(max)");
 
@@ -121,6 +124,8 @@ namespace LIS_backend.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("locationid");
 
                     b.HasIndex("userid");
 
@@ -297,9 +302,15 @@ namespace LIS_backend.Migrations
 
             modelBuilder.Entity("LIS_backend.Models.Invoice", b =>
                 {
+                    b.HasOne("LIS_backend.Models.StoreLocation", "location")
+                        .WithMany()
+                        .HasForeignKey("locationid");
+
                     b.HasOne("LIS_backend.Models.User", "user")
                         .WithMany()
                         .HasForeignKey("userid");
+
+                    b.Navigation("location");
 
                     b.Navigation("user");
                 });
