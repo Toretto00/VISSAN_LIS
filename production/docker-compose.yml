@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  sqlserver:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      MSSQL_SA_PASSWORD: "1236fG543$"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1434:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+    restart: always
+
+  lis_backend:
+    container_name: lisbackend
+#   image: ${DOCKER_REGISTRY-}lisbackend
+    build:
+      context: ../LIS_backend/LIS_backend
+      dockerfile: ../LIS_backend/LIS_backend/Dockerfile
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ASPNETCORE_URLS=http://+:8080
+    - "DatabaseSettings:DefaultConnection=Server=sqlserver;Database=LISBackend;User Id=sa;Password=1236fG543$;TrustServerCertificate=true"
+    ports:
+    - "8080:8080"
+    depends_on:
+    - sqlserver
+    restart: always
+
+  lis_frontend:
+    container_name: lisfrontend
+    build:
+      context: ../LIS_website
+      dockerfile: ../LIS_website/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${API_URL}
+        BASEPATH: ""
+        NEXTAUTH_URL: "http://localhost:3000${BASEPATH}/api/auth"
+        API_URL: "http://localhost:8080"
+        NEXTAUTH_SECRET: "fbe06505b8c9a62d3fdd1ceeaed54c16"      
+    env_file:
+      - ../LIS_website/.env
+    ports:
+      - "3000:3000"
+
+volumes:
+  sql_data:
+    name: sql_data
